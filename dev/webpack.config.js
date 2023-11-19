@@ -5,6 +5,7 @@ module.exports = {
     return {
       mode: 'development',
       entry: './src/assets/typescript/index/index.ts',
+      target: 'electron-renderer',
       output: {
         filename: routes + ".js"
       },

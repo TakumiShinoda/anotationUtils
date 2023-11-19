@@ -1,4 +1,7 @@
 :root{
+  --upperMenuHeight: 40px;
+  --upperMenuIconWidthRatio: 0.35;
+  --upperMenuIconpadding: calc(var(--upperMenuHeight) * (1 - var(--upperMenuIconWidthRatio)) / 2);
   --sideMenuWidth: 60px;
   --sideMenuIconWidthRatio: 0.6;
 }
@@ -6,7 +9,12 @@
 body{
   -webkit-user-select: none;
   -webkit-app-region: drag;
-  background: rgba(122, 122, 122, 0.95);
+  background: #1f1f1f;
+}
+
+label{
+  color: #d7d7d7;
+  font-size: 20px;
 }
 
 .dragmovable{
@@ -17,8 +25,32 @@ body{
   -webkit-app-region: no-drag;
 }
 
+.displayFlex{
+  display: flex;
+}
+
+#upperMenu{
+  height: var(--upperMenuHeight);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-bottom: 1px solid #37373d;
+  background-color: #1f1f1f;
+}
+
+#upperMenu .icon{
+  color: #d7d7d7;
+  font-size: calc(var(--upperMenuHeight) * var(--upperMenuIconWidthRatio));
+  padding: var(--upperMenuIconpadding) calc(var(--upperMenuIconpadding) + 3px) var(--upperMenuIconpadding) var(--upperMenuIconpadding);
+}
+
+#upperMenu .icon:hover{
+  transition: 0.6s;
+  background-color: #e81123;
+}
+
 #mainFrame{
-  height: 100%;
+  height: calc(100% - var(--upperMenuHeight));
 }
 
 #sideMenu{
@@ -37,4 +69,24 @@ body{
 #sideMenu .icon:hover{
   transition: 0.6s;
   color: #5c5c5c;
+}
+
+#mainView{
+  width: 100%;
+  padding: 10px;
+}
+
+#autoAnotationView{
+  width: 100%;
+  height: 100%;
+}
+
+#imagePathInputField{
+  margin-left: 10px;
+  width: 100%;
+}
+
+#modelPathInputField{
+  margin-left: 10px;
+  width: 100%;
 }

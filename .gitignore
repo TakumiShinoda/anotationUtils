@@ -1,0 +1,8 @@
+.DS_Store
+
+package-lock.json
+yarn.lock
+/node_modules
+/dist
+/*darwin-x64*
+*tsOutput/

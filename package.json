@@ -1,0 +1,59 @@
+{
+  "name": "electron-template",
+  "version": "1.0.0",
+  "nodeVersion": "15.14.0",
+  "description": "",
+  "main": "./src/app/main.js",
+  "scripts": {
+    "start": "gulp start",
+    "clean": "rm -R ./dist/",
+    "clean-start": "npm run clean || npm start && npm start",
+    "compile-pug": "gulp pug_compile",
+    "dist": "rm -R dist || gulp build_dist && gulp build_dist",
+    "test-pack-darwinx64": "rm -R *darwin-x64* || node build/darwinx64.js && node build/darwinx64.js",
+    "devenv-reset": "rm -r node_modules && rm package-lock.json",
+    "devenv-rebuild": "npm run devenv-reset & npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "overrides": {
+    "semver": "6.3.1",
+    "minimatch": "3.0.5",
+    "lodash": "4.17.21",
+    "graceful-fs": "4.2.10",
+    "glob-parent": "6.0.1",
+    "@types/node": "20.9.1"
+  },
+  "resolutions": {
+    "semver": "6.3.1",
+    "minimatch": "3.0.5",
+    "lodash": "4.17.21",
+    "graceful-fs": "4.2.10",
+    "glob-parent": "6.0.1",
+    "@types/node": "16.18.60"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.14",
+    "chokidar": "^3.0.0",
+    "css-loader": "^6.8.1",
+    "electron": "^27.1.0",
+    "electron-connect": "^0.6.3",
+    "electron-packager": "^17.1.2",
+    "electron-reload": "^2.0.0-alpha.1",
+    "fs": "0.0.1-security",
+    "glob-stream": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^5.0.0",
+    "lodash": "^4.17.21",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.2",
+    "webpack": "^5.0.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "path": "^0.12.7"
+  }
+}

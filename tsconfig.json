@@ -4,7 +4,8 @@
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "./src/assets/tsOutput/"
+    "outDir": "./src/assets/tsOutput/",
+    "typeRoots": ["./src/common", "node_modules/@types"],
   },
   "include": [
     "./src/assets/typescript/*.ts",

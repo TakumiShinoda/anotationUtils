@@ -81,6 +81,10 @@ label{
   height: 100%;
 }
 
+#anotationNameInputField{
+  margin-left: 10px;
+}
+
 #imagePathInputField{
   margin-left: 10px;
   width: 100%;
@@ -89,4 +93,8 @@ label{
 #modelPathInputField{
   margin-left: 10px;
   width: 100%;
+}
+
+#alertModalMes{
+  margin-bottom: 0px;
 }

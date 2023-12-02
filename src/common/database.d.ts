@@ -1,7 +1,9 @@
+export interface databaseItem{
+  [itemNameKeys: string]: string | {[movieItemNameKeys: string]: string}
+}
+
 export interface databaseInfo{
-  [databaseKeys: string]: {
-    [itemNameKeys: string]: string | {[movieItemNameKeys: string]: string}
-  }
+  [databaseKeys: string]: databaseItem
 }
 
 export interface itemCounts{

@@ -1,17 +1,18 @@
-import { databaseInfo, itemCounts } from './database.d'
+import { databaseInfo, databaseItem, itemCounts } from './database.d'
 
-export function countItems(databaseInfo: databaseInfo): itemCounts{
-  let itemBuff: {[itemNameKeys: string]: string | {[movieItemNameKeys: string]: string}}
-  let result: itemCounts = {items: 0, movies: 0}
+export function countItems(databaseInfo: databaseInfo): {[databasekey: string]: itemCounts}{
+  let itemBuff: databaseItem
+  let result: {[databasekey: string]: itemCounts} = {}
 
   for(let databaseKey in databaseInfo){
     itemBuff = databaseInfo[databaseKey]
+    result[databaseKey] = {items: 0, movies: 0}
 
     for(let itemKey in itemBuff){
       if(typeof(databaseInfo[databaseKey][itemKey]) == 'object'){
-        result.movies++
+        result[databaseKey].movies++
       }else{
-        result.items++
+        result[databaseKey].items++
       }
     }
   }

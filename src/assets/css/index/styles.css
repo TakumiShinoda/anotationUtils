@@ -4,6 +4,7 @@
   --upperMenuIconpadding: calc(var(--upperMenuHeight) * (1 - var(--upperMenuIconWidthRatio)) / 2);
   --sideMenuWidth: 70px;
   --sideMenuIconWidthRatio: 0.6;
+  --anotatedImageViewFooterHeight: 50px;
 }
 
 body{
@@ -129,4 +130,32 @@ label{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#anotatedImageView #mainView{
+  height: calc(100% - var(--anotatedImageViewFooterHeight));
+  padding: 0px;
+}
+
+#anotatedImageView #footer{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: var(--anotatedImageViewFooterHeight);
+  border-top: #d7d7d7 solid 1px;
+}
+
+#anotatedImageView #selectAllButton{
+  margin-right: 10px;
+}
+
+#anotatedImageView .imageSelectBox{
+  margin: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  border: #d7d7d7 solid 2px;
+}
+
+#anotatedImageView .imageSelectBox:hover{
+  background-color: rgba(255, 255, 255, 0.1);
 }

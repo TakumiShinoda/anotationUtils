@@ -1,4 +1,4 @@
-function hideAllViews(): void{
+export function hideAllViews(): void{
   $('.views').hide()
 }
 

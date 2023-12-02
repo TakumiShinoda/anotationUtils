@@ -7,6 +7,20 @@ const {distPath} = require('../../dev/path');
 
 let AnotationProc
 
+function cvtImgToBase64(path){
+  let result
+
+  if(path.split('.').slice(-1)[0] != 'jpg') return undefined
+
+  try{
+    if(!fs.statSync(path).isFile()) return undefined
+
+    result = new Buffer(fs.readFileSync(path)).toString('base64')
+  }catch(err){return undefined}
+
+  return result
+}
+
 app.on('ready', () => {
   let mainWindow = new BrowserWindow({
     width: 960,
@@ -95,11 +109,11 @@ app.on('ready', () => {
 
                   for(m of movieItemsDirBuff){
                     try{
-                      if(m.split('.').slice(-1)[0] == 'jpg') result[d][i][m] = `${itemPathBuff}/${m}`
+                      if(m.split('.').slice(-1)[0] == 'jpg') result[d][i][m] = cvtImgToBase64(`${itemPathBuff}/${m}`)
                     }catch(err){continue}
                   }
                 }else if(fs.statSync(itemPathBuff).isFile()){
-                  if(itemPathBuff.split('.').slice(-1)[0] == 'jpg') result[d][i] = itemPathBuff
+                  if(itemPathBuff.split('.').slice(-1)[0] == 'jpg') result[d][i] = cvtImgToBase64(itemPathBuff)
                 }
               }catch(err){continue}
             }

@@ -3,10 +3,12 @@ import 'jquery-inview'
 import { countItems } from './../../../common/database'
 import { databaseInfo, itemCounts } from './../../../common/database.d'
 import { modalSetting, showAlertModal } from '../utils'
+import { showAnotatedImageView } from './anotatedImageView'
 
 function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement>[]{
-  let counts: itemCounts = countItems(databaseInfo)
+  let counts: {[databasekey: string]: itemCounts} = countItems(databaseInfo)
   let listHtmlStrBuff: string
+  let listBuff: JQuery<HTMLElement>
   let result: JQuery<HTMLElement>[] = []
 
   for(let databaseKey in databaseInfo){
@@ -20,15 +22,19 @@ function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement
               <div>Movies:</div>
             </div>
             <div>
-              <div>${counts.items}</div>
-              <div>${counts.movies}</div>
+              <div>${counts[databaseKey].items}</div>
+              <div>${counts[databaseKey].movies}</div>
             </div>
           </div>
         </div>
       </li>
     `
+    listBuff = $(listHtmlStrBuff)
 
-    result.push($(listHtmlStrBuff))
+    listBuff.on('click', () => {
+      showAnotatedImageView(databaseInfo[databaseKey])
+    })
+    result.push(listBuff)
   }
 
   return result
@@ -37,17 +43,19 @@ function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement
 $(function (){
   const electronWindow: any = window
 
-  $('#databaseList').on('inview', async () => {
+  $('#databaseList').on('inview', async (_, isInView: boolean) => {
     const alertErrorModalSetting: modalSetting = {backColor: '#ad463a', mesColor: '#FFFFFF'}
     let databaseInfo: databaseInfo
 
-    try{
+    if(!isInView){
       $('#databaseList').children('li').remove()
+      return
+    }
+
+    try{
       databaseInfo = await electronWindow.electronAPI.getDatabaseInfo()
 
-      for(let key in databaseInfo){
-        $('#databaseList').append(createDatabaseListItems(databaseInfo))
-      }
+      $('#databaseList').append(createDatabaseListItems(databaseInfo))
     }catch(err){
       showAlertModal('Unknow error.', alertErrorModalSetting)
     }

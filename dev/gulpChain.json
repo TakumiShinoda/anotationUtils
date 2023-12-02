@@ -15,10 +15,6 @@
     {
       "src": "src/assets/css/index/bootstrap-icons/**",
       "dest": "./dist/css/bootstrap-icons/"
-    },
-    {
-      "src": "src/assets/typescript/index/webviewResources/webviewExm1/domReady.js",
-      "dest": "./dist/js/index/webviewResources/webviewExm1/"
     }
   ],
   "routes": [

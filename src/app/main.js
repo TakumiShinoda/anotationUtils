@@ -1,6 +1,6 @@
 const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const { spawn } = require('child_process')
-const electronReload = require('electron-reload')(['./dist/bundles/**', './dist/js/**', './dist/views/**']);
+const electronReload = require('electron-reload')(['./dist/bundles/**']);
 const fs = require('fs')
 
 const {distPath} = require('../../dev/path');
@@ -63,6 +63,53 @@ app.on('ready', () => {
         if(code == 0) return res(true)
         else return res({code: 2, mes: `Subproces end at Code: ${code}`})
       })
+    })
+  })
+
+  ipcMain.handle('getDatabaseInfo', async () => {
+    return new Promise((res, rej) => {
+      try{
+        const databasePath = `${__dirname}/../../externalPackage/output`
+        let databases = fs.readdirSync(databasePath)
+        let itemsDirBuff
+        let movieItemsDirBuff
+        let itemPathBuff
+        let result = {}
+
+        for(d of databases){
+          try{
+            databasePathBuff = `${databasePath}/${d}`
+            
+            if(!fs.statSync(databasePathBuff).isDirectory()) continue
+
+            itemsDirBuff = fs.readdirSync(databasePathBuff)
+            result[d] = {}
+
+            for(let i of itemsDirBuff){
+              try{
+                itemPathBuff = `${databasePathBuff}/${i}`
+
+                if(fs.statSync(itemPathBuff).isDirectory()){
+                  movieItemsDirBuff = fs.readdirSync(itemPathBuff)
+                  result[d][i] = {}
+
+                  for(m of movieItemsDirBuff){
+                    try{
+                      if(m.split('.').slice(-1)[0] == 'jpg') result[d][i][m] = `${itemPathBuff}/${m}`
+                    }catch(err){continue}
+                  }
+                }else if(fs.statSync(itemPathBuff).isFile()){
+                  if(itemPathBuff.split('.').slice(-1)[0] == 'jpg') result[d][i] = itemPathBuff
+                }
+              }catch(err){continue}
+            }
+          }catch(err){continue}
+        }
+
+        return res(result)
+      }catch(err){
+        return rej(err)
+      }
     })
   })
 

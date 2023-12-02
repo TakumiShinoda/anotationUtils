@@ -8,8 +8,12 @@ html(lang='ja')
       i#exitAppButton.bi.bi-x-lg.icon.nodragmovable
     div#mainFrame.d-flex.flex-nowrap.nodragmovable
       div#sideMenu.flex-column
-        i.bi.bi-card-image.icon
-        i.bi.bi-card-image.icon
-        i.bi.bi-card-image.icon
+        div#showAutoAnotaionViewIcon.iconContainer
+          i.bi.bi-card-image.icon
+        div#showDatabaseViewIcon.iconContainer
+          i.bi.bi-card-image.icon
+        div.iconContainer
+          i.bi.bi-card-image.icon
       div#mainView.flex-column
         include ./autoAnotationView.pug
+        include ./selectDatabaseView.pug

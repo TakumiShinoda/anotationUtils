@@ -2,7 +2,7 @@
   --upperMenuHeight: 40px;
   --upperMenuIconWidthRatio: 0.35;
   --upperMenuIconpadding: calc(var(--upperMenuHeight) * (1 - var(--upperMenuIconWidthRatio)) / 2);
-  --sideMenuWidth: 60px;
+  --sideMenuWidth: 70px;
   --sideMenuIconWidthRatio: 0.6;
 }
 
@@ -10,6 +10,7 @@ body{
   -webkit-user-select: none;
   -webkit-app-region: drag;
   background: #1f1f1f;
+  color: #d7d7d7;
 }
 
 label{
@@ -27,6 +28,10 @@ label{
 
 .displayFlex{
   display: flex;
+}
+
+.diaplayNone{
+  display: none;
 }
 
 #upperMenu{
@@ -59,6 +64,10 @@ label{
   width: var(--sideMenuWidth);
   height: 100%;
   text-align: center;
+}
+
+#sideMenu .iconContainer{
+  margin: 5px 0px;
 }
 
 #sideMenu .icon{
@@ -97,4 +106,27 @@ label{
 
 #alertModalMes{
   margin-bottom: 0px;
+}
+
+#databaseList{
+  padding: 0px;
+}
+
+#databaseList li{
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: #d7d7d7;
+  border: 0px;
+  border-bottom: 1px solid #37373d;
+}
+
+#databaseList li:hover{
+  transition: 0.6s;
+  background-color: #37373d;
+}
+
+#databaseList .flexArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

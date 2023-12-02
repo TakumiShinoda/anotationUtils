@@ -5,6 +5,10 @@
       "dest": "./dist/js/bootstrap"
     },
     {
+      "src": "src/assets/javascript/jquery-inview/*",
+      "dest": "./dist/js/jquery-inview"
+    },
+    {
       "src": "src/assets/css/index/bootstrap/*",
       "dest": "./dist/css/bootstrap/"
     },

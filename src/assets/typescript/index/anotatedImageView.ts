@@ -16,7 +16,7 @@ export function showAnotatedImageView(databaseItem: databaseItem): void{
 
     imageSelectorHtmlStrBuff = `
       <div class="imageSelectBox">
-        <img src="data:image/jpg;base64,${databaseItem[d]}" width=100px height=100px}>
+        <img src="${databaseItem[d]}" width=100px height=100px}>
       </div>
     `
 

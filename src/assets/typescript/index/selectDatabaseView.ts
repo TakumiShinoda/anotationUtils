@@ -1,5 +1,3 @@
-import 'jquery-inview'
-
 import { countItems } from './../../../common/database'
 import { databaseInfo, itemCounts } from './../../../common/database.d'
 import { modalSetting, showAlertModal } from '../utils'
@@ -30,8 +28,10 @@ function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement
       </li>
     `
     listBuff = $(listHtmlStrBuff)
+    console.log(databaseInfo)
 
     listBuff.on('click', () => {
+      console.log(databaseInfo[databaseKey])
       showAnotatedImageView(databaseInfo[databaseKey])
     })
     result.push(listBuff)

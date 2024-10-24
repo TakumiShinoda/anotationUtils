@@ -2,6 +2,8 @@ const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const { spawn } = require('child_process')
 const electronReload = require('electron-reload')(['./dist/bundles/**']);
 const fs = require('fs')
+const jimp = require('jimp')
+const v8 = require('v8')
 
 const {distPath} = require('../../dev/path');
 
@@ -18,7 +20,81 @@ function cvtImgToBase64(path){
     result = new Buffer(fs.readFileSync(path)).toString('base64')
   }catch(err){return undefined}
 
-  return result
+  return `data:image/jpg;base64,${result}`
+}
+
+function readAnotationFile(anotationTextPath){
+  let fileStr
+  let fileStrLineSplit
+  let valueSplitBuff
+  let result = []
+
+  try{
+    if(anotationTextPath.split('.').slice(-1)[0] != 'txt') return []
+    if(!fs.statSync(anotationTextPath).isFile()) return []
+
+    fileStr = fs.readFileSync(anotationTextPath).toString()
+    fileStrLineSplit = fileStr.split('\n')
+
+    for(let f of fileStrLineSplit){
+      valueSplitBuff = f.split(' ')
+      
+      if(valueSplitBuff.length != 6) continue
+
+      result.push({
+        class: parseInt(valueSplitBuff[0]),
+        x1: parseFloat(valueSplitBuff[1]),
+        y1: parseFloat(valueSplitBuff[2]),
+        x2: parseFloat(valueSplitBuff[3]),
+        y2: parseFloat(valueSplitBuff[4]),
+        pred: parseFloat(valueSplitBuff[5]),
+      })
+    }
+
+    return result
+  }catch(err){
+    console.log(`ERROR: ${err}`)
+    return []
+  }
+}
+
+async function getBase64Async(jimpObj){
+  return new Promise((res, rej) => {
+    jimpObj.getBase64(jimp.MIME_JPEG, (err, src) => {
+      if(err) rej(err)
+      res(src)
+    })
+  })
+}
+
+async function cutImgToBase64(imgPath, anotationTextPath){
+  let img
+  let cropImgBuff
+  let anotationDataList
+  let result = []
+
+  return new Promise(async (res, rej) => {
+    try{
+      anotationDataList = readAnotationFile(anotationTextPath)
+  
+      if(imgPath.split('.').slice(-1)[0] != 'jpg') return []
+      if(!fs.statSync(imgPath).isFile()) return []
+      if(anotationDataList.length == 0) return []
+
+      for(let i in anotationDataList){
+        img = await jimp.read(imgPath)
+        cropImgBuff = await img.crop(
+          anotationDataList[i].x1,
+          anotationDataList[i].y1,
+          (anotationDataList[i].x2 - anotationDataList[i].x1),
+          (anotationDataList[i].y2 - anotationDataList[i].y1),
+        )
+        
+        result.push(await getBase64Async(cropImgBuff))
+      }
+      res(result)
+    }catch(err){res([])}
+  })
 }
 
 app.on('ready', () => {
@@ -81,13 +157,15 @@ app.on('ready', () => {
   })
 
   ipcMain.handle('getDatabaseInfo', async () => {
-    return new Promise((res, rej) => {
+    return new Promise(async (res, rej) => {
       try{
         const databasePath = `${__dirname}/../../externalPackage/output`
         let databases = fs.readdirSync(databasePath)
         let itemsDirBuff
         let movieItemsDirBuff
         let itemPathBuff
+        let itemAnotaioPathBuff
+        let cutImagesBuff
         let result = {}
 
         for(d of databases){
@@ -102,18 +180,30 @@ app.on('ready', () => {
             for(let i of itemsDirBuff){
               try{
                 itemPathBuff = `${databasePathBuff}/${i}`
-
+                
                 if(fs.statSync(itemPathBuff).isDirectory()){
                   movieItemsDirBuff = fs.readdirSync(itemPathBuff)
                   result[d][i] = {}
 
                   for(m of movieItemsDirBuff){
                     try{
-                      if(m.split('.').slice(-1)[0] == 'jpg') result[d][i][m] = cvtImgToBase64(`${itemPathBuff}/${m}`)
+                      if(m.split('.').slice(-1)[0] == 'jpg'){
+                        result[d][i][m] = cvtImgToBase64(`${itemPathBuff}/${m}`)
+                        // cutImagesBuff = await cutImgToBase64(itemPathBuff, itemAnotaioPathBuff)
+                        // result[d][i][m] = cutImagesBuff[0]
+                      }
                     }catch(err){continue}
                   }
                 }else if(fs.statSync(itemPathBuff).isFile()){
-                  if(itemPathBuff.split('.').slice(-1)[0] == 'jpg') result[d][i] = cvtImgToBase64(itemPathBuff)
+                  if(itemPathBuff.split('.').slice(-1)[0] == 'jpg'){
+                    itemAnotaioPathBuff = `${itemPathBuff}.txt`
+                    
+                    if(!fs.statSync(itemAnotaioPathBuff).isFile()) continue
+
+                    // result[d][i] = cvtImgToBase64(itemPathBuff)
+                    cutImagesBuff = await cutImgToBase64(itemPathBuff, itemAnotaioPathBuff)
+                    result[d][i] = cutImagesBuff[0]
+                  }
                 }
               }catch(err){continue}
             }

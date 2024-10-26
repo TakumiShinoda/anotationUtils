@@ -5,5 +5,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openFolderDialog: () => ipcRenderer.invoke('openFolderDialog'),
   loadAnotationTarget: (anotationName, targetModel, targetDir) => ipcRenderer.invoke('loadAnotationTarget', anotationName, targetModel, targetDir),
   getDatabaseInfo: () => ipcRenderer.invoke('getDatabaseInfo'),
+  getImageViewList: (imageViewDir) => ipcRenderer.invoke('getImageViewList', imageViewDir),
   exitApp: () => ipcRenderer.send('exitApp')
 })

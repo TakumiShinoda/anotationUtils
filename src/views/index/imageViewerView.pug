@@ -1,0 +1,19 @@
+div#imageViewerView.views.diaplayNone
+  div(style='height: 10%;')
+    h2 Image Viewer
+  div(style='height: 10%;')
+    div.displayFlex(style='margin-bottom: 20px;')
+      input#openFolderDirInputField(type='text')
+      div#openFolderBtn.btn.btn-primary Reference
+    div.displayFlex(style='margin-bottom: 20px; justify-content: right; align-items: center;')
+      div#loadFolderBtn.btn.btn-success Load
+  div(style='height: 10%;')
+    div Preview size
+    div.displayFlex(style='margin-bottom: 10px;')
+      input#imageViewImageSizeSlider(type='range' min='100' max='300' step='10' value=100)
+      div#imageViewImageSize 100
+    div
+      span#imageCounts 0
+      span  : images
+  div(style='height: 70%;')
+    div#imageViewArea(style='height: 100%;overflow-y: scroll;')

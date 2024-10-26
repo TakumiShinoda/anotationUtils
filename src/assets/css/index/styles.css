@@ -105,6 +105,22 @@ label{
   width: 100%;
 }
 
+#openFolderDirInputField{
+  width: 100%;
+}
+
+#openFolderBtn{
+  margin-left: 10px;
+}
+
+.imageViewImage{
+  margin: 5px;
+}
+
+.imageViewImage:hover{
+  filter: brightness(0.6);
+}
+
 #alertModalMes{
   margin-bottom: 0px;
 }

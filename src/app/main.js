@@ -3,13 +3,12 @@ const { spawn } = require('child_process')
 const electronReload = require('electron-reload')(['./dist/bundles/**']);
 const fs = require('fs')
 const jimp = require('jimp')
-const express = require("express");
+const imageSize = require('image-size')
 const v8 = require('v8')
 
 const {distPath} = require('../../dev/path');
 const {getLastElement, getAllFilesRecursive} = require('./utils')
 
-const localServer = express();
 let AnotationProc
 
 function cvtImgToBase64(path){
@@ -222,14 +221,24 @@ app.on('ready', () => {
 
   ipcMain.handle('getImageViewList', async (_, imageViewDir) => {
     return new Promise((res, rej) => {
+      let imgStatBuff
+      let allPathList
+      let allImgPathList = []
+      let imgSizeBuff
+
       try{
-        let allPathList = getAllFilesRecursive(imageViewDir)
-        let allImgPathList = []
+        allPathList = getAllFilesRecursive(imageViewDir)
         
         for(ap of allPathList){
           if(!['jpg', 'jpeg', 'png', 'svg', 'webp'].includes(getLastElement(ap.split('.')))) continue
 
-          allImgPathList.push(ap)
+          imgSizeBuff = imageSize.imageSize(ap)
+          imgStatBuff = fs.statSync(ap)
+          allImgPathList.push({
+            imgSize:{w: imgSizeBuff.width, h: imgSizeBuff.height},
+            dataSize: imgStatBuff.size,
+            path: ap
+          })
         }
 
         res(allImgPathList)
@@ -242,13 +251,5 @@ app.on('ready', () => {
   ipcMain.on('exitApp', async () => {
     console.log("exit")
     mainWindow.close();
-  })
-
-  localServer.get("/image/:file", (req, res) => {
-    console.log(`/image/${req.params.file}へアクセスがありました`);
-  });
-
-  localServer.listen(53838, () => {
-    console.log(`Local server opened at ${53838}`)
   })
 });

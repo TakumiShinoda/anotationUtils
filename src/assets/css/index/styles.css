@@ -113,12 +113,38 @@ label{
   margin-left: 10px;
 }
 
-.imageViewImage{
-  margin: 5px;
+.imageViewPreviewImageBackground{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  background-color: #c0c0c0;
 }
 
-.imageViewImage:hover{
-  filter: brightness(0.6);
+.imageViewPreviewImageBackground:hover .imageViewImageInfoArea{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.imageViewImageInfoArea{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.imageViewImageInfo{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #alertModalMes{

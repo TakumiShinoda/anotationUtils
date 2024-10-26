@@ -1,4 +1,4 @@
-import { cvtNum2DataSizeStr, getLastElement } from "../utils"
+import { cvtNum2DataSizeStr, getLastElement, showAlertModal } from "../utils"
 
 $(function (){
   $('#openFolderBtn').on('click', async() => {
@@ -12,8 +12,8 @@ $(function (){
     let imageViewDir: string = $('#openFolderDirInputField').val() as string
     let imageViewPaths: {imgSize: {w: number, h: number}, dataSize: number, path: string}[]
     let previewImageSizeBuff: {w: number, h: number}
-    let imageElementBuff: string
     let imageNameBuff: string
+    let imageViewElementStr: string = ''
     let imagePreviewSize: number
 
     try{
@@ -36,9 +36,9 @@ $(function (){
         if(ivp.imgSize.w > ivp.imgSize.h) previewImageSizeBuff.h = ivp.imgSize.h * (imagePreviewSize / ivp.imgSize.w)
         else previewImageSizeBuff.w = ivp.imgSize.w * (imagePreviewSize / ivp.imgSize.h)
 
-        imageElementBuff = `
+        imageViewElementStr += `
           <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
-            <img class="imageViewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px">
+            <img class="imageViewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy">
             <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
               <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
               <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
@@ -46,18 +46,20 @@ $(function (){
             </span>
           </span>
         `
-
-        $('#imageViewArea').append(imageElementBuff)
       }
+
+      $('#imageViewArea').append(imageViewElementStr)
     }catch(err){
-      alert('error')
+      alert(`Error:\n${err}`)
     }
   })
 
   $('#imageViewImageSizeSlider').on('input', (ev: JQuery.TriggeredEvent) => {
-    let imageSize: number = parseInt(ev.currentTarget.value)
+    let imageInfoAreaElementBuff: JQuery<HTMLElement>
+    let imageElementBuff: JQuery<HTMLElement>
     let previewImageSizeBuff: {w: number, h: number}
     let currentImageSizeBuff: {w: number, h: number}
+    let imageSize: number = parseInt(ev.currentTarget.value)
 
     $('#imageViewImageSize').text(imageSize)
 
@@ -66,23 +68,26 @@ $(function (){
       $(imageBackgroundElement).height(imageSize)
     }
 
-    for(let imageInfoElement of $('.imageViewImageInfoArea')){
-      $(imageInfoElement).width(imageSize)
-      $(imageInfoElement).height(imageSize)
+    for(let iiae of $('.imageViewImageInfoArea')){
+      imageInfoAreaElementBuff = $(iiae)
+
+      imageInfoAreaElementBuff.width(imageSize)
+      imageInfoAreaElementBuff.height(imageSize)
     }
 
-    for(let imageElement of $('.imageViewImage')){
+    for(let ie of $('.imageViewImage')){
+      imageElementBuff = $(ie)
       previewImageSizeBuff = {w: imageSize, h: imageSize}
       currentImageSizeBuff = {
-        w: $(imageElement).width() as number,
-        h: $(imageElement).height() as number
+        w: imageElementBuff.width() as number,
+        h: imageElementBuff.height() as number
       }
 
       if(currentImageSizeBuff.w > currentImageSizeBuff.h) previewImageSizeBuff.h = currentImageSizeBuff.h * (imageSize / currentImageSizeBuff.w)
       else previewImageSizeBuff.w = currentImageSizeBuff.w * (imageSize / currentImageSizeBuff.h)
 
-      $(imageElement).width(previewImageSizeBuff.w)
-      $(imageElement).height(previewImageSizeBuff.h)
+      imageElementBuff.width(previewImageSizeBuff.w)
+      imageElementBuff.height(previewImageSizeBuff.h)
     }
   })
 })

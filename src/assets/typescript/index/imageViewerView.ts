@@ -1,5 +1,11 @@
 import { cvtNum2DataSizeStr, getLastElement, showAlertModal } from "../utils"
 
+// const cman = require('../../javascript/cmanObjMove_v091/cmanObjMove_v091.js')
+import {cmanOM_JS_init} from '../cmanObjMove_v091'
+
+let ImgViewMousePos: {x: number, y: number} = {x: 0, y: 0}
+let IsImgViewMouseCover: boolean = false
+
 $(function (){
   $('#openFolderBtn').on('click', async() => {
     let openFolderDir: string
@@ -17,7 +23,7 @@ $(function (){
     let imagePreviewSize: number
 
     try{
-      $('#imageViewArea').empty()
+      $('#imagePreviewArea').empty()
 
       imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
       imageViewPaths = await (window as any).electronAPI.getImageViewList(imageViewDir)
@@ -38,8 +44,8 @@ $(function (){
 
         imageViewElementStr += `
           <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
-            <img class="imageViewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy">
-            <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
+            <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy">
+            <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
               <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
               <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
               <span class="imageViewImageInfo" width="100%">${ivp.imgSize.w} x ${ivp.imgSize.h}</span>
@@ -48,10 +54,82 @@ $(function (){
         `
       }
 
-      $('#imageViewArea').append(imageViewElementStr)
+      $('#imagePreviewArea').append(imageViewElementStr)
+      $('.imageViewImageInfoArea').on('click', (ev: JQuery.TriggeredEvent) => {
+        const ImgViewDefaultMaxSize = 300
+
+        let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
+        let imageViewAreaElement: JQuery<HTMLElement> = $('#imageViewArea')
+        let clickedElement: JQuery<HTMLElement> = $(ev.currentTarget)
+        let imgPath: string = clickedElement.attr('src') as string
+        let imgPreviewSize: {w: number, h: number}
+        let imgViewSize: {w: number, h: number} = {w: ImgViewDefaultMaxSize, h: ImgViewDefaultMaxSize}
+    
+        imgPreviewSize = {
+          w: parseInt(clickedElement.attr('imgW') as string),
+          h: parseInt(clickedElement.attr('imgh') as string)
+        }
+
+        if(imgPreviewSize.w > imgPreviewSize.h) imgViewSize.h = imgPreviewSize.h * (imgViewSize.w / imgPreviewSize.w)
+        else imgViewSize.w = imgPreviewSize.w * (imgViewSize.h / imgPreviewSize.h)
+
+        imageViewAreaElement.empty()
+        imageViewAreaElement.append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;">`)
+        cmanOM_JS_init()
+
+        $('.imageViewImage').on({
+          'mousemove': function(e: JQuery.MouseMoveEvent){
+            ImgViewMousePos = {x: e.offsetX, y: e.offsetY}
+          },
+          'mouseover': function(){
+            IsImgViewMouseCover = true
+          },
+          'mouseout': function(e: JQuery.MouseOutEvent){
+            IsImgViewMouseCover = false
+          }
+        })
+        
+        imageViewAreaBackgroundElement.css({'z-index': '10'})
+        imageViewAreaBackgroundElement.css({'opacity': '1'})
+      })
     }catch(err){
       alert(`Error:\n${err}`)
     }
+  })
+
+  document.addEventListener('wheel', (e: WheelEvent) => {
+    const ZoomStep: number = 0.3
+    const ImgMaxScale: number = 15
+    const ImgMinScale: number = 0.1
+
+    let imgViewImgElement: JQuery<HTMLElement> = $('.imageViewImage')
+    let wheelDirection: number
+    let postImgScale: number
+    let newImgScale: number
+
+    if(
+      imgViewImgElement.length == 0 ||
+      !IsImgViewMouseCover
+    ) return
+
+    postImgScale = parseFloat(imgViewImgElement.css('scale'))
+
+    if(e.deltaY < 0) wheelDirection = 1
+    else wheelDirection = -1
+
+    newImgScale = postImgScale + (ZoomStep * wheelDirection)
+
+    if(newImgScale < ImgMinScale) newImgScale = ImgMinScale
+    else if(newImgScale > ImgMaxScale) newImgScale = ImgMaxScale
+
+    imgViewImgElement.css('scale', newImgScale.toString())
+  })
+
+  $('#imageViewCloseBtn').on('click', (ev: JQuery.TriggeredEvent) => {
+    let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
+
+    imageViewAreaBackgroundElement.css({'z-index': '-10'})
+    imageViewAreaBackgroundElement.css({'opacity': '0'})
   })
 
   $('#imageViewImageSizeSlider').on('input', (ev: JQuery.TriggeredEvent) => {
@@ -63,7 +141,7 @@ $(function (){
 
     $('#imageViewImageSize').text(imageSize)
 
-    for(let imageBackgroundElement of $('#imageViewArea').children()){
+    for(let imageBackgroundElement of $('#imagePreviewArea').children()){
       $(imageBackgroundElement).width(imageSize)
       $(imageBackgroundElement).height(imageSize)
     }

@@ -9,6 +9,10 @@
       "dest": "./dist/js/jquery-inview"
     },
     {
+      "src": "src/assets/javascript/cmanObjMove_v091/*",
+      "dest": "./dist/js/cmanObjMove_v091"
+    },
+    {
       "src": "src/assets/css/index/bootstrap/*",
       "dest": "./dist/css/bootstrap/"
     },

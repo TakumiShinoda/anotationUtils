@@ -232,13 +232,17 @@ app.on('ready', () => {
         for(ap of allPathList){
           if(!['jpg', 'jpeg', 'png', 'svg', 'webp'].includes(getLastElement(ap.split('.')))) continue
 
-          imgSizeBuff = imageSize.imageSize(ap)
-          imgStatBuff = fs.statSync(ap)
-          allImgPathList.push({
-            imgSize:{w: imgSizeBuff.width, h: imgSizeBuff.height},
-            dataSize: imgStatBuff.size,
-            path: ap
-          })
+          try{
+            imgSizeBuff = imageSize.imageSize(ap)
+            imgStatBuff = fs.statSync(ap)
+            allImgPathList.push({
+              imgSize:{w: imgSizeBuff.width, h: imgSizeBuff.height},
+              dataSize: imgStatBuff.size,
+              path: ap
+            })
+          }catch{
+            continue
+          }
         }
 
         res(allImgPathList)

@@ -10,8 +10,12 @@ $(function (){
   $('#openFolderBtn').on('click', async() => {
     let openFolderDir: string
 
-    openFolderDir = await (window as any).electronAPI.openFolderDialog()
-    $('#openFolderDirInputField').val(openFolderDir)
+    try{
+      openFolderDir = await (window as any).electronAPI.openFolderDialog()
+      $('#openFolderDirInputField').val(openFolderDir)
+    }catch(err){
+      alert(err)
+    }
   })
 
   $('#loadFolderBtn').on('click', async() => {

@@ -8,10 +8,13 @@ let IsImgViewMouseCover: boolean = false
 
 $(function (){
   $('#openFolderBtn').on('click', async() => {
-    let openFolderDir: string
+    let openFolderDir: string | undefined
 
     try{
       openFolderDir = await (window as any).electronAPI.openFolderDialog()
+
+      if(openFolderDir == undefined) return
+      
       $('#openFolderDirInputField').val(openFolderDir)
     }catch(err){
       alert(err)

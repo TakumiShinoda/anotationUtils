@@ -80,8 +80,9 @@ $(function (){
         if(imgPreviewSize.w > imgPreviewSize.h) imgViewSize.h = imgPreviewSize.h * (imgViewSize.w / imgPreviewSize.w)
         else imgViewSize.w = imgPreviewSize.w * (imgViewSize.h / imgPreviewSize.h)
 
-        imageViewAreaElement.empty()
-        imageViewAreaElement.append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;">`)
+        $('#imageViewArea img').remove()
+
+        imageViewAreaElement.append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
         cmanOM_JS_init()
 
         $('.imageViewImage').on({

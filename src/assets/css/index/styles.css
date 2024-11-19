@@ -181,6 +181,27 @@ label{
   transition: 0.5s;
 }
 
+#imageViewPrevNextArea{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 30px);
+  font-size: 50px;
+  z-index: 10;
+}
+
+#imageViewPrevBtn:hover{
+  transition: 0.5s;
+  opacity: 0.3;
+}
+
+#imageViewNextBtn:hover{
+  transition: 0.5s;
+  opacity: 0.3;
+}
+
 #imageViewArea{
   display: flex;
   overflow: hidden;

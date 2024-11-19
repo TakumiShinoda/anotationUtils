@@ -234,7 +234,7 @@ function cmanOM_JS_mdown(e: any){
 		cmanOM_VAR['sLeft']	= parseInt(cmanOM_VAR['objNowImg'].style.left.replace("px", ""));	// 対象オブジェクトのLeft
 	}
 
-	cmanOM_VAR['objNowImg'].style.zIndex	= 2;
+	cmanOM_VAR['objNowImg'].style.zIndex	= 12;
 
 	return false;
 }

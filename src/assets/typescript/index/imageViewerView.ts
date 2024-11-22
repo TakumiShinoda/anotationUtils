@@ -3,8 +3,53 @@ import { cvtNum2DataSizeStr, getLastElement, showAlertModal } from "../utils"
 // const cman = require('../../javascript/cmanObjMove_v091/cmanObjMove_v091.js')
 import {cmanOM_JS_init} from '../cmanObjMove_v091'
 
-let ImgViewMousePos: {x: number, y: number} = {x: 0, y: 0}
 let IsImgViewMouseCover: boolean = false
+let ImageViewImagePreviewId: number = -1
+
+function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
+  const ImgViewDefaultMaxSize = 300
+
+  let imgViewSize: {w: number, h: number} = {w: ImgViewDefaultMaxSize, h: ImgViewDefaultMaxSize}
+
+  if(imgSize.w > imgSize.h) imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
+  else imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
+
+  $('#imageViewArea img').remove()
+  $('#imageViewArea').append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
+  cmanOM_JS_init()
+
+  $('.imageViewImage').on({
+    'mouseover': function(){
+      IsImgViewMouseCover = true
+    },
+    'mouseout': function(e: JQuery.MouseOutEvent){
+      IsImgViewMouseCover = false
+    }
+  })
+}
+
+function turnOverImageView(isNext: boolean = true){
+  let imgSize: {w: number, h: number}
+
+  if(isNext){
+    if((ImageViewImagePreviewId + 1) >= $('img.imageViewPreviewImage').length) return
+    ImageViewImagePreviewId += 1;
+  }else{
+    if((ImageViewImagePreviewId - 1) < 0) return
+    ImageViewImagePreviewId -= 1;
+  }
+
+  for(let ivpi of $('img.imageViewPreviewImage')){
+    if(parseInt($(ivpi).attr('previewId') as string) != ImageViewImagePreviewId) continue
+
+    imgSize = {
+      w: parseInt($(ivpi).attr('imgW') as string),
+      h: parseInt($(ivpi).attr('imgh') as string)
+    }
+
+    resetImageViewImage($(ivpi).attr('src') as string, imgSize)
+  }
+}
 
 $(function (){
   $('#openFolderBtn').on('click', async() => {
@@ -42,7 +87,7 @@ $(function (){
 
       $('#imageCounts').text(imageViewPaths.length.toString())
 
-      for(let ivp of imageViewPaths){
+      imageViewPaths.forEach((ivp: {imgSize: {w: number, h: number}, dataSize: number, path: string}, ivpi) => {
         previewImageSizeBuff = {w: imagePreviewSize, h: imagePreviewSize}
         imageNameBuff = getLastElement(ivp.path.split('/'))
 
@@ -51,51 +96,30 @@ $(function (){
 
         imageViewElementStr += `
           <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
-            <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy">
-            <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
+            <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}">
+            <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
               <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
               <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
               <span class="imageViewImageInfo" width="100%">${ivp.imgSize.w} x ${ivp.imgSize.h}</span>
             </span>
           </span>
         `
-      }
+      })
 
       $('#imagePreviewArea').append(imageViewElementStr)
       $('.imageViewImageInfoArea').on('click', (ev: JQuery.TriggeredEvent) => {
-        const ImgViewDefaultMaxSize = 300
-
         let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
-        let imageViewAreaElement: JQuery<HTMLElement> = $('#imageViewArea')
         let clickedElement: JQuery<HTMLElement> = $(ev.currentTarget)
         let imgPath: string = clickedElement.attr('src') as string
-        let imgPreviewSize: {w: number, h: number}
-        let imgViewSize: {w: number, h: number} = {w: ImgViewDefaultMaxSize, h: ImgViewDefaultMaxSize}
+        let imgSize: {w: number, h: number}
     
-        imgPreviewSize = {
+        imgSize = {
           w: parseInt(clickedElement.attr('imgW') as string),
           h: parseInt(clickedElement.attr('imgh') as string)
         }
-
-        if(imgPreviewSize.w > imgPreviewSize.h) imgViewSize.h = imgPreviewSize.h * (imgViewSize.w / imgPreviewSize.w)
-        else imgViewSize.w = imgPreviewSize.w * (imgViewSize.h / imgPreviewSize.h)
-
-        $('#imageViewArea img').remove()
-
-        imageViewAreaElement.append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
-        cmanOM_JS_init()
-
-        $('.imageViewImage').on({
-          'mousemove': function(e: JQuery.MouseMoveEvent){
-            ImgViewMousePos = {x: e.offsetX, y: e.offsetY}
-          },
-          'mouseover': function(){
-            IsImgViewMouseCover = true
-          },
-          'mouseout': function(e: JQuery.MouseOutEvent){
-            IsImgViewMouseCover = false
-          }
-        })
+        
+        resetImageViewImage(imgPath, imgSize)
+        ImageViewImagePreviewId = parseInt(clickedElement.attr('previewId') as string)
         
         imageViewAreaBackgroundElement.css({'z-index': '10'})
         imageViewAreaBackgroundElement.css({'opacity': '1'})
@@ -138,6 +162,21 @@ $(function (){
 
     imageViewAreaBackgroundElement.css({'z-index': '-10'})
     imageViewAreaBackgroundElement.css({'opacity': '0'})
+  })
+
+  $('#imageViewPrevBtn').on('click', (ev: JQuery.TriggeredEvent) => {
+    turnOverImageView(false)
+  })
+
+  $('#imageViewNextBtn').on('click', (ev: JQuery.TriggeredEvent) => {
+    turnOverImageView(true)
+  })
+
+  document.addEventListener('keydown', (ev: KeyboardEvent) => {
+    if(ImageViewImagePreviewId != -1){
+      if(ev.key == 'ArrowRight') turnOverImageView(true)
+      else if(ev.key == 'ArrowLeft') turnOverImageView(false)
+    }
   })
 
   $('#imageViewImageSizeSlider').on('input', (ev: JQuery.TriggeredEvent) => {

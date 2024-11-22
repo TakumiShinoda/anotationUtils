@@ -1,6 +1,5 @@
 import { cvtNum2DataSizeStr, getLastElement, showAlertModal } from "../utils"
 
-// const cman = require('../../javascript/cmanObjMove_v091/cmanObjMove_v091.js')
 import {cmanOM_JS_init} from '../cmanObjMove_v091'
 
 let IsImgViewMouseCover: boolean = false
@@ -157,8 +156,10 @@ $(function (){
     imgViewImgElement.css('scale', newImgScale.toString())
   })
 
-  $('#imageViewCloseBtn').on('click', (ev: JQuery.TriggeredEvent) => {
+  $('#imageViewCloseBtn,#imageViewArea').on('click', (ev: JQuery.TriggeredEvent) => {
     let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
+
+    if(IsImgViewMouseCover) return
 
     imageViewAreaBackgroundElement.css({'z-index': '-10'})
     imageViewAreaBackgroundElement.css({'opacity': '0'})

@@ -19,6 +19,10 @@
     {
       "src": "src/assets/css/index/bootstrap-icons/**",
       "dest": "./dist/css/bootstrap-icons/"
+    },
+    {
+      "src": "src/assets/images/**",
+      "dest": "./dist/images/"
     }
   ],
   "routes": [

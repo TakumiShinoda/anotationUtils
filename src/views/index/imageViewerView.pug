@@ -15,8 +15,10 @@ div#imageViewerView.views.diaplayNone
     div
       span#imageCounts 0
       span  : images
-  div(style='height: calc(100% - 240px);')
-    div#imagePreviewArea.displayFlex(style='height: 100%;position: relative;overflow-y: scroll;flex-wrap:wrap;')
+  div(style='height: calc(100% - 240px); position: relative;')
+    div#imagePreviewArea.displayFlex(style='position: absolute; width: 100%; height: 100%;overflow-y: scroll;flex-wrap:wrap;')
+    div#imagePreviewAreaLoadingArea(style="position: absolute; width: 100%; height: 100%;")
+      img(src="../../images/loading.webp" width="40%" height="auto")
   div#imageViewAreaBackground
     div#imageViewControlArea(width="100%" height="50px" style="background:rgba(192,192,192,0.5)")
       i#imageViewCloseBtn.bi.bi-x-lg.icon.nodragmovable

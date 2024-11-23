@@ -133,6 +133,12 @@ label{
   }
 }
 
+#imagePreviewAreaLoadingArea{
+  display: none; 
+  justify-content: center; 
+  align-items: center;
+}
+
 .imageViewPreviewImageBackground{
   display: flex;
   justify-content: center;

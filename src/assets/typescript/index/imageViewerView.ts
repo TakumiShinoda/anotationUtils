@@ -67,18 +67,16 @@ $(function (){
 
   $('#loadFolderBtn').on('click', async() => {
     let imageViewDir: string = $('#openFolderDirInputField').val() as string
-    let imageViewPaths: {imgSize: {w: number, h: number}, dataSize: number, path: string}[]
     let previewImageSizeBuff: {w: number, h: number}
     let imageNameBuff: string
     let imageViewElementStr: string = ''
     let imagePreviewSize: number
 
-    try{
-      $('#imagePreviewArea').empty()
+    $('#imagePreviewArea').empty()
+    $('#imagePreviewAreaLoadingArea').css('display', 'flex')
 
-      imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
-      imageViewPaths = await (window as any).electronAPI.getImageViewList(imageViewDir)
-
+    imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
+    window.electronAPI.getImageViewList(imageViewDir).then((imageViewPaths) => {
       if(imageViewPaths.length > 10000){
         alert(`${imageViewPaths.length}images found.\nToo much images.`)
         return
@@ -123,9 +121,10 @@ $(function (){
         imageViewAreaBackgroundElement.css({'z-index': '10'})
         imageViewAreaBackgroundElement.css({'opacity': '1'})
       })
-    }catch(err){
+      $('#imagePreviewAreaLoadingArea').css('display', 'none')
+    }).catch((err) => {
       alert(`Error:\n${err}`)
-    }
+    })
   })
 
   document.addEventListener('wheel', (e: WheelEvent) => {

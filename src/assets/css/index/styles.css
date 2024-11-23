@@ -226,13 +226,15 @@ label{
 
 #imageViewArea{
   display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   width: 100%;
   height: calc(100% - 30px);
 }
 
 .imageViewImage{
-  margin: auto;
+  /* margin: auto; */
 }
 
 #alertModalMes{

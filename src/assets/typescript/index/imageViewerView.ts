@@ -2,7 +2,8 @@ import { cvtNum2DataSizeStr, getLastElement, showAlertModal } from "../utils"
 
 import {cmanOM_JS_init} from '../cmanObjMove_v091'
 
-let IsImgViewMouseCover: boolean = false
+let IsImgViewImageMouseCover: boolean = false
+let IsImgViewPrevNextBtnMouseCover: boolean = false
 let ImageViewImagePreviewId: number = -1
 
 function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
@@ -13,16 +14,16 @@ function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
   if(imgSize.w > imgSize.h) imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
   else imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
 
-  $('#imageViewArea img').remove()
+  $('#imageViewArea #cmanOM_ID_DMY0').remove()
   $('#imageViewArea').append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
   cmanOM_JS_init()
 
   $('.imageViewImage').on({
     'mouseover': function(){
-      IsImgViewMouseCover = true
+      IsImgViewImageMouseCover = true
     },
     'mouseout': function(e: JQuery.MouseOutEvent){
-      IsImgViewMouseCover = false
+      IsImgViewImageMouseCover = false
     }
   })
 }
@@ -93,7 +94,7 @@ $(function (){
 
         imageViewElementStr += `
           <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
-            <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}">
+            <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
             <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
               <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
               <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
@@ -139,7 +140,7 @@ $(function (){
 
     if(
       imgViewImgElement.length == 0 ||
-      !IsImgViewMouseCover
+      !IsImgViewImageMouseCover
     ) return
 
     postImgScale = parseFloat(imgViewImgElement.css('scale'))
@@ -158,10 +159,19 @@ $(function (){
   $('#imageViewCloseBtn,#imageViewArea').on('click', (ev: JQuery.TriggeredEvent) => {
     let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
 
-    if(IsImgViewMouseCover) return
+    if(IsImgViewImageMouseCover || IsImgViewPrevNextBtnMouseCover) return
 
     imageViewAreaBackgroundElement.css({'z-index': '-10'})
     imageViewAreaBackgroundElement.css({'opacity': '0'})
+  })
+  
+  $('#imageViewPrevBtn,#imageViewNextBtn').on({
+    'mouseover': function(){
+      IsImgViewPrevNextBtnMouseCover = true
+    },
+    'mouseout': function(){
+      IsImgViewPrevNextBtnMouseCover = false
+    }
   })
 
   $('#imageViewPrevBtn').on('click', (ev: JQuery.TriggeredEvent) => {

@@ -5,7 +5,12 @@ div#imageViewerView.views.diaplayNone
     div.displayFlex(style='margin-bottom: 20px;')
       input#openFolderDirInputField(type='text')
       div#openFolderBtn.btn.btn-primary Reference
-    div.displayFlex(style='margin-bottom: 20px; justify-content: right; align-items: center;')
+    div.displayFlex(style='margin-bottom: 20px; justify-content: space-between; align-items: center;')
+      div#loadModeSelectArea.btn-group-toggle(data-toggle="buttons")
+        label.btn.btn-outline-info.active(for='previewModeAll' loadMode="AllImg") All Img
+          input#previewModeAll.btn-check(type='radio' name='options' autocomplete='off')
+        label.btn.btn-outline-danger(for='previewModeDir' loadMode="Directory") Directory
+          input#previewModeDir.btn-check(type='radio' name='options' autocomplete='off')
       div#loadFolderBtn.btn.btn-success Load
   div(style='min-height: 90px;')
     div Preview size
@@ -16,7 +21,7 @@ div#imageViewerView.views.diaplayNone
       span#imageCounts 0
       span  : images
   div(style='height: calc(100% - 240px); position: relative;')
-    div#imagePreviewArea.displayFlex(style='position: absolute; width: 100%; height: 100%;overflow-y: scroll;flex-wrap:wrap;')
+    div#imagePreviewArea.displayFlex(style='position: absolute; width: 100%; height: 100%; overflow-x: hidden; overflow-y: scroll; flex-wrap:wrap;')
     div#imagePreviewAreaLoadingArea(style="position: absolute; width: 100%; height: 100%;")
       img(src="../../images/loading.webp" width="40%" height="auto")
   div#imageViewAreaBackground

@@ -15,7 +15,7 @@ function getAllFilesRecursive(dir){
     fileStat = fs.statSync(pathBuff)
     
     if(fileStat.isDirectory()) pathList = pathList.concat(getAllFilesRecursive(pathBuff))
-    else pathList.push(pathBuff)
+    else pathList.push(pathBuff.replaceAll('\\', '/'))
   }
 
   return pathList

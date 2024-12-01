@@ -1,10 +1,13 @@
 import { cvtNum2DataSizeStr, getLastElement, showAlertModal } from "../utils"
 
 import {cmanOM_JS_init} from '../cmanObjMove_v091'
+import { ImagePreviewListItem } from "../preload"
 
 let IsImgViewImageMouseCover: boolean = false
 let IsImgViewPrevNextBtnMouseCover: boolean = false
 let ImageViewImagePreviewId: number = -1
+let LoadedImageViewPaths: ImagePreviewListItem[] = []
+let LoadedPathDict: {[key: string]: {imgName: string, imgSize: {w: number, h: number}, dataSize: number}[]} = {}
 
 const LoadModeList = ['Error', 'AllImg', 'Directory'] as const
 type LoadMode = (typeof LoadModeList)[number]
@@ -64,6 +67,131 @@ function getLoadMode(): LoadMode{
   else return 'Error'
 }
 
+function resetPreviewImages(imageViewPaths: ImagePreviewListItem[]){
+  let previewImageSizeBuff: {w: number, h: number}
+  let imageNameBuff: string
+  let imageViewElementStr: string = ''
+  let imagePreviewSize: number
+
+  imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
+
+  $('#imagePreviewArea').empty()
+  $('#imageCounts').text(imageViewPaths.length.toString())
+  
+  imageViewPaths.forEach((ivp: ImagePreviewListItem, ivpi) => {
+    previewImageSizeBuff = {w: imagePreviewSize, h: imagePreviewSize}
+    imageNameBuff = getLastElement(ivp.path.split('/'))
+
+    if(ivp.imgSize.w > ivp.imgSize.h) previewImageSizeBuff.h = ivp.imgSize.h * (imagePreviewSize / ivp.imgSize.w)
+    else previewImageSizeBuff.w = ivp.imgSize.w * (imagePreviewSize / ivp.imgSize.h)
+
+    imageViewElementStr += `
+      <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
+        <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
+        <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
+          <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
+          <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
+          <span class="imageViewImageInfo" width="100%">${ivp.imgSize.w} x ${ivp.imgSize.h}</span>
+        </span>
+      </span>
+    `
+  })
+
+  $('#imagePreviewArea').append(imageViewElementStr)
+  $('.imageViewImageInfoArea').on('click', (ev: JQuery.TriggeredEvent) => {
+    let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
+    let clickedElement: JQuery<HTMLElement> = $(ev.currentTarget)
+    let imgPath: string = clickedElement.attr('src') as string
+    let imgSize: {w: number, h: number}
+
+    imgSize = {
+      w: parseInt(clickedElement.attr('imgW') as string),
+      h: parseInt(clickedElement.attr('imgh') as string)
+    }
+    
+    resetImageViewImage(imgPath, imgSize)
+    ImageViewImagePreviewId = parseInt(clickedElement.attr('previewId') as string)
+    
+    imageViewAreaBackgroundElement.css({'z-index': '10'})
+    imageViewAreaBackgroundElement.css({'opacity': '1'})
+  })
+}
+
+function resetPreviewPathList(){
+  let imageViewElementStr: string = ''
+  let allImageCount: number = 0
+
+  $('#imagePreviewArea').empty()
+
+  imageViewElementStr += `
+    <table class='table table-dark table-hover table-borderless' style='display: flex; margin: 0px; flex-direction: column;'>
+      <thead class='sticky-top bg-primary' style='border-radius: 0px;'>
+        <tr style='display: flex;'>
+          <th style='display: flex; justify-content: left; align-items: center; width: 100%; padding: 3px;'>
+            <div style='display: flex; align-items: center; margin: 0px 3px;'>
+              <div>Filter：</div>
+              <input class='form-control' type='text' style='width:240px; height: 30px;'>
+            </div>
+            <div style='display: flex; align-items: center; margin: 0px 3px;'>
+              <div>Filter Depth：</div>
+              <input class='form-control' type='number' style='width:50px; height: 30px;' step='1'>
+            </div>
+            <div class='btn btn-success' style='display: flex; margin: 0px 3px;'>Filter<div>
+          </th>
+        </tr>
+      </thead>
+      <tbody style='display: flex; flex-direction: column; width: 100%;'>
+  `
+
+  for(let key of Object.keys(LoadedPathDict)){
+    imageViewElementStr += `
+      <tr class='pathPreviewListItem' style='display: flex; width: 100%; padding: 0px;' path='${key}'>
+        <td style='display: flex; width: 100%; padding: 0px;'>
+          <button type="button" class='list-group-item list-group-item-success list-group-item-action btn'>
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+              <div>
+                ${key}
+              </div>
+              <div>
+                ${LoadedPathDict[key].length}images
+              </div>
+            </div>
+          </button>
+        </td>
+      </tr>
+    `
+
+    allImageCount += LoadedPathDict[key].length
+  }
+
+  imageViewElementStr += `</tbody></table>`
+
+  $('#imagePreviewArea').append(imageViewElementStr)
+  $('#imageCounts').text(allImageCount.toString())
+  $('.pathPreviewListItem').on('click', (ev: JQuery.ClickEvent) => {
+    let path: string = $(ev.currentTarget).attr('path') as string
+    let previewList: ImagePreviewListItem[] = []
+
+    if(LoadedPathDict[path].length > 10000){
+      alert(`${LoadedPathDict[path].length}images found.\nToo much images.`)
+      return
+    }
+
+    for(let lpd of LoadedPathDict[path]){
+      previewList.push({
+        imgSize: lpd.imgSize, 
+        dataSize: lpd.dataSize, 
+        path: `${path}/${lpd.imgName}`
+      })
+    }
+
+    resetPreviewImages(previewList)
+    $('#previewAreaPager').css('display', 'none')
+    $('#backToPathListBtn').css('display', 'block')
+    $('#imagePreviewAreaLoadingArea').css('display', 'none')
+  })
+}
+
 $(function (){
   $('#openFolderBtn').on('click', async() => {
     let openFolderDir: string | undefined
@@ -81,137 +209,55 @@ $(function (){
 
   $('#loadFolderBtn').on('click', async() => {
     let loadMode: LoadMode = getLoadMode()
-    let pathDict: {[key: string]: {imgName: string, imgSize: {w: number, h: number}, dataSize: number}[]} = {}
     let imageViewPathSplitBuff: string[]
     let imageViewDir: string = $('#openFolderDirInputField').val() as string
-    let previewImageSizeBuff: {w: number, h: number}
-    let imageNameBuff: string
-    let imageViewElementStr: string = ''
     let pathDictKeyBuff: string
-    let imagePreviewSize: number
-    let allImageCount: number = 0
 
     if(loadMode == 'Error') return
 
     $('#imagePreviewArea').empty()
     $('#imagePreviewAreaLoadingArea').css('display', 'flex')
 
-    if(loadMode == 'AllImg'){
-      imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
-      window.electronAPI.getImageViewList(imageViewDir).then((imageViewPaths) => {
-        if(imageViewPaths.length > 10000){
-          alert(`${imageViewPaths.length}images found.\nToo much images.`)
+    window.electronAPI.getImageViewList(imageViewDir).then((imageViewPaths) => {
+      LoadedImageViewPaths = imageViewPaths
+
+      LoadedPathDict = {}
+      for(let ivp of LoadedImageViewPaths){
+        imageViewPathSplitBuff = ivp.path.split('/')
+        pathDictKeyBuff = imageViewPathSplitBuff.slice(0, imageViewPathSplitBuff.length - 1).join('/')
+        
+        if(!(pathDictKeyBuff in LoadedPathDict)) LoadedPathDict[pathDictKeyBuff] = []
+
+        LoadedPathDict[pathDictKeyBuff].push({imgName: getLastElement(imageViewPathSplitBuff), imgSize: ivp.imgSize, dataSize: ivp.dataSize})
+      }
+
+      if(loadMode == 'AllImg'){
+        if(LoadedImageViewPaths.length > 10000){
+          alert(`${LoadedImageViewPaths.length}images found.\nToo much images.`)
           return
         }
 
-        $('#imageCounts').text(imageViewPaths.length.toString())
+        $('#imageCounts').text(LoadedImageViewPaths.length.toString())
 
-        imageViewPaths.forEach((ivp: {imgSize: {w: number, h: number}, dataSize: number, path: string}, ivpi) => {
-          previewImageSizeBuff = {w: imagePreviewSize, h: imagePreviewSize}
-          imageNameBuff = getLastElement(ivp.path.split('/'))
+        resetPreviewImages(LoadedImageViewPaths)
+        $('#previewAreaPager').css('display', 'block')
+        $('#backToPathListBtn').css('display', 'none')
+      }else if(loadMode == 'Directory'){
+        resetPreviewPathList()
+      }else{
+        console.log('undefined LoadMode')
+      }
+    }).catch((err) => {
+      alert(`Error:\n${err}`)
+    }).finally(() => {
+      $('#imagePreviewAreaLoadingArea').css('display', 'none')
+    })
+  })
 
-          if(ivp.imgSize.w > ivp.imgSize.h) previewImageSizeBuff.h = ivp.imgSize.h * (imagePreviewSize / ivp.imgSize.w)
-          else previewImageSizeBuff.w = ivp.imgSize.w * (imagePreviewSize / ivp.imgSize.h)
-
-          imageViewElementStr += `
-            <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
-              <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
-              <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
-                <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
-                <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
-                <span class="imageViewImageInfo" width="100%">${ivp.imgSize.w} x ${ivp.imgSize.h}</span>
-              </span>
-            </span>
-          `
-        })
-
-        $('#imagePreviewArea').append(imageViewElementStr)
-        $('.imageViewImageInfoArea').on('click', (ev: JQuery.TriggeredEvent) => {
-          let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
-          let clickedElement: JQuery<HTMLElement> = $(ev.currentTarget)
-          let imgPath: string = clickedElement.attr('src') as string
-          let imgSize: {w: number, h: number}
-      
-          imgSize = {
-            w: parseInt(clickedElement.attr('imgW') as string),
-            h: parseInt(clickedElement.attr('imgh') as string)
-          }
-          
-          resetImageViewImage(imgPath, imgSize)
-          ImageViewImagePreviewId = parseInt(clickedElement.attr('previewId') as string)
-          
-          imageViewAreaBackgroundElement.css({'z-index': '10'})
-          imageViewAreaBackgroundElement.css({'opacity': '1'})
-        })
-      }).catch((err) => {
-        alert(`Error:\n${err}`)
-      }).finally(() => {
-        $('#imagePreviewAreaLoadingArea').css('display', 'none')
-      })
-    }else if(loadMode == 'Directory'){
-      window.electronAPI.getImageViewList(imageViewDir).then((imageViewPaths) => {
-        for(let ivp of imageViewPaths){
-          imageViewPathSplitBuff = ivp.path.split('/')
-          pathDictKeyBuff = imageViewPathSplitBuff.slice(0, imageViewPathSplitBuff.length - 1).join('/')
-          
-          if(!(pathDictKeyBuff in pathDict)) pathDict[pathDictKeyBuff] = []
-
-          pathDict[pathDictKeyBuff].push({imgName: getLastElement(imageViewPathSplitBuff), imgSize: ivp.imgSize, dataSize: ivp.dataSize})
-        }
-
-        imageViewElementStr += `
-          <table class='table table-dark table-hover table-borderless' style='display: flex; margin: 0px; flex-direction: column;'>
-            <thead class='sticky-top bg-primary' style='border-radius: 0px;'>
-              <tr style='display: flex;'>
-                <th style='display: flex; justify-content: left; align-items: center; width: 100%; padding: 3px;'>
-                  <div style='display: flex; align-items: center; margin: 0px 3px;'>
-                    <div>Filter：</div>
-                    <input class='form-control' type='text' style='width:240px; height: 30px;'>
-                  </div>
-                  <div style='display: flex; align-items: center; margin: 0px 3px;'>
-                    <div>Filter Depth：</div>
-                    <input class='form-control' type='number' style='width:50px; height: 30px;' step='1'>
-                  </div>
-                  <div class='btn btn-success' style='display: flex; margin: 0px 3px;'>Filter<div>
-                </th>
-              </tr>
-            </thead>
-            <tbody style='display: flex; flex-direction: column; width: 100%;'>
-        `
-
-        for(let key of Object.keys(pathDict)){
-          imageViewElementStr += `
-            <tr style='display: flex; width: 100%; padding: 0px;'>
-              <td style='display: flex; width: 100%; padding: 0px;'>
-                <button type="button" class='list-group-item list-group-item-success list-group-item-action btn'>
-                  <div style="display: flex; justify-content: space-between; width: 100%;">
-                    <div>
-                      ${key}
-                    </div>
-                    <div>
-                      ${pathDict[key].length}images
-                    </div>
-                  </div>
-                </button>
-              </td>
-            </tr>
-          `
-
-          allImageCount += pathDict[key].length
-        }
-
-        imageViewElementStr += `</tbody></table>`
-
-        $('#imagePreviewArea').append(imageViewElementStr)
-        $('#imageCounts').text(allImageCount.toString())
-      }).catch((err) => {
-        alert(`Error:\n${err}`)
-      }).finally(() => {
-        $('#imagePreviewAreaLoadingArea').css('display', 'none')
-      })
-    }else{
-      console.log('undefined LoadMode')
-    }
+  $('#backToPathListBtn').on('click', (ev: JQuery.ClickEvent) => {
+    resetPreviewPathList()
+    $('#previewAreaPager').css('display', 'none')
+    $('#backToPathListBtn').css('display', 'none')
   })
 
   document.addEventListener('wheel', (e: WheelEvent) => {

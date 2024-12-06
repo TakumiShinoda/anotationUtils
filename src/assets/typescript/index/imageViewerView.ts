@@ -57,14 +57,22 @@ function turnOverImageView(isNext: boolean = true){
   }
 }
 
-function getLoadMode(): LoadMode{
-  let loadModeBuff: string | undefined
-
-  loadModeBuff = $('#loadModeSelectArea .active').attr('loadMode')
-
-  if(loadModeBuff == undefined) return 'Error'
-  else if(LoadModeList.some((v) => (v === loadModeBuff))) return loadModeBuff as LoadMode
+function cvtLoadMode(modeStr: string | undefined): LoadMode{
+  if(modeStr == undefined) return 'Error'
+  else if(LoadModeList.some((v) => (v === modeStr))) return modeStr as LoadMode
   else return 'Error'
+}
+
+function getLoadMode(): LoadMode{
+  return cvtLoadMode($('#loadModeSelectArea .active').attr('loadMode'))
+}
+
+function resetImagePreviewNaviArea(){
+  let imagePreviewNaviArea: JQuery<HTMLElement> = $('#imagePreviewNaviArea')
+
+  for(let ipn of imagePreviewNaviArea.children()){
+    $(ipn).css('display', 'none')
+  }
 }
 
 function resetPreviewImages(imageViewPaths: ImagePreviewListItem[]){
@@ -75,6 +83,7 @@ function resetPreviewImages(imageViewPaths: ImagePreviewListItem[]){
 
   imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
 
+  resetImagePreviewNaviArea()
   $('#imagePreviewArea').empty()
   $('#imageCounts').text(imageViewPaths.length.toString())
   
@@ -115,12 +124,15 @@ function resetPreviewImages(imageViewPaths: ImagePreviewListItem[]){
     imageViewAreaBackgroundElement.css({'z-index': '10'})
     imageViewAreaBackgroundElement.css({'opacity': '1'})
   })
+
+  $('#previewAreaPager').css('display', 'block')
 }
 
 function resetPreviewPathList(){
   let imageViewElementStr: string = ''
   let allImageCount: number = 0
 
+  resetImagePreviewNaviArea()
   $('#imagePreviewArea').empty()
 
   imageViewElementStr += `
@@ -186,7 +198,7 @@ function resetPreviewPathList(){
     }
 
     resetPreviewImages(previewList)
-    $('#previewAreaPager').css('display', 'none')
+    resetImagePreviewNaviArea()
     $('#backToPathListBtn').css('display', 'block')
     $('#imagePreviewAreaLoadingArea').css('display', 'none')
   })
@@ -237,11 +249,7 @@ $(function (){
           return
         }
 
-        $('#imageCounts').text(LoadedImageViewPaths.length.toString())
-
         resetPreviewImages(LoadedImageViewPaths)
-        $('#previewAreaPager').css('display', 'block')
-        $('#backToPathListBtn').css('display', 'none')
       }else if(loadMode == 'Directory'){
         resetPreviewPathList()
       }else{
@@ -258,6 +266,13 @@ $(function (){
     resetPreviewPathList()
     $('#previewAreaPager').css('display', 'none')
     $('#backToPathListBtn').css('display', 'none')
+  })
+
+  $('#loadModeSelectArea .btn').on('click', (ev: JQuery.ClickEvent) => {
+    let loadMode: LoadMode = cvtLoadMode($(ev.currentTarget).attr('loadMode'))
+
+    if(loadMode == 'AllImg') resetPreviewImages(LoadedImageViewPaths)
+    else if(loadMode == 'Directory') resetPreviewPathList()
   })
 
   document.addEventListener('wheel', (e: WheelEvent) => {

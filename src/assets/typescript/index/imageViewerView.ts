@@ -75,19 +75,118 @@ function resetImagePreviewNaviArea(){
   }
 }
 
-function resetPreviewImages(imageViewPaths: ImagePreviewListItem[]){
+function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page: number = 1){
+  let slicedImageViewPaths: ImagePreviewListItem[]
   let previewImageSizeBuff: {w: number, h: number}
   let imageNameBuff: string
   let imageViewElementStr: string = ''
+  let previewAreaPagerElementStr: string = ''
   let imagePreviewSize: number
+  let maxPreviewCount: number
+  let pageCount: number
+  let pageStartIndex: number
 
   imagePreviewSize = parseInt($('#imageViewImageSizeSlider').val() as string)
+  maxPreviewCount = parseInt($('#imageViewMaxPreviewImagesInput').val() as string)
+  pageCount = Math.ceil(imageViewPaths.length / maxPreviewCount)
 
   resetImagePreviewNaviArea()
   $('#imagePreviewArea').empty()
   $('#imageCounts').text(imageViewPaths.length.toString())
+
+  if((page <= 0) || (page > pageCount)) return
+
+  pageStartIndex = (page - 1) * maxPreviewCount
+
+  if(pageStartIndex + maxPreviewCount > imageViewPaths.length) slicedImageViewPaths = imageViewPaths.slice(pageStartIndex)
+  else slicedImageViewPaths = imageViewPaths.slice(pageStartIndex, pageStartIndex + maxPreviewCount)
+
+  previewAreaPagerElementStr += `
+    <div style="display: flex;">
+      <div class="previewPagerSelector" previewPage="-4">≪&nbsp;</div>
+      <div class="previewPagerSelector" previewPage="-3"><&nbsp;</div>
+  `
+
+  if(pageCount <= 3){
+    for(let i = 0; i < pageCount; i++){
+      if((i + 1) == page){
+        previewAreaPagerElementStr += `
+          <div class="previewPagerSelector previewPagerSelectorSelected" previewPage="${i + 1}">${i + 1}&nbsp;</div>
+        `
+      }else{
+        previewAreaPagerElementStr += `
+          <div class="previewPagerSelector" previewPage="${i + 1}">${i + 1}&nbsp;</div>
+        `
+      }
+    }
+  }else if(pageCount > 3){
+    if(page < 3){
+      for(let i = 0; i < 3; i++){
+        if((i + 1) == page){
+          previewAreaPagerElementStr += `
+            <div class="previewPagerSelector previewPagerSelectorSelected" previewPage="${i + 1}">${i + 1}&nbsp;</div>
+          `
+        }else{
+          previewAreaPagerElementStr += `
+            <div class="previewPagerSelector" previewPage="${i + 1}">${i + 1}&nbsp;</div>
+          `
+        }
+        
+      }
+
+      previewAreaPagerElementStr += `
+        <div>...&nbsp;</div>
+        <div class="previewPagerSelector" previewPage="${pageCount}">${pageCount}&nbsp;</div>
+      `
+    }else if (page > (pageCount - (3 - 1))){
+      previewAreaPagerElementStr += `
+        <div class="previewPagerSelector" previewPage="1">1&nbsp;</div>
+        <div>...&nbsp;</div>
+      `
+
+      for(let i = 0; i < 3; i++){
+        if((i + 1) + (pageCount - 3) == page){
+          previewAreaPagerElementStr += `
+            <div class="previewPagerSelector previewPagerSelectorSelected" previewPage="${(i + 1) + (pageCount - 3)}">${(i + 1) + (pageCount - 3)}&nbsp;</div>
+          `
+        }else{
+          previewAreaPagerElementStr += `
+            <div class="previewPagerSelector" previewPage="${(i + 1) + (pageCount - 3)}">${(i + 1) + (pageCount - 3)}&nbsp;</div>
+          `
+        }
+      }
+    }else{
+      previewAreaPagerElementStr += `
+        <div class="previewPagerSelector" previewPage="1">1&nbsp;</div>
+        <div>...&nbsp;</div>
+        <div class="previewPagerSelector" previewPage="${page - 1}">${page - 1}&nbsp;</div>
+        <div class="previewPagerSelector previewPagerSelectorSelected" previewPage="${page}">${page}&nbsp;</div>
+        <div class="previewPagerSelector" previewPage="${page + 1}">${page + 1}&nbsp;</div>
+        <div>...&nbsp;</div>
+        <div class="previewPagerSelector" previewPage="${pageCount}">${pageCount}&nbsp;</div>
+      `
+    }
+  }
+
+  previewAreaPagerElementStr += `
+      <div class="previewPagerSelector" previewPage="-2">>&nbsp;</div>
+      <div class="previewPagerSelector" previewPage="-1">≫</div>
+    </div>
+  `
+
+  $('#previewAreaPager').empty()
+  $('#previewAreaPager').append(previewAreaPagerElementStr)
+  $('.previewPagerSelector').on('click', (ev: JQuery.ClickEvent) => {
+    let previewPage: number = parseInt($(ev.currentTarget).attr('previewPage') as string)
+
+    if(previewPage == -1) resetPreviewImages(imageViewPaths, pageCount)
+    else if(previewPage == -2) resetPreviewImages(imageViewPaths, (page == pageCount) ? page : (page + 1))
+    else if(previewPage == -3) resetPreviewImages(imageViewPaths, ((page == 1) ? 1 : (page - 1)))
+    else if(previewPage == -4) resetPreviewImages(imageViewPaths, 1)
+    else if(previewPage > 0) resetPreviewImages(imageViewPaths, previewPage)
+  })
   
-  imageViewPaths.forEach((ivp: ImagePreviewListItem, ivpi) => {
+  slicedImageViewPaths.forEach((ivp: ImagePreviewListItem, ivpi) => {
     previewImageSizeBuff = {w: imagePreviewSize, h: imagePreviewSize}
     imageNameBuff = getLastElement(ivp.path.split('/'))
 
@@ -184,11 +283,6 @@ function resetPreviewPathList(){
     let path: string = $(ev.currentTarget).attr('path') as string
     let previewList: ImagePreviewListItem[] = []
 
-    if(LoadedPathDict[path].length > 10000){
-      alert(`${LoadedPathDict[path].length}images found.\nToo much images.`)
-      return
-    }
-
     for(let lpd of LoadedPathDict[path]){
       previewList.push({
         imgSize: lpd.imgSize, 
@@ -199,7 +293,7 @@ function resetPreviewPathList(){
 
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
-    $('#backToPathListBtn').css('display', 'block')
+    $('#previewAreaPager').css('display', 'block')
     $('#imagePreviewAreaLoadingArea').css('display', 'none')
   })
 }
@@ -244,11 +338,6 @@ $(function (){
       }
 
       if(loadMode == 'AllImg'){
-        if(LoadedImageViewPaths.length > 10000){
-          alert(`${LoadedImageViewPaths.length}images found.\nToo much images.`)
-          return
-        }
-
         resetPreviewImages(LoadedImageViewPaths)
       }else if(loadMode == 'Directory'){
         resetPreviewPathList()
@@ -260,12 +349,6 @@ $(function (){
     }).finally(() => {
       $('#imagePreviewAreaLoadingArea').css('display', 'none')
     })
-  })
-
-  $('#backToPathListBtn').on('click', (ev: JQuery.ClickEvent) => {
-    resetPreviewPathList()
-    $('#previewAreaPager').css('display', 'none')
-    $('#backToPathListBtn').css('display', 'none')
   })
 
   $('#loadModeSelectArea .btn').on('click', (ev: JQuery.ClickEvent) => {
@@ -371,5 +454,19 @@ $(function (){
       imageElementBuff.width(previewImageSizeBuff.w)
       imageElementBuff.height(previewImageSizeBuff.h)
     }
+  })
+
+  $('#imageViewMaxPreviewImagesSlider').on('input', (ev: JQuery.TriggeredEvent) => {
+    $('#imageViewMaxPreviewImagesInput').val($(ev.currentTarget).val())
+  })
+
+  $('#imageViewMaxPreviewImagesInput').on('input', (ev: JQuery.TriggeredEvent) => {
+    let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
+    let inputValue: number = parseInt(inputElement.val() as string)
+
+    if(isNaN(inputValue) || inputValue < 0) inputElement.val(0)
+    else if(inputValue > 10000) inputElement.val(10000)
+
+      $('#imageViewMaxPreviewImagesSlider').val(inputValue)
   })
 })

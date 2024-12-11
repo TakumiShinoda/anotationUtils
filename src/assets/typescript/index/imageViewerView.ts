@@ -8,6 +8,7 @@ let IsImgViewPrevNextBtnMouseCover: boolean = false
 let ImageViewImagePreviewId: number = -1
 let LoadedImageViewPaths: ImagePreviewListItem[] = []
 let LoadedPathDict: {[key: string]: {imgName: string, imgSize: {w: number, h: number}, dataSize: number}[]} = {}
+let IsImgNamePathCopying: boolean = false
 
 const LoadModeList = ['Error', 'AllImg', 'Directory'] as const
 type LoadMode = (typeof LoadModeList)[number]
@@ -20,6 +21,8 @@ function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
   if(imgSize.w > imgSize.h) imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
   else imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
 
+  $('#imageViewControlAreaImagePath').val(getLastElement(imgPath.split('/')))
+  $('#imageViewControlAreaImagePath').attr('fullPath', imgPath)
   $('#imageViewArea #cmanOM_ID_DMY0').remove()
   $('#imageViewArea').append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
   cmanOM_JS_init()
@@ -190,17 +193,19 @@ function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page: number
     previewImageSizeBuff = {w: imagePreviewSize, h: imagePreviewSize}
     imageNameBuff = getLastElement(ivp.path.split('/'))
 
+    if(imageNameBuff.length > (imagePreviewSize / 10)) imageNameBuff = `...${imageNameBuff.slice(-1 * (imagePreviewSize / 10))}`
+
     if(ivp.imgSize.w > ivp.imgSize.h) previewImageSizeBuff.h = ivp.imgSize.h * (imagePreviewSize / ivp.imgSize.w)
     else previewImageSizeBuff.w = ivp.imgSize.w * (imagePreviewSize / ivp.imgSize.h)
 
     imageViewElementStr += `
       <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
         <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
-        <span class="imageViewImageInfoArea" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
-          <span class="imageViewImageInfo" width="100%">${imageNameBuff}</span>
+        <div class="imageViewImageInfoArea" style="width:${imagePreviewSize}px; height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
+          <span class="imageViewImageInfo imageViewImageInfoName" width="100%">${imageNameBuff}</span>
           <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
           <span class="imageViewImageInfo" width="100%">${ivp.imgSize.w} x ${ivp.imgSize.h}</span>
-        </span>
+        </div>
       </span>
     `
   })
@@ -296,6 +301,33 @@ function resetPreviewPathList(){
     $('#previewAreaPager').css('display', 'block')
     $('#imagePreviewAreaLoadingArea').css('display', 'none')
   })
+}
+
+function appearCopiedText(){
+  const diappearMillis: number = 600
+  const diappearSteps: number = 10
+  const intervalMillis: number = Math.floor(diappearMillis / diappearSteps)
+  const opacityDecrease: number =  (1 / diappearSteps)
+
+  let textElement: JQuery<HTMLElement> = $('#imageViewControlAreaCopiedText')
+  let intervalObj: NodeJS.Timer
+  let opacityBuff: number
+
+  if(IsImgNamePathCopying) return
+
+  IsImgNamePathCopying = true
+  textElement.css('display', 'block')
+  textElement.css('opacity', 1)
+  
+  intervalObj = setInterval(() => {
+    opacityBuff = parseFloat(textElement.css('opacity')) - opacityDecrease
+
+    if(opacityBuff <= 0){
+      textElement.css('display', 'none')
+      clearInterval(intervalObj)
+      IsImgNamePathCopying = false
+    }else textElement.css('opacity', opacityBuff)
+  }, intervalMillis);
 }
 
 $(function (){
@@ -420,40 +452,17 @@ $(function (){
   })
 
   $('#imageViewImageSizeSlider').on('input', (ev: JQuery.TriggeredEvent) => {
-    let imageInfoAreaElementBuff: JQuery<HTMLElement>
-    let imageElementBuff: JQuery<HTMLElement>
-    let previewImageSizeBuff: {w: number, h: number}
-    let currentImageSizeBuff: {w: number, h: number}
-    let imageSize: number = parseInt(ev.currentTarget.value)
+    $('#imageViewImageSizeInput').val(parseInt(ev.currentTarget.value))
+  })
 
-    $('#imageViewImageSize').text(imageSize)
+  $('#imageViewImageSizeInput').on('input', (ev: JQuery.TriggeredEvent) => {
+    let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
+    let inputValue: number = parseInt(inputElement.val() as string)
 
-    for(let imageBackgroundElement of $('#imagePreviewArea').children()){
-      $(imageBackgroundElement).width(imageSize)
-      $(imageBackgroundElement).height(imageSize)
-    }
+    if(isNaN(inputValue) || inputValue <= 0) inputElement.val(1)
+    else if(inputValue > 1000) inputElement.val(1000)
 
-    for(let iiae of $('.imageViewImageInfoArea')){
-      imageInfoAreaElementBuff = $(iiae)
-
-      imageInfoAreaElementBuff.width(imageSize)
-      imageInfoAreaElementBuff.height(imageSize)
-    }
-
-    for(let ie of $('.imageViewImage')){
-      imageElementBuff = $(ie)
-      previewImageSizeBuff = {w: imageSize, h: imageSize}
-      currentImageSizeBuff = {
-        w: imageElementBuff.width() as number,
-        h: imageElementBuff.height() as number
-      }
-
-      if(currentImageSizeBuff.w > currentImageSizeBuff.h) previewImageSizeBuff.h = currentImageSizeBuff.h * (imageSize / currentImageSizeBuff.w)
-      else previewImageSizeBuff.w = currentImageSizeBuff.w * (imageSize / currentImageSizeBuff.h)
-
-      imageElementBuff.width(previewImageSizeBuff.w)
-      imageElementBuff.height(previewImageSizeBuff.h)
-    }
+    $('#imageViewImageSizeSlider').val(inputValue)
   })
 
   $('#imageViewMaxPreviewImagesSlider').on('input', (ev: JQuery.TriggeredEvent) => {
@@ -464,9 +473,19 @@ $(function (){
     let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
     let inputValue: number = parseInt(inputElement.val() as string)
 
-    if(isNaN(inputValue) || inputValue < 0) inputElement.val(0)
+    if(isNaN(inputValue) || inputValue <= 0) inputElement.val(1)
     else if(inputValue > 10000) inputElement.val(10000)
 
       $('#imageViewMaxPreviewImagesSlider').val(inputValue)
+  })
+
+  $('#imageViewControlAreaCopyNameBtn').on('click', (ev: JQuery.ClickEvent) => {
+    navigator.clipboard.writeText($('#imageViewControlAreaImagePath').val() as string)
+    appearCopiedText()
+  })
+
+  $('#imageViewControlAreaCopyPathBtn').on('click', (ev: JQuery.ClickEvent) => {
+    navigator.clipboard.writeText($('#imageViewControlAreaImagePath').attr('fullPath') as string)
+    appearCopiedText()
   })
 })

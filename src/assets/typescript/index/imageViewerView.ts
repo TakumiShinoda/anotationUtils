@@ -14,12 +14,25 @@ const LoadModeList = ['Error', 'AllImg', 'Directory'] as const
 type LoadMode = (typeof LoadModeList)[number]
 
 function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
-  const ImgViewDefaultMaxSize = 300
+  const MaxViewSizeOffset = 35
 
-  let imgViewSize: {w: number, h: number} = {w: ImgViewDefaultMaxSize, h: ImgViewDefaultMaxSize}
+  let viewAreaElement: JQuery<Element> = $('#imageViewArea')
+  let imgViewDefaultMaxSize: number = parseInt($('#imageViewControlAreaViewSizeInput').val() as string)
+  let imgViewSize: {w: number, h: number} = {w: imgViewDefaultMaxSize, h: imgViewDefaultMaxSize}
+  let viewAreaSize: {w: number, h: number} = {w: viewAreaElement.width() as number, h: viewAreaElement.height() as number}
 
-  if(imgSize.w > imgSize.h) imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
-  else imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
+  viewAreaSize.w -= MaxViewSizeOffset * 2
+  viewAreaSize.h -= MaxViewSizeOffset * 2
+
+  if(imgSize.w > imgSize.h){
+    if(imgViewSize.w > viewAreaSize.w) imgViewSize = {w: viewAreaSize.w, h: viewAreaSize.w}
+
+    imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
+  }else{
+    if(imgViewSize.h > viewAreaSize.h) imgViewSize = {w: viewAreaSize.h, h: viewAreaSize.h}
+
+    imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
+  }
 
   $('#imageViewControlAreaImagePath').val(getLastElement(imgPath.split('/')))
   $('#imageViewControlAreaImagePath').attr('fullPath', imgPath)
@@ -37,16 +50,16 @@ function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
   })
 }
 
-function turnOverImageView(isNext: boolean = true){
+function turnPageImageView(turnPage: number){
   let imgSize: {w: number, h: number}
+  let newPage: number = ImageViewImagePreviewId + turnPage
 
-  if(isNext){
-    if((ImageViewImagePreviewId + 1) >= $('img.imageViewPreviewImage').length) return
-    ImageViewImagePreviewId += 1;
-  }else{
-    if((ImageViewImagePreviewId - 1) < 0) return
-    ImageViewImagePreviewId -= 1;
-  }
+  if(
+    (newPage >= $('img.imageViewPreviewImage').length) ||
+    (newPage < 0) 
+  ) return
+
+  ImageViewImagePreviewId = newPage
 
   for(let ivpi of $('img.imageViewPreviewImage')){
     if(parseInt($(ivpi).attr('previewId') as string) != ImageViewImagePreviewId) continue
@@ -437,17 +450,17 @@ $(function (){
   })
 
   $('#imageViewPrevBtn').on('click', (ev: JQuery.TriggeredEvent) => {
-    turnOverImageView(false)
+    turnPageImageView(-1)
   })
 
   $('#imageViewNextBtn').on('click', (ev: JQuery.TriggeredEvent) => {
-    turnOverImageView(true)
+    turnPageImageView(1)
   })
 
   document.addEventListener('keydown', (ev: KeyboardEvent) => {
     if(ImageViewImagePreviewId != -1){
-      if(ev.key == 'ArrowRight') turnOverImageView(true)
-      else if(ev.key == 'ArrowLeft') turnOverImageView(false)
+      if(ev.key == 'ArrowRight') turnPageImageView(1)
+      else if(ev.key == 'ArrowLeft') turnPageImageView(-1)
     }
   })
 
@@ -487,5 +500,23 @@ $(function (){
   $('#imageViewControlAreaCopyPathBtn').on('click', (ev: JQuery.ClickEvent) => {
     navigator.clipboard.writeText($('#imageViewControlAreaImagePath').attr('fullPath') as string)
     appearCopiedText()
+  })
+
+  $('#imageViewControlAreaViewSizeSlider').on('input', (ev: JQuery.TriggeredEvent) => {
+    $('#imageViewControlAreaViewSizeInput').val($(ev.currentTarget).val())
+  })
+
+  $('#imageViewControlAreaViewSizeInput').on('input', (ev: JQuery.TriggeredEvent) => {
+    let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
+    let inputValue: number = parseInt(inputElement.val() as string)
+
+    if(isNaN(inputValue) || inputValue <= 100) inputElement.val(100)
+    else if(inputValue > 1000) inputElement.val(1000)
+
+    $('#imageViewControlAreaViewSizeSlider').val(inputValue)
+  })
+
+  $('#imageViewControlAreaViewReset').on('click', () => {
+    turnPageImageView(0)
   })
 })

@@ -298,26 +298,6 @@ function resetPreviewPathList(){
 
   $('#pathPreviewArea').append(imageViewElementStr)
   $('#imageCounts').text(allImageCount.toString())
-  
-  $('#previewDirFilterInput').on('change', (ev: JQuery.TriggeredEvent) => {
-    ImagePreviewDirModeFilter.filter = $(ev.currentTarget).val()
-  })
-
-  $('#previewDirFilterDepthInput').on('input', (ev: JQuery.TriggeredEvent) => {
-    let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
-    let inputValue: number = parseInt(inputElement.val() as string)
-
-    if(isNaN(inputValue) || inputValue <= 0) inputValue = 1
-    else if(inputValue > 10) inputValue = 10
-    
-    inputElement.val(inputValue)
-    ImagePreviewDirModeFilter.depth = inputValue
-  })
-
-  $('#previewDirFilterBtn').on('click', () => {
-    resetPreviewPathList()
-  })
-
   $('.pathPreviewListItem').on('click', (ev: JQuery.ClickEvent) => {
     let path: string = $(ev.currentTarget).attr('path') as string
     let previewList: ImagePreviewListItem[] = []
@@ -422,6 +402,48 @@ $(function (){
 
     if(LoadModeState == 'AllImg') resetPreviewImages(LoadedImageViewPaths)
     else if(LoadModeState == 'Directory') resetPreviewPathList()
+  })
+
+  $('#previewDirFilterInput').on('change', (ev: JQuery.TriggeredEvent) => {
+    ImagePreviewDirModeFilter.filter = $(ev.currentTarget).val()
+  })
+
+  $('#previewDirFilterDepthInput').on('input', (ev: JQuery.TriggeredEvent) => {
+    let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
+    let inputValue: number = parseInt(inputElement.val() as string)
+
+    if(isNaN(inputValue) || inputValue <= 0) inputValue = 1
+    else if(inputValue > 10) inputValue = 10
+    
+    inputElement.val(inputValue)
+    ImagePreviewDirModeFilter.depth = inputValue
+  })
+
+  $('#previewDirFilterBtn').on('click', () => {
+    resetPreviewPathList()
+  })
+
+  $('#previewDirShowFilteredBtn').on('click', () => {
+    let pathPreviewListItemElements: JQuery<HTMLElement> = $('.pathPreviewListItem')
+    let previewList: ImagePreviewListItem[] = []
+    let pathBuff: string
+
+    for(let ppli of pathPreviewListItemElements){
+      pathBuff = $(ppli).attr('path') as string
+
+      for(let lpd of LoadedPathDict[pathBuff]){
+        previewList.push({
+          imgSize: lpd.imgSize, 
+          dataSize: lpd.dataSize, 
+          path: `${pathBuff}/${lpd.imgName}`
+        })
+      }
+    }
+
+    resetPreviewImages(previewList)
+    resetImagePreviewNaviArea()
+    $('#previewAreaPager').css('display', 'block')
+    $('#imagePreviewAreaLoadingArea').css('display', 'none')
   })
 
   document.addEventListener('wheel', (e: WheelEvent) => {

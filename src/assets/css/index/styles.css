@@ -13,7 +13,7 @@
 }
 
 body{
-  -webkit-user-select: none;
+  user-select: none;
   -webkit-app-region: drag;
   background: #1f1f1f;
   color: #d7d7d7;
@@ -334,10 +334,6 @@ label{
   overflow: hidden;
   width: 100%;
   height: calc(100% - 30px);
-}
-
-.imageViewImage{
-  /* margin: auto; */
 }
 
 #alertModalMes{

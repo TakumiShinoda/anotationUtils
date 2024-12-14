@@ -1,6 +1,5 @@
 const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const { spawn } = require('child_process')
-const electronReload = require('electron-reload')(['./dist/bundles/**']);
 const fs = require('fs')
 const jimp = require('jimp')
 const v8 = require('v8')

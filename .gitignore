@@ -4,6 +4,7 @@
 /*darwin-x64*
 /externalPackage/**
 anotationUtilsSubprocess/
+publish
 
 package-lock.json
 yarn.lock

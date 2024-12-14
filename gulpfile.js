@@ -65,3 +65,4 @@ gulp.task('watcher', () => {
 });
 
 gulp.task('start', gulp.series('asset_copy', 'pug_compile', 'make_bundle', 'watcher'));
+gulp.task('dist', gulp.parallel('asset_copy', 'pug_compile', 'make_bundle'));

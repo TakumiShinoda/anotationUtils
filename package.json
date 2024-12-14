@@ -1,7 +1,7 @@
 {
   "name": "electron-template",
   "version": "1.0.0",
-  "nodeVersion": "15.14.0",
+  "nodeVersion": "20.10.0",
   "description": "",
   "main": "./src/app/main.js",
   "scripts": {
@@ -12,7 +12,9 @@
     "dist": "rm -R dist || gulp build_dist && gulp build_dist",
     "test-pack-darwinx64": "rm -R *darwin-x64* || node build/darwinx64.js && node build/darwinx64.js",
     "devenv-reset": "rm -r node_modules && rm package-lock.json",
-    "devenv-rebuild": "npm run devenv-reset & npm i"
+    "devenv-rebuild": "npm run devenv-reset & npm i",
+    "build-prepare": "npm run devenv-reset & npm run clean & rm -R publish & yarn",
+    "build-exe-win": "npm run build-prepare && gulp dist && electron-builder --win"
   },
   "author": "",
   "license": "ISC",
@@ -37,18 +39,18 @@
     "chokidar": "^3.0.0",
     "css-loader": "^6.8.1",
     "electron": "^27.1.0",
+    "electron-builder": "24.13.3",
     "electron-connect": "^0.6.3",
     "electron-packager": "^17.1.2",
-    "electron-reload": "^2.0.0-alpha.1",
     "fs": "0.0.1-security",
     "glob-stream": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^5.0.0",
-    "lodash": "^4.17.21",
+    "lodash": "4.17.21",
     "style-loader": "^3.3.3",
     "ts-loader": "^5.2.1",
-    "typescript": "^3.1.2",
+    "typescript": "3.9.7",
     "webpack": "^5.0.0",
     "webpack-stream": "^7.0.0"
   },
@@ -56,5 +58,21 @@
     "jimp": "^0.22.10",
     "jquery": "^3.3.1",
     "path": "^0.12.7"
+  },
+  "build": {
+    "directories": {
+      "output": "publish"
+    },
+    "productName": "AnotationUtils",
+    "appId": "app.anotationutils",
+    "files":[
+      "./src/app/**",
+      "./node_modules/**",
+      "./dist/**",
+      "./dev/**"
+    ],
+    "win": {
+      "target": ["portable"]
+    }
   }
 }

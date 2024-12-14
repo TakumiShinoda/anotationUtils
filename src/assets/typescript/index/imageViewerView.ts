@@ -9,6 +9,10 @@ let ImageViewImagePreviewId: number = -1
 let LoadedImageViewPaths: ImagePreviewListItem[] = []
 let LoadedPathDict: {[key: string]: {imgName: string, imgSize: {w: number, h: number}, dataSize: number}[]} = {}
 let IsImgNamePathCopying: boolean = false
+let ImagePreviewDirModeFilter: {filter: string, depth: number} = {
+  filter: '',
+  depth: 1
+}
 
 const LoadModeList = ['Error', 'AllImg', 'Directory'] as const
 type LoadMode = (typeof LoadModeList)[number]
@@ -248,6 +252,7 @@ function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page: number
 function resetPreviewPathList(){
   let imageViewElementStr: string = ''
   let allImageCount: number = 0
+  let splitPathBuff: string[]
 
   resetImagePreviewNaviArea()
   $('#imagePreviewArea').empty()
@@ -259,13 +264,13 @@ function resetPreviewPathList(){
           <th style='display: flex; justify-content: left; align-items: center; width: 100%; padding: 3px;'>
             <div style='display: flex; align-items: center; margin: 0px 3px;'>
               <div>Filter：</div>
-              <input id='previewDirFilterInput' class='form-control' type='text'>
+              <input id='previewDirFilterInput' class='form-control' type='text' value='${ImagePreviewDirModeFilter.filter}'>
             </div>
-            <div style='display: flex; align-items: center; margin: 0px 3px;'>
+            <div style='display: flex; align-items: center; margin-left: 15px;'>
               <div>Filter Depth：</div>
-              <input id='previewDirFilterDepthInput' class='form-control inputNumNoSpin' type='number'>
+              <input id='previewDirFilterDepthInput' class='form-control inputNumNoSpins' type='number' value=${ImagePreviewDirModeFilter.depth}>
             </div>
-            <div class='btn btn-success' style='display: flex; margin: 0px 3px;'>Filter<div>
+            <div id='previewDirFilterBtn' class='btn btn-success'>Filter<div>
           </th>
         </tr>
       </thead>
@@ -273,6 +278,13 @@ function resetPreviewPathList(){
   `
 
   for(let key of Object.keys(LoadedPathDict)){
+    splitPathBuff = key.split('/')
+
+    if(ImagePreviewDirModeFilter.filter != ''){
+      if(splitPathBuff.length < ImagePreviewDirModeFilter.depth) continue
+      if(splitPathBuff[splitPathBuff.length - ImagePreviewDirModeFilter.depth] != ImagePreviewDirModeFilter.filter) continue
+    }
+
     imageViewElementStr += `
       <tr class='pathPreviewListItem' style='display: flex; width: 100%; padding: 0px;' path='${key}'>
         <td style='display: flex; width: 100%; padding: 0px;'>
@@ -297,6 +309,26 @@ function resetPreviewPathList(){
 
   $('#imagePreviewArea').append(imageViewElementStr)
   $('#imageCounts').text(allImageCount.toString())
+  
+  $('#previewDirFilterInput').on('change', (ev: JQuery.TriggeredEvent) => {
+    ImagePreviewDirModeFilter.filter = $(ev.currentTarget).val()
+  })
+
+  $('#previewDirFilterDepthInput').on('input', (ev: JQuery.TriggeredEvent) => {
+    let inputElement: JQuery<HTMLElement> = $(ev.currentTarget)
+    let inputValue: number = parseInt(inputElement.val() as string)
+
+    if(isNaN(inputValue) || inputValue <= 0) inputValue = 1
+    else if(inputValue > 10) inputValue = 10
+    
+    inputElement.val(inputValue)
+    ImagePreviewDirModeFilter.depth = inputValue
+  })
+
+  $('#previewDirFilterBtn').on('click', () => {
+    resetPreviewPathList()
+  })
+
   $('.pathPreviewListItem').on('click', (ev: JQuery.ClickEvent) => {
     let path: string = $(ev.currentTarget).attr('path') as string
     let previewList: ImagePreviewListItem[] = []

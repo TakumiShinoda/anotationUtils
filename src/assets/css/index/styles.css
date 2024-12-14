@@ -175,9 +175,15 @@ label{
 }
 
 #previewDirFilterDepthInput{
-  width:50px; 
+  width:60px; 
   height: 30px;
+  padding-right: 2px;
   text-align: center;
+}
+
+#previewDirFilterBtn{
+  display: flex;
+  margin-left: 15px;
 }
 
 #imagePreviewAreaLoadingArea{

@@ -9,6 +9,7 @@ let ImageViewImagePreviewId: number = -1
 let LoadedImageViewPaths: ImagePreviewListItem[] = []
 let LoadedPathDict: {[key: string]: {imgName: string, imgSize: {w: number, h: number}, dataSize: number}[]} = {}
 let IsImgNamePathCopying: boolean = false
+let LoadModeState: LoadMode = 'AllImg'
 let ImagePreviewDirModeFilter: {filter: string, depth: number} = {
   filter: '',
   depth: 1
@@ -83,16 +84,23 @@ function cvtLoadMode(modeStr: string | undefined): LoadMode{
   else return 'Error'
 }
 
-function getLoadMode(): LoadMode{
-  return cvtLoadMode($('#loadModeSelectArea .active').attr('loadMode'))
-}
-
 function resetImagePreviewNaviArea(){
   let imagePreviewNaviArea: JQuery<HTMLElement> = $('#imagePreviewNaviArea')
 
   for(let ipn of imagePreviewNaviArea.children()){
     $(ipn).css('display', 'none')
   }
+}
+
+function clearPreviewArea(){
+  let previewImagesElement: JQuery<HTMLElement> = $('#imagePreviewArea>.imageViewPreviewImageBackground')
+  let pathPreviewTableElement: JQuery<HTMLElement> = $('#pathPreviewTable')
+  let pathPreviewAreaElement: JQuery<HTMLElement> = $('#pathPreviewArea')
+
+  previewImagesElement.remove()
+  pathPreviewAreaElement.empty()
+
+  pathPreviewTableElement.css('display', 'none')
 }
 
 function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page: number = 1){
@@ -111,7 +119,7 @@ function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page: number
   pageCount = Math.ceil(imageViewPaths.length / maxPreviewCount)
 
   resetImagePreviewNaviArea()
-  $('#imagePreviewArea').empty()
+  clearPreviewArea()
   $('#imageCounts').text(imageViewPaths.length.toString())
 
   if((page <= 0) || (page > pageCount)) return
@@ -255,27 +263,8 @@ function resetPreviewPathList(){
   let splitPathBuff: string[]
 
   resetImagePreviewNaviArea()
-  $('#imagePreviewArea').empty()
-
-  imageViewElementStr += `
-    <table class='table table-dark table-hover table-borderless' style='display: flex; margin: 0px; flex-direction: column;'>
-      <thead class='sticky-top bg-primary' style='border-radius: 0px;'>
-        <tr style='display: flex;'>
-          <th style='display: flex; justify-content: left; align-items: center; width: 100%; padding: 3px;'>
-            <div style='display: flex; align-items: center; margin: 0px 3px;'>
-              <div>Filter：</div>
-              <input id='previewDirFilterInput' class='form-control' type='text' value='${ImagePreviewDirModeFilter.filter}'>
-            </div>
-            <div style='display: flex; align-items: center; margin-left: 15px;'>
-              <div>Filter Depth：</div>
-              <input id='previewDirFilterDepthInput' class='form-control inputNumNoSpins' type='number' value=${ImagePreviewDirModeFilter.depth}>
-            </div>
-            <div id='previewDirFilterBtn' class='btn btn-success'>Filter<div>
-          </th>
-        </tr>
-      </thead>
-      <tbody style='display: flex; flex-direction: column; width: 100%;'>
-  `
+  clearPreviewArea()
+  $('#pathPreviewTable').css('display', 'flex')
 
   for(let key of Object.keys(LoadedPathDict)){
     splitPathBuff = key.split('/')
@@ -307,7 +296,7 @@ function resetPreviewPathList(){
 
   imageViewElementStr += `</tbody></table>`
 
-  $('#imagePreviewArea').append(imageViewElementStr)
+  $('#pathPreviewArea').append(imageViewElementStr)
   $('#imageCounts').text(allImageCount.toString())
   
   $('#previewDirFilterInput').on('change', (ev: JQuery.TriggeredEvent) => {
@@ -391,14 +380,14 @@ $(function (){
   })
 
   $('#loadFolderBtn').on('click', async() => {
-    let loadMode: LoadMode = getLoadMode()
+    let loadMode: LoadMode = LoadModeState
     let imageViewPathSplitBuff: string[]
     let imageViewDir: string = $('#openFolderDirInputField').val() as string
     let pathDictKeyBuff: string
 
     if(loadMode == 'Error') return
 
-    $('#imagePreviewArea').empty()
+    clearPreviewArea()
     $('#imagePreviewAreaLoadingArea').css('display', 'flex')
 
     window.electronAPI.getImageViewList(imageViewDir).then((imageViewPaths) => {
@@ -429,10 +418,10 @@ $(function (){
   })
 
   $('#loadModeSelectArea .btn').on('click', (ev: JQuery.ClickEvent) => {
-    let loadMode: LoadMode = cvtLoadMode($(ev.currentTarget).attr('loadMode'))
+    LoadModeState = cvtLoadMode($(ev.currentTarget).attr('loadMode'))
 
-    if(loadMode == 'AllImg') resetPreviewImages(LoadedImageViewPaths)
-    else if(loadMode == 'Directory') resetPreviewPathList()
+    if(LoadModeState == 'AllImg') resetPreviewImages(LoadedImageViewPaths)
+    else if(LoadModeState == 'Directory') resetPreviewPathList()
   })
 
   document.addEventListener('wheel', (e: WheelEvent) => {

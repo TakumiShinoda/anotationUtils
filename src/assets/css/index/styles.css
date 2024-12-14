@@ -7,6 +7,11 @@
   --anotatedImageViewFooterHeight: 50px;
 }
 
+.inputNumNoSpin::-webkit-outer-spin-button,
+.inputNumNoSpin::-webkit-inner-spin-button{
+  -webkit-appearance: none; 
+}
+
 body{
   -webkit-user-select: none;
   -webkit-app-region: drag;
@@ -118,10 +123,14 @@ label{
 }
 
 #imageViewImageSizeInput{
+  width: 50px;
+  text-align: center;
   border-radius: 8px;
 }
 
 #imageViewMaxPreviewImagesInput{
+  width: 60px;
+  text-align: center;
   border-radius: 8px;
 }
 
@@ -158,6 +167,17 @@ label{
   display: flex;
   flex-wrap:wrap;
   align-content: flex-start;
+}
+
+#previewDirFilterInput{
+  width:240px;
+  height: 30px;
+}
+
+#previewDirFilterDepthInput{
+  width:50px; 
+  height: 30px;
+  text-align: center;
 }
 
 #imagePreviewAreaLoadingArea{
@@ -255,11 +275,6 @@ label{
   color: greenyellow;
   display: none;
   margin-left: 5px;
-}
-
-#imageViewControlAreaViewSizeInput::-webkit-outer-spin-button,
-#imageViewControlAreaViewSizeInput::-webkit-inner-spin-button{
-  -webkit-appearance: none; 
 }
 
 #imageViewControlAreaViewSizeInput{

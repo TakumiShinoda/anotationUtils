@@ -259,11 +259,11 @@ function resetPreviewPathList(){
           <th style='display: flex; justify-content: left; align-items: center; width: 100%; padding: 3px;'>
             <div style='display: flex; align-items: center; margin: 0px 3px;'>
               <div>Filter：</div>
-              <input class='form-control' type='text' style='width:240px; height: 30px;'>
+              <input id='previewDirFilterInput' class='form-control' type='text'>
             </div>
             <div style='display: flex; align-items: center; margin: 0px 3px;'>
               <div>Filter Depth：</div>
-              <input class='form-control' type='number' style='width:50px; height: 30px;' step='1'>
+              <input id='previewDirFilterDepthInput' class='form-control inputNumNoSpin' type='number'>
             </div>
             <div class='btn btn-success' style='display: flex; margin: 0px 3px;'>Filter<div>
           </th>

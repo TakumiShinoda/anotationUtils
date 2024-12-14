@@ -17,11 +17,11 @@ div#imageViewerView.views.diaplayNone
       div
         div Preview size
         input#imageViewImageSizeSlider(type='range' min='0' max='1000' step='10' value=100)
-        input#imageViewImageSizeInput(type='number' style='width: 60px;' min='1' max='1000' value=100)
+        input#imageViewImageSizeInput.inputNumNoSpin(type='number' min='1' max='1000' value=100)
       div(style='margin-left: 15px;')
         div Max preview images
         input#imageViewMaxPreviewImagesSlider(type='range' min='0' max='10000' step='100' value=1000)
-        input#imageViewMaxPreviewImagesInput(type='number' style='width: 70px;' min='1' max='10000' value=1000)
+        input#imageViewMaxPreviewImagesInput.inputNumNoSpin(type='number' min='1' max='10000' value=1000)
     div(style='display: flex; justify-content: space-between; margin-right: 25px;')
       div
         div
@@ -42,7 +42,7 @@ div#imageViewerView.views.diaplayNone
         div#imageViewControlAreaCopiedText Copied!
         div(style="margin-left: 20px;") View Size：
         input#imageViewControlAreaViewSizeSlider(type='range' style="width: 70px;" min='100' max='1000' step='10' value=300)
-        input#imageViewControlAreaViewSizeInput.form-control.form-control-sm(type="number" min='100' max='1000' value=300 placeholder=".form-control-sm" readonly)
+        input#imageViewControlAreaViewSizeInput.form-control.form-control-sm.inputNumNoSpin(type="number" min='100' max='1000' value=300 placeholder=".form-control-sm" readonly)
       div(style="display: flex; align-items: center;")
         div#imageViewControlAreaViewReset.btn.btn-danger Reset View
         i#imageViewCloseBtn.bi.bi-x-lg.icon.nodragmovable

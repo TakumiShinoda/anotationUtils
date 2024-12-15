@@ -124,7 +124,11 @@ app.on('ready', () => {
   })
 
   ipcMain.handle('openFolderDialog', async () => {
-    return await dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] });
+    let dialogResult = await dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] })
+    
+    if(dialogResult == undefined) return undefined
+    if(dialogResult.length == 0) return undefined
+    else return dialogResult[0].replaceAll('\\', '/')
   })
 
   ipcMain.handle('loadAnotationTarget', async (_, anotationName, targetModel, targetDir) => {
@@ -246,6 +250,29 @@ app.on('ready', () => {
         }
 
         res(allImgPathList)
+      }catch(err){
+        rej(err)
+      }
+    })
+  })
+
+  ipcMain.handle('copyFile', (_, srcPath) => {
+    return new Promise((res, rej) => {
+      let distPath
+      let srcFileName = getLastElement(srcPath.split('/'))
+      let srcFileExtension = getLastElement(srcFileName.split('.'))
+
+      try{
+        distPath = dialog.showSaveDialogSync({
+          defaultPath: srcFileName,
+          filters:[
+            {name: 'Image', extensions: [srcFileExtension]}
+          ]
+        })
+
+        if(distPath != undefined) fs.copyFileSync(srcPath, distPath)
+
+        res(distPath)
       }catch(err){
         rej(err)
       }

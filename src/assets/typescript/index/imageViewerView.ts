@@ -330,14 +330,14 @@ function appearCopiedText(){
   if(IsImgNamePathCopying) return
 
   IsImgNamePathCopying = true
-  textElement.css('display', 'block')
+  textElement.css('visibility', 'visible')
   textElement.css('opacity', 1)
   
   intervalObj = setInterval(() => {
     opacityBuff = parseFloat(textElement.css('opacity')) - opacityDecrease
 
     if(opacityBuff <= 0){
-      textElement.css('display', 'none')
+      textElement.css('visibility', 'hidden')
       clearInterval(intervalObj)
       IsImgNamePathCopying = false
     }else textElement.css('opacity', opacityBuff)
@@ -351,6 +351,7 @@ $(function (){
     try{
       openFolderDir = await (window as any).electronAPI.openFolderDialog()
 
+      console.log(openFolderDir)
       if(openFolderDir == undefined) return
       
       $('#openFolderDirInputField').val(openFolderDir)
@@ -559,7 +560,22 @@ $(function (){
     $('#imageViewControlAreaViewSizeSlider').val(inputValue)
   })
 
-  $('#imageViewControlAreaViewReset').on('click', () => {
+  $('#imageViewControlAreaViewResetBtn').on('click', () => {
     turnPageImageView(0)
+  })
+
+  $('#imageViewControlAreaSaveImgBtn').on('click', async () => {
+    let imagePath: string = $('.imageViewImage').attr('src') as string
+    let saveFolderPath: string | undefined
+
+    try{
+      saveFolderPath = await window.electronAPI.copyFile(imagePath)
+
+      if(saveFolderPath == undefined) return
+
+      alert('saved')
+    }catch(err){
+      alert(err)
+    }
   })
 })

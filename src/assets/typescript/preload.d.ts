@@ -12,7 +12,8 @@ export interface IElectronAPI {
   openFolderDialog: () => Promise<string | undefined>,
   loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, targetDir: string | undefined) => Promise<CustomError | boolean>,
   getDatabaseInfo: () => Promise<databaseInfo>,
-  getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>
+  getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
+  copyFile: (srcPath: string) => Promise<string>
   exitApp: () => Promise<void>
 }
 

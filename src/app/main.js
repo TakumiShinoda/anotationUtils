@@ -3,6 +3,7 @@ const { spawn } = require('child_process')
 const fs = require('fs')
 const jimp = require('jimp')
 const imageSize = require('image-size')
+const electronReload = require('electron-reload')(['./dist/bundles/**']);
 const v8 = require('v8')
 
 const {distPath} = require('../../dev/path');

@@ -9,12 +9,20 @@
       "dest": "./dist/js/jquery-inview"
     },
     {
+      "src": "src/assets/javascript/cmanObjMove_v091/*",
+      "dest": "./dist/js/cmanObjMove_v091"
+    },
+    {
       "src": "src/assets/css/index/bootstrap/*",
       "dest": "./dist/css/bootstrap/"
     },
     {
       "src": "src/assets/css/index/bootstrap-icons/**",
       "dest": "./dist/css/bootstrap-icons/"
+    },
+    {
+      "src": "src/assets/images/**",
+      "dest": "./dist/images/"
     }
   ],
   "routes": [

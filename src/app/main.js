@@ -2,9 +2,11 @@ const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const { spawn } = require('child_process')
 const fs = require('fs')
 const jimp = require('jimp')
+const imageSize = require('image-size')
 const v8 = require('v8')
 
 const {distPath} = require('../../dev/path');
+const {getLastElement, getAllFilesRecursive} = require('./utils')
 
 let AnotationProc
 
@@ -121,7 +123,11 @@ app.on('ready', () => {
   })
 
   ipcMain.handle('openFolderDialog', async () => {
-    return await dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] });
+    let dialogResult = await dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] })
+    
+    if(dialogResult == undefined) return undefined
+    if(dialogResult.length == 0) return undefined
+    else return dialogResult[0].replaceAll('\\', '/')
   })
 
   ipcMain.handle('loadAnotationTarget', async (_, anotationName, targetModel, targetDir) => {
@@ -212,6 +218,62 @@ app.on('ready', () => {
         return res(result)
       }catch(err){
         return rej(err)
+      }
+    })
+  })
+
+  ipcMain.handle('getImageViewList', async (_, imageViewDir) => {
+    return new Promise((res, rej) => {
+      let imgStatBuff
+      let allPathList
+      let allImgPathList = []
+      let imgSizeBuff
+
+      try{
+        allPathList = getAllFilesRecursive(imageViewDir)
+        
+        for(ap of allPathList){
+          if(!['jpg', 'jpeg', 'png', 'svg', 'webp'].includes(getLastElement(ap.split('.')))) continue
+
+          try{
+            imgSizeBuff = imageSize.imageSize(ap)
+            imgStatBuff = fs.statSync(ap)
+            allImgPathList.push({
+              imgSize:{w: imgSizeBuff.width, h: imgSizeBuff.height},
+              dataSize: imgStatBuff.size,
+              path: ap
+            })
+          }catch{
+            continue
+          }
+        }
+
+        res(allImgPathList)
+      }catch(err){
+        rej(err)
+      }
+    })
+  })
+
+  ipcMain.handle('copyFile', (_, srcPath) => {
+    return new Promise((res, rej) => {
+      let distPath
+      let srcFileName = getLastElement(srcPath.split('/'))
+      let srcFileExtension = getLastElement(srcFileName.split('.'))
+
+      try{
+        distPath = dialog.showSaveDialogSync({
+          defaultPath: srcFileName,
+          filters:[
+            {name: 'Image', extensions: [srcFileExtension]}
+          ]
+        })
+
+        if(distPath != undefined) fs.copyFileSync(srcPath, distPath)
+
+        res(distPath)
+      }catch(err){
+        rej(err)
       }
     })
   })

@@ -14,4 +14,8 @@ $(function (){
   $('#showDatabaseViewIcon').on('click', () => {
     $('#selectDatabaseView').show()
   })
+
+  $('#showImageViewerViewIcon').on('click', () => {
+    $('#imageViewerView').show()
+  })
 })

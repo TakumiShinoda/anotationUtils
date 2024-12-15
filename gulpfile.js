@@ -58,7 +58,7 @@ gulp.task('restart', () => {
 gulp.task('watcher', () => {
   new Promise((res) => {
     gulp.watch(['./src/**', '!./src/app/main.js'], gulp.parallel('pug_compile', 'asset_copy', 'make_bundle'));
-    gulp.watch('./src/app/main.js', gulp.series('restart'));
+    gulp.watch('./src/app/**', gulp.series('restart'));
     electron.start();
     res();
   });

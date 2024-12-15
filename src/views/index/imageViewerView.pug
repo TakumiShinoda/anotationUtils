@@ -1,0 +1,67 @@
+div#imageViewerView.views.diaplayNone
+  div(style='height: 50px;')
+    h2 Image Viewer
+  div(style='height: 100px;')
+    div.displayFlex(style='margin-bottom: 20px;')
+      input#openFolderDirInputField(type='text')
+      div#openFolderBtn.btn.btn-primary Reference
+    div.displayFlex(style='margin-bottom: 20px; justify-content: space-between; align-items: center;')
+      div#loadModeSelectArea.btn-group-toggle(data-toggle="buttons")
+        label.btn.btn-outline-info.active(for='previewModeAll' loadMode="AllImg") All Img
+          input#previewModeAll.btn-check(type='radio' name='options' autocomplete='off')
+        label.btn.btn-outline-danger(for='previewModeDir' loadMode="Directory") Directory
+          input#previewModeDir.btn-check(type='radio' name='options' autocomplete='off')
+      div#loadFolderBtn.btn.btn-success Load
+  div(style='min-height: 90px;')
+    div.displayFlex(style='margin-bottom: 10px;')
+      div
+        div Preview size
+        input#imageViewImageSizeSlider(type='range' min='0' max='1000' step='10' value=100)
+        input#imageViewImageSizeInput.inputNumNoSpin(type='number' min='1' max='1000' value=100)
+      div(style='margin-left: 15px;')
+        div Max preview images
+        input#imageViewMaxPreviewImagesSlider(type='range' min='0' max='10000' step='100' value=1000)
+        input#imageViewMaxPreviewImagesInput.inputNumNoSpin(type='number' min='1' max='10000' value=1000)
+    div(style='display: flex; justify-content: space-between; margin-right: 25px;')
+      div
+        div
+          span#imageCounts 0
+          span  : images
+      div#imagePreviewNaviArea(style='display: flex;')
+        div#previewAreaPager(style='display: none;')
+  div(style='height: calc(100% - 240px); position: relative;')
+    div#imagePreviewArea
+      table#pathPreviewTable.table.table-dark.table-hover.table-borderless(style='display: none; margin: 0px; flex-direction: column;')
+        thead.sticky-top.bg-primary(style='border-radius: 0px; display: flex;')
+          tr(style='width: 100%;')
+            th(style='display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 5px;')
+              div(style='display: flex;')
+                div(style='display: flex; align-items: center; margin: 0px 3px;')
+                  div Filter：
+                  input#previewDirFilterInput.form-control.inputNumNoSpins(type='text' value='')
+                div(style='display: flex; align-items: center; margin-left: 15px;')
+                  div Filter Depth：
+                  input#previewDirFilterDepthInput.form-control.inputNumNoSpins(type="number" value=1)
+                div#previewDirFilterBtn.btn.btn-success Filter
+              div#previewDirShowFilteredBtn.btn.btn-danger Show Filtered
+        tbody#pathPreviewArea(style='display: flex; flex-direction: column; width: 100%;')
+    div#imagePreviewAreaLoadingArea(style="position: absolute; width: 100%; height: 100%;")
+      img(src="../../images/loading.webp" width="40%" height="auto")
+  div#imageViewAreaBackground
+    div#imageViewControlArea(width="100%" height="50px" style="background:rgba(192,192,192,0.5); display: flex;")
+      div(style="display: flex; align-items: center;")
+        input#imageViewControlAreaImagePath.form-control.form-control-sm(type="text" style="width: 150px;" placeholder=".form-control-sm" readonly)
+        div#imageViewControlAreaCopyNameBtn.btn.btn-primary(disabled) Copy Name
+        div#imageViewControlAreaCopyPathBtn.btn.btn-success Copy Path
+        div#imageViewControlAreaCopiedText Copied!
+        div(style="margin-left: 20px;") View Size：
+        input#imageViewControlAreaViewSizeSlider(type='range' style="width: 70px;" min='100' max='1000' step='10' value=300)
+        input#imageViewControlAreaViewSizeInput.form-control.form-control-sm.inputNumNoSpin(type="number" min='100' max='1000' value=300 placeholder=".form-control-sm" readonly)
+      div(style="display: flex; align-items: center;")
+        div#imageViewControlAreaViewResetBtn.btn.btn-danger Reset View
+        div#imageViewControlAreaSaveImgBtn.btn.btn-info Save
+        i#imageViewCloseBtn.bi.bi-x-lg.icon.nodragmovable
+    div#imageViewArea(cmanOMat="area")
+      div#imageViewPrevNextArea
+        div#imageViewPrevBtn <
+        div#imageViewNextBtn >

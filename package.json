@@ -13,7 +13,7 @@
     "test-pack-darwinx64": "rm -R *darwin-x64* || node build/darwinx64.js && node build/darwinx64.js",
     "devenv-reset": "rm -r node_modules && rm package-lock.json",
     "devenv-rebuild": "npm run devenv-reset & npm i",
-    "build-prepare": "npm run devenv-reset & npm run clean & rm -R publish & yarn",
+    "build-prepare": "npm run devenv-reset & npm run clean & rm -R publish & rm yarn.lock & yarn",
     "build-exe-win": "npm run build-prepare && gulp dist && electron-builder --win"
   },
   "author": "",
@@ -42,8 +42,6 @@
     "electron-builder": "24.13.3",
     "electron-connect": "^0.6.3",
     "electron-packager": "^17.1.2",
-    "electron-reload": "^2.0.0-alpha.1",
-    "fs": "0.0.1-security",
     "glob-stream": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.0",
@@ -60,7 +58,9 @@
     "image-size": "^1.1.1",
     "jimp": "^0.22.10",
     "jquery": "^3.3.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "fs": "0.0.1-security",
+    "electron-reload": "^2.0.0-alpha.1"
   },
   "build": {
     "directories": {

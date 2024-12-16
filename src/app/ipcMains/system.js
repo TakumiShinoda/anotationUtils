@@ -1,6 +1,7 @@
 function exitApp(_){
   console.log("exit")
-  mainWindow.close();
+  mainWindow.close()
+  process.exit(0)
 }
 
 module.exports= {

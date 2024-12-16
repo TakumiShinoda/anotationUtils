@@ -3,7 +3,7 @@ import '../../css/index/styles.css'
 import './sideMenu'
 import './autoAnotationView'
 import './selectDatabaseView'
-import './imageViewerView'
+import './imageViewerView/imageViewerView'
 
 $(function (){
   $('#exitAppButton').on('click', () => {

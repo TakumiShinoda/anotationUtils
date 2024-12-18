@@ -1,6 +1,6 @@
 function exitApp(_){
   console.log("exit")
-  mainWindow.close()
+  MainWindow.close()
   process.exit(0)
 }
 

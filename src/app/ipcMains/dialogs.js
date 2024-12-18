@@ -1,16 +1,14 @@
 const { dialog } = require('electron');
 const fs = require('fs')
 
-const { getLastElement } = require('../utils')
-
-require('../globals')
+const { getLastElement } = require('../utils');
 
 function openFileDialog(_, filters){
   return dialog.showOpenDialogSync({ filters: filters ,properties: ['openFile'] });
 }
 
 function openFolderDialog(){
-  let dialogResult = dialog.showOpenDialogSync(mainWindow, { properties: ['openDirectory'] })
+  let dialogResult = dialog.showOpenDialogSync(MainWindow, { properties: ['openDirectory'] })
     
   if(dialogResult == undefined) return undefined
   if(dialogResult.length == 0) return undefined

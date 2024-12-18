@@ -1,6 +1,6 @@
-const { app, BrowserWindow, dialog, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 
-const {distPath} = require('../../dev/path');
+const { distPath } = require('../../dev/path');
 const { getImageViewList } = require('./ipcMains/ImageViewer');
 const { copyFile, openFileDialog, openFolderDialog } = require('./ipcMains/dialogs');
 const { exitApp } = require('./ipcMains/system');
@@ -8,14 +8,13 @@ const { loadAnotationTarget } = require('./ipcMains/autoAnotation');
 const { getDatabaseInfo } = require('./ipcMains/anotatedImage');
 
 require('electron-reload')(['./dist/bundles/**']);
-require('./globals')
-
-AnotationProc = undefined
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({
+  MainWindow = new BrowserWindow({
     width: 960,
     height: 720,
+    minWidth: 960,
+    minHeight: 720,
     resizable: true,
     movable: true,
     'webPreferences': {
@@ -26,10 +25,10 @@ app.on('ready', () => {
     // titleBarStyle: 'hidden',
     frame: false,
   });
-  mainWindow.loadURL('file://' + distPath.views('/index/index.html'));
+  MainWindow.loadURL('file://' + distPath.views('/index/index.html'));
 
-  mainWindow.on('closed', () => {
-    mainWindow = null;
+  MainWindow.on('closed', () => {
+    MainWindow = null;
   });
 
   ipcMain.handle('openFileDialog', openFileDialog)

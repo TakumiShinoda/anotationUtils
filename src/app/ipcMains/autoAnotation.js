@@ -1,7 +1,5 @@
 const { spawn } = require('child_process')
 
-require('../globals')
-
 function loadAnotationTarget(_, anotationName, targetModel, targetDir){
   return new Promise((res, rej) => {
     let externalPackagePath = `${__dirname}/../../../externalPackage`

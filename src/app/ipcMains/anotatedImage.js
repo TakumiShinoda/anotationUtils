@@ -1,10 +1,11 @@
 const fs = require('fs')
 const { cutImgToBase64 } = require('../utils')
+const { RootPath } = require('../globals')
 
 function getDatabaseInfo(){
   return new Promise(async (res, rej) => {
     try{
-      const databasePath = `${__dirname}/../../../externalPackage/output`
+      const databasePath = `${RootPath}/externalPackage/output`
       let databases = fs.readdirSync(databasePath)
       let itemsDirBuff
       let movieItemsDirBuff

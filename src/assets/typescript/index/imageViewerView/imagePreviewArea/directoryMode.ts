@@ -1,6 +1,6 @@
 import { ImagePreviewListItem } from "../../../preload"
 import { clearPreviewArea, resetImagePreviewNaviArea } from "./ImagePreviewArea"
-import { resetPreviewImages } from "./AllImgMode"
+import { resetPreviewImages } from "./allImgMode"
 
 export function resetPreviewPathList(){
   let imageViewElementStr: string = ''

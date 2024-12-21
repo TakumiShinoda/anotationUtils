@@ -1,6 +1,6 @@
 import { getLastElement } from "../../utils"
 import { LoadMode, LoadModeList } from './globals'
-import { resetPreviewImages } from "./imagePreviewArea/AllImgMode"
+import { resetPreviewImages } from "./imagePreviewArea/allImgMode"
 import { resetPreviewPathList } from './imagePreviewArea/directoryMode'
 import { clearPreviewArea } from "./imagePreviewArea/ImagePreviewArea"
 
@@ -27,7 +27,7 @@ $(function (){
     let openFolderDir: string | undefined
 
     try{
-      openFolderDir = await (window as any).electronAPI.openFolderDialog()
+      openFolderDir = await window.electronAPI.openFolderDialog('imageViewerOpenFolderDialog')
 
       if(openFolderDir == undefined) return
       

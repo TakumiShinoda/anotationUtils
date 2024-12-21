@@ -9,20 +9,19 @@ $(function (){
         name: 'Torch model'
       }
     ]
-    let files: string[] | undefined = await (window as any).electronAPI.openFileDialog(dialogFilter)
-    console.log(files)
+    let filePath: string[] | undefined = await window.electronAPI.openFileDialog(dialogFilter, 'autoAnotationModelPathDialog')
 
-    if((files == undefined) || (files.length == 0)) return
+    if(filePath == undefined) return
 
-    $('#modelPathInputField').val(files[0])
+    $('#modelPathInputField').val(filePath)
   })
 
   $('#imagePathInputButton').on('click', async () => {
-    let directries: string[] | undefined = await (window as any).electronAPI.openFolderDialog()
+    let directry: string | undefined = await window.electronAPI.openFolderDialog('autoAnotationImagePathDialog')
 
-    if((directries == undefined) || (directries.length == 0)) return
+    if(directry == undefined) return
 
-    $('#imagePathInputField').val(directries[0])
+    $('#imagePathInputField').val(directry)
   })
 
   $('#startLoadButton').on('click', async () => {
@@ -34,7 +33,7 @@ $(function (){
     let anotationProcResult: CustomError | boolean
 
     try{
-      anotationProcResult = await (window as any).electronAPI.loadAnotationTarget(anotationName, modelPath, imagePath)
+      anotationProcResult = await window.electronAPI.loadAnotationTarget(anotationName, modelPath, imagePath)
 
       if(isCustomErrors(anotationProcResult)){
         showAlertModal(anotationProcResult.mes, alertErrorModalSetting)

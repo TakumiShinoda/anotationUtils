@@ -3,6 +3,7 @@
 /dist
 /*darwin-x64*
 /externalPackage/**
+/settings/**
 anotationUtilsSubprocess/
 publish
 

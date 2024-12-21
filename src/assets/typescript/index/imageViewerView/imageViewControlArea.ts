@@ -61,7 +61,7 @@ $(function (){
     let saveFolderPath: string | undefined
 
     try{
-      saveFolderPath = await window.electronAPI.copyFile(imagePath)
+      saveFolderPath = await window.electronAPI.copyFile(imagePath, 'imageViewerSaveImgDialog')
 
       if(saveFolderPath == undefined) return
 

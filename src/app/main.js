@@ -1,15 +1,18 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron')
+const fs = require('fs')
 
-const { distPath } = require('../../dev/path');
-const { getImageViewList } = require('./ipcMains/ImageViewer');
-const { copyFile, openFileDialog, openFolderDialog } = require('./ipcMains/dialogs');
-const { exitApp } = require('./ipcMains/system');
-const { loadAnotationTarget } = require('./ipcMains/autoAnotation');
-const { getDatabaseInfo } = require('./ipcMains/anotatedImage');
+const { distPath } = require('../../dev/path')
+const { getImageViewList } = require('./ipcMains/ImageViewer')
+const { copyFile, openFileDialog, openFolderDialog } = require('./ipcMains/dialogs')
+const { exitApp } = require('./ipcMains/system')
+const { loadAnotationTarget } = require('./ipcMains/autoAnotation')
+const { getDatabaseInfo } = require('./ipcMains/anotatedImage')
+const { loadDialogHistory } = require('./mods/dialogHistory')
 
-require('electron-reload')(['./dist/bundles/**']);
+require('electron-reload')(['./dist/bundles/**'])
 
 app.on('ready', () => {
+  DialogHistory = loadDialogHistory()
   MainWindow = new BrowserWindow({
     width: 960,
     height: 720,
@@ -24,12 +27,12 @@ app.on('ready', () => {
     // transparent: true,
     // titleBarStyle: 'hidden',
     frame: false,
-  });
-  MainWindow.loadURL('file://' + distPath.views('/index/index.html'));
+  })
+  MainWindow.loadURL('file://' + distPath.views('/index/index.html'))
 
   MainWindow.on('closed', () => {
-    MainWindow = null;
-  });
+    MainWindow = null
+  })
 
   ipcMain.handle('openFileDialog', openFileDialog)
   ipcMain.handle('openFolderDialog', openFolderDialog)
@@ -38,4 +41,4 @@ app.on('ready', () => {
   ipcMain.handle('getImageViewList', getImageViewList)
   ipcMain.handle('copyFile', copyFile)
   ipcMain.on('exitApp', exitApp)
-});
+})

@@ -116,4 +116,12 @@ $(function (){
       window.IsImgViewPrevNextBtnMouseCover = false
     }
   })
+
+  $('#imageViewPrevBtn').on('click', () => {
+    turnPageImageView(-1)
+  })
+
+  $('#imageViewNextBtn').on('click', () => {
+    turnPageImageView(1)
+  })
 })

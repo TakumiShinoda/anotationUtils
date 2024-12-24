@@ -20,9 +20,9 @@ export function resetPreviewPathList(){
     }
 
     imageViewElementStr += `
-      <tr class='pathPreviewListItem' style='display: flex; width: 100%; padding: 0px;' path='${key}'>
-        <td style='display: flex; width: 100%; padding: 0px;'>
-          <button type="button" class='list-group-item list-group-item-success list-group-item-action btn'>
+      <tr class='pathPreviewListItem' style='display: flex; width: 100%; padding: 0px; background-color: rgb(0, 0, 0, 0);' path='${key}'>
+        <td style='display: flex; width: 100%; padding: 0px; background-color: rgb(0, 0, 0, 0);'>
+          <div class='btn btn-success pathPreviewListItemBtn' style=''>
             <div style="display: flex; justify-content: space-between; width: 100%;">
               <div>
                 ${key}
@@ -31,7 +31,7 @@ export function resetPreviewPathList(){
                 ${window.LoadedPathDict[key].length}images
               </div>
             </div>
-          </button>
+          </div>
         </td>
       </tr>
     `

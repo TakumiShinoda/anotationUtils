@@ -7,10 +7,10 @@ div#imageViewerView.views.diaplayNone
       div#openFolderBtn.btn.btn-primary Reference
     div.displayFlex(style='margin-bottom: 20px; justify-content: space-between; align-items: center;')
       div#loadModeSelectArea.btn-group-toggle(data-toggle="buttons")
-        label.btn.btn-outline-info.active(for='previewModeAll' loadMode="AllImg") All Img
-          input#previewModeAll.btn-check(type='radio' name='options' autocomplete='off')
+        input#previewModeAll.btn-check(type='radio' name='options-outlined' autocomplete='off' checked)
+        label.btn.btn-outline-info(for='previewModeAll' loadMode="AllImg") All Img
+        input#previewModeDir.btn-check(type='radio' name='options-outlined' autocomplete='off')
         label.btn.btn-outline-danger(for='previewModeDir' loadMode="Directory") Directory
-          input#previewModeDir.btn-check(type='radio' name='options' autocomplete='off')
       div#loadFolderBtn.btn.btn-success Load
   div(style='min-height: 90px;')
     div.displayFlex(style='margin-bottom: 10px;')
@@ -31,10 +31,10 @@ div#imageViewerView.views.diaplayNone
         div#previewAreaPager(style='display: none;')
   div(style='height: calc(100% - 240px); position: relative;')
     div#imagePreviewArea
-      table#pathPreviewTable.table.table-dark.table-hover.table-borderless(style='display: none; margin: 0px; flex-direction: column;')
-        thead.sticky-top.bg-primary(style='border-radius: 0px; display: flex;')
+      table#pathPreviewTable.table.table-hover.table-borderless.table-dark(style='display: none; margin: 0px; flex-direction: column;')
+        thead.sticky-top(style='border-radius: 0px; display: flex;')
           tr(style='width: 100%;')
-            th(style='display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 5px;')
+            th(style='display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 5px; background-color: #007bff;')
               div(style='display: flex;')
                 div(style='display: flex; align-items: center; margin: 0px 3px;')
                   div Filter：

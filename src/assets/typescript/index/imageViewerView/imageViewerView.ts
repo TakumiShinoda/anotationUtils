@@ -37,7 +37,7 @@ $(function (){
     }
   })
 
-  $('#loadFolderBtn').on('click', async() => {
+  $('#loadFolderBtn').on('click', async(ev) => {
     let loadMode: LoadMode = window.LoadModeState
     let imageViewPathSplitBuff: string[]
     let imageViewDir: string = $('#openFolderDirInputField').val() as string

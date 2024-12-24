@@ -12,6 +12,11 @@
   -webkit-appearance: none; 
 }
 
+.btn-outline-info{
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+}
+
 body{
   user-select: none;
   -webkit-app-region: drag;
@@ -233,6 +238,20 @@ label{
 .imageViewImageInfoName{
   overflow-x: hidden;
   white-space: nowrap;
+}
+
+.pathPreviewListItemBtn{
+  width: 100%;
+  background-color: #c3e6cb; 
+  color: #155724;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.75rem 1.25rem;
+}
+
+.pathPreviewListItemBtn:hover{
+  background-color: #b1dfbb;
+  color: #155724;
+  transition: 0.15s;
 }
 
 #imageViewAreaBackground{

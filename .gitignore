@@ -6,6 +6,7 @@
 /settings/**
 anotationUtilsSubprocess/
 publish
+todo.txt
 
 package-lock.json
 yarn.lock

@@ -1,3 +1,4 @@
+import { showSuccussAlert, showWarningAlert } from "../alertModal"
 import { turnPageImageView } from "./imageViewArea"
 
 function appearCopiedText(){
@@ -65,9 +66,9 @@ $(function (){
 
       if(saveFolderPath == undefined) return
 
-      alert('saved')
+      showSuccussAlert('saved')
     }catch(err){
-      alert(err)
+      showWarningAlert(err as string)
     }
   })
 })

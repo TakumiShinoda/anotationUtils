@@ -1,5 +1,5 @@
 import { CustomError, isCustomErrors } from '../../../common/customErrors'
-import { modalSetting, showAlertModal } from '../utils';
+import { showSuccussAlert, showWarningAlert } from './alertModal';
 
 $(function (){
   $('#modelPathInputButton').on('click', async () => {
@@ -25,8 +25,6 @@ $(function (){
   })
 
   $('#startLoadButton').on('click', async () => {
-    const alertErrorModalSetting: modalSetting = {backColor: '#ad463a', mesColor: '#FFFFFF'}
-    const alertSuccessModalSetting: modalSetting = {backColor: '#2ea043', mesColor: '#FFFFFF'}
     let anotationName: string | undefined = $('#anotationNameInputField').val()?.toString()
     let modelPath: string | undefined = $('#modelPathInputField').val()?.toString()
     let imagePath: string | undefined = $('#imagePathInputField').val()?.toString()
@@ -36,13 +34,13 @@ $(function (){
       anotationProcResult = await window.electronAPI.loadAnotationTarget(anotationName, modelPath, imagePath)
 
       if(isCustomErrors(anotationProcResult)){
-        showAlertModal(anotationProcResult.mes, alertErrorModalSetting)
+        showWarningAlert(anotationProcResult.mes)
         return
       }else if(!anotationProcResult) throw ''
       
-      showAlertModal('Anotation succes!', alertSuccessModalSetting)
+      showSuccussAlert('Anotation succes!')
     }catch(err){
-      showAlertModal('Unknow error.', alertErrorModalSetting)
+      showWarningAlert('Unknow error.')
     }
   })
 })

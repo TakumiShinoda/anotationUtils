@@ -1,4 +1,5 @@
 import { getLastElement } from "../../utils"
+import { showWarningAlert } from "../alertModal"
 import { LoadMode, LoadModeList } from './globals'
 import { resetPreviewImages } from "./imagePreviewArea/allImgMode"
 import { resetPreviewPathList } from './imagePreviewArea/directoryMode'
@@ -33,7 +34,7 @@ $(function (){
       
       $('#openFolderDirInputField').val(openFolderDir)
     }catch(err){
-      alert(err)
+      showWarningAlert(err as string)
     }
   })
 
@@ -69,7 +70,7 @@ $(function (){
         console.log('undefined LoadMode')
       }
     }).catch((err) => {
-      alert(`Error:\n${err}`)
+      showWarningAlert(`Error:\n${err}`)
     }).finally(() => {
       $('#imagePreviewAreaLoadingArea').css('display', 'none')
     })

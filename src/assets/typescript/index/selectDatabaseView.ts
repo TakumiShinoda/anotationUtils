@@ -1,6 +1,6 @@
 import { countItems } from './../../../common/database'
 import { databaseInfo, itemCounts } from './../../../common/database.d'
-import { modalSetting, showAlertModal } from '../utils'
+import { AlertModalSetting, showWarningAlert } from './alertModal'
 import { showAnotatedImageView } from './anotatedImageView'
 
 function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement>[]{
@@ -44,7 +44,7 @@ $(function (){
   const electronWindow: any = window
 
   $('#databaseList').on('inview', async (_, isInView: boolean) => {
-    const alertErrorModalSetting: modalSetting = {backColor: '#ad463a', mesColor: '#FFFFFF'}
+    const alertErrorModalSetting: AlertModalSetting = {backColor: '#ad463a', mesColor: '#FFFFFF'}
     let databaseInfo: databaseInfo
 
     if(!isInView){
@@ -57,7 +57,7 @@ $(function (){
 
       $('#databaseList').append(createDatabaseListItems(databaseInfo))
     }catch(err){
-      showAlertModal('Unknow error.', alertErrorModalSetting)
+      showWarningAlert('Unknow error.')
     }
   })
 })

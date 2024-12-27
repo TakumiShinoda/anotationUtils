@@ -361,10 +361,6 @@ label{
   height: calc(100% - 30px);
 }
 
-#alertModalMes{
-  margin-bottom: 0px;
-}
-
 #databaseList{
   padding: 0px;
 }
@@ -414,4 +410,29 @@ label{
 
 #anotatedImageView .imageSelectBox:hover{
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+#alertModal{
+  position: absolute;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - var(--upperMenuHeight));
+  background-color: rgba(24, 24, 24, 0.5);
+}
+
+#alertModalMes{
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: scroll;
+  width: 60%;
+}
+
+#alertModalMes::-webkit-scrollbar{
+  display: none;
 }

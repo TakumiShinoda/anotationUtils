@@ -436,3 +436,12 @@ label{
 #alertModalMes::-webkit-scrollbar{
   display: none;
 }
+
+#disableFilter{
+  position: absolute;
+  display: none;
+  z-index: 100;
+  width: 100%;
+  height: calc(100% - var(--upperMenuHeight));
+  opacity: 0;
+}

@@ -1,6 +1,7 @@
+import { toggleUserControl } from '.'
 import { countItems } from './../../../common/database'
 import { databaseInfo, itemCounts } from './../../../common/database.d'
-import { AlertModalSetting, showWarningAlert } from './alertModal'
+import { showWarningAlert } from './alertModal'
 import { showAnotatedImageView } from './anotatedImageView'
 
 function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement>[]{
@@ -44,7 +45,6 @@ $(function (){
   const electronWindow: any = window
 
   $('#databaseList').on('inview', async (_, isInView: boolean) => {
-    const alertErrorModalSetting: AlertModalSetting = {backColor: '#ad463a', mesColor: '#FFFFFF'}
     let databaseInfo: databaseInfo
 
     if(!isInView){
@@ -53,9 +53,11 @@ $(function (){
     }
 
     try{
+      toggleUserControl(false)
       databaseInfo = await electronWindow.electronAPI.getDatabaseInfo()
 
       $('#databaseList').append(createDatabaseListItems(databaseInfo))
+      toggleUserControl(true)
     }catch(err){
       showWarningAlert('Unknow error.')
     }

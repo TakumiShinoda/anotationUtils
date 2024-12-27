@@ -1,3 +1,5 @@
+import { toggleUserControl } from "../../index"
+
 export function clearPreviewArea(){
   let previewImagesElement: JQuery<HTMLElement> = $('#imagePreviewArea>.imageViewPreviewImageBackground')
   let pathPreviewTableElement: JQuery<HTMLElement> = $('#pathPreviewTable')
@@ -7,6 +9,16 @@ export function clearPreviewArea(){
   pathPreviewAreaElement.empty()
 
   pathPreviewTableElement.css('display', 'none')
+}
+
+export function togglePreviewAreaLoading(visible: boolean){
+  if(visible){
+    toggleUserControl(false)
+    $('#imagePreviewAreaLoadingArea').css('display', 'flex')
+  }else{
+    toggleUserControl(true)
+    $('#imagePreviewAreaLoadingArea').css('display', 'none')
+  }
 }
 
 export function resetImagePreviewNaviArea(){

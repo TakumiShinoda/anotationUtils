@@ -1,9 +1,9 @@
-import { getLastElement } from "../../utils"
+import { getLastElement, wait } from "../../utils"
 import { showWarningAlert } from "../alertModal"
 import { LoadMode, LoadModeList } from './globals'
 import { resetPreviewImages } from "./imagePreviewArea/allImgMode"
 import { resetPreviewPathList } from './imagePreviewArea/directoryMode'
-import { clearPreviewArea } from "./imagePreviewArea/ImagePreviewArea"
+import { clearPreviewArea, togglePreviewAreaLoading } from "./imagePreviewArea/ImagePreviewArea"
 
 window.IsImgViewImageMouseCover = false
 window.IsImgViewPrevNextBtnMouseCover= false
@@ -38,7 +38,7 @@ $(function (){
     }
   })
 
-  $('#loadFolderBtn').on('click', async(ev) => {
+  $('#loadFolderBtn').on('click', () => {
     let loadMode: LoadMode = window.LoadModeState
     let imageViewPathSplitBuff: string[]
     let imageViewDir: string = $('#openFolderDirInputField').val() as string
@@ -47,7 +47,7 @@ $(function (){
     if(loadMode == 'Error') return
 
     clearPreviewArea()
-    $('#imagePreviewAreaLoadingArea').css('display', 'flex')
+    togglePreviewAreaLoading(true)
 
     window.electronAPI.getImageViewList(imageViewDir).then((imageViewPaths) => {
       window.LoadedImageViewPaths = imageViewPaths
@@ -72,7 +72,7 @@ $(function (){
     }).catch((err) => {
       showWarningAlert(`Error:\n${err}`)
     }).finally(() => {
-      $('#imagePreviewAreaLoadingArea').css('display', 'none')
+      togglePreviewAreaLoading(false)
     })
   })
 

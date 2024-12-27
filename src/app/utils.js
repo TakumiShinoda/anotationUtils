@@ -110,11 +110,20 @@ function cutImgToBase64(imgPath, anotationTextPath){
   })
 }
 
+async function wait(millis){
+  return new Promise((res) => {
+    setTimeout(() => {
+      res()
+    }, millis)
+  })
+}
+
 module.exports= {
   getLastElement: getLastElement,
   getAllFilesRecursive: getAllFilesRecursive,
   readAnotationFile: readAnotationFile,
   cvtImgToBase64: cvtImgToBase64,
   getBase64Async: getBase64Async,
-  cutImgToBase64: cutImgToBase64
+  cutImgToBase64: cutImgToBase64,
+  wait: wait
 }

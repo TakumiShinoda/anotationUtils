@@ -58,7 +58,6 @@ export function resetPreviewPathList(){
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
     $('#previewAreaPager').css('display', 'block')
-    $('#imagePreviewAreaLoadingArea').css('display', 'none')
   })
 }
 
@@ -102,7 +101,6 @@ $(function (){
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
     $('#previewAreaPager').css('display', 'block')
-    $('#imagePreviewAreaLoadingArea').css('display', 'none')
   })
 
   $('#imageViewMaxPreviewImagesSlider').on('input', (ev: JQuery.TriggeredEvent) => {

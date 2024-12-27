@@ -1,3 +1,9 @@
+let hoge = false
+
+function domLoaded(_){
+  MainWindow.show()
+}
+
 function exitApp(_){
   console.log("exit")
   MainWindow.close()
@@ -5,5 +11,6 @@ function exitApp(_){
 }
 
 module.exports= {
+  domLoaded: domLoaded,
   exitApp: exitApp
 }

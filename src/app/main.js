@@ -1,10 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
-const fs = require('fs')
 
 const { distPath } = require('../../dev/path')
 const { getImageViewList } = require('./ipcMains/ImageViewer')
 const { copyFile, openFileDialog, openFolderDialog } = require('./ipcMains/dialogs')
-const { exitApp } = require('./ipcMains/system')
+const { exitApp, domLoaded } = require('./ipcMains/system')
 const { loadAnotationTarget } = require('./ipcMains/autoAnotation')
 const { getDatabaseInfo } = require('./ipcMains/anotatedImage')
 const { loadDialogHistory } = require('./mods/dialogHistory')
@@ -27,6 +26,7 @@ app.on('ready', () => {
     // transparent: true,
     // titleBarStyle: 'hidden',
     frame: false,
+    show: false
   })
   MainWindow.loadURL('file://' + distPath.views('/index/index.html'))
 
@@ -40,5 +40,6 @@ app.on('ready', () => {
   ipcMain.handle('getDatabaseInfo', getDatabaseInfo)
   ipcMain.handle('getImageViewList', getImageViewList)
   ipcMain.handle('copyFile', copyFile)
+  ipcMain.on('domLoaded', domLoaded)
   ipcMain.on('exitApp', exitApp)
 })

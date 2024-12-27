@@ -30,6 +30,7 @@ export interface IElectronAPI {
   getDatabaseInfo: () => Promise<databaseInfo>,
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
   copyFile: (srcPath: string, dialogHistoryKey: DialogHistoryKey) => Promise<string>
+  domLoaded: () => Promise<void>
   exitApp: () => Promise<void>
 }
 

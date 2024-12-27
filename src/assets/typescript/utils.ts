@@ -29,6 +29,14 @@ export function getLastElement(list: any[]){
   return list[list.length - 1]
 }
 
+export async function wait(millis: number): Promise<void>{
+  return new Promise((res) => {
+    setTimeout(() => {
+      res()
+    }, millis)
+  })
+}
+
 export function showAlertModal(mes: string, setting: modalSetting = {mesColor: '0x000000', backColor: '0xFFFFFF'}){
   let modal: any = $('#alertModal')
   let content: JQuery<HTMLElement>= $('#alertModalContent')

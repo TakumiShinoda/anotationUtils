@@ -55,13 +55,13 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1",
     "express": "^4.21.1",
-    "image-size": "^1.1.1",
+    "fs": "0.0.1-security",
     "jimp": "^0.22.10",
     "jquery": "^3.3.1",
     "path": "^0.12.7",
-    "fs": "0.0.1-security",
-    "electron-reload": "^2.0.0-alpha.1"
+    "probe-image-size": "^7.2.3"
   },
   "build": {
     "directories": {
@@ -69,14 +69,16 @@
     },
     "productName": "AnotationUtils",
     "appId": "app.anotationutils",
-    "files":[
+    "files": [
       "./src/app/**",
       "./node_modules/**",
       "./dist/**",
       "./dev/**"
     ],
     "win": {
-      "target": ["portable"]
+      "target": [
+        "portable"
+      ]
     }
   }
 }

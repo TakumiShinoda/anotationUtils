@@ -261,6 +261,18 @@ label{
   transition: 0.15s;
 }
 
+.pathPreviewListItemPath{
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.pathPreviewListItemImgCount{
+  width: 15%;
+  text-align: right;
+}
+
 #imageViewAreaBackground{
   position: absolute;
   top: -10px;

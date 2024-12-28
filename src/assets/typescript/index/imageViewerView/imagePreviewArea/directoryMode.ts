@@ -2,6 +2,44 @@ import { ImagePreviewListItem } from "../../../preload"
 import { clearPreviewArea, resetImagePreviewNaviArea } from "./ImagePreviewArea"
 import { resetPreviewImages } from "./allImgMode"
 
+function fitPathPreviewListItemPath(){
+  const LastTextLength: number = 10
+
+  let pathListItemElements: JQuery<HTMLElement> = $('.pathPreviewListItemPath')
+  let pathListItemTextElementBuff: JQuery<HTMLElement>
+  let pathTextBuff: string
+  let newPathTextBuff: string
+  let fontSizeBuff: number
+  let pathListItemWidthBuff: number
+  let maxTextLenBuff: number
+  let frontTextEnd: number
+  let backTextStart: number
+
+  try{
+    for(let plie of pathListItemElements){
+      pathListItemTextElementBuff = $(plie).children('span')
+      pathTextBuff = pathListItemTextElementBuff.attr('originPath') as string
+
+      pathListItemTextElementBuff.text(pathTextBuff)
+
+      pathListItemWidthBuff = $(plie).width() as number
+      fontSizeBuff =  Math.ceil((pathListItemTextElementBuff.width() as number) / pathTextBuff.length)
+      maxTextLenBuff = Math.floor(pathListItemWidthBuff / fontSizeBuff)
+
+      if(pathTextBuff.length < maxTextLenBuff - (LastTextLength + 3)) newPathTextBuff = pathTextBuff
+      else{
+        frontTextEnd = maxTextLenBuff - (LastTextLength + 3)
+        backTextStart = pathTextBuff.length - LastTextLength
+
+        if(frontTextEnd >= backTextStart) newPathTextBuff = pathTextBuff
+        else newPathTextBuff = `${pathTextBuff.slice(0, frontTextEnd)}...${pathTextBuff.slice(backTextStart)}`
+      }
+
+      pathListItemTextElementBuff.text(newPathTextBuff)
+    }
+  }catch(err){ console.log(err) }
+}
+
 export function resetPreviewPathList(){
   let imageViewElementStr: string = ''
   let allImageCount: number = 0
@@ -24,10 +62,12 @@ export function resetPreviewPathList(){
         <td style='display: flex; width: 100%; padding: 0px; background-color: rgb(0, 0, 0, 0);'>
           <div class='btn btn-success pathPreviewListItemBtn' style=''>
             <div style="display: flex; justify-content: space-between; width: 100%;">
-              <div>
-                ${key}
+              <div class='pathPreviewListItemPath'>
+                <span originPath='${key}'>
+                  ${key}
+                </span>
               </div>
-              <div>
+              <div class='pathPreviewListItemImgCount'>
                 ${window.LoadedPathDict[key].length}images
               </div>
             </div>
@@ -42,6 +82,7 @@ export function resetPreviewPathList(){
   imageViewElementStr += `</tbody></table>`
 
   $('#pathPreviewArea').append(imageViewElementStr)
+  fitPathPreviewListItemPath()
   $('#imageCounts').text(allImageCount.toString())
   $('.pathPreviewListItem').on('click', (ev: JQuery.ClickEvent) => {
     let path: string = $(ev.currentTarget).attr('path') as string
@@ -115,5 +156,9 @@ $(function (){
     else if(inputValue > 10000) inputElement.val(10000)
 
       $('#imageViewMaxPreviewImagesSlider').val(inputValue)
+  })
+
+  $(window).on('resize', () => {
+    fitPathPreviewListItemPath()
   })
 })

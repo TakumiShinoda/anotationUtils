@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "outDir": "./src/assets/tsOutput/",
     "typeRoots": ["./src/common", "node_modules/@types"],
+    "lib": ["ES2021.String", "dom", "es5"]
   },
   "include": [
     "./src/assets/typescript/*.ts",

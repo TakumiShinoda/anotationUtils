@@ -49,8 +49,8 @@
     "gulp-pug": "^5.0.0",
     "lodash": "4.17.21",
     "style-loader": "^3.3.3",
-    "ts-loader": "^5.2.1",
-    "typescript": "3.9.7",
+    "ts-loader": "9.5.1",
+    "typescript": "5.7.2",
     "webpack": "^5.0.0",
     "webpack-stream": "^7.0.0"
   },

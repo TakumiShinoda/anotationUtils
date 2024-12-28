@@ -1,6 +1,6 @@
 export function cvtNum2DataSizeStr(val: number): string{
-  let cvtLevelStr: string = ''
-  let cvtNumber: number = 0
+  let cvtLevelStr: string = 'B'
+  let cvtNumber: number = val
   
   if(val >= 1024){
     cvtLevelStr = 'KB'

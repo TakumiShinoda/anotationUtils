@@ -1,19 +1,46 @@
+declare global{
+  interface Window{
+    bootstrap: any
+  }
+}
+
 export function hideAllViews(): void{
   $('.views').hide()
 }
 
+function initBootstapTooltip(){
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
+}
+
+function clearSideMenuIcon(){
+  $('#sideMenu>.iconContainer').css('background-color', 'rgba(0, 0, 0, 0)')
+  $('#sideMenu>.disableHover').removeClass('disableHover')
+}
+
 $(function (){
-  $('#showAutoAnotaionViewIcon').on('click', () => {
+  initBootstapTooltip()
+
+  $('#showAutoAnotaionViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {
+    clearSideMenuIcon()
+    $(ev.currentTarget).css('background-color', 'var(--bs-primary)')
+    $(ev.currentTarget).addClass('disableHover')
     hideAllViews()
     $('#autoAnotationView').show()
   })
 
-  $('#showDatabaseViewIcon').on('click', () => {
+  $('#showDatabaseViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {
+    clearSideMenuIcon()
+    $(ev.currentTarget).css('background-color', 'var(--bs-primary)')
+    $(ev.currentTarget).addClass('disableHover')
     hideAllViews()
     $('#selectDatabaseView').show()
   })
 
-  $('#showImageViewerViewIcon').on('click', () => {
+  $('#showImageViewerViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {
+    clearSideMenuIcon()
+    $(ev.currentTarget).css('background-color', 'var(--bs-primary)')
+    $(ev.currentTarget).addClass('disableHover')
     hideAllViews()
     $('#imageViewerView').show()
   })

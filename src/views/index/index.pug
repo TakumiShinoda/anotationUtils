@@ -8,11 +8,11 @@ html(lang='ja')
       i#exitAppButton.bi.bi-x-lg.icon.nodragmovable
     div#mainFrame.d-flex.flex-nowrap.nodragmovable
       div#sideMenu.flex-column
-        div#showAutoAnotaionViewIcon.iconContainer
-          i.bi.bi-card-image.icon
-        div#showDatabaseViewIcon.iconContainer
-          i.bi.bi-card-image.icon
-        div#showImageViewerViewIcon
+        div#showAutoAnotaionViewIcon.iconContainer.disableHover(style='background-color: var(--bs-primary);' data-bs-toggle='tooltip' data-bs-placement='right' data-bs-title='Auto Anotation')
+          i.bi.bi-person-bounding-box.icon
+        div#showDatabaseViewIcon.iconContainer(data-bs-toggle='tooltip' data-bs-placement='right' data-bs-title='Anotated Database')
+          i.bi.bi-database.icon
+        div#showImageViewerViewIcon.iconContainer(data-bs-toggle='tooltip' data-bs-placement='right' data-bs-title='Image Viewer')
           i.bi.bi-card-image.icon
       div#mainView.flex-column
         include ./autoAnotationView.pug

@@ -1,4 +1,4 @@
-import { ImagePreviewListItem } from "../../../preload"
+import { ImagePreviewListItem } from "../../../preloads/index/preload"
 import { clearPreviewArea, resetImagePreviewNaviArea } from "./ImagePreviewArea"
 import { resetPreviewImages } from "./allImgMode"
 

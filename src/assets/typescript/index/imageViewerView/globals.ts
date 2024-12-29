@@ -1,4 +1,4 @@
-import { ImagePreviewListItem } from "../../preload"
+import { ImagePreviewListItem } from "../../preloads/index/preload"
 
 export const LoadModeList = ['Error', 'AllImg', 'Directory'] as const
 export type LoadMode = (typeof LoadModeList)[number]

@@ -1,6 +1,6 @@
 import { cvtNum2DataSizeStr, getLastElement } from "../../../utils"
 import { resetImageViewImage } from "../imageViewArea"
-import { ImagePreviewListItem } from "../../../preload"
+import { ImagePreviewListItem } from "../../../preloads/index/preload"
 import { clearPreviewArea, resetImagePreviewNaviArea } from "./ImagePreviewArea"
 
 export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page: number = 1){

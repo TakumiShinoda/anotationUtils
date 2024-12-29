@@ -21,11 +21,11 @@
       "dest": "./dist/js/cmanObjMove_v091"
     },
     {
-      "src": "src/assets/css/index/bootstrap/*",
+      "src": "src/assets/css/bootstrap/*",
       "dest": "./dist/css/bootstrap/"
     },
     {
-      "src": "src/assets/css/index/bootstrap-icons/**",
+      "src": "src/assets/css/bootstrap-icons/**",
       "dest": "./dist/css/bootstrap-icons/"
     },
     {

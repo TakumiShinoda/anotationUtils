@@ -1,0 +1,30 @@
+#autoAnotationView{
+  width: 100%;
+  height: 100%;
+}
+
+#anotationNameInputField{
+  margin-left: 10px;
+}
+
+#imagePathInputField{
+  margin-left: 10px;
+  width: 100%;
+}
+
+#modelPathInputField{
+  margin-left: 10px;
+  width: 100%;
+}
+
+#imageViewerView{
+  position: relative;
+}
+
+#openFolderDirInputField{
+  width: 100%;
+}
+
+#openFolderBtn{
+  margin-left: 10px;
+}

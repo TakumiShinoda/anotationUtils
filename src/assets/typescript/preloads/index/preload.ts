@@ -1,7 +1,7 @@
 import { IpcRendererEvent } from 'electron'
 
-import { CustomError } from '../../common/customErrors'
-import { databaseInfo } from '../../common/database.d'
+import { CustomError } from '../../../../common/customErrors'
+import { databaseInfo } from '../../../../common/database.d'
 
 export interface ImagePreviewListItem{
   imgSize: {w: number, h: number}, 

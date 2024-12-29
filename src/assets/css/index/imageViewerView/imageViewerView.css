@@ -1,0 +1,16 @@
+@import './imageViewArea.css';
+@import './imagePreviewArea/ImagePreviewArea.css';
+@import './imagePreviewArea/allImgMode.css';
+@import './imagePreviewArea/directoryMode.css';
+
+#imageViewImageSizeInput{
+  width: 50px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#imageViewMaxPreviewImagesInput{
+  width: 60px;
+  text-align: center;
+  border-radius: 8px;
+}

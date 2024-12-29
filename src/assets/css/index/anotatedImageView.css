@@ -1,0 +1,54 @@
+:root{
+  --anotatedImageViewFooterHeight: 50px;
+}
+
+#databaseList{
+  padding: 0px;
+}
+
+#databaseList li{
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: #d7d7d7;
+  border: 0px;
+  border-bottom: 1px solid #37373d;
+}
+
+#databaseList li:hover{
+  transition: 0.6s;
+  background-color: #37373d;
+}
+
+#databaseList .flexArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#anotatedImageView #mainView{
+  height: calc(100% - var(--anotatedImageViewFooterHeight));
+  padding: 0px;
+}
+
+#anotatedImageView #footer{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: var(--anotatedImageViewFooterHeight);
+  border-top: #d7d7d7 solid 1px;
+}
+
+#anotatedImageView #selectAllButton{
+  margin-right: 10px;
+}
+
+#anotatedImageView .imageSelectBox{
+  margin: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  border: #d7d7d7 solid 2px;
+}
+
+#anotatedImageView .imageSelectBox:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}

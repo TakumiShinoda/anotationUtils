@@ -1,0 +1,47 @@
+.inputNumNoSpin::-webkit-outer-spin-button,
+.inputNumNoSpin::-webkit-inner-spin-button{
+  -webkit-appearance: none; 
+}
+
+.btn-outline-info{
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+}
+
+.btn-info{
+  --bs-btn-color: white;
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+}
+
+body{
+  user-select: none;
+  -webkit-app-region: drag;
+  background: #1f1f1f;
+  color: #d7d7d7;
+}
+
+label{
+  color: #d7d7d7;
+  font-size: 20px;
+}
+
+.dragmovable{
+  -webkit-app-region: drag;
+}
+
+.nodragmovable{
+  -webkit-app-region: no-drag;
+}
+
+.disableHover{
+  pointer-events: none;
+}
+
+.displayFlex{
+  display: flex;
+}
+
+.diaplayNone{
+  display: none;
+}

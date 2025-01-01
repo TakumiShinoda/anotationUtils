@@ -1,4 +1,4 @@
-import { cvtNum2DataSizeStr, getLastElement } from "../../../utils"
+import { cvtNum2DataSizeStr, getLastElement, wait } from "../../../utils"
 import { resetImageViewImage } from "../imageViewArea"
 import { ImagePreviewListItem } from "../../../preloads/index/preload"
 import { clearPreviewArea, resetImagePreviewNaviArea } from "./ImagePreviewArea"
@@ -136,7 +136,7 @@ export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page:
   })
 
   $('#imagePreviewArea').append(imageViewElementStr)
-  $('.imageViewImageInfoArea').on('click', (ev: JQuery.TriggeredEvent) => {
+  $('.imageViewImageInfoArea').on('click', async (ev: JQuery.TriggeredEvent) => {
     let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
     let clickedElement: JQuery<HTMLElement> = $(ev.currentTarget)
     let imgPath: string = clickedElement.attr('src') as string
@@ -151,6 +151,7 @@ export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page:
     window.ImageViewImagePreviewId = parseInt(clickedElement.attr('previewId') as string)
     
     imageViewAreaBackgroundElement.css({'z-index': '10'})
+    await wait(100)
     imageViewAreaBackgroundElement.css({'opacity': '1'})
   })
 

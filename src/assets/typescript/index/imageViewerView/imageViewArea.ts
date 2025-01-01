@@ -1,4 +1,4 @@
-import { getLastElement } from "../../utils"
+import { getLastElement, wait } from "../../utils"
 import {cmanOM_JS_init} from '../../cmanObjMove_v091'
 import './globals'
 import './imageViewControlArea'
@@ -99,13 +99,14 @@ $(function (){
     }
   })
 
-  $('#imageViewCloseBtn,#imageViewArea').on('click', () => {
+  $('#imageViewCloseBtn,#imageViewArea').on('click', async () => {
     let imageViewAreaBackgroundElement: JQuery<HTMLElement> = $('#imageViewAreaBackground')
 
     if(window.IsImgViewImageMouseCover || window.IsImgViewPrevNextBtnMouseCover) return
 
-    imageViewAreaBackgroundElement.css({'z-index': '-10'})
     imageViewAreaBackgroundElement.css({'opacity': '0'})
+    await wait(300)
+    imageViewAreaBackgroundElement.css({'z-index': '-10'})
   })
 
   $('#imageViewPrevBtn,#imageViewNextBtn').on({

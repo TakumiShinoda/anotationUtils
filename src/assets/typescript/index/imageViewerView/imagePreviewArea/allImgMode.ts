@@ -151,7 +151,7 @@ export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page:
     window.ImageViewImagePreviewId = parseInt(clickedElement.attr('previewId') as string)
     
     imageViewAreaBackgroundElement.css({'z-index': '10'})
-    await wait(100)
+    await wait(300)
     imageViewAreaBackgroundElement.css({'opacity': '1'})
   })
 

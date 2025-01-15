@@ -3,6 +3,7 @@
 @import './sideMenu.css';
 @import './alertModal.css';
 @import './autoAnotationView.css';
+@import './selectedDatabaseView.css';
 @import './anotatedImageView.css';
 @import './imageViewerView/imageViewerView.css';
 

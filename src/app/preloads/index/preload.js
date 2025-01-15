@@ -5,7 +5,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openFileDialog: (filters, dialogHistoryKey) => ipcRenderer.invoke('openFileDialog', filters, dialogHistoryKey),
   openFolderDialog: (dialogHistoryKey) => ipcRenderer.invoke('openFolderDialog', dialogHistoryKey),
   loadAnotationTarget: (anotationName, targetModel, targetDir) => ipcRenderer.invoke('loadAnotationTarget', anotationName, targetModel, targetDir),
-  getDatabaseInfo: () => ipcRenderer.invoke('getDatabaseInfo'),
+  getDatabaseInfo: (progressId) => ipcRenderer.invoke('getDatabaseInfo', progressId),
   getImageViewList: (imageViewDir) => ipcRenderer.invoke('getImageViewList', imageViewDir),
   copyFile: (srcPath, dialogHistoryKey) => ipcRenderer.invoke('copyFile', srcPath, dialogHistoryKey),
   domLoaded: () => ipcRenderer.send('domLoaded'),

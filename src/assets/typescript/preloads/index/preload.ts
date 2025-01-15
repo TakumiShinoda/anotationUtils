@@ -27,7 +27,7 @@ export interface IElectronAPI {
   openFileDialog: (filters: {extensions: string[], name: string}[], dialogHistoryKey: DialogHistoryKey) => Promise<string[] | undefined>,
   openFolderDialog: (dialogHistoryKey: DialogHistoryKey) => Promise<string | undefined>,
   loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, targetDir: string | undefined) => Promise<CustomError | boolean>,
-  getDatabaseInfo: () => Promise<databaseInfo>,
+  getDatabaseInfo: (progressId: number) => Promise<databaseInfo>,
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
   copyFile: (srcPath: string, dialogHistoryKey: DialogHistoryKey) => Promise<string>
   domLoaded: () => Promise<void>

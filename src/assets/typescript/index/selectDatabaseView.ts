@@ -29,10 +29,10 @@ function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement
       </li>
     `
     listBuff = $(listHtmlStrBuff)
-    console.log(databaseInfo)
+    // console.log(databaseInfo)
 
     listBuff.on('click', () => {
-      console.log(databaseInfo[databaseKey])
+      // console.log(databaseInfo[databaseKey])
       showAnotatedImageView(databaseInfo[databaseKey])
     })
     result.push(listBuff)
@@ -45,7 +45,10 @@ $(function (){
   const electronWindow: any = window
 
   $('#databaseList').on('inview', async (_, isInView: boolean) => {
+    let progressBarAreaElement: JQuery<HTMLElement> = $('#selectDatabaseViewprogressBarArea')
+    let progressBarElement: JQuery<HTMLElement> = $('#selectDatabaseViewprogressBarArea .progress .progress-bar')
     let databaseInfo: databaseInfo
+    let progressId: number
 
     if(!isInView){
       $('#databaseList').children('li').remove()
@@ -54,9 +57,18 @@ $(function (){
 
     try{
       toggleUserControl(false)
-      databaseInfo = await electronWindow.electronAPI.getDatabaseInfo()
+      progressBarElement.css('width', '0%')
+      progressBarAreaElement.css('display', 'flex')
+
+      progressId = window.IpcProgress.addProgress((progressPercent: number) => {
+        progressBarElement.css('width', `${progressPercent * 100}%`)
+      })
+      
+      databaseInfo = await electronWindow.electronAPI.getDatabaseInfo(progressId)
 
       $('#databaseList').append(createDatabaseListItems(databaseInfo))
+
+      progressBarAreaElement.css('display', 'none')
       toggleUserControl(true)
     }catch(err){
       showWarningAlert('Unknow error.')

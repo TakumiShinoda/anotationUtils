@@ -2,7 +2,7 @@ const fs = require('fs')
 const { cutImgToBase64 } = require('../utils')
 const { RootPath } = require('../globals')
 
-function getDatabaseInfo(){
+function getDatabaseInfo(_, progressId){
   return new Promise(async (res, rej) => {
     try{
       const databasePath = `${RootPath}/externalPackage/output`
@@ -12,6 +12,7 @@ function getDatabaseInfo(){
       let itemPathBuff
       let itemAnotaioPathBuff
       let cutImagesBuff
+      let progressCnt = 0
       let result = {}
 
       for(d of databases){
@@ -53,7 +54,12 @@ function getDatabaseInfo(){
               }
             }catch(err){continue}
           }
-        }catch(err){continue}
+        }catch(err){
+          console.log(err)
+        }finally{
+          progressCnt++
+          MainWindow.webContents.send('ipcProgressOn', progressId, (progressCnt / databases.length))
+        }
       }
 
       return res(result)

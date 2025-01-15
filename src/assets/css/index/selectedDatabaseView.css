@@ -1,0 +1,23 @@
+#selectDatabaseView{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#selectDatabaseViewprogressBarArea{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#selectDatabaseViewprogressBarArea > .progress{
+  width: 100%;
+}
+
+#selectDatabaseViewprogressBarArea > .progress > .progress-bar{
+  width: 0%;
+}

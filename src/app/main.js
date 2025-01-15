@@ -21,7 +21,7 @@ app.on('ready', () => {
     movable: true,
     'webPreferences': {
       'webviewTag': true,
-      'preload': `${process.cwd()}/src/app/preloads/index/preload.js`
+      'preload': `${__dirname}/preloads/index/preload.js`
     },
     // transparent: true,
     // titleBarStyle: 'hidden',

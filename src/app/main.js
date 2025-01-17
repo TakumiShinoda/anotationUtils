@@ -1,3 +1,4 @@
+const express = require('express')
 const { app, BrowserWindow, ipcMain } = require('electron')
 
 const { distPath } = require('../../dev/path')
@@ -7,6 +8,8 @@ const { exitApp, domLoaded } = require('./ipcMains/system')
 const { loadAnotationTarget } = require('./ipcMains/autoAnotation')
 const { getDatabaseInfo } = require('./ipcMains/anotatedImage')
 const { loadDialogHistory } = require('./mods/dialogHistory')
+const { httpApiProgress } = require('./httpServer/progressServer')
+const { ProgressServerPort } = require('./globals')
 
 require('electron-reload')(['./dist/bundles/**'])
 
@@ -42,4 +45,9 @@ app.on('ready', () => {
   ipcMain.handle('copyFile', copyFile)
   ipcMain.on('domLoaded', domLoaded)
   ipcMain.on('exitApp', exitApp)
+
+  ExpressApp = express()
+  ExpressServer = ExpressApp.listen(ProgressServerPort)
+  
+  ExpressApp.get('/api/progress', httpApiProgress)
 })

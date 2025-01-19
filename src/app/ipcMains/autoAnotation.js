@@ -2,7 +2,7 @@ const { spawn } = require('child_process')
 
 function loadAnotationTarget(_, anotationName, targetModel, targetDir){
   return new Promise((res, rej) => {
-    let externalPackagePath = `${__dirname}/../../../externalPackage`
+    let externalPackagePath = `${__dirname}/../../../externalPackage/autoanotation`
     
     if(AnotationProc != undefined) return res({code: 0, mes: 'Anotation processing.'})
     if(anotationName == undefined | anotationName == '') return res({code: 0, mes: 'Empty name.'})

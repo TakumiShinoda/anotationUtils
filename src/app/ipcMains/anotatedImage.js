@@ -5,7 +5,7 @@ const { RootPath } = require('../globals')
 function getDatabaseInfo(_, progressId){
   return new Promise(async (res, rej) => {
     try{
-      const databasePath = `${RootPath}/externalPackage/output`
+      const databasePath = `${RootPath}/externalPackage/autoanotation/output`
       let databases = fs.readdirSync(databasePath)
       let itemsDirBuff
       let movieItemsDirBuff

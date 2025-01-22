@@ -13,5 +13,6 @@ declare global{
     IsImgNamePathCopying: boolean
     LoadModeState: LoadMode
     ImagePreviewDirModeFilter: {filter: string, depth: number}
+    ImageViewerProgressId: number
   }
 }

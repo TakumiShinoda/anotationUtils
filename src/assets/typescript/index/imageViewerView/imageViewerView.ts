@@ -16,6 +16,7 @@ window.ImagePreviewDirModeFilter = {
   filter: '',
   depth: 1
 }
+window.ImageViewerProgressId = -1
 
 function cvtLoadMode(modeStr: string | undefined): LoadMode{
   if(modeStr == undefined) return 'Error'
@@ -24,6 +25,10 @@ function cvtLoadMode(modeStr: string | undefined): LoadMode{
 }
 
 $(function (){
+  window.ImageViewerProgressId = window.IpcProgress.addProgress((progressPercent: number) => {
+    $('#imageViewerViewProgressBarArea .progress .progress-bar').css('width', `${(progressPercent * 100).toString()}%`)
+  })
+
   $('#openFolderBtn').on('click', async() => {
     let openFolderDir: string | undefined
 

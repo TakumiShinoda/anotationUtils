@@ -3,6 +3,10 @@
 @import './imagePreviewArea/allImgMode.css';
 @import './imagePreviewArea/directoryMode.css';
 
+#imageViewerView{
+  position: relative;
+}
+
 #imageViewImageSizeInput{
   width: 50px;
   text-align: center;
@@ -13,4 +17,25 @@
   width: 60px;
   text-align: center;
   border-radius: 8px;
+}
+
+#imageViewerViewProgressBarArea{
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  margin-top: -10px;
+  margin-left: -10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(24, 24, 24, 0.5);
+}
+
+#imageViewerViewProgressBarArea > .progress{
+  width: 98%;
+}
+
+#imageViewerViewProgressBarArea > .progress > .progress-bar{
+  width: 0%;
 }

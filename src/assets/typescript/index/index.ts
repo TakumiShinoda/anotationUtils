@@ -8,6 +8,8 @@ import './imageViewerView/imageViewerView'
 import { wait } from '../utils'
 import { IpcProgressHandler } from '../ipcProgressHandler'
 
+window.IpcProgress = new IpcProgressHandler()
+
 export function toggleUserControl(isUserControlEnable: boolean){
   if(isUserControlEnable) $('#disableFilter').css('display', 'none')
   else $('#disableFilter').css('display', 'flex')
@@ -19,8 +21,6 @@ $(window).on('load', async() => {
 })
 
 $(function (){
-  window.IpcProgress = new IpcProgressHandler()
-
   $('#exitAppButton').on('click', () => {
     window.electronAPI.exitApp()
     console.log("exit")

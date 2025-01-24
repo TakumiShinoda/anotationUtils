@@ -118,6 +118,12 @@ async function wait(millis){
   })
 }
 
+function debugPrint(browserWindow, mes){
+  if(browserWindow == undefined) return
+
+  browserWindow.webContents.send('debugPrint', `debugPrint: ${mes}`)
+}
+
 module.exports= {
   getLastElement: getLastElement,
   getAllFilesRecursive: getAllFilesRecursive,
@@ -125,5 +131,6 @@ module.exports= {
   cvtImgToBase64: cvtImgToBase64,
   getBase64Async: getBase64Async,
   cutImgToBase64: cutImgToBase64,
-  wait: wait
+  wait: wait,
+  debugPrint: debugPrint
 }

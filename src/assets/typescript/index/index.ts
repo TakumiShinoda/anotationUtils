@@ -1,3 +1,5 @@
+import { IpcRendererEvent } from 'electron'
+
 import '../../css/index/styles.css'
 
 import './sideMenu'
@@ -18,6 +20,10 @@ export function toggleUserControl(isUserControlEnable: boolean){
 $(window).on('load', async() => {
   await wait(1000)
   window.electronAPI.domLoaded()
+})
+
+window.electronAPI.on('debugPrint', (_: IpcRendererEvent, mes: string) => {
+  console.log(mes)
 })
 
 $(function (){

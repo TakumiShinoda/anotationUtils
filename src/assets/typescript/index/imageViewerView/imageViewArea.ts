@@ -18,10 +18,20 @@ export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: num
     if(imgViewSize.w > viewAreaSize.w) imgViewSize = {w: viewAreaSize.w, h: viewAreaSize.w}
 
     imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
+
+    if((viewAreaSize.h - imgViewSize.h) < (MaxViewSizeOffset * 2)){
+      imgViewSize.w = imgViewSize.w * (viewAreaSize.h  / imgViewSize.h)
+      imgViewSize.h = viewAreaSize.h
+    }
   }else{
     if(imgViewSize.h > viewAreaSize.h) imgViewSize = {w: viewAreaSize.h, h: viewAreaSize.h}
 
     imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
+
+    if((viewAreaSize.w - imgViewSize.w) < (MaxViewSizeOffset * 2)){
+      imgViewSize.h = imgViewSize.h * (viewAreaSize.w / imgViewSize.w)
+      imgViewSize.w = viewAreaSize.w
+    }
   }
 
   $('#imageViewControlAreaImagePath').val(getLastElement(imgPath.split('/')))

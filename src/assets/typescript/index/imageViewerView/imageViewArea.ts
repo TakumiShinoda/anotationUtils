@@ -19,7 +19,7 @@ export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: num
 
     imgViewSize.h = imgSize.h * (imgViewSize.w / imgSize.w)
 
-    if((viewAreaSize.h - imgViewSize.h) < (MaxViewSizeOffset * 2)){
+    if(viewAreaSize.h < imgViewSize.h){
       imgViewSize.w = imgViewSize.w * (viewAreaSize.h  / imgViewSize.h)
       imgViewSize.h = viewAreaSize.h
     }
@@ -28,7 +28,7 @@ export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: num
 
     imgViewSize.w = imgSize.w * (imgViewSize.h / imgSize.h)
 
-    if((viewAreaSize.w - imgViewSize.w) < (MaxViewSizeOffset * 2)){
+    if(viewAreaSize.w < imgViewSize.w){
       imgViewSize.h = imgViewSize.h * (viewAreaSize.w / imgViewSize.w)
       imgViewSize.w = viewAreaSize.w
     }

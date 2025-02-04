@@ -1,5 +1,10 @@
+const { RootPath } = require("../globals")
+
 function domLoaded(_){
-  MainWindow.show()
+  return new Promise((res, _) => {
+    MainWindow.show()
+    res(RootPath)
+  })
 }
 
 function exitApp(_){

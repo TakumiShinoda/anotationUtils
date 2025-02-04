@@ -8,6 +8,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
   getDatabaseInfo: (progressId) => ipcRenderer.invoke('getDatabaseInfo', progressId),
   getImageViewList: (imageViewDir) => ipcRenderer.invoke('getImageViewList', imageViewDir),
   copyFile: (srcPath, dialogHistoryKey) => ipcRenderer.invoke('copyFile', srcPath, dialogHistoryKey),
-  domLoaded: () => ipcRenderer.send('domLoaded'),
+  domLoaded: () => ipcRenderer.invoke('domLoaded'),
   exitApp: () => ipcRenderer.send('exitApp')
 })

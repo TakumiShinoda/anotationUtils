@@ -43,7 +43,7 @@ app.on('ready', () => {
   ipcMain.handle('getDatabaseInfo', getDatabaseInfo)
   ipcMain.handle('getImageViewList', getImageViewList)
   ipcMain.handle('copyFile', copyFile)
-  ipcMain.on('domLoaded', domLoaded)
+  ipcMain.handle('domLoaded', domLoaded)
   ipcMain.on('exitApp', exitApp)
 
   ExpressApp = express()

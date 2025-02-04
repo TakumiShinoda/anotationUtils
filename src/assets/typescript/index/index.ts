@@ -19,7 +19,7 @@ export function toggleUserControl(isUserControlEnable: boolean){
 
 $(window).on('load', async() => {
   await wait(1000)
-  window.electronAPI.domLoaded()
+  window.RootPath = await window.electronAPI.domLoaded()
 })
 
 window.electronAPI.on('debugPrint', (_: IpcRendererEvent, mes: string) => {

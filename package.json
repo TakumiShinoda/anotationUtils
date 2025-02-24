@@ -11,10 +11,9 @@
     "compile-pug": "gulp pug_compile",
     "dist": "rimraf ./dist || gulp build_dist && gulp build_dist",
     "test-pack-darwinx64": "rm -R *darwin-x64* || node build/darwinx64.js && node build/darwinx64.js",
-    "devenv-reset": "rimraf ./node_modules && rimraf ./package-lock.json",
-    "devenv-rebuild": "npm run devenv-reset & npm i",
+    "devenv-reset": "rm -R ./node_modules & rm ./package-lock.json & rm ./yarn.lock & yarn",
     "build-copyExternals": "robocopy ./externalPackage ./publish/win-unpacked/externalPackage /s /e & robocopy ./settings ./publish/win-unpacked/settings /s /e",
-    "build-prepare": "npm run devenv-reset & npm run clean & rimraf ./publish & rimraf ./yarn.lock & yarn",
+    "build-prepare": "npm run devenv-reset & npm run clean & rimraf ./publish",
     "build-python-env": "cd ./publish/win-unpacked/externalPackage/python & setup.sh",
     "build-exe-win": "npm run build-prepare & gulp dist & electron-builder --win & npm run build-copyExternals & npm run build-python-env"
   },

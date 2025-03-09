@@ -54,9 +54,15 @@ div#imageViewerView.views.diaplayNone
     div#imageViewControlArea(style="background:rgba(192,192,192,0.5); display: flex;")
       div(style="display: flex; align-items: center;")
         input#imageViewControlAreaImagePath.form-control.form-control-sm(type="text" style="width: 150px;" placeholder=".form-control-sm" readonly)
-        div#imageViewControlAreaCopyNameBtn.btn.btn-primary(disabled) Copy Name
-        div#imageViewControlAreaCopyPathBtn.btn.btn-success Copy Path
-        div#imageViewControlAreaCopyImageBtn.btn.btn-warning Copy Img
+        div#imageViewControlAreaClipDropdownArea
+          div.btn-group.btn-success
+            div#imageViewControlAreaClipDropdownBtn.btn.btn-success.dropdown-toggle(data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false') Clip
+            div#imageViewControlAreaClipDropdown.dropdown-menu(aria-labelledby='imageViewControlAreaClipDropdownBtn')
+              div#imageViewControlAreaClipDropdownMenuArea.btn-group-toggle(data-toggle='buttons' data-bs-auto-close="true")
+                ul.list-group
+                  a#imageViewControlAreaCopyNameBtn.list-group-item.list-group-item-action.list-group-item-success Copy Name
+                  a#imageViewControlAreaCopyPathBtn.list-group-item.list-group-item-action.list-group-item-success Copy Path
+                  a#imageViewControlAreaCopyImageBtn.list-group-item.list-group-item-action.list-group-item-success Copy Img
         div#imageViewControlAreaOpenExplorerBtn.btn.btn-info Explorer
         div#imageViewControlAreaCopiedText Copied!
         div(style="margin-left: 20px;") View Size：

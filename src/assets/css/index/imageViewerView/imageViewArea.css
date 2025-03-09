@@ -27,6 +27,20 @@
   font-size: 15px;
 }
 
+#imageViewControlAreaClipDropdownBtn{
+  font-size: 15px;
+  padding: 3px 6px;
+  margin-left: 5px;
+}
+
+#imageViewControlAreaClipDropdown{
+  padding: 0px;
+}
+
+#imageViewControlAreaClipDropdownMenuArea .list-group .list-group-item{
+  margin: 0px;
+}
+
 #imageViewControlAreaCopyNameBtn{
   font-size: 15px;
   padding: 3px 6px;

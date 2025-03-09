@@ -22,7 +22,7 @@ function appearCopiedText(){
 
     if(opacityBuff <= 0){
       textElement.css('visibility', 'hidden')
-      clearInterval(intervalObj)
+      clearInterval(Number(intervalObj))
       window.IsImgNamePathCopying = false
     }else textElement.css('opacity', opacityBuff)
   }, intervalMillis);
@@ -37,6 +37,17 @@ $(function (){
   $('#imageViewControlAreaCopyPathBtn').on('click', (ev: JQuery.ClickEvent) => {
     navigator.clipboard.writeText($('#imageViewControlAreaImagePath').attr('fullPath') as string)
     appearCopiedText()
+  })
+
+  $('#imageViewControlAreaOpenExplorer').on('click', async (ev: JQuery.ClickEvent) => {
+    let fullPath: string = $('#imageViewControlAreaImagePath').attr('fullPath') as string
+    let openDir: string = fullPath.split('/').slice(0, -1).join('/')
+
+    try{
+      await window.electronAPI.openByExplorer(openDir)
+    }catch(err){
+      showWarningAlert(err as string)
+    }
   })
 
   $('#imageViewControlAreaViewSizeSlider').on('input', (ev: JQuery.TriggeredEvent) => {

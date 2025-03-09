@@ -1,5 +1,5 @@
 const fs = require('fs')
-// const imageSize = require('image-size')
+const openExplorer = require('open-file-explorer')
 const imageSize = require('probe-image-size')
 
 const { getAllFilesRecursive, getLastElement } = require('../utils')
@@ -62,6 +62,22 @@ function getImageViewList(_, imageViewDir){
   })
 }
 
+function openByExplorer(_, openDir){
+  return new Promise(async (res, rej) => {
+    try{
+      openDir = openDir.replaceAll('/', '\\')
+
+      if(!fs.existsSync(openDir)) throw 'Directory not exist.'
+
+      await openExplorer(openDir.replaceAll('/', '\\'))
+      res()
+    }catch(err){
+      rej(err)
+    }
+  })
+}
+
 module.exports= {
-  getImageViewList: getImageViewList
+  getImageViewList: getImageViewList,
+  openByExplorer: openByExplorer
 }

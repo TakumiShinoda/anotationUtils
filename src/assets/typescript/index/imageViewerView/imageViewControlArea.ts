@@ -39,7 +39,36 @@ $(function (){
     appearCopiedText()
   })
 
-  $('#imageViewControlAreaOpenExplorer').on('click', async (ev: JQuery.ClickEvent) => {
+  $('#imageViewControlAreaCopyImageBtn').on('click', async (ev: JQuery.ClickEvent) => {
+    let imageViewImageJqueryElement: JQuery<HTMLElement>
+    let imageViewImageElement: HTMLElement
+    let canvasObj: HTMLCanvasElement
+    let ctxObj: CanvasRenderingContext2D
+
+    try{
+      imageViewImageJqueryElement = $('.imageViewImage')
+      imageViewImageElement = imageViewImageJqueryElement.get(0) as HTMLElement
+      canvasObj = document.createElement('canvas')
+      ctxObj = canvasObj.getContext('2d') as CanvasRenderingContext2D
+      canvasObj.width = parseInt(imageViewImageJqueryElement.attr('srcImgW') as string)
+      canvasObj.height = parseInt(imageViewImageJqueryElement.attr('srcImgH') as string)
+      ctxObj.drawImage(imageViewImageElement as CanvasImageSource, 0, 0)
+
+      canvasObj.toBlob(async (blob: Blob | null) => {
+        if(blob == null) throw 'Failed to copy clipboard.'
+
+        await navigator.clipboard.write([
+          new ClipboardItem({'image/png': blob})
+        ])
+      })
+    }catch(err){
+      showWarningAlert(err as string)
+    }finally{
+      appearCopiedText()
+    }
+  })
+
+  $('#imageViewControlAreaOpenExplorerBtn').on('click', async (ev: JQuery.ClickEvent) => {
     let fullPath: string = $('#imageViewControlAreaImagePath').attr('fullPath') as string
     let openDir: string = fullPath.split('/').slice(0, -1).join('/')
 

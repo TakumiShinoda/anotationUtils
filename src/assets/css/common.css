@@ -14,6 +14,12 @@
   --bs-btn-active-color: white;
 }
 
+.btn-warning{
+  --bs-btn-color: white;
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+}
+
 body{
   user-select: none;
   -webkit-app-region: drag;

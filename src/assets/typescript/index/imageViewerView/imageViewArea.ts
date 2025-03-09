@@ -3,7 +3,7 @@ import {cmanOM_JS_init} from '../../cmanObjMove_v091'
 import './globals'
 import './imageViewControlArea'
 
-export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}){
+export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: number}, srcImgSize: {w: number, h: number}){
   const MaxViewSizeOffset = 35
 
   let viewAreaElement: JQuery<Element> = $('#imageViewArea')
@@ -37,7 +37,7 @@ export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: num
   $('#imageViewControlAreaImagePath').val(getLastElement(imgPath.split('/')))
   $('#imageViewControlAreaImagePath').attr('fullPath', imgPath)
   $('#imageViewArea #cmanOM_ID_DMY0').remove()
-  $('#imageViewArea').append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
+  $('#imageViewArea').append(`<img class="imageViewImage" src="${imgPath}" width="${imgViewSize.w}px" height="${imgViewSize.h}px" srcImgW="${srcImgSize.w}" srcImgH="${srcImgSize.h}" cmanOMat="move" style="scale:1;transform-origin: 0px 0px;z-index: 12;">`)
   cmanOM_JS_init()
 
   $('.imageViewImage').on({
@@ -50,8 +50,22 @@ export function resetImageViewImage(imgPath: string, imgSize: {w: number, h: num
   })
 }
 
+export function getCurrentPreviewImageElement(): JQuery<HTMLElement> | undefined{
+  let result: JQuery<HTMLElement> | undefined = undefined
+
+  for(let ivpi of $('img.imageViewPreviewImage')){
+    if(parseInt($(ivpi).attr('previewId') as string) != window.ImageViewImagePreviewId) continue
+
+    result = $(ivpi)
+  }
+
+  return result
+}
+
 export function turnPageImageView(turnPage: number){
+  let currentPreviewImageElement: JQuery<HTMLElement> | undefined
   let imgSize: {w: number, h: number}
+  let srcImgSize: {w: number, h: number}
   let newPage: number = window.ImageViewImagePreviewId + turnPage
 
   if(
@@ -60,17 +74,21 @@ export function turnPageImageView(turnPage: number){
   ) return
 
   window.ImageViewImagePreviewId = newPage
+  currentPreviewImageElement = getCurrentPreviewImageElement()
 
-  for(let ivpi of $('img.imageViewPreviewImage')){
-    if(parseInt($(ivpi).attr('previewId') as string) != window.ImageViewImagePreviewId) continue
+  if(currentPreviewImageElement == undefined) return
 
-    imgSize = {
-      w: parseInt($(ivpi).attr('imgW') as string),
-      h: parseInt($(ivpi).attr('imgh') as string)
-    }
-
-    resetImageViewImage($(ivpi).attr('src') as string, imgSize)
+  imgSize = {
+    w: parseInt(currentPreviewImageElement.attr('imgW') as string),
+    h: parseInt(currentPreviewImageElement.attr('imgH') as string)
   }
+
+  srcImgSize = {
+    w: parseInt(currentPreviewImageElement.attr('srcImgW') as string),
+    h: parseInt(currentPreviewImageElement.attr('srcImgH') as string)
+  }
+
+  resetImageViewImage(currentPreviewImageElement.attr('src') as string, imgSize, srcImgSize)
 }
 
 $(function (){

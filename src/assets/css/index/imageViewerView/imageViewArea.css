@@ -39,7 +39,13 @@
   margin-left: 5px;
 }
 
-#imageViewControlAreaOpenExplorer{
+#imageViewControlAreaCopyImageBtn{
+  font-size: 15px;
+  padding: 3px 6px;
+  margin-left: 5px;
+}
+
+#imageViewControlAreaOpenExplorerBtn{
   font-size: 15px;
   padding: 3px 6px;
   margin-left: 5px;

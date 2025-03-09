@@ -125,8 +125,8 @@ export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page:
 
     imageViewElementStr += `
       <span class="imageViewPreviewImageBackground" style="width:${imagePreviewSize}px;height:${imagePreviewSize}px;">
-        <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}">
-        <div class="imageViewImageInfoArea" style="width:${imagePreviewSize}px; height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" previewId="${ivpi}">
+        <img class="imageViewPreviewImage" src="${ivp.path}" width="${previewImageSizeBuff.w}px" height="${previewImageSizeBuff.h}px" loading="lazy" previewId="${ivpi}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" srcImgW="${ivp.imgSize.w}" srcImgH="${ivp.imgSize.h}">
+        <div class="imageViewImageInfoArea" style="width:${imagePreviewSize}px; height:${imagePreviewSize}px;" src="${ivp.path}" imgW="${previewImageSizeBuff.w}" imgH="${previewImageSizeBuff.h}" srcImgW="${ivp.imgSize.w}" srcImgH="${ivp.imgSize.h}" previewId="${ivpi}">
           <span class="imageViewImageInfo imageViewImageInfoName" width="100%">${imageNameBuff}</span>
           <span class="imageViewImageInfo" width="100%">${cvtNum2DataSizeStr(ivp.dataSize)}</span>
           <span class="imageViewImageInfo" width="100%">${ivp.imgSize.w} x ${ivp.imgSize.h}</span>
@@ -141,13 +141,19 @@ export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page:
     let clickedElement: JQuery<HTMLElement> = $(ev.currentTarget)
     let imgPath: string = clickedElement.attr('src') as string
     let imgSize: {w: number, h: number}
+    let srcImgSize: {w: number, h: number}
 
     imgSize = {
       w: parseInt(clickedElement.attr('imgW') as string),
       h: parseInt(clickedElement.attr('imgh') as string)
     }
+
+    srcImgSize = {
+      w: parseInt(clickedElement.attr('srcImgW') as string),
+      h: parseInt(clickedElement.attr('srcImgh') as string)
+    }
     
-    resetImageViewImage(imgPath, imgSize)
+    resetImageViewImage(imgPath, imgSize, srcImgSize)
     window.ImageViewImagePreviewId = parseInt(clickedElement.attr('previewId') as string)
     
     imageViewAreaBackgroundElement.css({'z-index': '10'})

@@ -1,9 +1,13 @@
 const { RootPath } = require("../globals")
+const { loadDialogHistory } = require("../mods/dialogHistory")
 
 function domLoaded(_){
   return new Promise((res, _) => {
     MainWindow.show()
-    res(RootPath)
+    res({
+      rootPath: RootPath,
+      dialogHistories: loadDialogHistory()
+    })
   })
 }
 

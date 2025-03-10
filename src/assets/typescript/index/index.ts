@@ -9,8 +9,16 @@ import './imageViewerView/imageViewerView'
 
 import { wait } from '../utils'
 import { IpcProgressHandler } from '../ipcProgressHandler'
+import { DialogHistoryKey, DomLoadedInitItem } from '../preloads/index/preload'
 
 window.IpcProgress = new IpcProgressHandler()
+
+function initInputAreaByDialogHistory(dialogHistories: {[key in DialogHistoryKey]: string}){
+  console.log(dialogHistories)
+  $('#modelPathInputField').val(dialogHistories.autoAnotationModelPathDialog)
+  $('#imagePathInputField').val(dialogHistories.autoAnotationImagePathDialog)
+  $('#openFolderDirInputField').val(dialogHistories.imageViewerOpenFolderDialog)
+}
 
 export function toggleUserControl(isUserControlEnable: boolean){
   if(isUserControlEnable) $('#disableFilter').css('display', 'none')
@@ -18,8 +26,13 @@ export function toggleUserControl(isUserControlEnable: boolean){
 }
 
 $(window).on('load', async() => {
+  let domLoadedInitItem: DomLoadedInitItem
+
   await wait(1000)
-  window.RootPath = await window.electronAPI.domLoaded()
+  domLoadedInitItem = await window.electronAPI.domLoaded()
+  window.RootPath = domLoadedInitItem.rootPath
+  window.InitialDialogHistories = domLoadedInitItem.dialogHistories
+  initInputAreaByDialogHistory(window.InitialDialogHistories)
 })
 
 window.electronAPI.on('debugPrint', (_: IpcRendererEvent, mes: string) => {

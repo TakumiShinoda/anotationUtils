@@ -21,7 +21,10 @@ function loadDialogHistory(){
     for(let key in result){
       try{
         if(fileJson[key] == undefined) continue
-        if(!fs.statSync(fileJson[key]).isDirectory()) continue
+        if(
+          !fs.statSync(fileJson[key]).isDirectory() &&
+          !fs.statSync(fileJson[key]).isFile()
+        ) continue
 
         result[key] = fileJson[key]
       }catch{ continue }

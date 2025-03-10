@@ -22,6 +22,11 @@ export interface DialogHistory{
   imageViewerSaveImgDialog: string
 }
 
+export interface DomLoadedInitItem{
+  rootPath: string,
+  dialogHistories: {[key in DialogHistoryKey]: string}
+}
+
 export interface IElectronAPI {
   on: (channel: string, listener: (event: IpcRendererEvent, ...args: any[]) => void) => void,
   openFileDialog: (filters: {extensions: string[], name: string}[], dialogHistoryKey: DialogHistoryKey) => Promise<string[] | undefined>,
@@ -31,7 +36,7 @@ export interface IElectronAPI {
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
   openByExplorer: (openDir: string) => Promise<void>,
   copyFile: (srcPath: string, dialogHistoryKey: DialogHistoryKey) => Promise<string>
-  domLoaded: () => Promise<string>
+  domLoaded: () => Promise<DomLoadedInitItem>
   exitApp: () => Promise<void>
 }
 

@@ -39,7 +39,7 @@
     "@types/jquery": "^3.3.14",
     "chokidar": "^3.0.0",
     "css-loader": "^6.8.1",
-    "electron": "^27.1.0",
+    "electron": "35.0.2",
     "electron-builder": "24.13.3",
     "electron-connect": "^0.6.3",
     "electron-packager": "^17.1.2",

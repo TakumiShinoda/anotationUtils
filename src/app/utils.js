@@ -1,5 +1,10 @@
 const fs = require('fs')
 const jimp = require('jimp')
+const { spawn } = require('child_process')
+
+const { RootPath } = require('./globals')
+
+const CommandVenvPython = `${`${RootPath}/externalPackage/python/env/Scripts/python.exe`}`
 
 function getLastElement(list){
   return list[list.length - 1]
@@ -20,6 +25,55 @@ function getAllFilesRecursive(dir){
   }
 
   return pathList
+}
+
+async function getAllFilesRecursive2(dir, filterFileName = ''){
+  let proc
+  let procResultStr
+  let procResult
+
+  return new Promise((res, rej) => {
+    try{
+      proc = spawn(
+        CommandVenvPython,
+        [
+          `${RootPath}/src/assets/python/getAllFilesRecursive.py`,
+          '--dir', dir,
+          '--filterFileName', filterFileName,
+          '--outputJsonDir', `${RootPath}/temp`
+        ],
+        { 
+          shell: false,
+          windowsHide: true,
+          stdio: ["pipe", "pipe", "inherit"],
+        }
+      )
+
+      proc.stdout.on('data', (data) => {
+        console.log(data.toString())
+        debugPrint(MainWindow, `getAllFilesRecursive stdout: ${data.toString()}`)
+      })
+  
+      proc.on('close', (code) => {
+        console.log(`proc code ${code}`)
+        debugPrint(MainWindow, `proc code ${code}`)
+
+        if(code != 0) throw `Proc code ${code}.`
+        
+        procResultStr = fs.readFileSync(`${RootPath}/temp/getAllFilesRecursive.json`)
+        procResult = JSON.parse(procResultStr)
+
+        if(Object.keys(procResult).indexOf('result') < 0) throw 'Invalid result.'
+        if(!(procResult['result'] instanceof Array)) throw 'Invalid result.'
+
+        fs.unlinkSync(`${RootPath}/temp/getAllFilesRecursive.json`)
+        
+        res(procResult['result'])
+      })
+    }catch(err){
+      rej(`getAllFilesRecursive err: ${err}`)
+    }
+  })
 }
 
 function readAnotationFile(anotationTextPath){
@@ -127,6 +181,7 @@ function debugPrint(browserWindow, mes){
 module.exports= {
   getLastElement: getLastElement,
   getAllFilesRecursive: getAllFilesRecursive,
+  getAllFilesRecursive2: getAllFilesRecursive2,
   readAnotationFile: readAnotationFile,
   cvtImgToBase64: cvtImgToBase64,
   getBase64Async: getBase64Async,

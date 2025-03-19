@@ -2,7 +2,7 @@ const fs = require('fs')
 const openExplorer = require('open-file-explorer')
 const imageSize = require('probe-image-size')
 
-const { getAllFilesRecursive, getLastElement } = require('../utils')
+const { getAllFilesRecursive2, getLastElement } = require('../utils')
 
 function getImageViewList(_, imageViewDir){
   return new Promise(async (res, rej) => {
@@ -16,8 +16,8 @@ function getImageViewList(_, imageViewDir){
     let parallelProcCnt = 0
 
     try{
-      allPathList = getAllFilesRecursive(imageViewDir)
-      
+      allPathList = await getAllFilesRecursive2(imageViewDir)
+
       for(let [i, ap] of Object.entries(allPathList)){
         if(!['jpg', 'jpeg', 'png', 'svg', 'webp', 'gif', 'bmp', 'tiff'].includes(getLastElement(ap.split('.')))){
           console.log(`Bad extension: ${ap}`)

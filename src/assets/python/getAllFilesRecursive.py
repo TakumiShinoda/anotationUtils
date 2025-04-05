@@ -6,13 +6,14 @@ from io import TextIOWrapper
 
 from typing import *
 
-def getAllFilesRecursive(dir: str, filterFileName: str) -> List[str]:
-  pathList: List[str] = glob.glob(f'{dir}/**/{filterFileName}', recursive=True)
+def getAllFilesRecursive(dir: str, filterFileName: List[str]) -> List[str]:
+  pathList: List[str] = []
 
-  if(filterFileName == ''):
-    pathList = glob.glob(f'{dir}/**', recursive=True)
+  if(len(filterFileName) == 0):
+      pathList = glob.glob(f'{dir}/**', recursive=True)
   else:
-    pathList = glob.glob(f'{dir}/**/{filterFileName}', recursive=True)
+    for ffn in filterFileName:
+      pathList.extend(glob.glob(f'{dir}/**/{ffn}', recursive=True))
 
   pathList = [os.path.abspath(p).replace('\\', '/') for p in pathList if os.path.isfile(p)]
 
@@ -27,7 +28,7 @@ if __name__ == '__main__':
   resultStr: str
 
   parser.add_argument('--dir', type=str, default='', help='dir')
-  parser.add_argument('--filterFileName', type=str, default='', help='')
+  parser.add_argument('--filterFileName', type=str, nargs='+', default=[], help='')
   parser.add_argument('--outputJsonDir', type=str, default='', help='')
   opt = parser.parse_args()
 

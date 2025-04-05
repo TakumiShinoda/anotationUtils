@@ -10,38 +10,28 @@ function getLastElement(list){
   return list[list.length - 1]
 }
 
-function getAllFilesRecursive(dir){
-  let readList = fs.readdirSync(dir)
-  let fileStat
-  let pathList = []
-  let pathBuff
-
-  for(r of readList){
-    pathBuff = `${dir}/${r}`
-    fileStat = fs.statSync(pathBuff)
-    
-    if(fileStat.isDirectory()) pathList = pathList.concat(getAllFilesRecursive(pathBuff))
-    else pathList.push(pathBuff.replaceAll('\\', '/'))
-  }
-
-  return pathList
-}
-
-async function getAllFilesRecursive2(dir, filterFileName = ''){
+async function getAllFilesRecursive(dir, filterFileName = []){
+  const CommandArgsTemp = [
+    `${RootPath}/src/assets/python/getAllFilesRecursive.py`,
+    '--dir', dir,
+    '--outputJsonDir', `${RootPath}/temp`,
+  ]
+  
   let proc
+  let commandArgs = CommandArgsTemp
   let procResultStr
   let procResult
 
   return new Promise((res, rej) => {
     try{
+      if(filterFileName.length != 0){
+        commandArgs.push('--filterFileName')
+        commandArgs = commandArgs.concat(filterFileName)
+      }
+
       proc = spawn(
         CommandVenvPython,
-        [
-          `${RootPath}/src/assets/python/getAllFilesRecursive.py`,
-          '--dir', dir,
-          '--filterFileName', filterFileName,
-          '--outputJsonDir', `${RootPath}/temp`
-        ],
+        commandArgs,
         { 
           shell: false,
           windowsHide: true,
@@ -181,7 +171,7 @@ function debugPrint(browserWindow, mes){
 module.exports= {
   getLastElement: getLastElement,
   getAllFilesRecursive: getAllFilesRecursive,
-  getAllFilesRecursive2: getAllFilesRecursive2,
+  getAllFilesRecursive: getAllFilesRecursive,
   readAnotationFile: readAnotationFile,
   cvtImgToBase64: cvtImgToBase64,
   getBase64Async: getBase64Async,

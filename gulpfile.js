@@ -4,22 +4,24 @@ const electron = require('electron-connect').server.create()
 const webpack = require('webpack')
 const webpackStream = require('webpack-stream')
 const plumber = require('gulp-plumber')
-const fs = require('fs')
 const webpackConfig = require('./dev/webpack.config.js')
-const {copyChain, routes} = require('./dev/gulpChain.json') 
-const {distPath, srcPath} = require('./dev/path')
+const {copyChain, routes} = require('./dev/gulpChain.json')
 
 gulp.task('make_bundle', () => {
   return new Promise((mainRes, mainRej) => {
     let tasks = []
+    let configBuff
 
-    for(var i = 0; i < routes.length; i++){
+    for(let rt of routes){
+      configBuff = webpackConfig.config(rt)
+
       tasks.push(new Promise((subRes, subRej) => {
         try{
-          webpackStream(webpackConfig.config(routes[i]), webpack)
-            .pipe(plumber())
+          gulp.src(configBuff.entry)
+            .pipe(plumber({errorHandler: function(err) {this.emit('end')}}))
+            .pipe(webpackStream(configBuff, webpack))
             .pipe(gulp.dest('./dist/bundles/'))
-            .on('error', function (e) { this.emit('end') })
+            .on('error', function (err) {this.emit('end')})
             .on('end', () => {subRes()})
         }catch(err){subRej(err)}
       }))
@@ -45,11 +47,11 @@ gulp.task('asset_copy', () => {
   return new Promise((mainRes, mainRej) => {
     let tasks = []
 
-    for(var i = 0; i < copyChain.length; i++){
+    for(let cc of copyChain){
       tasks.push(new Promise((subRes, subRej) => {
         try{
-          gulp.src(copyChain[i].src)
-            .pipe(gulp.dest(copyChain[i].dest))
+          gulp.src(cc.src)
+            .pipe(gulp.dest(cc.dest))
             .on('end', () => {subRes()})
         }catch(err){subRej(err)}
       }))

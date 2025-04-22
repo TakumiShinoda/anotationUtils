@@ -4,6 +4,9 @@
 }
 
 #sideMenu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #d7d7d7;
   background: #181818;
   width: var(--sideMenuWidth);

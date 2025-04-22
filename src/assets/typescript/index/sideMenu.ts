@@ -14,8 +14,8 @@ function initBootstapTooltip(){
 }
 
 function clearSideMenuIcon(){
-  $('#sideMenu>.iconContainer').css('background-color', 'rgba(0, 0, 0, 0)')
-  $('#sideMenu>.disableHover').removeClass('disableHover')
+  $('#sideMenu>div>.iconContainer').css('background-color', 'rgba(0, 0, 0, 0)')
+  $('#sideMenu>div>.disableHover').removeClass('disableHover')
 }
 
 $(function (){

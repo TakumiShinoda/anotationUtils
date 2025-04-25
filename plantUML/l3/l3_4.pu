@@ -1,0 +1,13 @@
+@startuml
+!include ../l4/l4_3.pu
+
+package "中機能"{
+  object "中機能" as 3_4 #LightGreen{
+    id = 3-4
+    detail = 対象をフォルダ選択して指定できる
+  }
+}
+
+
+3_4 <-- 4_3
+@enduml

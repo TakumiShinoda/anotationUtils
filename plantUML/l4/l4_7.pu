@@ -1,0 +1,14 @@
+@startuml
+!include ../l5/l5_1.pu
+!include ../l5/l5_9.pu
+
+package "小機能"{
+  object "小機能" as 4_7{
+    id = 4-7
+    detail = ソートして表示できる
+  }
+}
+
+4_7 <-- 5_1
+4_7 <-- 5_9
+@enduml

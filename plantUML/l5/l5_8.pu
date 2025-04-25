@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  object "構成" as 5_8 #LightGreen{
+    id = 5-8
+    detail = GUIに設定用のスライドバーを実装する
+  }
+}
+
+5_8 <-- 5_1
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_10.pu
+
+package "中機能"{
+  object "中機能" as 3_11 #LightGreen{
+    id = 3-11
+    detail = 画像ビュワーの画像表示サイズを変更できる
+  }
+}
+
+3_11 <-- 4_10
+@enduml

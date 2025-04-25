@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_3.pu
+
+package "構成"{
+  object "構成" as 5_6{
+    id = 5-6
+    detail = GUI上で画像編集操作できるように(T.B.D)を使用する
+  }
+}
+
+5_6 <-- 5_3
+@enduml

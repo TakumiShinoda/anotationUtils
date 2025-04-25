@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_4.pu
+
+package "構成"{
+  object "構成" as 5_5 #LightGreen{
+    id = 5-5
+    detail = 画像処理はopencvを使用する
+  }
+}
+
+5_5 <-- 5_4
+@enduml

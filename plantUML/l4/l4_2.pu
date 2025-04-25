@@ -1,0 +1,12 @@
+@startuml
+!include ../l5/l5_1.pu
+
+package "小機能"{
+  object "小機能" as 4_2 #LightGreen{
+    id = 4-2
+    detail = GUIに表示する
+  }
+}
+
+4_2 <-- 5_1
+@enduml

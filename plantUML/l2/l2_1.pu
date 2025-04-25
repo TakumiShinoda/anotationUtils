@@ -1,0 +1,16 @@
+@startuml
+!include ../l3/l3_2.pu
+!include ../l3/l3_4.pu
+!include ../l3/l3_5.pu
+
+package "大機能" as l2{
+  object "大機能" as 2_1 #Red{
+    id = 2-1
+    detail = 画像の自動アノテーション機能
+  }
+}
+
+2_1 <-- 3_2
+2_1 <-- 3_4
+2_1 <-- 3_5
+@enduml

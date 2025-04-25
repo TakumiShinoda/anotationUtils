@@ -1,0 +1,16 @@
+@startuml
+!include ../l3/l3_8.pu
+!include ../l3/l3_9.pu
+!include ../l3/l3_10.pu
+
+package "大機能" as l2{
+  object "大機能" as 2_6 #red{
+    id = 2-6
+    detail = フォルダ内の画像を一覧で表示できる
+  }
+}
+
+2_6 <-- 3_8
+2_6 <-- 3_9
+2_6 <-- 3_10
+@enduml

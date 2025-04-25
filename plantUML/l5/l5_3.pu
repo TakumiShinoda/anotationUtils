@@ -1,0 +1,8 @@
+@startuml
+package "構成"{
+  object "構成" as 5_3 #LightGreen{
+    id = 5-3
+    detail = nodejsを使用する
+  }
+}
+@enduml

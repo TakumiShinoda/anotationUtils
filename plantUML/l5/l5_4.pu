@@ -1,0 +1,8 @@
+@startuml
+package "構成"{
+  object "構成" as 5_4 #LightGreen{
+    id = 5-4
+    detail = pythonを使用する
+  }
+}
+@enduml

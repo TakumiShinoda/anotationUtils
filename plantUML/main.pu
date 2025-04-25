@@ -1,39 +1,4 @@
 @startuml
-!include ./l2.pu
-
-package "目的"{
-  object "目的" as 1_1 #Red{
-    id = 1-1
-    detail = GUIで画像認識モデル作成に向けた画像アノテーションを自動化
-  }
-
-  object "目的" as 1_2 #LightGreen{
-    id = 1-2
-    detail = GUIで任意フォルダ内の画像を確認したい
-  }
-}
-
-package "凡例"{
-  object "完了" as legend_close #LightGreen{
-    color = #LightGreen
-  }
-
-  object "未対応" as legend_pending {
-    color = None
-  }
-
-  object "実装中/バグ対応" as legend_open #Red{
-    color = #Red
-  }
-
-  object "廃止" as legend_abolition #Orange{
-    color = #Orange
-  }
-}
-
-1_1 <-- 2_1
-1_1 <-- 2_2
-1_1 <-- 2_3
-1_1 <-- 2_4
-1_2 <-- 2_5
+!include ./legend.pu
+!include ./l1/l1.pu
 @enduml

@@ -1,0 +1,20 @@
+@startuml
+!include ../l4/l4_2.pu
+!include ../l4/l4_6.pu
+!include ../l4/l4_7.pu
+!include ../l4/l4_10.pu
+!include ../l4/l4_11.pu
+
+package "中機能"{
+  object "中機能" as 3_8 #Red{
+    id = 3-8
+    detail = 全画像一覧表示モード
+  }
+}
+
+3_8 <-- 4_2
+3_8 <-- 4_6
+3_8 <-- 4_7
+3_8 <-- 4_10
+3_8 <-- 4_11
+@enduml

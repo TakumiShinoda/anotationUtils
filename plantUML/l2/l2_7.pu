@@ -1,0 +1,12 @@
+@startuml
+!include ../l3/l3_11.pu
+
+package "大機能" as l2{
+  object "大機能" as 2_7 #LightGreen{
+    id = 2-7
+    detail = フォルダ内の画像をビュワーで確認できる
+  }
+}
+
+2_7 <-- 3_11
+@enduml

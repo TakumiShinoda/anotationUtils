@@ -1,0 +1,14 @@
+@startuml
+!include ../l5/l5_7.pu
+!include ../l5/l5_8.pu
+
+package "小機能"{
+  object "小機能" as 4_10 #LightGreen{
+    id = 4-10
+    detail = GUIに表示できる画像サイズを変更できる
+  }
+}
+
+4_10 <-- 5_7
+4_10 <-- 5_8
+@enduml

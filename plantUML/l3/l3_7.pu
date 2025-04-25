@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_3.pu
+
+package "中機能"{
+  object "中機能" as 3_7 #LightGreen{
+    id = 3-7
+    detail = フォルダ内を再帰的に検索できる
+  }
+}
+
+3_7 <-- 4_3
+@enduml

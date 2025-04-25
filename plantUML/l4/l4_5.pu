@@ -1,0 +1,12 @@
+@startuml
+!include ../l5/l5_6.pu
+
+package "小機能"{
+  object "小機能" as 4_5{
+    id = 4-5
+    detail = GUI上で画像編集操作できる
+  }
+}
+
+4_5 <-- 5_6
+@enduml

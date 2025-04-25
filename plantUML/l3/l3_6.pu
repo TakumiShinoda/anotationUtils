@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_5.pu
+
+package "中機能"{
+  object "中機能" as 3_6{
+    id = 3-6
+    detail = GUIで画像の上に表示した領域（枠）を調整できる
+  }
+}
+
+3_6 <-- 4_5
+@enduml

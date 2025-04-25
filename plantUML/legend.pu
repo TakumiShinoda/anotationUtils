@@ -1,0 +1,19 @@
+@startuml
+package "凡例"{
+  object "完了" as legend_close #LightGreen{
+    color = #LightGreen
+  }
+
+  object "未対応" as legend_pending {
+    color = None
+  }
+
+  object "実装中/バグ対応" as legend_open #Red{
+    color = #Red
+  }
+
+  object "廃止" as legend_abolition #Orange{
+    color = #Orange
+  }
+}
+@enduml

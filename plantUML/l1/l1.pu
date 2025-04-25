@@ -1,0 +1,4 @@
+@startuml
+!include ./l1_1.pu
+!include ./l1_2.pu
+@enduml

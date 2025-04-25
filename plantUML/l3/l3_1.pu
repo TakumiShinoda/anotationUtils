@@ -1,0 +1,16 @@
+@startuml
+!include ../l4/l4_1.pu
+!include ../l4/l4_2.pu
+!include ../l4/l4_4.pu
+
+package "中機能"{
+  object "中機能" as 3_1 #red{
+    id = 3-1
+    detail = アノテーション結果をマークした画像を表示する機能
+  }
+}
+
+3_1 <-- 4_1
+3_1 <-- 4_2
+3_1 <-- 4_4
+@enduml

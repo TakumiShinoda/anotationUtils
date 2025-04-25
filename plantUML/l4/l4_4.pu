@@ -1,0 +1,13 @@
+@startuml
+!include ../l5/l5_5.pu
+
+package "小機能"{
+  object "小機能" as 4_4 #LightGreen{
+    id = 4-4
+    detail = 画像処理ができる
+  }
+}
+
+
+4_4 <-- 5_5
+@enduml

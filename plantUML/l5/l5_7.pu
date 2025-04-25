@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  object "構成" as 5_7 #LightGreen{
+    id = 5-7
+    detail = GUIに画像を表示する
+  }
+}
+
+5_7 <-- 5_1
+@enduml

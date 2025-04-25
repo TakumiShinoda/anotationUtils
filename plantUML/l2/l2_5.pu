@@ -1,0 +1,18 @@
+@startuml
+!include ../l3/l3_4.pu
+!include ../l3/l3_7.pu
+!include ../l3/l3_8.pu
+!include ../l3/l3_9.pu
+
+package "大機能" as l2{
+ object "大機能" as 2_5 #red{
+    id = 2-5
+    detail = フォルダ内を再帰的に検索して画像を表示
+  }
+}
+
+2_5 <-- 3_4
+2_5 <-- 3_7
+2_5 <-- 3_8
+2_5 <-- 3_9
+@enduml

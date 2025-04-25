@@ -2,9 +2,11 @@
 !include ../l5/l5_13.pu
 
 package "小機能"{
-  object "小機能" as 4_17 #LightGreen{
-    id = 4-17
-    detail = 画像ビュワーでボタンで次/前の画像に切り替えられる
+  package "GUI"{
+    object "小機能" as 4_17 #LightGreen{
+      id = 4-17
+      detail = 画像ビュワーでボタンで次/前の画像に切り替えられる
+    }
   }
 }
 

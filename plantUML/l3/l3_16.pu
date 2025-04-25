@@ -2,9 +2,11 @@
 !include ../l4/l4_14.pu
 
 package "中機能"{
-  object "中機能" as 3_16 #LightGreen{
-    id = 3-16
-    detail = 表示中の画像をクリップボードにコピーできる
+  package "画像ビュワー"{
+    object "中機能" as 3_16 #LightGreen{
+      id = 3-16
+      detail = 表示中の画像をクリップボードにコピーできる
+    }
   }
 }
 

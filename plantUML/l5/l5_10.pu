@@ -2,9 +2,11 @@
 !include ./l5_1.pu
 
 package "構成"{
-  object "構成" as 5_10 #LightGreen{
-    id = 5-10
-    detail = GUIでDOM内の画像移動制御をcmanObjMove_v091で実装する
+  package "環境"{
+    object "構成" as 5_10 #LightGreen{
+      id = 5-10
+      detail = GUIでDOM内の画像移動制御をcmanObjMove_v091で実装する
+    }
   }
 }
 

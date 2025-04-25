@@ -2,9 +2,11 @@
 !include ./l5_1.pu
 
 package "構成"{
-  object "構成" as 5_9 #LightGreen{
-    id = 5-9
-    detail = GUIにローディング画面を表示する
+  package "機能"{
+    object "構成" as 5_9 #LightGreen{
+      id = 5-9
+      detail = GUIにローディング画面を表示する
+    }
   }
 }
 

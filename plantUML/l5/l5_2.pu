@@ -2,9 +2,11 @@
 !include ./l5_4.pu
 
 package "構成"{
-  object "構成" as 5_2 #LightGreen{
-    id = 5-2
-    detail = 画像認識モデルはyoloを使用する
+  package "環境"{
+    object "構成" as 5_2 #LightGreen{
+      id = 5-2
+      detail = 画像認識モデルはyoloを使用する
+    }
   }
 }
 

@@ -3,9 +3,11 @@
 !include ../l5/l5_9.pu
 
 package "小機能"{
-  object "小機能" as 4_8 #LightGreen{
-    id = 4-8
-    detail = ディレクトリパス階層でフィルタして表示できる
+  package "GUI"{
+    object "小機能" as 4_8 #LightGreen{
+      id = 4-8
+      detail = ディレクトリパス階層でフィルタして表示できる
+    }
   }
 }
 

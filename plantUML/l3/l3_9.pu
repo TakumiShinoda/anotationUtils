@@ -4,9 +4,11 @@
 !include ../l4/l4_9.pu
 
 package "中機能"{
-  object "中機能" as 3_9 #Red{
-    id = 3-9
-    detail = ディレクトリ表示モード
+  package "画像ビュワー"{
+    object "中機能" as 3_9 #Red{
+      id = 3-9
+      detail = ディレクトリ表示モード
+    }
   }
 }
 

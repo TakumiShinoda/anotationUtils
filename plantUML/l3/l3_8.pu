@@ -6,9 +6,11 @@
 !include ../l4/l4_11.pu
 
 package "中機能"{
-  object "中機能" as 3_8 #Red{
-    id = 3-8
-    detail = 全画像一覧表示モード
+  package "画像ビュワー"{
+    object "中機能" as 3_8 #Red{
+      id = 3-8
+      detail = 全画像一覧表示モード
+    }
   }
 }
 

@@ -2,9 +2,11 @@
 !include ../l3/l3_6.pu
 
 package "大機能" as l2{
-  object "大機能" as 2_3{
-    id = 2-3
-    detail = アノテーション結果から領域を調整できる機能
+  package "自動アノテーション機能"{
+    object "大機能" as 2_3{
+      id = 2-3
+      detail = アノテーション結果から領域を調整できる機能
+    }
   }
 }
 

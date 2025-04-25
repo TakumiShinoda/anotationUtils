@@ -2,9 +2,11 @@
 !include ../l4/l4_10.pu
 
 package "中機能"{
- object "中機能" as 3_10 #LightGreen{
-    id = 3-10
-    detail = 画像一覧の表示サイズを変更できる
+  package "共通"{
+    object "中機能" as 3_10 #LightGreen{
+      id = 3-10
+      detail = 画像一覧の表示サイズを変更できる
+    }
   }
 }
 

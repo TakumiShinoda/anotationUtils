@@ -2,9 +2,11 @@
 !include ../l5/l5_1.pu
 
 package "小機能"{
-  object "小機能" as 4_12 #LightGreen{
-    id = 4-12
-    detail = マウススクロールを検出する
+  package "バックエンド"{
+    object "小機能" as 4_12 #LightGreen{
+      id = 4-12
+      detail = マウススクロールを検出する
+    }
   }
 }
 

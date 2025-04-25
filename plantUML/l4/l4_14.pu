@@ -2,9 +2,11 @@
 !include ../l5/l5_11.pu
 
 package "小機能"{
-  object "小機能" as 4_14 #LightGreen{
-    id = 4-14
-    detail = クリップボードにデータをコピーできる
+  package "バックエンド"{
+    object "小機能" as 4_14 #LightGreen{
+      id = 4-14
+      detail = クリップボードにデータをコピーできる
+    }
   }
 }
 

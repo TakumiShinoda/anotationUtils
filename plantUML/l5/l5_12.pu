@@ -2,9 +2,11 @@
 !include ./l5_3.pu
 
 package "構成"{
-  object "構成" as 5_12 #LightGreen{
-    id = 5-12
-    detail = エクスプローラの起動/制御をnodejsのopen-file-explorerで実装する
+  package "環境"{
+    object "構成" as 5_12 #LightGreen{
+      id = 5-12
+      detail = エクスプローラの起動/制御をnodejsのopen-file-explorerで実装する
+    }
   }
 }
 

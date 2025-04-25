@@ -2,9 +2,11 @@
 !include ../l4/l4_3.pu
 
 package "中機能"{
-  object "中機能" as 3_2 #Red{
-    id = 3-2
-    detail = アノテーション結果は実行ごとにプロジェクトとして保存する
+  package "自動アノテーション機能"{
+    object "中機能" as 3_2 #Red{
+      id = 3-2
+      detail = アノテーション結果は実行ごとにプロジェクトとして保存する
+    }
   }
 }
 

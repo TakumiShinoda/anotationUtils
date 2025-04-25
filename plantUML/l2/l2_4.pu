@@ -2,9 +2,11 @@
 !include ../l3/l3_2.pu
 
 package "大機能" as l2{
-  object "大機能" as 2_4{
-    id = 2-4
-    detail = 選択したアノテーション結果をエクスポートできる機能
+  package "自動アノテーション機能"{
+    object "大機能" as 2_4{
+      id = 2-4
+      detail = 選択したアノテーション結果をエクスポートできる機能
+    }
   }
 }
 

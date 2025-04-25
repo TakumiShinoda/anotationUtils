@@ -3,11 +3,12 @@
 !include ../l3/l3_3.pu
 
 package "大機能" as l2{
-  object "大機能" as 2_2 #Red{
-    id = 2-2
-    detail = 自動アノテーションした結果を閲覧できる機能
+  package "自動アノテーション機能"{
+    object "大機能" as 2_2 #Red{
+      id = 2-2
+      detail = 自動アノテーションした結果を閲覧できる機能
+    }
   }
-
 }
 
 2_2 <-- 3_1

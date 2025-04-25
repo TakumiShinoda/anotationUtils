@@ -2,9 +2,11 @@
 !include ../l5/l5_2.pu
 
 package "小機能"{
-  object "小機能" as 4_1 #LightGreen{
-    id = 4-1
-    detail = アノテーション領域は画像認識モデルで認識した領域とする
+  package "バックエンド"{
+    object "小機能" as 4_1 #LightGreen{
+      id = 4-1
+      detail = アノテーション領域は画像認識モデルで認識した領域とする
+    }
   }
 }
 

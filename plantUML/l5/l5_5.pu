@@ -2,9 +2,11 @@
 !include ./l5_4.pu
 
 package "構成"{
-  object "構成" as 5_5 #LightGreen{
-    id = 5-5
-    detail = 画像処理はopencvを使用する
+  package "環境"{
+    object "構成" as 5_5 #LightGreen{
+      id = 5-5
+      detail = 画像処理はopencvを使用する
+    }
   }
 }
 

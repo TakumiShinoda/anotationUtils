@@ -5,9 +5,11 @@
 !include ../l3/l3_9.pu
 
 package "大機能" as l2{
- object "大機能" as 2_5 #red{
-    id = 2-5
-    detail = フォルダ内を再帰的に検索して画像を表示
+  package "画像ビュワー"{
+    object "大機能" as 2_5 #red{
+      id = 2-5
+      detail = フォルダ内を再帰的に検索して画像を表示
+    }
   }
 }
 

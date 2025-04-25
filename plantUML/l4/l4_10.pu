@@ -3,9 +3,11 @@
 !include ../l5/l5_8.pu
 
 package "小機能"{
-  object "小機能" as 4_10 #LightGreen{
-    id = 4-10
-    detail = GUIに表示できる画像サイズを変更できる
+  package "GUI"{
+    object "小機能" as 4_10 #LightGreen{
+      id = 4-10
+      detail = GUIに表示できる画像サイズを変更できる
+    }
   }
 }
 

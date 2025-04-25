@@ -3,9 +3,11 @@
 !include ../l4/l4_12.pu
 
 package "中機能"{
-  object "中機能" as 3_12 #LightGreen{
-    id = 3-12
-    detail = マウススクロールで画像の拡大/縮小操作ができる
+  package "画像ビュワー"{
+    object "中機能" as 3_12 #LightGreen{
+      id = 3-12
+      detail = マウススクロールで画像の拡大/縮小操作ができる
+    }
   }
 }
 

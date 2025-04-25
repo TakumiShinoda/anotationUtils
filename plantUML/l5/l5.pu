@@ -8,4 +8,9 @@
 !include ./l5_7.pu
 !include ./l5_8.pu
 !include ./l5_9.pu
+!include ./l5_10.pu
+!include ./l5_11.pu
+!include ./l5_12.pu
+!include ./l5_13.pu
+!include ./l5_14.pu
 @enduml

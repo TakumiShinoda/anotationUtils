@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_13.pu
+
+package "中機能"{
+  object "中機能" as 3_13 #LightGreen{
+    id = 3-13
+    detail = 画像をドラッグして画像の移動操作ができる
+  }
+}
+
+3_13 <-- 4_13
+@enduml

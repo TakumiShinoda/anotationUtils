@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  object "構成" as 5_11 #LightGreen{
+    id = 5-11
+    detail = クリップボードにアクセスする
+  }
+}
+
+5_11 <-- 5_1
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_3.pu
+
+package "中機能"{
+  object "中機能" as 3_19 #LightGreen{
+    id = 3-19
+    detail = 画像ビュワーで表示中の画像を保存できる
+  }
+}
+
+3_19 <-- 4_3
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+!include ../l4/l4_17.pu
+!include ../l4/l4_18.pu
+
+package "中機能"{
+  object "中機能" as 3_20 #LightGreen{
+    id = 3-20
+    detail = 画像ビュワーでボタンやショートカットキーで次/前の画像に切り替えられる
+  }
+}
+
+3_20 <-- 4_17
+3_20 <-- 4_18
+@enduml

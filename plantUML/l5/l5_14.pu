@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  object "構成" as 5_14 #LightGreen{
+    id = 5-14
+    detail = GUIでキー入力イベントを設定する
+  }
+}
+
+5_14 <-- 5_1
+@enduml

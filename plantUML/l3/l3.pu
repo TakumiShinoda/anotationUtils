@@ -10,4 +10,13 @@
 !include ./l3_9.pu
 !include ./l3_10.pu
 !include ./l3_11.pu
+!include ./l3_12.pu
+!include ./l3_13.pu
+!include ./l3_14.pu
+!include ./l3_15.pu
+!include ./l3_16.pu
+!include ./l3_17.pu
+!include ./l3_18.pu
+!include ./l3_19.pu
+!include ./l3_20.pu
 @enduml

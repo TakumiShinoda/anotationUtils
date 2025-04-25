@@ -1,0 +1,12 @@
+@startuml
+!include ../l5/l5_14.pu
+
+package "小機能"{
+  object "小機能" as 4_18 #LightGreen{
+    id = 4-18
+    detail = 画像ビュワーでショートカットキーで次/前の画像に切り替えられる
+  }
+}
+
+4_18 <-- 5_14
+@enduml

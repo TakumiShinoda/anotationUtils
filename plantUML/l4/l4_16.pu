@@ -1,0 +1,12 @@
+@startuml
+!include ../l5/l5_12.pu
+
+package "小機能"{
+  object "小機能" as 4_16 #LightGreen{
+    id = 4-16
+    detail = エクスプローラで指定したパスを開ける
+  }
+}
+
+4_16 <-- 5_12
+@enduml

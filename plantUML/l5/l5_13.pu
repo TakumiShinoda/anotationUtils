@@ -1,0 +1,12 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  object "構成" as 5_13 #LightGreen{
+    id = 5-13
+    detail = GUIにボタンを配置する
+  }
+}
+
+5_13 <-- 5_1
+@enduml

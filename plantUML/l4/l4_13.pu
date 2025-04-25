@@ -1,0 +1,12 @@
+@startuml
+!include ../l5/l5_10.pu
+
+package "小機能"{
+  object "小機能" as 4_13 #LightGreen{
+    id = 4-13
+    detail = GUIで画像移動を特定領域内におさめる
+  }
+}
+
+4_13 <-- 5_10
+@enduml

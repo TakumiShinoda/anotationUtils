@@ -1,4 +1,8 @@
 @startuml
 !include ./legend.pu
 !include ./l1/l1.pu
+!include ./l2/l2.pu
+!include ./l3/l3.pu
+!include ./l4/l4.pu
+!include ./l5/l5.pu
 @enduml

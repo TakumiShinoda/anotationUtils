@@ -10,4 +10,11 @@
 !include ./l4_9.pu
 !include ./l4_10.pu
 !include ./l4_11.pu
+!include ./l4_12.pu
+!include ./l4_13.pu
+!include ./l4_14.pu
+!include ./l4_15.pu
+!include ./l4_16.pu
+!include ./l4_17.pu
+!include ./l4_18.pu
 @enduml

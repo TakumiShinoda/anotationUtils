@@ -1,0 +1,12 @@
+@startuml
+!include ../l5/l5_12.pu
+
+package "小機能"{
+  object "小機能" as 4_15 #LightGreen{
+    id = 4-15
+    detail = GUIからエクスプローラを起動できる
+  }
+}
+
+4_15 <-- 5_12
+@enduml

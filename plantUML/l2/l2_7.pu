@@ -1,5 +1,14 @@
 @startuml
 !include ../l3/l3_11.pu
+!include ../l3/l3_12.pu
+!include ../l3/l3_13.pu
+!include ../l3/l3_14.pu
+!include ../l3/l3_15.pu
+!include ../l3/l3_16.pu
+!include ../l3/l3_17.pu
+!include ../l3/l3_18.pu
+!include ../l3/l3_19.pu
+!include ../l3/l3_20.pu
 
 package "大機能" as l2{
   object "大機能" as 2_7 #LightGreen{
@@ -9,4 +18,13 @@ package "大機能" as l2{
 }
 
 2_7 <-- 3_11
+2_7 <-- 3_12
+2_7 <-- 3_13
+2_7 <-- 3_14
+2_7 <-- 3_15
+2_7 <-- 3_16
+2_7 <-- 3_17
+2_7 <-- 3_18
+2_7 <-- 3_19
+2_7 <-- 3_20
 @enduml

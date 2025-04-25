@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_14.pu
+
+package "中機能"{
+  object "中機能" as 3_14 #LightGreen{
+    id = 3-14
+    detail = 表示中の画像のファイルパスをクリップボードにコピーできる
+  }
+}
+
+3_14 <-- 4_14
+@enduml

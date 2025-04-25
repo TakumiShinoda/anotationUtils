@@ -1,0 +1,12 @@
+@startuml
+!include ../l4/l4_10.pu
+
+package "中機能"{
+  object "中機能" as 3_18 #LightGreen{
+    id = 3-18
+    detail = 画像ビュワーで表示中の画像を既定のサイズにリセットできる
+  }
+}
+
+3_18 <-- 4_10
+@enduml

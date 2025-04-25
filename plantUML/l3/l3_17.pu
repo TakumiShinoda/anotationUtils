@@ -1,0 +1,14 @@
+@startuml
+!include ../l4/l4_15.pu
+!include ../l4/l4_16.pu
+
+package "中機能"{
+  object "中機能" as 3_17 #LightGreen{
+    id = 3-17
+    detail = 表示中の画像ファイルパスをエクスプローラで開ける
+  }
+}
+
+3_17 <-- 4_15
+3_17 <-- 4_16
+@enduml

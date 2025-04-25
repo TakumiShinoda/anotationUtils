@@ -1,0 +1,67 @@
+@startuml
+!include ./l5.pu
+
+package "小機能"{
+  object "小機能" as 4_1 #LightGreen{
+    id = 4-1
+    detail = アノテーション領域は画像認識モデルで認識した領域とする
+  }
+
+  object "小機能" as 4_2 #LightGreen{
+    id = 4-2
+    detail = GUIに表示する
+  }
+
+  object "小機能" as 4_3 #LightGreen{
+    id = 4-3
+    detail = ファイルシステムを使用する
+  }
+
+  object "小機能" as 4_4 #LightGreen{
+    id = 4-4
+    detail = 画像処理ができる
+  }
+
+  object "小機能" as 4_5{
+    id = 4-5
+    detail = GUI上で画像編集操作できる
+  }
+
+  object "小機能" as 4_6{
+    id = 4-6
+    detail = フィルタして表示できる
+  }
+
+  object "小機能" as 4_7{
+    id = 4-7
+    detail = ソートして表示できる
+  }
+
+  object "小機能" as 4_8 #LightGreen{
+    id = 4-8
+    detail = ディレクトリパス階層でフィルタして表示できる
+  }
+
+  object "小機能" as 4_9{
+    id = 4-9
+    detail = ディレクトリパス階層でソートして表示できる
+  }
+
+  object "小機能" as 4_10 #LightGreen{
+    id = 4-10
+    detail = GUIに表示できる画像サイズを変更できる
+  }
+}
+
+4_1 <-- 5_2
+4_2 <-- 5_1
+4_3 <-- 5_3
+4_3 <-- 5_4
+4_4 <-- 5_5
+4_5 <-- 5_6
+4_6 <-- 5_1
+4_7 <-- 5_1
+4_8 <-- 5_1
+4_9 <-- 5_1
+4_10 <-- 5_7
+@enduml

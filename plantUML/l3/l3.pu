@@ -22,4 +22,7 @@
 !include ./l3_21.pu
 !include ./l3_22.pu
 !include ./l3_23.pu
+!include ./l3_24.pu
+!include ./l3_25.pu
+!include ./l3_26.pu
 @enduml

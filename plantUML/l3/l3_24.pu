@@ -1,0 +1,16 @@
+@startuml
+!include ../l5/l5_13.pu
+!include ../l5/l5_25.pu
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_24 #LightGreen{
+      id = 3-24
+      detail = ソフト終了ボタンでソフト終了できる
+    }
+  }
+}
+
+3_24 <-- 5_13
+3_24 <-- 5_25
+@enduml

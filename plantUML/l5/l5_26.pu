@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_23.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_26{
+      id = 5-26
+      detail = ウィンドウを最小化する
+    }
+  }
+}
+
+5_26 <-- 5_23
+@enduml

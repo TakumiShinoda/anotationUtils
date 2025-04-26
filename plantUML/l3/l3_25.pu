@@ -1,0 +1,16 @@
+@startuml
+!include ../l5/l5_13.pu
+!include ../l5/l5_26.pu
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_25{
+      id = 3-25
+      detail = ウィンドウ最小化ボタンでウィンドウを最小化できる
+    }
+  }
+}
+
+3_25 <-- 5_13
+3_25 <-- 5_26
+@enduml

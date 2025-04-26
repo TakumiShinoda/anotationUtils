@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_23.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_25 #LightGreen{
+      id = 5-25
+      detail = ソフトを終了する
+    }
+  }
+}
+
+5_25 <-- 5_23
+@enduml

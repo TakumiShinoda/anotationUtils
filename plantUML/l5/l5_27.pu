@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_23.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_27{
+      id = 5-27
+      detail = ウィンドウを最大化する
+    }
+  }
+}
+
+5_27 <-- 5_23
+@enduml

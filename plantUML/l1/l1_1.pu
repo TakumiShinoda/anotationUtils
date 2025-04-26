@@ -3,6 +3,7 @@
 !include ../l2/l2_2.pu
 !include ../l2/l2_3.pu
 !include ../l2/l2_4.pu
+!include ../l2/l2_8.pu
 
 package "目的"{
   object "目的" as 1_1 #Red{
@@ -15,4 +16,5 @@ package "目的"{
 1_1 <-- 2_2
 1_1 <-- 2_3
 1_1 <-- 2_4
+1_1 <-- 2_8
 @enduml

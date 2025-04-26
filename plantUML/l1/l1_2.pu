@@ -1,6 +1,7 @@
 @startuml
 !include ../l2/l2_5.pu
 !include ../l2/l2_7.pu
+!include ../l2/l2_8.pu
 
 package "目的"{
   object "目的" as 1_2 #red{
@@ -11,4 +12,5 @@ package "目的"{
 
 1_2 <-- 2_5
 1_2 <-- 2_7
+1_2 <-- 2_8
 @enduml

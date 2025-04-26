@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_16 #LightGreen{
+      id = 5-16
+      detail = GUIにテキストボックスを表示
+    }
+  }
+}
+
+5_16 <-- 5_1
+@enduml

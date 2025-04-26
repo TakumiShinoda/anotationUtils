@@ -4,7 +4,7 @@
 
 package "小機能"{
   package "バックエンド"{
-    object "小機能" as 4_3 #LightGreen{
+    object "小機能" as 4_3 #Orange{
       id = 4-3
       detail = ファイルシステムを使用する
     }

@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_17 #LightGreen{
+      id = 5-17
+      detail = GUIでフォルダ選択ダイアログを表示
+    }
+  }
+}
+
+5_17 <-- 5_1
+@enduml

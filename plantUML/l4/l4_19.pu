@@ -1,0 +1,16 @@
+@startuml
+!include ../l5/l5_15.pu
+!include ../l5/l5_16.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_19 #LightGreen{
+      id = 4-19
+      detail = テキストボックスで対象フォルダを指定できる
+    }
+  }
+}
+
+4_19 <-- 5_15
+4_19 <-- 5_16
+@enduml

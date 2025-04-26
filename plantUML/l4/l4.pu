@@ -17,4 +17,6 @@
 !include ./l4_16.pu
 !include ./l4_17.pu
 !include ./l4_18.pu
+!include ./l4_19.pu
+!include ./l4_20.pu
 @enduml

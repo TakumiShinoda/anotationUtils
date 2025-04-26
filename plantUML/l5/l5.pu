@@ -13,4 +13,7 @@
 !include ./l5_12.pu
 !include ./l5_13.pu
 !include ./l5_14.pu
+!include ./l5_15.pu
+!include ./l5_16.pu
+!include ./l5_17.pu
 @enduml

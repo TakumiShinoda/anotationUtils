@@ -1,15 +1,16 @@
 @startuml
-!include ../l4/l4_3.pu
+!include ../l4/l4_19.pu
+!include ../l4/l4_20.pu
 
 package "中機能"{
   package "共通"{
     object "中機能" as 3_4 #LightGreen{
       id = 3-4
-      detail = 対象をフォルダ選択して指定できる
+      detail = テキストボックス/ダイアログで対象フォルダを指定できる
     }
   }
 }
 
-
-3_4 <-- 4_3
+3_4 <-- 4_19
+3_4 <-- 4_20
 @enduml

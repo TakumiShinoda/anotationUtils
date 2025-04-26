@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_3.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_19 #LightGreen{
+      id = 5-19
+      detail = GUIからコマンドを実行できる
+    }
+  }
+}
+
+5_19 <-- 5_3
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+!include ../l5/l5_19.pu
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_22 #LightGreen{
+      id = 4-22
+      detail = pythonのプラグラムを実行できる
+    }
+  }
+}
+
+4_22 <-- 5_19
+@enduml

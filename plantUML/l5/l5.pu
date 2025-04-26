@@ -21,4 +21,6 @@
 !include ./l5_20.pu
 !include ./l5_21.pu
 !include ./l5_22.pu
+!include ./l5_23.pu
+!include ./l5_24.pu
 @enduml

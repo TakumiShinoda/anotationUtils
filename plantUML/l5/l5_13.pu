@@ -1,5 +1,5 @@
 @startuml
-!include ./l5_1.pu
+!include ./l5_24.pu
 
 package "構成"{
   package "機能"{
@@ -10,5 +10,5 @@ package "構成"{
   }
 }
 
-5_13 <-- 5_1
+5_13 <-- 5_24
 @enduml

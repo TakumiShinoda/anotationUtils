@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_1.pu
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_23 #LightGreen{
+      id = 5-23
+      detail = electronメインプロセスを実装する
+    }
+  }
+}
+
+5_23 <-- 5_1
+@enduml

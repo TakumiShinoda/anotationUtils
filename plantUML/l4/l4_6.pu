@@ -1,16 +1,16 @@
 @startuml
-!include ../l5/l5_1.pu
 !include ../l5/l5_9.pu
+!include ../l5/l5_20.pu
 
 package "小機能"{
   package "GUI"{
     object "小機能" as 4_6{
       id = 4-6
-      detail = フィルタして表示できる
+      detail = 画像ファイル名でフィルタして表示できる
     }
   }
 }
 
-4_6 <-- 5_1
 4_6 <-- 5_9
+4_6 <-- 5_20
 @enduml

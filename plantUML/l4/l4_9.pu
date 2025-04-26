@@ -1,6 +1,7 @@
 @startuml
-!include ../l5/l5_1.pu
 !include ../l5/l5_9.pu
+!include ../l5/l5_21.pu
+!include ../l5/l5_22.pu
 
 package "小機能"{
   package "GUI"{
@@ -11,6 +12,7 @@ package "小機能"{
   }
 }
 
-4_9 <-- 5_1
 4_9 <-- 5_9
+4_9 <-- 5_21
+4_9 <-- 5_22
 @enduml

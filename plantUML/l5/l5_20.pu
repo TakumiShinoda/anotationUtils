@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_3.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_20 #LightGreen{
+      id = 5-20
+      detail = 文字列配列から特定文字列が含まれる文字列を抽出する
+    }
+  }
+}
+
+5_20 <-- 5_3
+@enduml

@@ -18,4 +18,7 @@
 !include ./l5_17.pu
 !include ./l5_18.pu
 !include ./l5_19.pu
+!include ./l5_20.pu
+!include ./l5_21.pu
+!include ./l5_22.pu
 @enduml

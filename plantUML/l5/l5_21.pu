@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_3.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_21{
+      id = 5-21
+      detail = 文字列配列を昇順でソートする
+    }
+  }
+}
+
+5_21 <-- 5_3
+@enduml

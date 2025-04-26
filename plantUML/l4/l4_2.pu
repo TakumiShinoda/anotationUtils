@@ -1,14 +1,14 @@
 @startuml
-!include ../l5/l5_24.pu
+' !include ../l5/l5_24.pu
 
 package "小機能"{
   package "GUI"{
-    object "小機能" as 4_2 #LightGreen{
+    object "小機能" as 4_2 #Orange{
       id = 4-2
       detail = GUIに表示する
     }
   }
 }
 
-4_2 <-- 5_24
+' 4_2 <-- 5_24
 @enduml

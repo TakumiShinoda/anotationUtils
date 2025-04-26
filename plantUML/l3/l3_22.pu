@@ -1,0 +1,14 @@
+@startuml
+!include ../l4/l4_11.pu
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_22 #LightGreen{
+      id = 3-22
+      detail = 画像一覧の表示数を変更できる
+    }
+  }
+}
+
+3_22 <-- 4_11
+@enduml

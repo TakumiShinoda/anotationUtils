@@ -1,6 +1,6 @@
 @startuml
-!include ../l4/l4_2.pu
 !include ../l4/l4_4.pu
+!include ../l4/l4_27.pu
 
 package "中機能"{
   package "自動アノテーション機能"{
@@ -11,6 +11,6 @@ package "中機能"{
   }
 }
 
-3_3 <-- 4_2
 3_3 <-- 4_4
+3_3 <-- 4_27
 @enduml

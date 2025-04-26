@@ -1,0 +1,20 @@
+@startuml
+!include ../l4/l4_23.pu
+!include ../l4/l4_24.pu
+!include ../l4/l4_25.pu
+!include ../l4/l4_26.pu
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_23 #LightGreen{
+      id = 3-23
+      detail = 画像一覧は複数ページに分けられる
+    }
+  }
+}
+
+3_23 <-- 4_23
+3_23 <-- 4_24
+3_23 <-- 4_25
+3_23 <-- 4_26
+@enduml

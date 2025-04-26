@@ -1,0 +1,14 @@
+@startuml
+!include ../l5/l5_7.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_27 {
+      id = 4-27
+      detail = マークした画像を表示する
+    }
+  }
+}
+
+4_27 <-- 5_7
+@enduml

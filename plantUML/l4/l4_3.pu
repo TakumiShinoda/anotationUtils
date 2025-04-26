@@ -1,6 +1,6 @@
 @startuml
-!include ../l5/l5_3.pu
-!include ../l5/l5_4.pu
+' !include ../l5/l5_3.pu
+' !include ../l5/l5_4.pu
 
 package "小機能"{
   package "バックエンド"{
@@ -11,6 +11,6 @@ package "小機能"{
   }
 }
 
-4_3 <-- 5_3
-4_3 <-- 5_4
+' 4_3 <-- 5_3
+' 4_3 <-- 5_4
 @enduml

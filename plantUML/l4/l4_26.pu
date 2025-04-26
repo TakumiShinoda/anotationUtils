@@ -1,0 +1,14 @@
+@startuml
+!include ../l5/l5_24.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_26 #LightGreen{
+      id = 4-26
+      detail = 最大ページを表示する
+    }
+  }
+}
+
+4_26 <-- 5_24
+@enduml

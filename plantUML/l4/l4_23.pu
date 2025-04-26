@@ -1,0 +1,14 @@
+@startuml
+!include ../l5/l5_13.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_23 #LightGreen{
+      id = 4-23
+      detail = ボタンで次/前ページに移動できる
+    }
+  }
+}
+
+4_23 <-- 5_13
+@enduml

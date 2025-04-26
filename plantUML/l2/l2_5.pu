@@ -3,12 +3,15 @@
 !include ../l3/l3_7.pu
 !include ../l3/l3_8.pu
 !include ../l3/l3_9.pu
+!include ../l3/l3_10.pu
+!include ../l3/l3_22.pu
+!include ../l3/l3_23.pu
 
 package "大機能" as l2{
   package "画像ビュワー"{
     object "大機能" as 2_5 #red{
       id = 2-5
-      detail = フォルダ内を再帰的に検索して画像を表示
+      detail = フォルダ内を再帰的に検索して画像を一覧で表示できる
     }
   }
 }
@@ -17,4 +20,7 @@ package "大機能" as l2{
 2_5 <-- 3_7
 2_5 <-- 3_8
 2_5 <-- 3_9
+2_5 <-- 3_10
+2_5 <-- 3_22
+2_5 <-- 3_23
 @enduml

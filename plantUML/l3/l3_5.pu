@@ -1,16 +1,16 @@
 @startuml
-!include ../l4/l4_3.pu
-!include ../l5/l5_15.pu
+!include ../l4/l4_19.pu
+!include ../l4/l4_21.pu
 
 package "中機能"{
   package "自動アノテーション機能"{
     object "中機能" as 3_5 #LightGreen{
       id = 3-5
-      detail = 使用する画像認識モデル選択して指定できる
+      detail = テキストボックス/ダイアログで使用する画像認識モデルを指定できる
     }
   }
 }
 
-3_5 <-- 4_3
-3_5 <-- 5_15
+3_5 <-- 4_19
+3_5 <-- 4_21
 @enduml

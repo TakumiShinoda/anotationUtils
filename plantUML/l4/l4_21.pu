@@ -1,0 +1,16 @@
+@startuml
+!include ../l5/l5_15.pu
+!include ../l5/l5_18.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_21 #LightGreen{
+      id = 4-21
+      detail = ダイアログで対象ファイルを指定できる
+    }
+  }
+}
+
+4_21 <-- 5_15
+4_21 <-- 5_18
+@enduml

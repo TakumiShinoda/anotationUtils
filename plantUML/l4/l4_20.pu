@@ -5,7 +5,7 @@
 package "小機能"{
   package "GUI"{
     object "小機能" as 4_20 #LightGreen{
-      id = 4-19
+      id = 4-20
       detail = ダイアログで対象フォルダを指定できる
     }
   }

@@ -40,8 +40,21 @@ window.electronAPI.on('debugPrint', (_: IpcRendererEvent, mes: string) => {
 })
 
 $(function (){
-  $('#exitAppButton').on('click', () => {
-    window.electronAPI.exitApp()
+  $('#minimizeAppButton').on('mouseover', async () => {
+    $('#minimizeAppButton').addClass('minimizeAppButtonHovered')
+  })
+
+  $('#minimizeAppButton').on('mouseout', async () => {
+    $('#minimizeAppButton').removeClass('minimizeAppButtonHovered')
+  })
+
+  $('#minimizeAppButton').on('click', async () => {
+    $('#minimizeAppButton').removeClass('minimizeAppButtonHovered')
+    await window.electronAPI.minimizeWindow()
+  })
+
+  $('#exitAppButton').on('click', async () => {
+    await window.electronAPI.exitApp()
     console.log("exit")
   })
 

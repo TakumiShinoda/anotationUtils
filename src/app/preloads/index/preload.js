@@ -10,5 +10,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   copyFile: (srcPath, dialogHistoryKey) => ipcRenderer.invoke('copyFile', srcPath, dialogHistoryKey),
   openByExplorer: (openDir) => ipcRenderer.invoke('openByExplorer', openDir),
   domLoaded: () => ipcRenderer.invoke('domLoaded'),
+  maximizeWindow: () => ipcRenderer.send('maximizeWindow'),
+  minimizeWindow: () => ipcRenderer.send('minimizeWindow'),
   exitApp: () => ipcRenderer.send('exitApp')
 })

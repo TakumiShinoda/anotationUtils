@@ -1,3 +1,4 @@
+const { BrowserWindow } = require("electron")
 const { RootPath } = require("../globals")
 const { loadDialogHistory } = require("../mods/dialogHistory")
 
@@ -11,11 +12,21 @@ function domLoaded(_){
   })
 }
 
+function maximizeWindow(ev){
+  BrowserWindow.fromWebContents(ev.sender).maximize()
+}
+
+function minimizeWindow(ev){
+  BrowserWindow.fromWebContents(ev.sender).minimize()
+}
+
 function exitApp(_){
   process.exit(0)
 }
 
 module.exports= {
   domLoaded: domLoaded,
+  maximizeWindow: maximizeWindow,
+  minimizeWindow: minimizeWindow,
   exitApp: exitApp
 }

@@ -45,11 +45,6 @@ export async function showSuccussAlert(mes: string){
 }
 
 $(function (){
-  $('#exitAppButton').on('click', () => {
-    window.electronAPI.exitApp()
-    console.log("exit")
-  })
-
   $('#alertModal').on('click', async() => {
     $('#alertModal').css('transition', `${TransitionSec}s`)
     $('#alertModal').css('opacity', '0')

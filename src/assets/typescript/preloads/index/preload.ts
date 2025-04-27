@@ -35,8 +35,11 @@ export interface IElectronAPI {
   getDatabaseInfo: (progressId: number) => Promise<databaseInfo>,
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
   openByExplorer: (openDir: string) => Promise<void>,
-  copyFile: (srcPath: string, dialogHistoryKey: DialogHistoryKey) => Promise<string>
-  domLoaded: () => Promise<DomLoadedInitItem>
+  copyFile: (srcPath: string, dialogHistoryKey: DialogHistoryKey) => Promise<string>,
+  domLoaded: () => Promise<DomLoadedInitItem>,
+  minimizeWindow: () => Promise<void>,
+  maximizeWindow: () => Promise<void>,
+  closeWindow: (withExitApp?: boolean) => Promise<void>,
   exitApp: () => Promise<void>
 }
 

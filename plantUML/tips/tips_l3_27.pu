@@ -1,0 +1,8 @@
+@startuml
+artifact "Tips"{
+  object "Tips" as tip_3_27{
+    ダブルクリックによるウィンドウ最大化はelectronの機能で実装されるため
+    ダブルクリック処理を実装する必要は不要
+  }
+}
+@enduml

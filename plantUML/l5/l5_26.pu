@@ -3,7 +3,7 @@
 
 package "構成"{
   package "機能"{
-    object "構成" as 5_26{
+    object "構成" as 5_26 #LightGreen{
       id = 5-26
       detail = ウィンドウを最小化する
     }

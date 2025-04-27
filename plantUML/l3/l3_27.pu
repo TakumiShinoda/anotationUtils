@@ -1,0 +1,16 @@
+@startuml
+!include ../l5/l5_24.pu
+!include ../tips/tips_l3_27.pu
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_27 #LightGreen{
+      id = 3-27
+      detail = ウィンドウ上部をダブルクリックでウィンドウを最大化できる
+    }
+  }
+}
+
+3_27 <-- 5_24
+3_27 <-- tip_3_27
+@enduml

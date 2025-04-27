@@ -4,7 +4,7 @@
 
 package "中機能"{
   package "共通"{
-    object "中機能" as 3_25{
+    object "中機能" as 3_25 #LightGreen{
       id = 3-25
       detail = ウィンドウ最小化ボタンでウィンドウを最小化できる
     }

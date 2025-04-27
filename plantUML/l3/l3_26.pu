@@ -1,16 +1,16 @@
 @startuml
-!include ../l5/l5_13.pu
-!include ../l5/l5_27.pu
+' !include ../l5/l5_13.pu
+' !include ../l5/l5_27.pu
 
 package "中機能"{
   package "共通"{
-    object "中機能" as 3_26{
+    object "中機能" as 3_26 #Orange{
       id = 3-26
       detail = ウィンドウ最大化ボタンでウィンドウを最大化できる
     }
   }
 }
 
-3_26 <-- 5_13
-3_26 <-- 5_27
+' 3_26 <-- 5_13
+' 3_26 <-- 5_27
 @enduml

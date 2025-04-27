@@ -1,6 +1,5 @@
 @startuml
 !include ../l4/l4_1.pu
-!include ../l4/l4_4.pu
 !include ../l4/l4_27.pu
 
 package "中機能"{
@@ -13,6 +12,5 @@ package "中機能"{
 }
 
 3_1 <-- 4_1
-3_1 <-- 4_4
 3_1 <-- 4_27
 @enduml

@@ -1,9 +1,9 @@
 @startuml
-!include ../l5/l5_5.pu
+' !include ../l5/l5_5.pu
 
 package "小機能"{
   package "バックエンド"{
-    object "小機能" as 4_4 #LightGreen{
+    object "小機能" as 4_4 #Orange{
       id = 4-4
       detail = 画像処理ができる
     }
@@ -11,5 +11,5 @@ package "小機能"{
 }
 
 
-4_4 <-- 5_5
+' 4_4 <-- 5_5
 @enduml

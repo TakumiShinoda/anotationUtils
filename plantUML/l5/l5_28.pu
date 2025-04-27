@@ -1,0 +1,14 @@
+@startuml
+!include ./l5_5.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_28 #LightGreen{
+      id = 5-28
+      detail = 画像処理ができる
+    }
+  }
+}
+
+5_28 <-- 5_5
+@enduml

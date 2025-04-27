@@ -54,7 +54,7 @@ $(function (){
   })
 
   $('#exitAppButton').on('click', async () => {
-    await window.electronAPI.exitApp()
+    await window.electronAPI.closeWindow(true)
     console.log("exit")
   })
 

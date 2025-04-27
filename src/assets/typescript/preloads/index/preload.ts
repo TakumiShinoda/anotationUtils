@@ -39,6 +39,7 @@ export interface IElectronAPI {
   domLoaded: () => Promise<DomLoadedInitItem>,
   minimizeWindow: () => Promise<void>,
   maximizeWindow: () => Promise<void>,
+  closeWindow: (withExitApp?: boolean) => Promise<void>,
   exitApp: () => Promise<void>
 }
 

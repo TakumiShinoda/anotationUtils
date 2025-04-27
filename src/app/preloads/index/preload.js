@@ -12,5 +12,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
   domLoaded: () => ipcRenderer.invoke('domLoaded'),
   maximizeWindow: () => ipcRenderer.send('maximizeWindow'),
   minimizeWindow: () => ipcRenderer.send('minimizeWindow'),
+  closeWindow: (withExitApp = false) => ipcRenderer.send('closeWindow', withExitApp),
   exitApp: () => ipcRenderer.send('exitApp')
 })

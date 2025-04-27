@@ -20,7 +20,14 @@ function minimizeWindow(ev){
   BrowserWindow.fromWebContents(ev.sender).minimize()
 }
 
+function closeWindow(ev, withExitApp = false){
+  BrowserWindow.fromWebContents(ev.sender).close()
+
+  if(withExitApp) exitApp(undefined)
+}
+
 function exitApp(_){
+  console.log('exitApp')
   process.exit(0)
 }
 
@@ -28,5 +35,6 @@ module.exports= {
   domLoaded: domLoaded,
   maximizeWindow: maximizeWindow,
   minimizeWindow: minimizeWindow,
+  closeWindow: closeWindow,
   exitApp: exitApp
 }

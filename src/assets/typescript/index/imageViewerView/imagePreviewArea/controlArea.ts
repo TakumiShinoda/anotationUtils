@@ -9,18 +9,34 @@ $(function () {
     let filterStr: string = filterInputElement.val() as string
     let fileNameBuff: string
 
-    if(filterStr == ''){
-      filteredLoadedImageViewPaths = window.LoadedImageViewPaths
-    }else{
-      for(let ivp of window.LoadedImageViewPaths){
-        fileNameBuff = getLastElement(ivp.path.split('/'))
+    if(window.LoadModeState == 'AllImg'){
+      if(filterStr == ''){
+        filteredLoadedImageViewPaths = window.LoadedImageViewPaths
+      }else{
+        for(let ivp of window.LoadedImageViewPaths){
+          fileNameBuff = getLastElement(ivp.path.split('/'))
+    
+          if(fileNameBuff.indexOf(filterStr) < 0) continue
+    
+          filteredLoadedImageViewPaths.push(ivp)
+        }
+      } 
   
-        if(fileNameBuff.indexOf(filterStr) < 0) continue
+      resetPreviewImages(filteredLoadedImageViewPaths)
+    }else if(window.LoadModeState == 'Directory'){
+      if(filterStr == ''){
+        filteredLoadedImageViewPaths = window.DirModeCurrentPreviewList
+      }else{
+        for(let ivp of window.DirModeCurrentPreviewList){
+          fileNameBuff = getLastElement(ivp.path.split('/'))
+    
+          if(fileNameBuff.indexOf(filterStr) < 0) continue
+    
+          filteredLoadedImageViewPaths.push(ivp)
+        }
+      } 
   
-        filteredLoadedImageViewPaths.push(ivp)
-      }
-    } 
-
-    resetPreviewImages(filteredLoadedImageViewPaths)
+      resetPreviewImages(filteredLoadedImageViewPaths)
+    }
   })
 })

@@ -97,6 +97,7 @@ export function resetPreviewPathList(){
       })
     }
 
+    window.DirModeCurrentPreviewList = previewList
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
     $('#previewAreaPager').css('display', 'block')
@@ -140,6 +141,7 @@ $(function (){
       }
     }
 
+    window.DirModeCurrentPreviewList = previewList
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
     $('#previewAreaPager').css('display', 'block')

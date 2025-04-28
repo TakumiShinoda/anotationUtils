@@ -48,6 +48,7 @@ export function resetPreviewPathList(){
   resetImagePreviewNaviArea()
   clearPreviewArea()
   $('#pathPreviewTable').css('display', 'flex')
+  $('#imagePreviewControlAreaFilterArea').css('display', 'none')
 
   for(let key of Object.keys(window.LoadedPathDict)){
     splitPathBuff = key.split('/')

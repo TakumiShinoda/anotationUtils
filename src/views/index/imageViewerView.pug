@@ -16,7 +16,7 @@ div#imageViewerView.views.diaplayNone
         label.btn.btn-outline-danger(for='previewModeDir' loadMode="Directory") Directory
       div#loadFolderBtn.btn.btn-success Load
   div(style='min-height: 90px;')
-    div.displayFlex(style='margin-bottom: 10px;')
+    div.displayFlex(style='margin-bottom: 15px;')
       div
         div Preview size
         input#imageViewImageSizeSlider(type='range' min='0' max='1000' step='10' value=100)
@@ -25,14 +25,17 @@ div#imageViewerView.views.diaplayNone
         div Max preview images
         input#imageViewMaxPreviewImagesSlider(type='range' min='0' max='10000' step='100' value=1000)
         input#imageViewMaxPreviewImagesInput.inputNumNoSpin(type='number' min='1' max='10000' value=1000)
-    div(style='display: flex; justify-content: space-between; margin-right: 25px;')
-      div
-        div
+    div#imagePreviewControlArea
+      div(style='display: flex;')
+        div#imagePreviewControlAreaImageCountsArea
           span#imageCounts 0
           span  : images
+        div#imagePreviewControlAreaFilterArea
+          input#imagePreviewControlAreaFilterInput.form-control(type='text')
+          div#imagePreviewControlAreaFilterBtn.btn.btn-success Filter
       div#imagePreviewNaviArea(style='display: flex;')
         div#previewAreaPager(style='display: none;')
-  div(style='height: calc(100% - 240px); position: relative;')
+  div(style='height: calc(100% - 245px); position: relative;')
     div#imagePreviewArea
       table#pathPreviewTable.table.table-hover.table-borderless.table-dark(style='display: none; margin: 0px; flex-direction: column;')
         thead.sticky-top(style='border-radius: 0px; display: flex;')

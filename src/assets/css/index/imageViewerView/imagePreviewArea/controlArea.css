@@ -1,0 +1,30 @@
+#imagePreviewControlArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-right: 25px;
+  margin-bottom: 2px;
+}
+
+#imagePreviewControlAreaImageCountsArea{
+  display: flex;
+  align-items: end;
+  width: 190px;
+}
+
+#imagePreviewControlAreaFilterArea{
+  display: flex;
+  align-items: end;
+}
+
+#imagePreviewControlAreaFilterInput{
+  height: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#imagePreviewControlAreaFilterBtn{
+  height: 25px;
+  margin-left: 5px;
+  padding-top: 0px;
+}

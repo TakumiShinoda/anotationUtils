@@ -1,3 +1,4 @@
+import './imagePreviewArea/controlArea'
 import { getLastElement, wait } from "../../utils"
 import { showWarningAlert } from "../alertModal"
 import { LoadMode, LoadModeList } from './globals'

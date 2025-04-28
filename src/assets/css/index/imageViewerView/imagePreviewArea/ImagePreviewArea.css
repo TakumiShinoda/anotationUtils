@@ -1,3 +1,7 @@
+@import './controlArea.css';
+@import './allImgMode.css';
+@import './directoryMode.css';
+
 .previewPagerSelector:hover{
   opacity: 0.5;
   transition: 0.8s;

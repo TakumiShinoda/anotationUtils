@@ -1,7 +1,5 @@
 @import './imageViewArea.css';
 @import './imagePreviewArea/ImagePreviewArea.css';
-@import './imagePreviewArea/allImgMode.css';
-@import './imagePreviewArea/directoryMode.css';
 
 #imageViewerView{
   position: relative;

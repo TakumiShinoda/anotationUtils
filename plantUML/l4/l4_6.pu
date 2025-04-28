@@ -4,7 +4,7 @@
 
 package "小機能"{
   package "GUI"{
-    object "小機能" as 4_6{
+    object "小機能" as 4_6 #LightGreen{
       id = 4-6
       detail = 画像ファイル名でフィルタして表示できる
     }

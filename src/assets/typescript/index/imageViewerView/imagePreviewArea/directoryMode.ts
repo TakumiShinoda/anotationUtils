@@ -54,7 +54,7 @@ export function resetPreviewPathList(){
 
     if(window.ImagePreviewDirModeFilter.filter != ''){
       if(splitPathBuff.length < window.ImagePreviewDirModeFilter.depth) continue
-      if(splitPathBuff[splitPathBuff.length - window.ImagePreviewDirModeFilter.depth] != window.ImagePreviewDirModeFilter.filter) continue
+      if(splitPathBuff[splitPathBuff.length - window.ImagePreviewDirModeFilter.depth].indexOf(window.ImagePreviewDirModeFilter.filter) < 0) continue
     }
 
     imageViewElementStr += `

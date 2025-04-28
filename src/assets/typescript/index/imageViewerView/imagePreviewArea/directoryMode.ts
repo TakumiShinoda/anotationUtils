@@ -48,13 +48,14 @@ export function resetPreviewPathList(){
   resetImagePreviewNaviArea()
   clearPreviewArea()
   $('#pathPreviewTable').css('display', 'flex')
+  $('#imagePreviewControlAreaFilterArea').css('display', 'none')
 
   for(let key of Object.keys(window.LoadedPathDict)){
     splitPathBuff = key.split('/')
 
     if(window.ImagePreviewDirModeFilter.filter != ''){
       if(splitPathBuff.length < window.ImagePreviewDirModeFilter.depth) continue
-      if(splitPathBuff[splitPathBuff.length - window.ImagePreviewDirModeFilter.depth] != window.ImagePreviewDirModeFilter.filter) continue
+      if(splitPathBuff[splitPathBuff.length - window.ImagePreviewDirModeFilter.depth].indexOf(window.ImagePreviewDirModeFilter.filter) < 0) continue
     }
 
     imageViewElementStr += `
@@ -96,6 +97,7 @@ export function resetPreviewPathList(){
       })
     }
 
+    window.DirModeCurrentPreviewList = previewList
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
     $('#previewAreaPager').css('display', 'block')
@@ -103,7 +105,7 @@ export function resetPreviewPathList(){
 }
 
 $(function (){
-  $('#previewDirFilterInput').on('change', (ev: JQuery.TriggeredEvent) => {
+  $('#previewDirFilterInput').on('keydown', (ev: JQuery.TriggeredEvent) => {
     window.ImagePreviewDirModeFilter.filter = $(ev.currentTarget).val()
   })
 
@@ -116,6 +118,12 @@ $(function (){
     
     inputElement.val(inputValue)
     window.ImagePreviewDirModeFilter.depth = inputValue
+  })
+
+  $('#previewDirFilterInput').on('keydown', (ev: JQuery.KeyDownEvent) => {
+    if(ev.key != 'Enter') return
+
+    resetPreviewPathList()
   })
 
   $('#previewDirFilterBtn').on('click', () => {
@@ -139,6 +147,7 @@ $(function (){
       }
     }
 
+    window.DirModeCurrentPreviewList = previewList
     resetPreviewImages(previewList)
     resetImagePreviewNaviArea()
     $('#previewAreaPager').css('display', 'block')

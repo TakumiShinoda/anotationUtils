@@ -21,6 +21,7 @@ export function resetPreviewImages(imageViewPaths: ImagePreviewListItem[], page:
   resetImagePreviewNaviArea()
   clearPreviewArea()
   $('#imageCounts').text(imageViewPaths.length.toString())
+  $('#imagePreviewControlAreaFilterArea').css('display', 'flex')
 
   if((page <= 0) || (page > pageCount)) return
 

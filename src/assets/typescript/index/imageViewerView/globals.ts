@@ -10,6 +10,7 @@ declare global{
     ImageViewImagePreviewId: number
     LoadedImageViewPaths: ImagePreviewListItem[]
     LoadedPathDict: {[key: string]: {imgName: string, imgSize: {w: number, h: number}, dataSize: number}[]}
+    DirModeCurrentPreviewList: ImagePreviewListItem[]
     IsImgNamePathCopying: boolean
     LoadModeState: LoadMode
     ImagePreviewDirModeFilter: {filter: string, depth: number}

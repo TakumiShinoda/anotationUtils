@@ -105,7 +105,7 @@ export function resetPreviewPathList(){
 }
 
 $(function (){
-  $('#previewDirFilterInput').on('change', (ev: JQuery.TriggeredEvent) => {
+  $('#previewDirFilterInput').on('keydown', (ev: JQuery.TriggeredEvent) => {
     window.ImagePreviewDirModeFilter.filter = $(ev.currentTarget).val()
   })
 
@@ -118,6 +118,12 @@ $(function (){
     
     inputElement.val(inputValue)
     window.ImagePreviewDirModeFilter.depth = inputValue
+  })
+
+  $('#previewDirFilterInput').on('keydown', (ev: JQuery.KeyDownEvent) => {
+    if(ev.key != 'Enter') return
+
+    resetPreviewPathList()
   })
 
   $('#previewDirFilterBtn').on('click', () => {

@@ -85,6 +85,8 @@ $(function (){
   $('#loadModeSelectArea .btn').on('click', (ev: JQuery.ClickEvent) => {
     window.LoadModeState = cvtLoadMode($(ev.currentTarget).attr('loadMode'))
 
+    $('#imagePreviewControlAreaFilterInput').val('')
+
     if(window.LoadModeState == 'AllImg') resetPreviewImages(window.LoadedImageViewPaths)
     else if(window.LoadModeState == 'Directory') resetPreviewPathList()
   })

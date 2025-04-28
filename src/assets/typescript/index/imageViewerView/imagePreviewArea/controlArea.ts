@@ -5,38 +5,26 @@ import { resetPreviewImages } from "./allImgMode"
 $(function () {
   $('#imagePreviewControlAreaFilterBtn').on('click', () => {
     let filterInputElement: JQuery<HTMLElement> = $('#imagePreviewControlAreaFilterInput')
+    let targetImagePreviewList: ImagePreviewListItem[]
     let filteredLoadedImageViewPaths: ImagePreviewListItem[] = []
     let filterStr: string = filterInputElement.val() as string
     let fileNameBuff: string
 
-    if(window.LoadModeState == 'AllImg'){
-      if(filterStr == ''){
-        filteredLoadedImageViewPaths = window.LoadedImageViewPaths
-      }else{
-        for(let ivp of window.LoadedImageViewPaths){
-          fileNameBuff = getLastElement(ivp.path.split('/'))
-    
-          if(fileNameBuff.indexOf(filterStr) < 0) continue
-    
-          filteredLoadedImageViewPaths.push(ivp)
-        }
-      } 
+    if(window.LoadModeState == 'AllImg') targetImagePreviewList = window.LoadedImageViewPaths
+    else if(window.LoadModeState == 'Directory') targetImagePreviewList = window.DirModeCurrentPreviewList
+    else return
+
+    if(filterStr == '') filteredLoadedImageViewPaths = targetImagePreviewList
+    else{
+      for(let ivp of targetImagePreviewList){
+        fileNameBuff = getLastElement(ivp.path.split('/'))
   
-      resetPreviewImages(filteredLoadedImageViewPaths)
-    }else if(window.LoadModeState == 'Directory'){
-      if(filterStr == ''){
-        filteredLoadedImageViewPaths = window.DirModeCurrentPreviewList
-      }else{
-        for(let ivp of window.DirModeCurrentPreviewList){
-          fileNameBuff = getLastElement(ivp.path.split('/'))
-    
-          if(fileNameBuff.indexOf(filterStr) < 0) continue
-    
-          filteredLoadedImageViewPaths.push(ivp)
-        }
-      } 
+        if(fileNameBuff.indexOf(filterStr) < 0) continue
   
-      resetPreviewImages(filteredLoadedImageViewPaths)
-    }
+        filteredLoadedImageViewPaths.push(ivp)
+      }
+    } 
+
+    resetPreviewImages(filteredLoadedImageViewPaths)
   })
 })

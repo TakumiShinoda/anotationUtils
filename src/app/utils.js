@@ -171,7 +171,6 @@ function debugPrint(browserWindow, mes){
 module.exports= {
   getLastElement: getLastElement,
   getAllFilesRecursive: getAllFilesRecursive,
-  getAllFilesRecursive: getAllFilesRecursive,
   readAnotationFile: readAnotationFile,
   cvtImgToBase64: cvtImgToBase64,
   getBase64Async: getBase64Async,

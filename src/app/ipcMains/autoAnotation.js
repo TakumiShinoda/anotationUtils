@@ -1,36 +1,49 @@
+const fs = require('fs')
 const { spawn } = require('child_process')
+
+const { RootPath } = require('../globals')
+
+const CommandVenvPython = `${`${RootPath}/externalPackage/python/env/Scripts/python.exe`}`
 
 function loadAnotationTarget(_, anotationName, targetModel, targetDir){
   return new Promise((res, rej) => {
-    let externalPackagePath = `${__dirname}/../../../externalPackage/autoanotation`
-    
-    if(AnotationProc != undefined) return res({code: 0, mes: 'Anotation processing.'})
-    if(anotationName == undefined | anotationName == '') return res({code: 0, mes: 'Empty name.'})
-    if(targetModel == undefined | targetModel == '') return res({code: 0, mes: 'Empty target model.'})
-    if(targetDir == undefined | targetDir == '') return res({code: 0, mes: 'Empty target directory.'})
-    
-    AnotationProc = spawn(
-      `${externalPackagePath}/main.exe`, 
-      [
-        `--weights`, `${targetModel}`, 
-        `--source`, `${targetDir}`, 
-        `--outdir`, `${externalPackagePath}/output`, 
-        `--name`, anotationName
-      ]
-    )
+    let autoAnotationPath = `${RootPath}/externalPackage/autoanotation`
+    let commandArgs = [`${autoAnotationPath}/main.py`]
 
-    console.log('START PROC')
+    try{
+      if(anotationName == undefined | anotationName == '') return res({code: 0, mes: 'Empty name.'})
+      if(targetModel == undefined | targetModel == '') return res({code: 0, mes: 'Empty target model.'})
+      if(targetDir == undefined | targetDir == '') return res({code: 0, mes: 'Empty target directory.'})
 
-    AnotationProc.on('close', (code) => {
-      console.log(`CLOSED: ${code}`)
-      AnotationProc = undefined
+      if(fs.existsSync(`${autoAnotationPath}/output/${anotationName}`)) res({code: 0, mes: 'Aleady exist name.'})
 
-      if(code == 0) return res(true)
-      else return res({code: 2, mes: `Subproces end at Code: ${code}`})
-    })
+      commandArgs = commandArgs.concat([`--weights`, `${targetModel}`])
+      commandArgs = commandArgs.concat([`--source`, `${targetDir}`])
+      commandArgs = commandArgs.concat([`--outdir`, `${autoAnotationPath}/output`])
+      commandArgs = commandArgs.concat([`--name`, anotationName])
+
+      proc = spawn(
+        CommandVenvPython,
+        commandArgs,
+        { 
+          shell: false,
+          windowsHide: true,
+          stdio: ["pipe", "pipe", "inherit"],
+        }
+      )
+
+      proc.stdout.on('data', (data) => {
+        console.log(data.toString())
+        debugPrint(MainWindow, `getAllFilesRecursive stdout: ${data.toString()}`)
+      })
+  
+      proc.on('close', (code) => {
+        res({code: 2, mes: `Subproces end at Code: ${code}`})
+      })
+    }catch(err){rej(err)}
   })
 }
 
 module.exports= {
-  loadAnotationTarget: loadAnotationTarget
+  loadAnotationTarget: loadAnotationTarget,
 }

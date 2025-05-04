@@ -31,7 +31,7 @@ export interface IElectronAPI {
   on: (channel: string, listener: (event: IpcRendererEvent, ...args: any[]) => void) => void,
   openFileDialog: (filters: {extensions: string[], name: string}[], dialogHistoryKey: DialogHistoryKey) => Promise<string[] | undefined>,
   openFolderDialog: (dialogHistoryKey: DialogHistoryKey) => Promise<string | undefined>,
-  loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, targetDir: string | undefined) => Promise<CustomError | boolean>,
+  loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, targetDir: string | undefined, progressId: number) => Promise<CustomError | boolean>,
   getDatabaseInfo: (progressId: number) => Promise<databaseInfo>,
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
   openByExplorer: (openDir: string) => Promise<void>,

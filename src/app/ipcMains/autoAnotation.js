@@ -11,26 +11,11 @@ function loadAnotationTarget(_, anotationName, targetModel, targetDir, progressI
     let commandArgs = [`${autoAnotationPath}/main.py`]
 
     try{
-      if(anotationName == undefined | anotationName == ''){
-        res({code: 0, mes: 'Empty name.'})
-        return
-      }
-      if(targetModel == undefined | targetModel == ''){
-        res({code: 0, mes: 'Empty target model.'})
-        return
-      }
-      if(targetDir == undefined | targetDir == ''){
-        res({code: 0, mes: 'Empty target directory.'})
-        return
-      }
-      if(progressId == undefined | typeof(progressId) != 'number'){
-        res({code: 0, mes: 'Invalid progress id.'})
-        return
-      }
-      if(fs.existsSync(`${autoAnotationPath}/output/${anotationName}`)){
-        res({code: 0, mes: 'Aleady exist name.'})
-        return
-      }
+      if(anotationName == undefined | anotationName == '') throw 'Empty name.'
+      if(targetModel == undefined | targetModel == '') throw 'Empty target model.'
+      if(targetDir == undefined | targetDir == '') throw 'Empty target directory.'
+      if(progressId == undefined | typeof(progressId) != 'number') throw 'Invalid progress id.'
+      if(fs.existsSync(`${autoAnotationPath}/output/${anotationName}`)) throw 'Aleady exist name.'
 
       commandArgs = commandArgs.concat([`--weights`, `${targetModel}`])
       commandArgs = commandArgs.concat([`--source`, `${targetDir}`])
@@ -55,9 +40,15 @@ function loadAnotationTarget(_, anotationName, targetModel, targetDir, progressI
       })
   
       proc.on('close', (code) => {
-        res({code: 2, mes: `Subproces end at Code: ${code}`})
+        if(code != 0) rej(`Error at subprocess. Exit code: ${code}`)
+
+        res()
       })
-    }catch(err){rej(err)}
+
+      proc.on('error', (err) => {
+        rej(`Error at subprocess. Error: ${err}`)
+      })
+    }catch(err){rej(err.toString())}
   })
 }
 

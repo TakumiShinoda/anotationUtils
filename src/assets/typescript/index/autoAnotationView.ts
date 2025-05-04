@@ -1,5 +1,4 @@
 import { toggleUserControl } from './index';
-import { CustomError, isCustomErrors } from '../../../common/customErrors'
 import { showSuccussAlert, showWarningAlert } from './alertModal';
 
 $(function (){
@@ -31,7 +30,6 @@ $(function (){
     let anotationName: string | undefined = $('#anotationNameInputField').val()?.toString()
     let modelPath: string | undefined = $('#modelPathInputField').val()?.toString()
     let imagePath: string | undefined = $('#imagePathInputField').val()?.toString()
-    let anotationProcResult: CustomError | boolean
     let progressId: number
 
     try{
@@ -41,16 +39,11 @@ $(function (){
       progressId = window.IpcProgress.addProgress((progressPercent: number) => {
         progressBarElement.css('width', `${progressPercent * 100}%`)
       })
-      anotationProcResult = await window.electronAPI.loadAnotationTarget(anotationName, modelPath, imagePath, progressId)
-
-      if(isCustomErrors(anotationProcResult)){
-        showWarningAlert(anotationProcResult.mes)
-        return
-      }else if(!anotationProcResult) throw ''
+      await window.electronAPI.loadAnotationTarget(anotationName, modelPath, imagePath, progressId)
       
       showSuccussAlert('Anotation succes!')
     }catch(err){
-      showWarningAlert('Unknow error.')
+      showWarningAlert(err as string)
     }finally{
       progressBarAreaElement.css('display', 'none')
       toggleUserControl(true)

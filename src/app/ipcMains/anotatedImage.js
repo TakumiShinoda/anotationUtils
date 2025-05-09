@@ -1,6 +1,49 @@
-const fs = require('fs')
-const { cutImgToBase64 } = require('../utils')
+const fs = require('fs').promises
+const { cutImgToBase64, getLastElement, isExistFile, readAnotationFile } = require('../utils')
 const { RootPath } = require('../globals')
+
+function getAnotatedTree(_){
+  const SupportImageExtensions = ['jpg', 'jpeg', 'png', 'svg', 'webp', 'gif', 'bmp', 'tiff']
+  const AnotatedOutputPath = `${RootPath}/externalPackage/autoanotation/output`
+
+  let anotatedOutputDirBuff
+  let projectNameBuff
+  let imgPathListBuff
+  let result = {}
+
+  return new Promise(async (res, rej) => {
+    try{
+      projectNameBuff = await fs.readdir(AnotatedOutputPath, {withFileTypes: true})
+
+      for(let pn of projectNameBuff){
+        if(!pn.isDirectory()) continue
+
+        result[pn.name] = []
+        anotatedOutputDirBuff = `${AnotatedOutputPath}/${pn.name}`
+
+        imgPathListBuff = await fs.readdir(anotatedOutputDirBuff, {withFileTypes: true})
+
+        for(let ip of imgPathListBuff){
+          if(!ip.isFile()) continue
+          if(SupportImageExtensions.indexOf(getLastElement(ip.name.split('.'))) < 0) continue
+          if(!await isExistFile(`${anotatedOutputDirBuff}/${ip.name}.txt`)) continue
+
+          try{
+            await readAnotationFile(`${anotatedOutputDirBuff}/${ip.name}.txt`)
+          }catch(err){continue}
+
+          result[pn.name].push({
+            path: `${AnotatedOutputPath}/${pn.name}/${ip.name}`,
+            anotateData: {}
+          })
+        }
+      }
+
+      console.log(result)
+      res(result)
+    }catch(err){rej(err)}
+  })
+}
 
 function getDatabaseInfo(_, progressId){
   return new Promise(async (res, rej) => {
@@ -70,5 +113,6 @@ function getDatabaseInfo(_, progressId){
 }
 
 module.exports= {
-  getDatabaseInfo: getDatabaseInfo
+  getAnotatedTree: getAnotatedTree,
+  // getDatabaseInfo: getDatabaseInfo
 }

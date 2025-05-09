@@ -42,8 +42,6 @@ function createDatabaseListItems(databaseInfo: databaseInfo): JQuery<HTMLElement
 }
 
 $(function (){
-  const electronWindow: any = window
-
   $('#databaseList').on('inview', async (_, isInView: boolean) => {
     let progressBarAreaElement: JQuery<HTMLElement> = $('#selectDatabaseViewprogressBarArea')
     let progressBarElement: JQuery<HTMLElement> = $('#selectDatabaseViewprogressBarArea .progress .progress-bar')
@@ -64,9 +62,10 @@ $(function (){
         progressBarElement.css('width', `${progressPercent * 100}%`)
       })
       
-      databaseInfo = await electronWindow.electronAPI.getDatabaseInfo(progressId)
+      console.log(await window.electronAPI.getAnotatedTree())
+      // databaseInfo = await electronWindow.electronAPI.getDatabaseInfo(progressId)
 
-      $('#databaseList').append(createDatabaseListItems(databaseInfo))
+      // $('#databaseList').append(createDatabaseListItems(databaseInfo))
 
       progressBarAreaElement.css('display', 'none')
       toggleUserControl(true)

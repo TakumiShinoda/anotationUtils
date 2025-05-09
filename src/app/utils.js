@@ -1,4 +1,5 @@
 const fs = require('fs')
+const fsp = require('fs').promises
 const jimp = require('jimp')
 const { spawn } = require('child_process')
 
@@ -8,6 +9,13 @@ const CommandVenvPython = `${`${RootPath}/externalPackage/python/env/Scripts/pyt
 
 function getLastElement(list){
   return list[list.length - 1]
+}
+
+async function isExistFile(path){
+  try{
+    await fsp.access(path, fsp.constants.F_OK)
+    return true
+  }catch(_){return false}
 }
 
 async function getAllFilesRecursive(dir, filterFileName = []){
@@ -170,6 +178,7 @@ function debugPrint(browserWindow, mes){
 
 module.exports= {
   getLastElement: getLastElement,
+  isExistFile: isExistFile,
   getAllFilesRecursive: getAllFilesRecursive,
   readAnotationFile: readAnotationFile,
   cvtImgToBase64: cvtImgToBase64,

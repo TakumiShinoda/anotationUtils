@@ -2,6 +2,19 @@ import { IpcRendererEvent } from 'electron'
 
 import { databaseInfo } from '../../../../common/database.d'
 
+export interface AnotateData{
+  [tagName: string]: {x1: number, y1: number, x2: number, y2: number}
+}
+
+export interface AnotatedImgInfo{
+  path: string,
+  anotateData: AnotateData
+}
+
+export interface AnotatedTree{
+  [treeName: string]: AnotatedImgInfo[]
+}
+
 export interface ImagePreviewListItem{
   imgSize: {w: number, h: number}, 
   dataSize: number, 
@@ -31,7 +44,8 @@ export interface IElectronAPI {
   openFileDialog: (filters: {extensions: string[], name: string}[], dialogHistoryKey: DialogHistoryKey) => Promise<string[] | undefined>,
   openFolderDialog: (dialogHistoryKey: DialogHistoryKey) => Promise<string | undefined>,
   loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, targetDir: string | undefined, progressId: number) => Promise<void>,
-  getDatabaseInfo: (progressId: number) => Promise<databaseInfo>,
+  // getDatabaseInfo: (progressId: number) => Promise<databaseInfo>,
+  getAnotatedTree: () => Promise<AnotatedTree>
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,
   openByExplorer: (openDir: string) => Promise<void>,
   copyFile: (srcPath: string, dialogHistoryKey: DialogHistoryKey) => Promise<string>,

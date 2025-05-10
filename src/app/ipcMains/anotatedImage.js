@@ -1,6 +1,28 @@
 const fs = require('fs').promises
+const yaml = require('js-yaml')
 const { cutImgToBase64, getLastElement, isExistFile, readAnotationFile } = require('../utils')
 const { RootPath } = require('../globals')
+
+function loadClassesFromTrainYaml(trainYamlPath){
+  let trainYamlFile
+  let trainYamlObj
+  let result
+
+  return new Promise(async (res, rej) => {
+    try{
+      trainYamlFile = await fs.readFile(trainYamlPath)
+      trainYamlObj = yaml.load(trainYamlFile)
+  
+      if(Object.keys(trainYamlObj).indexOf('names') < 0) throw 'Invalid train yaml.'
+  
+      result = trainYamlObj['names']
+      
+      if(!Array.isArray(result)) throw 'Invalid train yaml.'
+
+      res(result)
+    }catch(err){rej(err)}
+  })
+}
 
 function getAnotatedTree(_){
   const SupportImageExtensions = ['jpg', 'jpeg', 'png', 'svg', 'webp', 'gif', 'bmp', 'tiff']
@@ -9,6 +31,10 @@ function getAnotatedTree(_){
   let anotatedOutputDirBuff
   let projectNameBuff
   let imgPathListBuff
+  let classesBuff
+  let anotatedLoadDataBuff
+  let anotateDataBuff
+  let tagBuff
   let result = {}
 
   return new Promise(async (res, rej) => {
@@ -18,28 +44,37 @@ function getAnotatedTree(_){
       for(let pn of projectNameBuff){
         if(!pn.isDirectory()) continue
 
-        result[pn.name] = []
         anotatedOutputDirBuff = `${AnotatedOutputPath}/${pn.name}`
 
+        classesBuff = await loadClassesFromTrainYaml(`${anotatedOutputDirBuff}/train.yaml`)
         imgPathListBuff = await fs.readdir(anotatedOutputDirBuff, {withFileTypes: true})
+        result[pn.name] = []
 
         for(let ip of imgPathListBuff){
           if(!ip.isFile()) continue
           if(SupportImageExtensions.indexOf(getLastElement(ip.name.split('.'))) < 0) continue
           if(!await isExistFile(`${anotatedOutputDirBuff}/${ip.name}.txt`)) continue
 
-          try{
-            await readAnotationFile(`${anotatedOutputDirBuff}/${ip.name}.txt`)
-          }catch(err){continue}
+          try{anotatedLoadDataBuff = await readAnotationFile(`${anotatedOutputDirBuff}/${ip.name}.txt`)}
+          catch(err){continue}
+
+          anotateDataBuff = {}
+          for(let ald of anotatedLoadDataBuff){
+            if(ald.class >= classesBuff.length) tagBuff = 'undefined'
+            else tagBuff = classesBuff[ald.class]
+
+            if(Object.keys(anotateDataBuff).indexOf(tagBuff) < 0) anotateDataBuff[tagBuff] = []
+            
+            anotateDataBuff[tagBuff].push({x1: ald.x1, y1: ald.y1, x2: ald.x2, y2: ald.y2})
+          }
 
           result[pn.name].push({
             path: `${AnotatedOutputPath}/${pn.name}/${ip.name}`,
-            anotateData: {}
+            anotateData: anotateDataBuff
           })
         }
       }
 
-      console.log(result)
       res(result)
     }catch(err){rej(err)}
   })

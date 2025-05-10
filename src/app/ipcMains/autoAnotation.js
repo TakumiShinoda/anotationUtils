@@ -5,7 +5,7 @@ const { RootPath, ProgressServerPort } = require('../globals')
 
 const CommandVenvPython = `${`${RootPath}/externalPackage/python/env/Scripts/python.exe`}`
 
-function loadAnotationTarget(_, anotationName, targetModel, targetDir, progressId){
+function loadAnotationTarget(_, anotationName, targetModel, trainyaml, targetDir, progressId){
   return new Promise((res, rej) => {
     let autoAnotationPath = `${RootPath}/externalPackage/autoanotation`
     let commandArgs = [`${autoAnotationPath}/main.py`]
@@ -13,11 +13,13 @@ function loadAnotationTarget(_, anotationName, targetModel, targetDir, progressI
     try{
       if(anotationName == undefined | anotationName == '') throw 'Empty name.'
       if(targetModel == undefined | targetModel == '') throw 'Empty target model.'
+      if(trainyaml == undefined | trainyaml == '') throw 'Empty train yaml.'
       if(targetDir == undefined | targetDir == '') throw 'Empty target directory.'
       if(progressId == undefined | typeof(progressId) != 'number') throw 'Invalid progress id.'
       if(fs.existsSync(`${autoAnotationPath}/output/${anotationName}`)) throw 'Aleady exist name.'
 
       commandArgs = commandArgs.concat([`--weights`, `${targetModel}`])
+      commandArgs = commandArgs.concat([`--trainYaml`, `${trainyaml}`])
       commandArgs = commandArgs.concat([`--source`, `${targetDir}`])
       commandArgs = commandArgs.concat([`--outdir`, `${autoAnotationPath}/output`])
       commandArgs = commandArgs.concat([`--name`, anotationName])

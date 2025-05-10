@@ -1,3 +1,5 @@
+import { resetSelectDatabaseList } from "./selectDatabaseView"
+
 declare global{
   interface Window{
     bootstrap: any
@@ -29,12 +31,13 @@ $(function (){
     $('#autoAnotationView').show()
   })
 
-  $('#showDatabaseViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {
+  $('#showDatabaseViewIcon').on('click', async (ev: JQuery.TriggeredEvent) => {
     clearSideMenuIcon()
     $(ev.currentTarget).css('background-color', 'var(--bs-primary)')
     $(ev.currentTarget).addClass('disableHover')
     hideAllViews()
     $('#selectDatabaseView').show()
+    await resetSelectDatabaseList()
   })
 
   $('#showImageViewerViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {

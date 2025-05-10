@@ -16,6 +16,20 @@ $(function (){
     $('#modelPathInputField').val(filePath)
   })
 
+  $('#trainYamlInputButton').on('click', async () => {
+    let dialogFilter: {extensions: string[], name: string}[] = [
+      {
+        extensions: ['*yaml'], 
+        name: 'Train YAML'
+      }
+    ]
+    let filePath: string[] | undefined = await window.electronAPI.openFileDialog(dialogFilter, 'autoAnotationTrainYamlPathDialog')
+
+    if(filePath == undefined) return
+
+    $('#trainYamlInputField').val(filePath)
+  })
+
   $('#imagePathInputButton').on('click', async () => {
     let directry: string | undefined = await window.electronAPI.openFolderDialog('autoAnotationImagePathDialog')
 
@@ -29,6 +43,7 @@ $(function (){
     let progressBarElement: JQuery<HTMLElement> = $('#autoAnotationViewProgressBarArea .progress .progress-bar')
     let anotationName: string | undefined = $('#anotationNameInputField').val()?.toString()
     let modelPath: string | undefined = $('#modelPathInputField').val()?.toString()
+    let trainYamlPath: string | undefined = $('#trainYamlInputField').val()?.toString()
     let imagePath: string | undefined = $('#imagePathInputField').val()?.toString()
     let progressId: number
 
@@ -39,7 +54,7 @@ $(function (){
       progressId = window.IpcProgress.addProgress((progressPercent: number) => {
         progressBarElement.css('width', `${progressPercent * 100}%`)
       })
-      await window.electronAPI.loadAnotationTarget(anotationName, modelPath, imagePath, progressId)
+      await window.electronAPI.loadAnotationTarget(anotationName, modelPath, trainYamlPath, imagePath, progressId)
       
       showSuccussAlert('Anotation succes!')
     }catch(err){

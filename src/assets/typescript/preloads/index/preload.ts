@@ -3,7 +3,7 @@ import { IpcRendererEvent } from 'electron'
 import { databaseInfo } from '../../../../common/database.d'
 
 export interface AnotateData{
-  [tagName: string]: {x1: number, y1: number, x2: number, y2: number}
+  [tagName: string]: {x1: number, y1: number, x2: number, y2: number}[]
 }
 
 export interface AnotatedImgInfo{
@@ -23,9 +23,10 @@ export interface ImagePreviewListItem{
 
 export const DialogHistoryKeyList = [
   'autoAnotationModelPathDialog',
+  'autoAnotationTrainYamlPathDialog',
   'autoAnotationImagePathDialog',
   'imageViewerOpenFolderDialog',
-  'imageViewerSaveImgDialog'
+  'imageViewerSaveImgDialog',
 ] as const
 export type DialogHistoryKey = (typeof DialogHistoryKeyList)[number]
 
@@ -43,7 +44,7 @@ export interface IElectronAPI {
   on: (channel: string, listener: (event: IpcRendererEvent, ...args: any[]) => void) => void,
   openFileDialog: (filters: {extensions: string[], name: string}[], dialogHistoryKey: DialogHistoryKey) => Promise<string[] | undefined>,
   openFolderDialog: (dialogHistoryKey: DialogHistoryKey) => Promise<string | undefined>,
-  loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, targetDir: string | undefined, progressId: number) => Promise<void>,
+  loadAnotationTarget: (anotationName: string | undefined, targetModel: string | undefined, trainYaml: string | undefined, targetDir: string | undefined, progressId: number) => Promise<void>,
   // getDatabaseInfo: (progressId: number) => Promise<databaseInfo>,
   getAnotatedTree: () => Promise<AnotatedTree>
   getImageViewList: (imageViewDir: string) => Promise<ImagePreviewListItem[]>,

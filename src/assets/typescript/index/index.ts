@@ -16,6 +16,7 @@ window.IpcProgress = new IpcProgressHandler()
 function initInputAreaByDialogHistory(dialogHistories: {[key in DialogHistoryKey]: string}){
   console.log(dialogHistories)
   $('#modelPathInputField').val(dialogHistories.autoAnotationModelPathDialog)
+  $('#trainYamlInputField').val(dialogHistories.autoAnotationTrainYamlPathDialog)
   $('#imagePathInputField').val(dialogHistories.autoAnotationImagePathDialog)
   $('#openFolderDirInputField').val(dialogHistories.imageViewerOpenFolderDialog)
 }

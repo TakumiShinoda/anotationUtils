@@ -9,6 +9,7 @@ function loadDialogHistory(){
   let fileJson
   let result = {
     'autoAnotationModelPathDialog': '',
+    'autoAnotationTrainYamlPathDialog': '',
     'autoAnotationImagePathDialog': '',
     'imageViewerOpenFolderDialog': '',
     'imageViewerSaveImgDialog': ''

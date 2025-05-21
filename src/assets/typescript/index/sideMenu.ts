@@ -1,4 +1,4 @@
-import { resetSelectDatabaseList } from "./selectDatabaseView"
+import { resetSelectDatabaseList } from "./anotatedImageView/selectDatabaseListArea"
 
 declare global{
   interface Window{
@@ -36,7 +36,7 @@ $(function (){
     $(ev.currentTarget).css('background-color', 'var(--bs-primary)')
     $(ev.currentTarget).addClass('disableHover')
     hideAllViews()
-    $('#selectDatabaseView').show()
+    $('#anotatedImageView').show()
     await resetSelectDatabaseList()
   })
 

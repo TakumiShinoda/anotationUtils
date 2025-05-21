@@ -4,7 +4,7 @@ import '../../css/index/styles.css'
 
 import './sideMenu'
 import './autoAnotationView'
-import './selectDatabaseView'
+import './anotatedImageView/anotatedImageView'
 import './imageViewerView/imageViewerView'
 
 import { wait } from '../utils'

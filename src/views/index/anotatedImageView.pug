@@ -1,9 +1,23 @@
 div#anotatedImageView.views.diaplayNone
-  div#mainView
-    h2 Images
-    div.displayFlex(style="justify-content: right;")
-      div#selectAllButton.btn.btn-primary Select All
-      div#clearButton.btn.btn-secondary Clear
-    div#imageArea.displayFlex
-  div#footer
-    div.btn.btn-primary Select
+  div#selectDatabaseViewprogressBarArea
+    div.progress(role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+      div.progress-bar.progress-bar-striped.progress-bar-animated
+  div#anotatedImageViewHeader
+    h2 Databases
+  div#anotatedImageViewContentArea
+    div#selectDatabaseListArea
+      ul#selectDatabaseListAreaList.list-group
+    div#anotatedImageViewArea
+      div#anotatedImageViewAreaHeader
+        div#anotatedImageViewAreaSelectModeBtnArea
+          div#anotatedImageViewAreaSelectAllBtn.btn.btn-primary Select All
+          div#anotatedImageViewAreaClearSelectBtn.btn.btn-secondary Clear
+        div
+          div#anotatedImageViewAreaSelectModeBtn.btn.btn-outline-primary Select Mode
+      div#anotatedImageViewAreaContentsArea
+      div#anotatedImageViewAreaFooter
+        div
+          div#anotatedImageViewAreaBackBtn.btn.btn-danger Back
+        div
+          div.btn.btn-success export
+          div.btn.btn-primary save

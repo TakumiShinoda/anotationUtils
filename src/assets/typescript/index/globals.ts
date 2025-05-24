@@ -6,5 +6,6 @@ declare global{
     IpcProgress: IpcProgressHandler,
     RootPath: string,
     InitialDialogHistories: {[key in DialogHistoryKey]: string}
+    AnotatedImageViewIsSelectMode: boolean
   }
 }

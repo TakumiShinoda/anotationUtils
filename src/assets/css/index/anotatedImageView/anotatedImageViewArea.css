@@ -70,8 +70,22 @@
 }
 
 .anotatedImageViewAreaImageInfo:hover{
-  transition: 0.5s;
+  transition: 0.2s;
   opacity: 1;
+}
+
+.anotatedImageViewAreaImageStatusArea{
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+}
+
+.anotatedImageViewAreaImageSelectedIcon{
+  background: lightgreen;
+  color: green;
 }
 
 #anotatedImageViewAreaFooter{

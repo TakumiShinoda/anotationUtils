@@ -1,7 +1,7 @@
 import { toggleUserControl } from '../index'
 import { AnotatedTree } from '../../preloads/index/preload'
 import { showWarningAlert } from '../alertModal'
-import { closeAllArea } from './anotatedImageView'
+import { toggleAnotatedImageViewArea } from './anotatedImageView'
 import { resetAnotatedImageViewArea } from './anotatedImageViewArea'
 
 function creatDatabaseListItems(anotatedTree: AnotatedTree){
@@ -29,18 +29,14 @@ function creatDatabaseListItems(anotatedTree: AnotatedTree){
 
     selectDatabaseListElement.append(newListItemElementBuff)
     newListItemElementBuff.on('click', () => {
-      resetAnotatedImageViewArea(anotatedTree[atk])
-      closeAllArea()
-      $('#anotatedImageViewArea').css('display', 'flex')
+      resetAnotatedImageViewArea(atk, anotatedTree[atk])
+      toggleAnotatedImageViewArea('anotatedImageView')
     })
   }
+}
 
-  // selectDatabaseListElement.append(listItemElementStr)
-
-  // $('.selectDatabaseListItem').on('click', () => {
-  //   closeAllArea()
-  //   $('#anotatedImageViewArea').css('display', 'flex')
-  // })
+export function resetHeaderName(headerName: string){
+  $('#anotatedImageViewHeaderName').text(headerName)
 }
 
 export async function resetSelectDatabaseList(){
@@ -54,6 +50,7 @@ export async function resetSelectDatabaseList(){
     selectDatabaseListElement.children('li').remove()
 
     toggleUserControl(false)
+    resetHeaderName('Databases')
     progressBarElement.css('width', '0%')
     progressBarAreaElement.css('display', 'flex')
 

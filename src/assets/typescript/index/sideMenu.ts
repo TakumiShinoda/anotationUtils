@@ -1,3 +1,4 @@
+import { toggleAnotatedImageViewArea } from "./anotatedImageView/anotatedImageView"
 import { resetSelectDatabaseList } from "./anotatedImageView/selectDatabaseListArea"
 
 declare global{
@@ -38,6 +39,7 @@ $(function (){
     hideAllViews()
     $('#anotatedImageView').show()
     await resetSelectDatabaseList()
+    toggleAnotatedImageViewArea("selectDatabaseList")
   })
 
   $('#showImageViewerViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {

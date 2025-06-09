@@ -37,9 +37,9 @@ $(function (){
     $(ev.currentTarget).css('background-color', 'var(--bs-primary)')
     $(ev.currentTarget).addClass('disableHover')
     hideAllViews()
-    $('#anotatedImageView').show()
     await resetSelectDatabaseList()
     toggleAnotatedImageViewArea("selectDatabaseList")
+    $('#anotatedImageView').show()
   })
 
   $('#showImageViewerViewIcon').on('click', (ev: JQuery.TriggeredEvent) => {

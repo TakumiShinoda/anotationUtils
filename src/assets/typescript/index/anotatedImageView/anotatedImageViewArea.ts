@@ -3,62 +3,67 @@ import { showSuccussAlert, showWarningAlert } from "../alertModal"
 import { toggleAnotatedImageViewArea } from "./anotatedImageView"
 import { resetHeaderName, resetSelectDatabaseList } from "./selectDatabaseListArea"
 
-export function resetAnotatedImageViewArea(projectName: string, anotatedImgInfos: AnotatedImgInfo[]){
+export function resetAnotatedImageViewArea(projectName: string, anotatedImgInfos: AnotatedImgInfo[]): Promise<void>{
   let contentsAreaElement: JQuery<HTMLElement> = $('#anotatedImageViewAreaContentsArea')
   let newItemElementBuff: JQuery<HTMLElement>
   let imgItemElementBuff: JQuery<HTMLElement>
   let selectedIconElementBuff: JQuery<HTMLElement>
   let imageItemElementStrBuff: string
 
-  contentsAreaElement.empty()
-  resetHeaderName(projectName)
+  return new Promise((res, rej) => {
+    try{
+      contentsAreaElement.empty()
+      resetHeaderName(projectName)
 
-  for(let aii of anotatedImgInfos){
-    for(let adk in aii.anotateData){
-      for(let ad of aii.anotateData[adk]){
-        imageItemElementStrBuff = /*html*/`
-          <div class='anotatedImageViewAreaImageBackground'>
-            <img class='anotatedImageViewAreaImage' src='${aii.path}' tag=${adk} x1=${ad.x1} y1=${ad.y1} x2=${ad.x2} y2=${ad.y2}>
-            <div class='anotatedImageViewAreaImageInfo'>${adk}</div>
-            <div class='anotatedImageViewAreaImageStatusArea'>
-              <div class="anotatedImageViewAreaImageSelectedIcon bi bi-check-square icon"></div>
-            </div>
-          </div>
-        `
-        newItemElementBuff = $(imageItemElementStrBuff)
-        imgItemElementBuff = newItemElementBuff.children('img')
-        selectedIconElementBuff = newItemElementBuff.find('.anotatedImageViewAreaImageSelectedIcon')
+      for(let aii of anotatedImgInfos){
+        for(let adk in aii.anotateData){
+          for(let ad of aii.anotateData[adk]){
+            imageItemElementStrBuff = /*html*/`
+              <div class='anotatedImageViewAreaImageBackground'>
+                <img class='anotatedImageViewAreaImage' src='${aii.path}' tag=${adk} x1=${ad.x1} y1=${ad.y1} x2=${ad.x2} y2=${ad.y2}>
+                <div class='anotatedImageViewAreaImageInfo'>${adk}</div>
+                <div class='anotatedImageViewAreaImageStatusArea'>
+                  <div class="anotatedImageViewAreaImageSelectedIcon bi bi-check-square icon"></div>
+                </div>
+              </div>
+            `
+            newItemElementBuff = $(imageItemElementStrBuff)
+            imgItemElementBuff = newItemElementBuff.children('img')
+            selectedIconElementBuff = newItemElementBuff.find('.anotatedImageViewAreaImageSelectedIcon')
 
-        if(ad.selected){
-          selectedIconElementBuff.prop('selected', true)
-          selectedIconElementBuff.css('visibility', 'visible')
-        }else{
-          selectedIconElementBuff.prop('selected', false)
-          selectedIconElementBuff.css('visibility', 'hidden')
-        }
+            if(ad.selected){
+              selectedIconElementBuff.prop('selected', true)
+              selectedIconElementBuff.css('visibility', 'visible')
+            }else{
+              selectedIconElementBuff.prop('selected', false)
+              selectedIconElementBuff.css('visibility', 'hidden')
+            }
 
-        newItemElementBuff.on('click', (ev: JQuery.ClickEvent) => {
-          let selectedIconElement: JQuery<HTMLElement> = $(ev.currentTarget).find('.anotatedImageViewAreaImageSelectedIcon')
-          let isSelected: boolean = selectedIconElement.prop('selected')
+            newItemElementBuff.on('click', (ev: JQuery.ClickEvent) => {
+              let selectedIconElement: JQuery<HTMLElement> = $(ev.currentTarget).find('.anotatedImageViewAreaImageSelectedIcon')
+              let isSelected: boolean = selectedIconElement.prop('selected')
 
-          if(window.AnotatedImageViewIsSelectMode){
-            selectedIconElement.prop('selected', !isSelected)
+              if(window.AnotatedImageViewIsSelectMode){
+                selectedIconElement.prop('selected', !isSelected)
 
-            if(isSelected) selectedIconElement.css('visibility', 'hidden')
-            else selectedIconElement.css('visibility', 'visible')
-          }else{
+                if(isSelected) selectedIconElement.css('visibility', 'hidden')
+                else selectedIconElement.css('visibility', 'visible')
+              }else{
+              }
+            })
+
+            imgItemElementBuff.on('load', (ev: JQuery.TriggeredEvent) => {
+              let loadedImgItemElementBuff: HTMLImageElement = $(ev.currentTarget)[0]
+
+              $(ev.currentTarget).css('object-view-box', `inset(${ad.y1}px ${loadedImgItemElementBuff.naturalWidth - ad.x2}px ${loadedImgItemElementBuff.naturalHeight - ad.y2}px ${ad.x1}px)`)
+              res()
+            })
+            contentsAreaElement.append(newItemElementBuff)
           }
-        })
-
-        imgItemElementBuff.on('load', (ev: JQuery.TriggeredEvent) => {
-          let loadedImgItemElementBuff: HTMLImageElement = $(ev.currentTarget)[0]
-
-          $(ev.currentTarget).css('object-view-box', `inset(${ad.y1}px ${loadedImgItemElementBuff.naturalWidth - ad.x2}px ${loadedImgItemElementBuff.naturalHeight - ad.y2}px ${ad.x1}px)`)
-        })
-        contentsAreaElement.append(newItemElementBuff)
+        }
       }
-    }
-  }
+    }catch(err){rej(err)}
+  })
 }
 
 $(function (){

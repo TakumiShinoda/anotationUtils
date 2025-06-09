@@ -1,7 +1,7 @@
 import { toggleUserControl } from '../index'
 import { AnotatedTree } from '../../preloads/index/preload'
 import { showWarningAlert } from '../alertModal'
-import { toggleAnotatedImageViewArea } from './anotatedImageView'
+import { closeAllAnotatedImageViewArea, toggleAnotatedImageViewArea } from './anotatedImageView'
 import { resetAnotatedImageViewArea } from './anotatedImageViewArea'
 
 function creatDatabaseListItems(anotatedTree: AnotatedTree){
@@ -28,8 +28,9 @@ function creatDatabaseListItems(anotatedTree: AnotatedTree){
     newListItemElementBuff = $(listItemElementStrBuff)
 
     selectDatabaseListElement.append(newListItemElementBuff)
-    newListItemElementBuff.on('click', () => {
-      resetAnotatedImageViewArea(atk, anotatedTree[atk])
+    newListItemElementBuff.on('click', async () => {
+      closeAllAnotatedImageViewArea()
+      await resetAnotatedImageViewArea(atk, anotatedTree[atk])
       toggleAnotatedImageViewArea('anotatedImageView')
     })
   }
@@ -42,21 +43,13 @@ export function resetHeaderName(headerName: string){
 export async function resetSelectDatabaseList(){
   let selectDatabaseListElement: JQuery<HTMLElement> = $('#selectDatabaseListAreaList')
   let progressBarAreaElement: JQuery<HTMLElement> = $('#selectDatabaseViewprogressBarArea')
-  let progressBarElement: JQuery<HTMLElement> = $('#selectDatabaseViewprogressBarArea .progress .progress-bar')
   let anotatedTree: AnotatedTree
-  let progressId: number
 
   try{
     selectDatabaseListElement.children('li').remove()
 
     toggleUserControl(false)
     resetHeaderName('Databases')
-    progressBarElement.css('width', '0%')
-    progressBarAreaElement.css('display', 'flex')
-
-    progressId = window.IpcProgress.addProgress((progressPercent: number) => {
-      progressBarElement.css('width', `${progressPercent * 100}%`)
-    })
     
     anotatedTree = await window.electronAPI.getAnotatedTree()
     creatDatabaseListItems(anotatedTree)

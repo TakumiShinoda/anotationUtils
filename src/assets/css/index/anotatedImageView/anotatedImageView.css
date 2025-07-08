@@ -1,5 +1,6 @@
 @import './selectDatabaseListArea.css';
 @import './anotatedImageViewArea.css';
+@import './anotationEditorArea.css';
 
 #anotatedImageView{
   position: relative;

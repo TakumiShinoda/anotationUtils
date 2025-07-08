@@ -1,0 +1,27 @@
+#anotationEditorArea{
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+div#anotationEditorAreaHeader{
+  height: 0px;
+}
+
+#anotationEditorAreaContentsArea{
+  display: flex;
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+#anotationEditorAreaCanvas{
+  width: 100%;
+  height: 100%;
+}
+
+#anotationEditorAreaFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}

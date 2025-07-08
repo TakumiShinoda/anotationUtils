@@ -60,6 +60,7 @@
   "dependencies": {
     "electron-reload": "^2.0.0-alpha.1",
     "express": "4.21.2",
+    "fabric": "6.7.0",
     "fs": "0.0.1-security",
     "jimp": "^0.22.10",
     "jquery": "^3.3.1",

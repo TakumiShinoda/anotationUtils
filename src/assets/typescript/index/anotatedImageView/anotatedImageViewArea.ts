@@ -2,6 +2,7 @@ import { AnotateData, AnotatedImgInfo } from "../../preloads/index/preload"
 import { showSuccussAlert, showWarningAlert } from "../alertModal"
 import { toggleAnotatedImageViewArea } from "./anotatedImageView"
 import { resetHeaderName, resetSelectDatabaseList } from "./selectDatabaseListArea"
+import { resetAnotationEditor } from './anotationEditor'
 
 export function resetAnotatedImageViewArea(projectName: string, anotatedImgInfos: AnotatedImgInfo[]): Promise<void>{
   let contentsAreaElement: JQuery<HTMLElement> = $('#anotatedImageViewAreaContentsArea')
@@ -41,6 +42,8 @@ export function resetAnotatedImageViewArea(projectName: string, anotatedImgInfos
 
             newItemElementBuff.on('click', (ev: JQuery.ClickEvent) => {
               let selectedIconElement: JQuery<HTMLElement> = $(ev.currentTarget).find('.anotatedImageViewAreaImageSelectedIcon')
+              let imgItemElement: JQuery<HTMLElement> = $(ev.currentTarget).find('img')
+              let anotationEditorTargetImgPath: string | undefined = imgItemElement.attr('src')
               let isSelected: boolean = selectedIconElement.prop('selected')
 
               if(window.AnotatedImageViewIsSelectMode){
@@ -49,6 +52,10 @@ export function resetAnotatedImageViewArea(projectName: string, anotatedImgInfos
                 if(isSelected) selectedIconElement.css('visibility', 'hidden')
                 else selectedIconElement.css('visibility', 'visible')
               }else{
+                if(anotationEditorTargetImgPath == undefined) return
+
+                resetAnotationEditor(anotationEditorTargetImgPath)
+                toggleAnotatedImageViewArea('anotationEditor')
               }
             })
 

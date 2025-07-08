@@ -12,3 +12,5 @@ temp
 package-lock.json
 yarn.lock
 *tsOutput/
+
+plantuml*.jar

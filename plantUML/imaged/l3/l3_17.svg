@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="741px" preserveAspectRatio="none" style="width:738px;height:741px;background:#FFFFFF;" version="1.1" viewBox="0 0 738 741" width="738px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M77.5,424 L107.375,424 A3.75,3.75 0 0 1 109.875,426.5 L116.875,447.6094 L638.5,447.6094 A2.5,2.5 0 0 1 641,450.1094 L641,731.5 A2.5,2.5 0 0 1 638.5,734 L77.5,734 A2.5,2.5 0 0 1 75,731.5 L75,426.5 A2.5,2.5 0 0 1 77.5,424 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="75" x2="116.875" y1="447.6094" y2="447.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="79" y="440.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M101.5,468 L131.375,468 A3.75,3.75 0 0 1 133.875,470.5 L140.875,491.6094 L614.5,491.6094 A2.5,2.5 0 0 1 617,494.1094 L617,707.5 A2.5,2.5 0 0 1 614.5,710 L101.5,710 A2.5,2.5 0 0 1 99,707.5 L99,470.5 A2.5,2.5 0 0 1 101.5,468 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="99" x2="140.875" y1="491.6094" y2="491.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="103" y="484.5332">環境</text></g><!--MD5=[04c5534593d3d55038da165bfe529f5c]
+cluster 小機能--><g id="cluster_小機能"><path d="M8.5,215 L52.8125,215 A3.75,3.75 0 0 1 55.3125,217.5 L62.3125,238.6094 L728.5,238.6094 A2.5,2.5 0 0 1 731,241.1094 L731,397.5 A2.5,2.5 0 0 1 728.5,400 L8.5,400 A2.5,2.5 0 0 1 6,397.5 L6,217.5 A2.5,2.5 0 0 1 8.5,215 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="62.3125" y1="238.6094" y2="238.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="10" y="231.5332">小機能</text></g><!--MD5=[7a6e980948299d17f1c8162a2137e9e8]
+cluster バックエンド--><g id="cluster_バックエンド"><path d="M32.5,259 L120.125,259 A3.75,3.75 0 0 1 122.625,261.5 L129.625,282.6094 L704.5,282.6094 A2.5,2.5 0 0 1 707,285.1094 L707,373.5 A2.5,2.5 0 0 1 704.5,376 L32.5,376 A2.5,2.5 0 0 1 30,373.5 L30,261.5 A2.5,2.5 0 0 1 32.5,259 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="129.625" y1="282.6094" y2="282.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="34" y="275.5332">バックエンド</text></g><!--MD5=[cd8a6d6b6ceaae3d861deb9820030cfc]
+cluster 中機能--><g id="cluster_中機能"><path d="M121.5,6 L165.8125,6 A3.75,3.75 0 0 1 168.3125,8.5 L175.3125,29.6094 L594.5,29.6094 A2.5,2.5 0 0 1 597,32.1094 L597,188.5 A2.5,2.5 0 0 1 594.5,191 L121.5,191 A2.5,2.5 0 0 1 119,188.5 L119,8.5 A2.5,2.5 0 0 1 121.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="119" x2="175.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="123" y="22.5332">中機能</text></g><!--MD5=[b300f6b1ec8eed363d27ec57bc54e477]
+cluster 画像ビュワー--><g id="cluster_画像ビュワー"><path d="M145.5,50 L233.125,50 A3.75,3.75 0 0 1 235.625,52.5 L242.625,73.6094 L570.5,73.6094 A2.5,2.5 0 0 1 573,76.1094 L573,164.5 A2.5,2.5 0 0 1 570.5,167 L145.5,167 A2.5,2.5 0 0 1 143,164.5 L143,52.5 A2.5,2.5 0 0 1 145.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="143" x2="242.625" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="147" y="66.5332">画像ビュワー</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="271" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="344" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="272" x2="444" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="277" y="669.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="277" y="686.752">detail = nodejsを使用する</text></g><g id="elem_5_12"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="485" x="115.5" y="504"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="344" y="520.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="116.5" x2="599.5" y1="525.6094" y2="525.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="121.5" y="544.1426">id = 5-12</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="473" x="121.5" y="561.752">detail = エクスプローラの起動/制御をnodejsのopen-file-explorerで実装する</text></g><g id="elem_4_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="395.5" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="522" y="311.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="396.5" x2="689.5" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="401.5" y="335.1426">id = 4-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="401.5" y="352.752">detail = GUIからエクスプローラを起動できる</text></g><g id="elem_4_16"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="314" x="46" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="182" y="311.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="359" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="52" y="335.1426">id = 4-16</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="52" y="352.752">detail = エクスプローラで指定したパスを開ける</text></g><g id="elem_3_17"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="398" x="159" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="337" y="102.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="160" x2="556" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="165" y="126.1426">id = 3-17</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="386" x="165" y="143.752">detail = 表示中の画像ファイルパスをエクスプローラで開ける</text></g><!--MD5=[bb29ccec43ba56da88d7529e69b9318a]
+reverse link 5_12 to 5_3--><g id="link_5_12_5_3"><path codeLine="12" d="M358,574.46 C358,591.82 358,612.31 358,628.93 " fill="none" id="5_12-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="358,569.18,354,578.18,358,574.18,362,578.18,358,569.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[255baba27e7b9bc7c2911e58c56747de]
+reverse link 4_15 to 5_12--><g id="link_4_15_5_12"><path codeLine="12" d="M511.16,364.12 C475.99,403.48 419.89,466.25 386.23,503.91 " fill="none" id="4_15-backto-5_12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="514.5,360.39,505.5224,364.4401,511.1702,364.1199,511.4903,369.7677,514.5,360.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e9dcc72276b2acbd34566f51f5c54706]
+reverse link 4_16 to 5_12--><g id="link_4_16_5_12"><path codeLine="12" d="M230.03,364.6 C259.52,403.98 306.26,466.41 334.35,503.91 " fill="none" id="4_16-backto-5_12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="226.88,360.39,229.08,369.99,229.88,364.39,235.48,365.19,226.88,360.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7e19b87895f0e110dd4780f75d5bb0a8]
+reverse link 3_17 to 4_15--><g id="link_3_17_4_15"><path codeLine="13" d="M389.84,155.12 C425.01,194.48 481.11,257.25 514.77,294.91 " fill="none" id="3_17-backto-4_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="386.5,151.39,389.5097,160.7677,389.8298,155.1199,395.4776,155.4401,386.5,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3c5e412aa82f97390f4fead79321eb94]
+reverse link 3_17 to 4_16--><g id="link_3_17_4_16"><path codeLine="14" d="M330.97,155.6 C301.48,194.98 254.74,257.41 226.65,294.91 " fill="none" id="3_17-backto-4_16" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="334.12,151.39,325.52,156.19,331.12,155.39,331.92,160.99,334.12,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9a0871e37fe1bed4434b6dd0656cdafe]
+@startuml
+!include ../l4/l4_15.pu
+!include ../l4/l4_16.pu
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_17 #LightGreen{
+      id = 3-17
+      detail = 表示中の画像ファイルパスをエクスプローラで開ける
+    }
+  }
+}
+
+3_17 <- - 4_15
+3_17 <- - 4_16
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_12 #LightGreen{
+      id = 5-12
+      detail = エクスプローラの起動/制御をnodejsのopen-file-explorerで実装する
+    }
+  }
+}
+
+5_12 <- - 5_3
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_15 #LightGreen{
+      id = 4-15
+      detail = GUIからエクスプローラを起動できる
+    }
+  }
+}
+
+4_15 <- - 5_12
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_16 #LightGreen{
+      id = 4-16
+      detail = エクスプローラで指定したパスを開ける
+    }
+  }
+}
+
+4_16 <- - 5_12
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_17 #LightGreen{
+      id = 3-17
+      detail = 表示中の画像ファイルパスをエクスプローラで開ける
+    }
+  }
+}
+
+3_17 <- - 4_15
+3_17 <- - 4_16
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

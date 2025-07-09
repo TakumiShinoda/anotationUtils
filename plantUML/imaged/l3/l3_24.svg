@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="798px" preserveAspectRatio="none" style="width:705px;height:798px;background:#FFFFFF;" version="1.1" viewBox="0 0 705 798" width="705px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M8.5,215 L38.375,215 A3.75,3.75 0 0 1 40.875,217.5 L47.875,238.6094 L695.5,238.6094 A2.5,2.5 0 0 1 698,241.1094 L698,788.5 A2.5,2.5 0 0 1 695.5,791 L8.5,791 A2.5,2.5 0 0 1 6,788.5 L6,217.5 A2.5,2.5 0 0 1 8.5,215 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="47.875" y1="238.6094" y2="238.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="10" y="231.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M32.5,400 L62.375,400 A3.75,3.75 0 0 1 64.875,402.5 L71.875,423.6094 L671.5,423.6094 A2.5,2.5 0 0 1 674,426.1094 L674,764.5 A2.5,2.5 0 0 1 671.5,767 L32.5,767 A2.5,2.5 0 0 1 30,764.5 L30,402.5 A2.5,2.5 0 0 1 32.5,400 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="71.875" y1="423.6094" y2="423.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="34" y="416.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M133.5,259 L163.375,259 A3.75,3.75 0 0 1 165.875,261.5 L172.875,282.6094 L581.5,282.6094 A2.5,2.5 0 0 1 584,285.1094 L584,373.5 A2.5,2.5 0 0 1 581.5,376 L133.5,376 A2.5,2.5 0 0 1 131,373.5 L131,261.5 A2.5,2.5 0 0 1 133.5,259 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="131" x2="172.875" y1="282.6094" y2="282.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="135" y="275.5332">機能</text></g><!--MD5=[cd8a6d6b6ceaae3d861deb9820030cfc]
+cluster 中機能--><g id="cluster_中機能"><path d="M115.5,6 L159.8125,6 A3.75,3.75 0 0 1 162.3125,8.5 L169.3125,29.6094 L490.5,29.6094 A2.5,2.5 0 0 1 493,32.1094 L493,188.5 A2.5,2.5 0 0 1 490.5,191 L115.5,191 A2.5,2.5 0 0 1 113,188.5 L113,8.5 A2.5,2.5 0 0 1 115.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="113" x2="169.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="117" y="22.5332">中機能</text></g><!--MD5=[ead2d831585ee15aa2f35daa9927ec5d]
+cluster 共通--><g id="cluster_共通"><path d="M139.5,50 L169.375,50 A3.75,3.75 0 0 1 171.875,52.5 L178.875,73.6094 L466.5,73.6094 A2.5,2.5 0 0 1 469,76.1094 L469,164.5 A2.5,2.5 0 0 1 466.5,167 L139.5,167 A2.5,2.5 0 0 1 137,164.5 L137,52.5 A2.5,2.5 0 0 1 139.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="137" x2="178.875" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="141" y="66.5332">共通</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="261" y="686"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="334" y="702.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="262" x2="434" y1="707.6094" y2="707.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="267" y="726.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="267" y="743.752">detail = nodejsを使用する</text></g><g id="elem_5_1"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="220" x="238" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="334" y="577.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="239" x2="457" y1="582.6094" y2="582.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="244" y="601.1426">id = 5-1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="244" y="618.752">detail = GUIをelectronで実装する</text></g><g id="elem_5_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="362.5" y="436"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="496" y="452.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="363.5" x2="656.5" y1="457.6094" y2="457.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="368.5" y="476.1426">id = 5-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="368.5" y="493.752">detail = electronレンダラプロセスを実装する</text></g><g id="elem_5_23"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="281" x="46.5" y="436"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="173" y="452.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="47.5" x2="326.5" y1="457.6094" y2="457.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="52.5" y="476.1426">id = 5-23</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="52.5" y="493.752">detail = electronメインプロセスを実装する</text></g><g id="elem_5_13"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="211" x="356.5" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="448" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="357.5" x2="566.5" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="362.5" y="335.1426">id = 5-13</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="362.5" y="352.752">detail = GUIにボタンを配置する</text></g><g id="elem_5_25"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="147" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="220" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="148" x2="320" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="153" y="335.1426">id = 5-25</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="153" y="352.752">detail = ソフトを終了する</text></g><g id="elem_3_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="300" x="153" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="282" y="102.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="154" x2="452" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="159" y="126.1426">id = 3-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="288" x="159" y="143.752">detail = ソフト終了ボタンでソフト終了できる</text></g><!--MD5=[fc317fe41ca6eff0545457d654623905]
+reverse link 5_1 to 5_3--><g id="link_5_1_5_3"><path codeLine="12" d="M348,631.46 C348,648.82 348,669.31 348,685.93 " fill="none" id="5_1-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="348,626.18,344,635.18,348,631.18,352,635.18,348,626.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[151220a8faead6bc965b12c371de67a3]
+reverse link 5_24 to 5_1--><g id="link_5_24_5_1"><path codeLine="12" d="M464.26,504.23 C440.79,522.05 412.42,543.59 389.58,560.93 " fill="none" id="5_24-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="468.28,501.18,458.6979,503.4568,464.3042,504.2119,463.549,509.8182,468.28,501.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a387296e057c0c92af3c44b40b558cf0]
+reverse link 5_13 to 5_24--><g id="link_5_13_5_24"><path codeLine="12" d="M474.57,364.92 C482.15,386.85 491.71,414.53 498.99,435.6 " fill="none" id="5_13-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="472.89,360.04,472.0388,369.852,474.5182,364.7675,479.6027,367.2469,472.89,360.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[170b999938103c92ad111a2c8b749233]
+reverse link 5_23 to 5_1--><g id="link_5_23_5_1"><path codeLine="12" d="M232.46,504.23 C255.78,522.05 283.98,543.59 306.68,560.93 " fill="none" id="5_23-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="228.46,501.18,233.1713,509.8289,232.429,504.221,238.0369,503.4786,228.46,501.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7e1efa66cf63252515823bb6c9bd14b1]
+reverse link 5_25 to 5_23--><g id="link_5_25_5_23"><path codeLine="12" d="M221.69,364.92 C214.27,386.85 204.91,414.53 197.79,435.6 " fill="none" id="5_25-backto-5_23" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="223.33,360.04,216.6564,367.2831,221.7274,364.7762,224.2343,369.8473,223.33,360.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9d708ef049c0c8387b82720914d35f45]
+reverse link 3_24 to 5_13--><g id="link_3_24_5_13"><path codeLine="13" d="M330.73,155.6 C360.98,194.98 408.93,257.41 437.74,294.91 " fill="none" id="3_24-backto-5_13" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="327.5,151.39,329.7986,160.9669,330.541,155.359,336.1489,156.1013,327.5,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0e2b6fd58f78b143a266ff0f1e4943a1]
+reverse link 3_24 to 5_25--><g id="link_3_24_5_25"><path codeLine="14" d="M290.65,156.56 C277.5,195.99 256.93,257.71 244.53,294.91 " fill="none" id="3_24-backto-5_25" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="292.37,151.39,285.7226,158.6572,290.7846,156.132,293.3098,161.1939,292.37,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0d97cd8c7eebe9cbda6fe4d72f8fefc8]
+@startuml
+!include ../l5/l5_13.pu
+!include ../l5/l5_25.pu
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_24 #LightGreen{
+      id = 3-24
+      detail = ソフト終了ボタンでソフト終了できる
+    }
+  }
+}
+
+3_24 <- - 5_13
+3_24 <- - 5_25
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_1 #LightGreen{
+      id = 5-1
+      detail = GUIをelectronで実装する
+    }
+  }
+}
+
+5_1 <- - 5_3
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_24 #LightGreen{
+      id = 5-24
+      detail = electronレンダラプロセスを実装する
+    }
+  }
+}
+
+5_24 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_13 #LightGreen{
+      id = 5-13
+      detail = GUIにボタンを配置する
+    }
+  }
+}
+
+5_13 <- - 5_24
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_23 #LightGreen{
+      id = 5-23
+      detail = electronメインプロセスを実装する
+    }
+  }
+}
+
+5_23 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_25 #LightGreen{
+      id = 5-25
+      detail = ソフトを終了する
+    }
+  }
+}
+
+5_25 <- - 5_23
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_24 #LightGreen{
+      id = 3-24
+      detail = ソフト終了ボタンでソフト終了できる
+    }
+  }
+}
+
+3_24 <- - 5_13
+3_24 <- - 5_25
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

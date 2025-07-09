@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="798px" preserveAspectRatio="none" style="width:389px;height:798px;background:#FFFFFF;" version="1.1" viewBox="0 0 389 798" width="389px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M8.5,215 L38.375,215 A3.75,3.75 0 0 1 40.875,217.5 L47.875,238.6094 L379.5,238.6094 A2.5,2.5 0 0 1 382,241.1094 L382,788.5 A2.5,2.5 0 0 1 379.5,791 L8.5,791 A2.5,2.5 0 0 1 6,788.5 L6,217.5 A2.5,2.5 0 0 1 8.5,215 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="47.875" y1="238.6094" y2="238.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="10" y="231.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M32.5,400 L62.375,400 A3.75,3.75 0 0 1 64.875,402.5 L71.875,423.6094 L355.5,423.6094 A2.5,2.5 0 0 1 358,426.1094 L358,764.5 A2.5,2.5 0 0 1 355.5,767 L32.5,767 A2.5,2.5 0 0 1 30,764.5 L30,402.5 A2.5,2.5 0 0 1 32.5,400 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="71.875" y1="423.6094" y2="423.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="34" y="416.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M74.5,259 L104.375,259 A3.75,3.75 0 0 1 106.875,261.5 L113.875,282.6094 L313.5,282.6094 A2.5,2.5 0 0 1 316,285.1094 L316,373.5 A2.5,2.5 0 0 1 313.5,376 L74.5,376 A2.5,2.5 0 0 1 72,373.5 L72,261.5 A2.5,2.5 0 0 1 74.5,259 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="72" x2="113.875" y1="282.6094" y2="282.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="76" y="275.5332">機能</text></g><!--MD5=[04c5534593d3d55038da165bfe529f5c]
+cluster 小機能--><g id="cluster_小機能"><path d="M11.5,6 L55.8125,6 A3.75,3.75 0 0 1 58.3125,8.5 L65.3125,29.6094 L376.5,29.6094 A2.5,2.5 0 0 1 379,32.1094 L379,188.5 A2.5,2.5 0 0 1 376.5,191 L11.5,191 A2.5,2.5 0 0 1 9,188.5 L9,8.5 A2.5,2.5 0 0 1 11.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="9" x2="65.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="13" y="22.5332">小機能</text></g><!--MD5=[b27c5c9af3cea12247b1c4c8d3c78770]
+cluster GUI--><g id="cluster_GUI"><path d="M35.5,50 L61.5,50 A3.75,3.75 0 0 1 64,52.5 L71,73.6094 L352.5,73.6094 A2.5,2.5 0 0 1 355,76.1094 L355,164.5 A2.5,2.5 0 0 1 352.5,167 L35.5,167 A2.5,2.5 0 0 1 33,164.5 L33,52.5 A2.5,2.5 0 0 1 35.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="33" x2="71" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="25" x="37" y="66.5332">GUI</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="107" y="686"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="180" y="702.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="108" x2="280" y1="707.6094" y2="707.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="113" y="726.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="113" y="743.752">detail = nodejsを使用する</text></g><g id="elem_5_1"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="220" x="84" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="180" y="577.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="85" x2="303" y1="582.6094" y2="582.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="90" y="601.1426">id = 5-1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="90" y="618.752">detail = GUIをelectronで実装する</text></g><g id="elem_5_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="46.5" y="436"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="180" y="452.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="47.5" x2="340.5" y1="457.6094" y2="457.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="52.5" y="476.1426">id = 5-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="52.5" y="493.752">detail = electronレンダラプロセスを実装する</text></g><g id="elem_5_13"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="211" x="88.5" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="180" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="89.5" x2="298.5" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="94.5" y="335.1426">id = 5-13</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="94.5" y="352.752">detail = GUIにボタンを配置する</text></g><g id="elem_4_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="290" x="49" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="173" y="102.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="50" x2="338" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="55" y="126.1426">id = 4-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="278" x="55" y="143.752">detail = ボタンで最初/後ページに移動できる</text></g><!--MD5=[fc317fe41ca6eff0545457d654623905]
+reverse link 5_1 to 5_3--><g id="link_5_1_5_3"><path codeLine="12" d="M194,631.46 C194,648.82 194,669.31 194,685.93 " fill="none" id="5_1-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="194,626.18,190,635.18,194,631.18,198,635.18,194,626.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[151220a8faead6bc965b12c371de67a3]
+reverse link 5_24 to 5_1--><g id="link_5_24_5_1"><path codeLine="12" d="M194,506.46 C194,523.82 194,544.31 194,560.93 " fill="none" id="5_24-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="194,501.18,190,510.18,194,506.18,198,510.18,194,501.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a387296e057c0c92af3c44b40b558cf0]
+reverse link 5_13 to 5_24--><g id="link_5_13_5_24"><path codeLine="12" d="M194,365.19 C194,387.09 194,414.62 194,435.6 " fill="none" id="5_13-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="194,360.04,190,369.04,194,365.04,198,369.04,194,360.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0412c040f1e7c297d6cd905a4df67cd3]
+reverse link 4_24 to 5_13--><g id="link_4_24_5_13"><path codeLine="12" d="M194,156.56 C194,195.99 194,257.71 194,294.91 " fill="none" id="4_24-backto-5_13" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="194,151.39,190,160.39,194,156.39,198,160.39,194,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4dd9fe5ac3d80598b191028baaf960e3]
+@startuml
+!include ../l5/l5_13.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_24 #LightGreen{
+      id = 4-24
+      detail = ボタンで最初/後ページに移動できる
+    }
+  }
+}
+
+4_24 <- - 5_13
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_1 #LightGreen{
+      id = 5-1
+      detail = GUIをelectronで実装する
+    }
+  }
+}
+
+5_1 <- - 5_3
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_24 #LightGreen{
+      id = 5-24
+      detail = electronレンダラプロセスを実装する
+    }
+  }
+}
+
+5_24 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_13 #LightGreen{
+      id = 5-13
+      detail = GUIにボタンを配置する
+    }
+  }
+}
+
+5_13 <- - 5_24
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_24 #LightGreen{
+      id = 4-24
+      detail = ボタンで最初/後ページに移動できる
+    }
+  }
+}
+
+4_24 <- - 5_13
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

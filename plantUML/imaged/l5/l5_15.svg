@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="339px" preserveAspectRatio="none" style="width:478px;height:339px;background:#FFFFFF;" version="1.1" viewBox="0 0 478 339" width="478px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M8.5,6 L38.375,6 A3.75,3.75 0 0 1 40.875,8.5 L47.875,29.6094 L468.5,29.6094 A2.5,2.5 0 0 1 471,32.1094 L471,329.5 A2.5,2.5 0 0 1 468.5,332 L8.5,332 A2.5,2.5 0 0 1 6,329.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="47.875" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="10" y="22.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M32.5,191 L62.375,191 A3.75,3.75 0 0 1 64.875,193.5 L71.875,214.6094 L444.5,214.6094 A2.5,2.5 0 0 1 447,217.1094 L447,305.5 A2.5,2.5 0 0 1 444.5,308 L32.5,308 A2.5,2.5 0 0 1 30,305.5 L30,193.5 A2.5,2.5 0 0 1 32.5,191 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="71.875" y1="214.6094" y2="214.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="34" y="207.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M102.5,50 L132.375,50 A3.75,3.75 0 0 1 134.875,52.5 L141.875,73.6094 L373.5,73.6094 A2.5,2.5 0 0 1 376,76.1094 L376,164.5 A2.5,2.5 0 0 1 373.5,167 L102.5,167 A2.5,2.5 0 0 1 100,164.5 L100,52.5 A2.5,2.5 0 0 1 102.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="100" x2="141.875" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="104" y="66.5332">機能</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="257" y="227"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="330" y="243.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="258" x2="430" y1="248.6094" y2="248.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="263" y="267.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="263" y="284.752">detail = nodejsを使用する</text></g><g id="elem_5_4"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="175" x="46.5" y="227"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="120" y="243.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="47.5" x2="220.5" y1="248.6094" y2="248.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="52.5" y="267.1426">id = 5-4</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="52.5" y="284.752">detail = pythonを使用する</text></g><g id="elem_5_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="244" x="116" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="224" y="102.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="117" x2="359" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="122" y="126.1426">id = 5-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="122" y="143.752">detail = ファイルシステムを使用する</text></g><!--MD5=[b1011733d73355a4138831320af051bc]
+reverse link 5_15 to 5_3--><g id="link_5_15_5_3"><path codeLine="13" d="M265.14,155.09 C281.97,177.15 303.4,205.26 319.68,226.6 " fill="none" id="5_15-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="262.05,151.04,264.3102,160.626,265.0751,155.0211,270.68,155.7859,262.05,151.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6128280f683422d2fdecf770c0175466]
+reverse link 5_15 to 5_4--><g id="link_5_15_5_4"><path codeLine="14" d="M211.37,155.09 C194.86,177.15 173.83,205.26 157.87,226.6 " fill="none" id="5_15-backto-5_4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="214.4,151.04,205.8193,155.8743,211.416,155.052,212.2384,160.6487,214.4,151.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b662d545f0dd0c6642f497ac52f7c82c]
+@startuml
+!include ./l5_3.pu
+!include ./l5_4.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_15 #LightGreen{
+      id = 5-15
+      detail = ファイルシステムを使用する
+    }
+  }
+}
+
+5_15 <- - 5_3
+5_15 <- - 5_4
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+package "構成"{
+  package "環境"{
+    object "構成" as 5_4 #LightGreen{
+      id = 5-4
+      detail = pythonを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_15 #LightGreen{
+      id = 5-15
+      detail = ファイルシステムを使用する
+    }
+  }
+}
+
+5_15 <- - 5_3
+5_15 <- - 5_4
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

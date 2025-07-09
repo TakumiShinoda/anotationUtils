@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1257px" preserveAspectRatio="none" style="width:4516px;height:1257px;background:#FFFFFF;" version="1.1" viewBox="0 0 4516 1257" width="4516px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M796.5,549 L826.375,549 A3.75,3.75 0 0 1 828.875,551.5 L835.875,572.6094 L2547.5,572.6094 A2.5,2.5 0 0 1 2550,575.1094 L2550,1247.5 A2.5,2.5 0 0 1 2547.5,1250 L796.5,1250 A2.5,2.5 0 0 1 794,1247.5 L794,551.5 A2.5,2.5 0 0 1 796.5,549 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="794" x2="835.875" y1="572.6094" y2="572.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="798" y="565.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M1755.5,734 L1785.375,734 A3.75,3.75 0 0 1 1787.875,736.5 L1794.875,757.6094 L2523.5,757.6094 A2.5,2.5 0 0 1 2526,760.1094 L2526,1223.5 A2.5,2.5 0 0 1 2523.5,1226 L1755.5,1226 A2.5,2.5 0 0 1 1753,1223.5 L1753,736.5 A2.5,2.5 0 0 1 1755.5,734 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1753" x2="1794.875" y1="757.6094" y2="757.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="1757" y="750.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M820.5,593 L850.375,593 A3.75,3.75 0 0 1 852.875,595.5 L859.875,616.6094 L2523.5,616.6094 A2.5,2.5 0 0 1 2526,619.1094 L2526,707.5 A2.5,2.5 0 0 1 2523.5,710 L820.5,710 A2.5,2.5 0 0 1 818,707.5 L818,595.5 A2.5,2.5 0 0 1 820.5,593 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="818" x2="859.875" y1="616.6094" y2="616.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="822" y="609.5332">機能</text></g><!--MD5=[04c5534593d3d55038da165bfe529f5c]
+cluster 小機能--><g id="cluster_小機能"><path d="M787.5,340 L831.8125,340 A3.75,3.75 0 0 1 834.3125,342.5 L841.3125,363.6094 L3817.5,363.6094 A2.5,2.5 0 0 1 3820,366.1094 L3820,522.5 A2.5,2.5 0 0 1 3817.5,525 L787.5,525 A2.5,2.5 0 0 1 785,522.5 L785,342.5 A2.5,2.5 0 0 1 787.5,340 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="785" x2="841.3125" y1="363.6094" y2="363.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="789" y="356.5332">小機能</text></g><!--MD5=[b27c5c9af3cea12247b1c4c8d3c78770]
+cluster GUI--><g id="cluster_GUI"><path d="M811.5,384 L837.5,384 A3.75,3.75 0 0 1 840,386.5 L847,407.6094 L2464.5,407.6094 A2.5,2.5 0 0 1 2467,410.1094 L2467,498.5 A2.5,2.5 0 0 1 2464.5,501 L811.5,501 A2.5,2.5 0 0 1 809,498.5 L809,386.5 A2.5,2.5 0 0 1 811.5,384 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="809" x2="847" y1="407.6094" y2="407.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="25" x="813" y="400.5332">GUI</text></g><!--MD5=[7a6e980948299d17f1c8162a2137e9e8]
+cluster バックエンド--><g id="cluster_バックエンド"><path d="M2493.5,384 L2581.125,384 A3.75,3.75 0 0 1 2583.625,386.5 L2590.625,407.6094 L3793.5,407.6094 A2.5,2.5 0 0 1 3796,410.1094 L3796,498.5 A2.5,2.5 0 0 1 3793.5,501 L2493.5,501 A2.5,2.5 0 0 1 2491,498.5 L2491,386.5 A2.5,2.5 0 0 1 2493.5,384 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2491" x2="2590.625" y1="407.6094" y2="407.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="2495" y="400.5332">バックエンド</text></g><!--MD5=[cd8a6d6b6ceaae3d861deb9820030cfc]
+cluster 中機能--><g id="cluster_中機能"><path d="M86.5,6 L130.8125,6 A3.75,3.75 0 0 1 133.3125,8.5 L140.3125,29.6094 L4506.5,29.6094 A2.5,2.5 0 0 1 4509,32.1094 L4509,313.5 A2.5,2.5 0 0 1 4506.5,316 L86.5,316 A2.5,2.5 0 0 1 84,313.5 L84,8.5 A2.5,2.5 0 0 1 86.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="84" x2="140.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="88" y="22.5332">中機能</text></g><!--MD5=[b300f6b1ec8eed363d27ec57bc54e477]
+cluster 画像ビュワー--><g id="cluster_画像ビュワー"><path d="M110.5,50 L198.125,50 A3.75,3.75 0 0 1 200.625,52.5 L207.625,73.6094 L4482.5,73.6094 A2.5,2.5 0 0 1 4485,76.1094 L4485,289.5 A2.5,2.5 0 0 1 4482.5,292 L110.5,292 A2.5,2.5 0 0 1 108,289.5 L108,52.5 A2.5,2.5 0 0 1 110.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="108" x2="207.625" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="112" y="66.5332">画像ビュワー</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="1792" y="1145"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1865" y="1161.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1793" x2="1965" y1="1166.6094" y2="1166.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="1798" y="1185.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="1798" y="1202.752">detail = nodejsを使用する</text></g><g id="elem_5_1"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="220" x="1769" y="1020"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1865" y="1036.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1770" x2="1988" y1="1041.6094" y2="1041.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="1775" y="1060.1426">id = 5-1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="1775" y="1077.752">detail = GUIをelectronで実装する</text></g><g id="elem_5_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="1769.5" y="895"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1903" y="911.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1770.5" x2="2063.5" y1="916.6094" y2="916.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1775.5" y="935.1426">id = 5-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="1775.5" y="952.752">detail = electronレンダラプロセスを実装する</text></g><g id="elem_5_10"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="456" x="2054" y="770"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="2268" y="786.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="2055" x2="2509" y1="791.6094" y2="791.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2060" y="810.1426">id = 5-10</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="444" x="2060" y="827.752">detail = GUIでDOM内の画像移動制御をcmanObjMove_v091で実装する</text></g><g id="elem_5_12"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="485" x="2024.5" y="1020"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="2253" y="1036.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="2025.5" x2="2508.5" y1="1041.6094" y2="1041.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2030.5" y="1060.1426">id = 5-12</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="473" x="2030.5" y="1077.752">detail = エクスプローラの起動/制御をnodejsのopen-file-explorerで実装する</text></g><g id="elem_5_4"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="175" x="1843.5" y="770"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1917" y="786.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1844.5" x2="2017.5" y1="791.6094" y2="791.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="1849.5" y="810.1426">id = 5-4</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="1849.5" y="827.752">detail = pythonを使用する</text></g><g id="elem_5_7"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="197" x="1675.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1760" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1676.5" x2="1871.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="1681.5" y="669.1426">id = 5-7</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185" x="1681.5" y="686.752">detail = GUIに画像を表示する</text></g><g id="elem_5_8"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="309" x="1907.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="2048" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1908.5" x2="2215.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="1913.5" y="669.1426">id = 5-8</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="297" x="1913.5" y="686.752">detail = GUIに設定用のスライドバーを実装する</text></g><g id="elem_5_11"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="258" x="2252" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="2367" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="2253" x2="2509" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2258" y="669.1426">id = 5-11</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="2258" y="686.752">detail = クリップボードにアクセスする</text></g><g id="elem_5_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="244" x="834" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="942" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="835" x2="1077" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="840" y="669.1426">id = 5-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="840" y="686.752">detail = ファイルシステムを使用する</text></g><g id="elem_5_13"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="211" x="1113.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1205" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1114.5" x2="1323.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1119.5" y="669.1426">id = 5-13</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="1119.5" y="686.752">detail = GUIにボタンを配置する</text></g><g id="elem_5_14"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="281" x="1359.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1486" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1360.5" x2="1639.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1365.5" y="669.1426">id = 5-14</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="1365.5" y="686.752">detail = GUIでキー入力イベントを設定する</text></g><g id="elem_4_10"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="323" x="1783.5" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1924" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1784.5" x2="2105.5" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1789.5" y="460.1426">id = 4-10</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="311" x="1789.5" y="477.752">detail = GUIに表示できる画像サイズを変更できる</text></g><g id="elem_4_13"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="309" x="2141.5" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2275" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="2142.5" x2="2449.5" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2147.5" y="460.1426">id = 4-13</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="297" x="2147.5" y="477.752">detail = GUIで画像移動を特定領域内におさめる</text></g><g id="elem_4_17"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="402" x="825" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1005" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="826" x2="1226" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="831" y="460.1426">id = 4-17</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="390" x="831" y="477.752">detail = 画像ビュワーでボタンで次/前の画像に切り替えられる</text></g><g id="elem_4_18"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="486" x="1262" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1484" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1263" x2="1747" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1268" y="460.1426">id = 4-18</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="474" x="1268" y="477.752">detail = 画像ビュワーでショートカットキーで次/前の画像に切り替えられる</text></g><g id="elem_4_12"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="244" x="2507" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2608" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="2508" x2="2750" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2513" y="460.1426">id = 4-12</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="2513" y="477.752">detail = マウススクロールを検出する</text></g><g id="elem_4_14"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="314" x="2786" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2922" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="2787" x2="3099" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2792" y="460.1426">id = 4-14</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="2792" y="477.752">detail = クリップボードにデータをコピーできる</text></g><g id="elem_4_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="3484.5" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="3611" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="3485.5" x2="3778.5" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="3490.5" y="460.1426">id = 4-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="3490.5" y="477.752">detail = GUIからエクスプローラを起動できる</text></g><g id="elem_4_16"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="314" x="3135" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="3271" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="3136" x2="3448" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="3141" y="460.1426">id = 4-16</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="3141" y="477.752">detail = エクスプローラで指定したパスを開ける</text></g><g id="elem_3_11"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="342" x="1064" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1214" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1065" x2="1405" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1070" y="251.1426">id = 3-11</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="330" x="1070" y="268.752">detail = 画像ビュワーの画像表示サイズを変更できる</text></g><g id="elem_3_12"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="374" x="1930" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2096" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1931" x2="2303" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1936" y="251.1426">id = 3-12</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="362" x="1936" y="268.752">detail = マウススクロールで画像の拡大/縮小操作ができる</text></g><g id="elem_3_13"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="342" x="2339" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2489" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="2340" x2="2680" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2345" y="251.1426">id = 3-13</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="330" x="2345" y="268.752">detail = 画像をドラッグして画像の移動操作ができる</text></g><g id="elem_3_14"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="454" x="2716" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2922" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="2717" x2="3169" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="2722" y="251.1426">id = 3-14</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="442" x="2722" y="268.752">detail = 表示中の画像のファイルパスをクリップボードにコピーできる</text></g><g id="elem_3_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="440" x="3205" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="3404" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="3206" x2="3644" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="3211" y="251.1426">id = 3-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="428" x="3211" y="268.752">detail = 表示中の画像のファイル名をクリップボードにコピーできる</text></g><g id="elem_3_16"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="356" x="3680" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="3837" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="3681" x2="4035" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="3686" y="251.1426">id = 3-16</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="344" x="3686" y="268.752">detail = 表示中の画像をクリップボードにコピーできる</text></g><g id="elem_3_17"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="398" x="4071" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="4249" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="4072" x2="4468" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="4077" y="251.1426">id = 3-17</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="386" x="4077" y="268.752">detail = 表示中の画像ファイルパスをエクスプローラで開ける</text></g><g id="elem_3_18"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="454" x="1441" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1647" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1442" x2="1894" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1447" y="251.1426">id = 3-18</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="442" x="1447" y="268.752">detail = 画像ビュワーで表示中の画像を既定のサイズにリセットできる</text></g><g id="elem_3_19"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="328" x="124" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="267" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="125" x2="451" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="130" y="251.1426">id = 3-19</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="316" x="130" y="268.752">detail = 画像ビュワーで表示中の画像を保存できる</text></g><g id="elem_3_20"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="542" x="487" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="737" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="488" x2="1028" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="493" y="251.1426">id = 3-20</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="530" x="493" y="268.752">detail = 画像ビュワーでボタンやショートカットキーで次/前の画像に切り替えられる</text></g><g id="elem_2_7"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="328" x="2149" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="2292" y="102.5332">大機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="2150" x2="2476" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="2155" y="126.1426">id = 2-7</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="316" x="2155" y="143.752">detail = フォルダ内の画像をビュワーで確認できる</text></g><path d="M8.5,91 L51.5,91 A3.75,3.75 0 0 1 54,93.5 L61,114.6094 L65.5,114.6094 A2.5,2.5 0 0 1 68,117.1094 L68,143.7188 A2.5,2.5 0 0 1 65.5,146.2188 L8.5,146.2188 A2.5,2.5 0 0 1 6,143.7188 L6,93.5 A2.5,2.5 0 0 1 8.5,91 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="6" x2="61" y1="114.6094" y2="114.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="10" y="107.5332">大機能</text><!--MD5=[fc317fe41ca6eff0545457d654623905]
+reverse link 5_1 to 5_3--><g id="link_5_1_5_3"><path codeLine="12" d="M1879,1090.46 C1879,1107.82 1879,1128.31 1879,1144.93 " fill="none" id="5_1-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1879,1085.18,1875,1094.18,1879,1090.18,1883,1094.18,1879,1085.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[151220a8faead6bc965b12c371de67a3]
+reverse link 5_24 to 5_1--><g id="link_5_24_5_1"><path codeLine="12" d="M1905.72,965.01 C1900.33,982.47 1893.93,1003.16 1888.75,1019.93 " fill="none" id="5_24-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1907.21,960.18,1900.7354,967.6016,1905.7366,964.958,1908.3802,969.9591,1907.21,960.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c7b0a2958fbb9722bbad7be497fc31b6]
+reverse link 5_7 to 5_24--><g id="link_5_7_5_24"><path codeLine="12" d="M1759.98,698.95 C1748.27,735.79 1737,793.1 1761,835 C1776.06,861.29 1801.93,880.76 1828.33,894.82 " fill="none" id="5_7-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1761.56,694.12,1754.9786,701.447,1760.0175,698.8761,1762.5883,703.915,1761.56,694.12" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e1b301863a870d6a56c79d2b8d9fcce5]
+reverse link 5_8 to 5_24--><g id="link_5_8_5_24"><path codeLine="12" d="M1972.41,695.62 C1946.17,704.17 1917.22,712.5 1890,718 C1879.94,720.03 1804.93,718.44 1798,726 C1765.26,761.71 1776.6,791.54 1798,835 C1810.26,859.9 1832.92,879.92 1855.2,894.81 " fill="none" id="5_8-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1977.27,694.03,1967.4695,693.0548,1972.5223,695.5983,1969.9788,700.6511,1977.27,694.03" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f9ee2d6f28b9e17c4ba1ee5822f68d4a]
+reverse link 4_10 to 5_7--><g id="link_4_10_5_7"><path codeLine="13" d="M1915.18,489.6 C1882.64,528.98 1831.08,591.41 1800.09,628.91 " fill="none" id="4_10-backto-5_7" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1918.66,485.39,1909.8446,489.782,1915.476,489.2451,1916.0128,494.8764,1918.66,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[cbd1dba6a3e499836bebab2ca3743c71]
+reverse link 4_10 to 5_8--><g id="link_4_10_5_8"><path codeLine="14" d="M1965.68,490.08 C1987.95,529.49 2023.03,591.56 2044.15,628.91 " fill="none" id="4_10-backto-5_8" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1963.02,485.39,1963.9567,495.1942,1965.4761,489.7452,1970.9251,491.2645,1963.02,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[df9cec54c2846eb07df33d984890e5c4]
+reverse link 3_11 to 4_10--><g id="link_3_11_4_10"><path codeLine="12" d="M1298.73,278.38 C1334.49,295.55 1380.53,314.7 1424,324 C1461.17,331.95 1729.76,320.55 1766,332 C1822.12,349.73 1876.94,390.88 1910.82,419.91 " fill="none" id="3_11-backto-4_10" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1293.98,276.08,1300.3473,283.5938,1298.4831,278.2529,1303.824,276.3888,1293.98,276.08" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[11616bdde34732b5b965c132b7e9403e]
+reverse link 4_12 to 5_24--><g id="link_4_12_5_24"><path codeLine="12" d="M2631.92,490.64 C2635.76,568.5 2632.26,748.74 2528,835 C2459.36,891.79 2222.51,913.41 2064.66,921.59 " fill="none" id="4_12-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2631.63,485.21,2628.1237,494.4136,2631.901,490.2026,2636.112,493.9799,2631.63,485.21" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[70fd50e429e6107169c985baf2553707]
+reverse link 3_12 to 4_10--><g id="link_3_12_4_10"><path codeLine="13" d="M2087,280.6 C2054.28,319.98 2002.41,382.41 1971.25,419.91 " fill="none" id="3_12-backto-4_10" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2090.5,276.39,2081.6767,280.7659,2087.3089,280.2393,2087.8355,285.8716,2090.5,276.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8105fd2a9bfb9fb8f16b002ee69eaf3c]
+reverse link 3_12 to 4_12--><g id="link_3_12_4_12"><path codeLine="14" d="M2187.44,278.16 C2226.22,295.06 2275.75,314.02 2322,324 C2353.55,330.81 2436.63,321.08 2467,332 C2518.47,350.51 2567.55,391.05 2597.93,419.77 " fill="none" id="3_12-backto-4_12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2182.76,276.12,2189.4105,283.3844,2187.3431,278.1188,2192.6086,276.0515,2182.76,276.12" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[93b36d8a00bddd7d14af251cc6e0f84f]
+reverse link 5_10 to 5_24--><g id="link_5_10_5_24"><path codeLine="12" d="M2183.64,836.64 C2129.87,854.77 2063.61,877.09 2010.6,894.96 " fill="none" id="5_10-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2188.48,835.02,2178.6736,834.1067,2183.7423,836.6183,2181.2308,841.687,2188.48,835.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b5e59384e1b23494948a2156b02f5377]
+reverse link 4_13 to 5_10--><g id="link_4_13_5_10"><path codeLine="12" d="M2370.19,487.06 C2406.16,502.48 2450.3,520.14 2491,533 C2506.22,537.81 2516.05,528.52 2526,541 C2575.04,602.51 2571.74,654 2526,718 C2509.53,741.04 2486.31,757.79 2460.67,769.96 " fill="none" id="4_13-backto-5_10" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2365.39,485,2372.0595,492.2469,2369.9783,486.9868,2375.2384,484.9057,2365.39,485" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d0054205d3be18bb64b5239582fa9c49]
+reverse link 3_13 to 4_13--><g id="link_3_13_4_13"><path codeLine="12" d="M2473.17,280.12 C2432.49,319.48 2367.59,382.25 2328.65,419.91 " fill="none" id="3_13-backto-4_13" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2477.03,276.39,2467.7816,279.7762,2473.4377,279.8678,2473.3461,285.5239,2477.03,276.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d4a94156e771388056683118c2fed3c1]
+reverse link 5_11 to 5_24--><g id="link_5_11_5_24"><path codeLine="12" d="M2307.27,695.95 C2284.27,704.84 2258.51,713.28 2234,718 C2222.87,720.14 1833.94,717.91 1826,726 C1792.08,760.59 1807.52,790.22 1826,835 C1835.66,858.4 1854.52,878.97 1872.58,894.65 " fill="none" id="5_11-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2312.13,694.05,2302.2919,693.5898,2307.4711,695.865,2305.1959,701.0441,2312.13,694.05" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b84cdeccfe8f9cf91fc760a5d7441616]
+reverse link 4_14 to 5_11--><g id="link_4_14_5_11"><path codeLine="12" d="M2873.84,487.24 C2842.23,502.1 2804.08,519.27 2769,533 C2675.24,569.69 2566.12,604.91 2487.52,629 " fill="none" id="4_14-backto-5_11" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2878.46,485.06,2868.6133,485.2684,2873.9349,487.1869,2872.0164,492.5085,2878.46,485.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d683e3f4908cfcfbc9692a9e63957c55]
+reverse link 3_14 to 4_14--><g id="link_3_14_4_14"><path codeLine="12" d="M2943,281.56 C2943,320.99 2943,382.71 2943,419.91 " fill="none" id="3_14-backto-4_14" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2943,276.39,2939,285.39,2943,281.39,2947,285.39,2943,276.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ea795672c179075f51999583091cb60f]
+reverse link 3_15 to 4_14--><g id="link_3_15_4_14"><path codeLine="12" d="M3340.18,277.77 C3295.54,294.05 3239.5,312.55 3188,324 C3157.43,330.79 3147.35,321.07 3118,332 C3064.39,351.96 3011.34,391.77 2977.95,419.94 " fill="none" id="3_15-backto-4_14" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3345.02,276,3335.1918,275.3621,3340.329,277.7305,3337.9606,282.8677,3345.02,276" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d07abe657d351bdcca90dd2fbd4db453]
+reverse link 3_16 to 4_14--><g id="link_3_16_4_14"><path codeLine="12" d="M3792.58,278.33 C3755.6,295.6 3707.91,314.85 3663,324 C3603.66,336.09 3175.73,313.7 3118,332 C3062.76,349.51 3009.25,390.7 2976.25,419.81 " fill="none" id="3_16-backto-4_14" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3797.49,276.02,3787.6439,276.2538,3792.9704,278.1586,3791.0657,283.4851,3797.49,276.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[bb29ccec43ba56da88d7529e69b9318a]
+reverse link 5_12 to 5_3--><g id="link_5_12_5_3"><path codeLine="12" d="M2162.81,1086.53 C2101.37,1106.01 2024.51,1130.37 1966.27,1148.83 " fill="none" id="5_12-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2167.58,1085.02,2157.7917,1083.9299,2162.8142,1086.5325,2160.2116,1091.5551,2167.58,1085.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[255baba27e7b9bc7c2911e58c56747de]
+reverse link 4_15 to 5_12--><g id="link_4_15_5_12"><path codeLine="12" d="M3562.88,487.37 C3533.43,501.65 3498.63,518.34 3467,533 C3044.09,729.08 2940.08,782.61 2509,960 C2458.01,980.98 2400.28,1002.88 2354,1019.99 " fill="none" id="4_15-backto-5_12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3567.56,485.09,3557.7168,485.4241,3563.0625,487.2745,3561.212,492.6202,3567.56,485.09" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e9dcc72276b2acbd34566f51f5c54706]
+reverse link 4_16 to 5_12--><g id="link_4_16_5_12"><path codeLine="12" d="M3233.48,487.64 C3051.43,593.85 2496.74,917.47 2321,1019.99 " fill="none" id="4_16-backto-5_12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3237.98,485.02,3228.1927,486.1199,3233.6663,487.5482,3232.2379,493.0218,3237.98,485.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7e19b87895f0e110dd4780f75d5bb0a8]
+reverse link 3_17 to 4_15--><g id="link_3_17_4_15"><path codeLine="13" d="M4183.09,277.82 C4143.85,292.52 4096.78,309.68 4054,324 C3949.13,359.11 3828.19,395.2 3742.74,419.99 " fill="none" id="3_17-backto-4_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="4187.84,276.04,4178.0085,275.4548,4183.1584,277.7956,4180.8175,282.9454,4187.84,276.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3c5e412aa82f97390f4fead79321eb94]
+reverse link 3_17 to 4_16--><g id="link_3_17_4_16"><path codeLine="14" d="M4197.9,278.03 C4156.72,295.39 4103.56,314.82 4054,324 C4021.93,329.94 3498.1,322.16 3467,332 C3411.75,349.48 3358.25,390.68 3325.25,419.8 " fill="none" id="3_17-backto-4_16" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="4202.61,276.03,4192.7624,275.8728,4198.0091,277.9875,4195.8944,283.2342,4202.61,276.03" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[74b2ef01b17424c5772b957f9285c4f1]
+reverse link 3_18 to 4_10--><g id="link_3_18_4_10"><path codeLine="12" d="M1714.41,279.18 C1766.95,318.45 1851.82,381.87 1902.63,419.84 " fill="none" id="3_18-backto-4_10" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1710.37,276.16,1715.1897,284.749,1714.3769,279.1508,1719.975,278.338,1710.37,276.16" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b1011733d73355a4138831320af051bc]
+reverse link 5_15 to 5_3--><g id="link_5_15_5_3"><path codeLine="13" d="M1017.12,696.54 C1186.22,790.7 1658.57,1053.75 1822.28,1144.91 " fill="none" id="5_15-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1012.69,694.07,1018.6039,701.9456,1017.0574,696.5043,1022.4988,694.9578,1012.69,694.07" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6128280f683422d2fdecf770c0175466]
+reverse link 5_15 to 5_4--><g id="link_5_15_5_4"><path codeLine="14" d="M1029.3,695.99 C1050.44,704.42 1073.8,712.6 1096,718 C1363.02,782.93 1689.87,797.51 1843.42,800.69 " fill="none" id="5_15-backto-5_4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1024.55,694.07,1031.3944,701.1519,1029.1854,695.9442,1034.3932,693.7352,1024.55,694.07" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0ce111f0802a649c56734dfb473a7397]
+reverse link 3_19 to 5_15--><g id="link_3_19_5_15"><path codeLine="12" d="M343.2,278.88 C470.41,358.1 782.63,552.53 905.32,628.94 " fill="none" id="3_19-backto-5_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="338.76,276.11,344.2843,284.2636,343.004,278.7536,348.5141,277.4732,338.76,276.11" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a387296e057c0c92af3c44b40b558cf0]
+reverse link 5_13 to 5_24--><g id="link_5_13_5_24"><path codeLine="12" d="M1279.82,696.51 C1349.29,734.3 1467.18,795.22 1574,835 C1638.54,859.04 1712.1,879.52 1774.49,894.98 " fill="none" id="5_13-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1275.31,694.06,1281.3152,701.8662,1279.7055,696.4433,1285.1284,694.8335,1275.31,694.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5a9d50e191d50564fc25f7440bf9c137]
+reverse link 4_17 to 5_13--><g id="link_4_17_5_13"><path codeLine="12" d="M1059.21,489.12 C1095.91,528.48 1154.44,591.25 1189.55,628.91 " fill="none" id="4_17-backto-5_13" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1055.73,485.39,1058.9479,494.6983,1059.1421,489.0448,1064.7956,489.239,1055.73,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7536118988a328019bcdd3b5479af2b2]
+reverse link 5_14 to 5_24--><g id="link_5_14_5_24"><path codeLine="12" d="M1543.68,697.32 C1590.37,733.77 1667.26,791.64 1738,835 C1773.71,856.89 1815.27,878.36 1849.35,895 " fill="none" id="5_14-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1539.54,694.08,1544.1819,702.7664,1543.4845,697.1527,1549.0981,696.4552,1539.54,694.08" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[529350755ca03f987664f12e730f0f5a]
+reverse link 4_18 to 5_14--><g id="link_4_18_5_14"><path codeLine="12" d="M1504.1,490.56 C1503.15,529.99 1501.66,591.71 1500.76,628.91 " fill="none" id="4_18-backto-5_14" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1504.23,485.39,1500.0254,494.2962,1504.1157,490.3887,1508.0233,494.4791,1504.23,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[543b98ac62db2eeb9727e35c7a6fe6f2]
+reverse link 3_20 to 4_17--><g id="link_3_20_4_17"><path codeLine="13" d="M803.21,279.42 C854.07,318.7 935.95,381.95 985.01,419.84 " fill="none" id="3_20-backto-4_17" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="799,276.16,803.6767,284.8277,802.9567,279.2168,808.5676,278.4969,799,276.16" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5a06769b5aa376699501f8266a9881c8]
+reverse link 3_20 to 4_18--><g id="link_3_20_4_18"><path codeLine="14" d="M856.47,277.6 C911.8,294.66 982.49,313.96 1047,324 C1090.51,330.77 1202.18,321.72 1245,332 C1320.84,350.21 1401.45,391.03 1452.45,419.88 " fill="none" id="3_20-backto-4_18" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="851.51,276.06,858.9316,282.5346,856.288,277.5334,861.2891,274.8898,851.51,276.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8b3b3f6d08463c08e5c39db1079d2704]
+reverse link 2_7 to 3_11--><g id="link_2_7_3_11"><path codeLine="21" d="M2143.78,133.74 C1964.65,149.56 1673.84,177.36 1424,211 C1418.15,211.79 1412.2,212.62 1406.19,213.48 " fill="none" id="2_7-backto-3_11" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2148.79,133.3,2139.4706,130.1143,2143.8097,133.7436,2140.1804,138.0828,2148.79,133.3" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[71fe19634f0de38d8aa004a784ef7a38]
+reverse link 2_7 to 3_12--><g id="link_2_7_3_12"><path codeLine="22" d="M2258.27,153.85 C2229.8,171.71 2195.24,193.4 2167.43,210.85 " fill="none" id="2_7-backto-3_12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2262.78,151.02,2253.0293,152.4068,2258.5424,153.6738,2257.2754,159.187,2262.78,151.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8dc4065c0e82463127b7870cc81f565e]
+reverse link 2_7 to 3_13--><g id="link_2_7_3_13"><path codeLine="23" d="M2368.01,153.85 C2396.62,171.71 2431.36,193.4 2459.31,210.85 " fill="none" id="2_7-backto-3_13" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2363.48,151.02,2369.0043,159.1736,2367.724,153.6636,2373.2341,152.3832,2363.48,151.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c8bad0041a8efb109f68ebd7342e3232]
+reverse link 2_7 to 3_14--><g id="link_2_7_3_14"><path codeLine="24" d="M2479.41,151.99 C2572.82,170.23 2688.84,192.88 2781.45,210.96 " fill="none" id="2_7-backto-3_14" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2474.42,151.02,2482.4703,156.6938,2479.3245,151.9923,2484.026,148.8466,2474.42,151.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[44e29f6f66a923459b0da39efa5638fe]
+reverse link 2_7 to 3_15--><g id="link_2_7_3_15"><path codeLine="25" d="M2482.43,135.8 C2658.81,153.1 2943,181.91 3188,211 C3193.56,211.66 3199.2,212.34 3204.89,213.03 " fill="none" id="2_7-backto-3_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2477.24,135.29,2485.8084,140.1462,2482.2163,135.7762,2486.5863,132.1841,2477.24,135.29" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[05bd23242e5400bb9744ace3afb16107]
+reverse link 2_7 to 3_16--><g id="link_2_7_3_16"><path codeLine="26" d="M2482.35,125.95 C2738.54,136.83 3239.68,162.57 3663,211 C3668.54,211.63 3674.16,212.31 3679.83,213.03 " fill="none" id="2_7-backto-3_16" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2477.09,125.72,2485.9099,130.1028,2482.0854,125.9347,2486.2535,122.1102,2477.09,125.72" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[bb9a662455233cb87d419d0c95527b47]
+reverse link 2_7 to 3_17--><g id="link_2_7_3_17"><path codeLine="27" d="M2482.22,123.21 C2793.84,131.19 3479.17,154.1 4054,211 C4059.56,211.55 4065.2,212.14 4070.89,212.77 " fill="none" id="2_7-backto-3_17" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2477.2,123.08,2486.0942,127.31,2482.1983,123.2085,2486.2998,119.3127,2477.2,123.08" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[171cb5c442d0ec1dba94ed402cdb8041]
+reverse link 2_7 to 3_18--><g id="link_2_7_3_18"><path codeLine="28" d="M2143.87,151.75 C2048.04,170.03 1928.67,192.79 1833.46,210.95 " fill="none" id="2_7-backto-3_18" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2148.99,150.78,2139.4038,148.5206,2144.0769,151.7083,2140.8892,156.3815,2148.99,150.78" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[af96b55837a694a09b4d2695ecee7b2a]
+reverse link 2_7 to 3_19--><g id="link_2_7_3_19"><path codeLine="29" d="M2143.58,121.03 C1818.23,125.48 1083.8,142.9 470,211 C464.1,211.65 458.11,212.38 452.06,213.16 " fill="none" id="2_7-backto-3_19" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2148.82,120.95,2139.7638,117.079,2143.8205,121.0214,2139.8781,125.0782,2148.82,120.95" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[220ab3c88b8522001cae0a86f1f9cb22]
+reverse link 2_7 to 3_20--><g id="link_2_7_3_20"><path codeLine="30" d="M2143.62,129.77 C1900.63,144.96 1439.15,175.47 1047,211 C1041.09,211.54 1035.12,212.09 1029.1,212.65 " fill="none" id="2_7-backto-3_20" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="2148.96,129.44,2139.7262,126.0141,2143.9699,129.7546,2140.2295,133.9983,2148.96,129.44" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2cbf3b839a25914011a3d99579d5fc2c]
+@startuml
+!include ../l3/l3_11.pu
+!include ../l3/l3_12.pu
+!include ../l3/l3_13.pu
+!include ../l3/l3_14.pu
+!include ../l3/l3_15.pu
+!include ../l3/l3_16.pu
+!include ../l3/l3_17.pu
+!include ../l3/l3_18.pu
+!include ../l3/l3_19.pu
+!include ../l3/l3_20.pu
+
+package "大機能" as l2{
+  package "画像ビュワー"{
+    object "大機能" as 2_7 #LightGreen{
+      id = 2-7
+      detail = フォルダ内の画像をビュワーで確認できる
+    }
+  }
+}
+
+2_7 <- - 3_11
+2_7 <- - 3_12
+2_7 <- - 3_13
+2_7 <- - 3_14
+2_7 <- - 3_15
+2_7 <- - 3_16
+2_7 <- - 3_17
+2_7 <- - 3_18
+2_7 <- - 3_19
+2_7 <- - 3_20
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_1 #LightGreen{
+      id = 5-1
+      detail = GUIをelectronで実装する
+    }
+  }
+}
+
+5_1 <- - 5_3
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_24 #LightGreen{
+      id = 5-24
+      detail = electronレンダラプロセスを実装する
+    }
+  }
+}
+
+5_24 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_7 #LightGreen{
+      id = 5-7
+      detail = GUIに画像を表示する
+    }
+  }
+}
+
+5_7 <- - 5_24
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_8 #LightGreen{
+      id = 5-8
+      detail = GUIに設定用のスライドバーを実装する
+    }
+  }
+}
+
+5_8 <- - 5_24
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_10 #LightGreen{
+      id = 4-10
+      detail = GUIに表示できる画像サイズを変更できる
+    }
+  }
+}
+
+4_10 <- - 5_7
+4_10 <- - 5_8
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_11 #LightGreen{
+      id = 3-11
+      detail = 画像ビュワーの画像表示サイズを変更できる
+    }
+  }
+}
+
+3_11 <- - 4_10
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_12 #LightGreen{
+      id = 4-12
+      detail = マウススクロールを検出する
+    }
+  }
+}
+
+4_12 <- - 5_24
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_12 #LightGreen{
+      id = 3-12
+      detail = マウススクロールで画像の拡大/縮小操作ができる
+    }
+  }
+}
+
+3_12 <- - 4_10
+3_12 <- - 4_12
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_10 #LightGreen{
+      id = 5-10
+      detail = GUIでDOM内の画像移動制御をcmanObjMove_v091で実装する
+    }
+  }
+}
+
+5_10 <- - 5_24
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_13 #LightGreen{
+      id = 4-13
+      detail = GUIで画像移動を特定領域内におさめる
+    }
+  }
+}
+
+4_13 <- - 5_10
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_13 #LightGreen{
+      id = 3-13
+      detail = 画像をドラッグして画像の移動操作ができる
+    }
+  }
+}
+
+3_13 <- - 4_13
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_11 #LightGreen{
+      id = 5-11
+      detail = クリップボードにアクセスする
+    }
+  }
+}
+
+5_11 <- - 5_24
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_14 #LightGreen{
+      id = 4-14
+      detail = クリップボードにデータをコピーできる
+    }
+  }
+}
+
+4_14 <- - 5_11
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_14 #LightGreen{
+      id = 3-14
+      detail = 表示中の画像のファイルパスをクリップボードにコピーできる
+    }
+  }
+}
+
+3_14 <- - 4_14
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_15 #LightGreen{
+      id = 3-15
+      detail = 表示中の画像のファイル名をクリップボードにコピーできる
+    }
+  }
+}
+
+3_15 <- - 4_14
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_16 #LightGreen{
+      id = 3-16
+      detail = 表示中の画像をクリップボードにコピーできる
+    }
+  }
+}
+
+3_16 <- - 4_14
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_12 #LightGreen{
+      id = 5-12
+      detail = エクスプローラの起動/制御をnodejsのopen-file-explorerで実装する
+    }
+  }
+}
+
+5_12 <- - 5_3
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_15 #LightGreen{
+      id = 4-15
+      detail = GUIからエクスプローラを起動できる
+    }
+  }
+}
+
+4_15 <- - 5_12
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_16 #LightGreen{
+      id = 4-16
+      detail = エクスプローラで指定したパスを開ける
+    }
+  }
+}
+
+4_16 <- - 5_12
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_17 #LightGreen{
+      id = 3-17
+      detail = 表示中の画像ファイルパスをエクスプローラで開ける
+    }
+  }
+}
+
+3_17 <- - 4_15
+3_17 <- - 4_16
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_18 #LightGreen{
+      id = 3-18
+      detail = 画像ビュワーで表示中の画像を既定のサイズにリセットできる
+    }
+  }
+}
+
+3_18 <- - 4_10
+package "構成"{
+  package "環境"{
+    object "構成" as 5_4 #LightGreen{
+      id = 5-4
+      detail = pythonを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_15 #LightGreen{
+      id = 5-15
+      detail = ファイルシステムを使用する
+    }
+  }
+}
+
+5_15 <- - 5_3
+5_15 <- - 5_4
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_19 #LightGreen{
+      id = 3-19
+      detail = 画像ビュワーで表示中の画像を保存できる
+    }
+  }
+}
+
+3_19 <- - 5_15
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_13 #LightGreen{
+      id = 5-13
+      detail = GUIにボタンを配置する
+    }
+  }
+}
+
+5_13 <- - 5_24
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_17 #LightGreen{
+      id = 4-17
+      detail = 画像ビュワーでボタンで次/前の画像に切り替えられる
+    }
+  }
+}
+
+4_17 <- - 5_13
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_14 #LightGreen{
+      id = 5-14
+      detail = GUIでキー入力イベントを設定する
+    }
+  }
+}
+
+5_14 <- - 5_24
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_18 #LightGreen{
+      id = 4-18
+      detail = 画像ビュワーでショートカットキーで次/前の画像に切り替えられる
+    }
+  }
+}
+
+4_18 <- - 5_14
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_20 #LightGreen{
+      id = 3-20
+      detail = 画像ビュワーでボタンやショートカットキーで次/前の画像に切り替えられる
+    }
+  }
+}
+
+3_20 <- - 4_17
+3_20 <- - 4_18
+
+package "大機能" as l2{
+  package "画像ビュワー"{
+    object "大機能" as 2_7 #LightGreen{
+      id = 2-7
+      detail = フォルダ内の画像をビュワーで確認できる
+    }
+  }
+}
+
+2_7 <- - 3_11
+2_7 <- - 3_12
+2_7 <- - 3_13
+2_7 <- - 3_14
+2_7 <- - 3_15
+2_7 <- - 3_16
+2_7 <- - 3_17
+2_7 <- - 3_18
+2_7 <- - 3_19
+2_7 <- - 3_20
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

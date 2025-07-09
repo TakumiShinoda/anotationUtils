@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1132px" preserveAspectRatio="none" style="width:1995px;height:1132px;background:#FFFFFF;" version="1.1" viewBox="0 0 1995 1132" width="1995px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M364.5,549 L394.375,549 A3.75,3.75 0 0 1 396.875,551.5 L403.875,572.6094 L1920.5,572.6094 A2.5,2.5 0 0 1 1923,575.1094 L1923,1122.5 A2.5,2.5 0 0 1 1920.5,1125 L364.5,1125 A2.5,2.5 0 0 1 362,1122.5 L362,551.5 A2.5,2.5 0 0 1 364.5,549 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="362" x2="403.875" y1="572.6094" y2="572.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="366" y="565.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M700.5,734 L730.375,734 A3.75,3.75 0 0 1 732.875,736.5 L739.875,757.6094 L1549.5,757.6094 A2.5,2.5 0 0 1 1552,760.1094 L1552,1098.5 A2.5,2.5 0 0 1 1549.5,1101 L700.5,1101 A2.5,2.5 0 0 1 698,1098.5 L698,736.5 A2.5,2.5 0 0 1 700.5,734 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="698" x2="739.875" y1="757.6094" y2="757.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="702" y="750.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M388.5,593 L418.375,593 A3.75,3.75 0 0 1 420.875,595.5 L427.875,616.6094 L1896.5,616.6094 A2.5,2.5 0 0 1 1899,619.1094 L1899,707.5 A2.5,2.5 0 0 1 1896.5,710 L388.5,710 A2.5,2.5 0 0 1 386,707.5 L386,595.5 A2.5,2.5 0 0 1 388.5,593 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="386" x2="427.875" y1="616.6094" y2="616.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="390" y="609.5332">機能</text></g><!--MD5=[cd8a6d6b6ceaae3d861deb9820030cfc]
+cluster 中機能--><g id="cluster_中機能"><path d="M86.5,6 L130.8125,6 A3.75,3.75 0 0 1 133.3125,8.5 L140.3125,29.6094 L1985.5,29.6094 A2.5,2.5 0 0 1 1988,32.1094 L1988,313.5 A2.5,2.5 0 0 1 1985.5,316 L86.5,316 A2.5,2.5 0 0 1 84,313.5 L84,8.5 A2.5,2.5 0 0 1 86.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="84" x2="140.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="88" y="22.5332">中機能</text></g><!--MD5=[414a15a2db8aa408aa2cfdd3668707a1]
+cluster 自動アノテーション機能--><g id="cluster_自動アノテーション機能"><path d="M110.5,50 L270.3125,50 A3.75,3.75 0 0 1 272.8125,52.5 L279.8125,73.6094 L1475.5,73.6094 A2.5,2.5 0 0 1 1478,76.1094 L1478,289.5 A2.5,2.5 0 0 1 1475.5,292 L110.5,292 A2.5,2.5 0 0 1 108,289.5 L108,52.5 A2.5,2.5 0 0 1 110.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="108" x2="279.8125" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158.8125" x="112" y="66.5332">自動アノテーション機能</text></g><!--MD5=[ead2d831585ee15aa2f35daa9927ec5d]
+cluster 共通--><g id="cluster_共通"><path d="M1504.5,175 L1534.375,175 A3.75,3.75 0 0 1 1536.875,177.5 L1543.875,198.6094 L1961.5,198.6094 A2.5,2.5 0 0 1 1964,201.1094 L1964,289.5 A2.5,2.5 0 0 1 1961.5,292 L1504.5,292 A2.5,2.5 0 0 1 1502,289.5 L1502,177.5 A2.5,2.5 0 0 1 1504.5,175 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1502" x2="1543.875" y1="198.6094" y2="198.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="1506" y="191.5332">共通</text></g><!--MD5=[04c5534593d3d55038da165bfe529f5c]
+cluster 小機能--><g id="cluster_小機能"><path d="M491.5,340 L535.8125,340 A3.75,3.75 0 0 1 538.3125,342.5 L545.3125,363.6094 L1950.5,363.6094 A2.5,2.5 0 0 1 1953,366.1094 L1953,522.5 A2.5,2.5 0 0 1 1950.5,525 L491.5,525 A2.5,2.5 0 0 1 489,522.5 L489,342.5 A2.5,2.5 0 0 1 491.5,340 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="489" x2="545.3125" y1="363.6094" y2="363.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="493" y="356.5332">小機能</text></g><!--MD5=[b27c5c9af3cea12247b1c4c8d3c78770]
+cluster GUI--><g id="cluster_GUI"><path d="M515.5,384 L541.5,384 A3.75,3.75 0 0 1 544,386.5 L551,407.6094 L1596.5,407.6094 A2.5,2.5 0 0 1 1599,410.1094 L1599,498.5 A2.5,2.5 0 0 1 1596.5,501 L515.5,501 A2.5,2.5 0 0 1 513,498.5 L513,386.5 A2.5,2.5 0 0 1 515.5,384 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="513" x2="551" y1="407.6094" y2="407.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="25" x="517" y="400.5332">GUI</text></g><!--MD5=[7a6e980948299d17f1c8162a2137e9e8]
+cluster バックエンド--><g id="cluster_バックエンド"><path d="M1625.5,384 L1713.125,384 A3.75,3.75 0 0 1 1715.625,386.5 L1722.625,407.6094 L1926.5,407.6094 A2.5,2.5 0 0 1 1929,410.1094 L1929,498.5 A2.5,2.5 0 0 1 1926.5,501 L1625.5,501 A2.5,2.5 0 0 1 1623,498.5 L1623,386.5 A2.5,2.5 0 0 1 1625.5,384 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1623" x2="1722.625" y1="407.6094" y2="407.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="1627" y="400.5332">バックエンド</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="849" y="1020"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="922" y="1036.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="850" x2="1022" y1="1041.6094" y2="1041.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="855" y="1060.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="855" y="1077.752">detail = nodejsを使用する</text></g><g id="elem_5_4"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="175" x="714.5" y="770"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="788" y="786.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="715.5" x2="888.5" y1="791.6094" y2="791.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="720.5" y="810.1426">id = 5-4</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="720.5" y="827.752">detail = pythonを使用する</text></g><g id="elem_5_1"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="220" x="962" y="895"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1058" y="911.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="963" x2="1181" y1="916.6094" y2="916.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="968" y="935.1426">id = 5-1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="968" y="952.752">detail = GUIをelectronで実装する</text></g><g id="elem_5_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="924.5" y="770"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1058" y="786.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="925.5" x2="1218.5" y1="791.6094" y2="791.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="930.5" y="810.1426">id = 5-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="930.5" y="827.752">detail = electronレンダラプロセスを実装する</text></g><g id="elem_5_23"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="281" x="1254.5" y="770"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1381" y="786.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1255.5" x2="1534.5" y1="791.6094" y2="791.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1260.5" y="810.1426">id = 5-23</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="1260.5" y="827.752">detail = electronメインプロセスを実装する</text></g><g id="elem_5_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="244" x="402" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="510" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="403" x2="645" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="408" y="669.1426">id = 5-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="408" y="686.752">detail = ファイルシステムを使用する</text></g><g id="elem_5_16"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="253" x="1011.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1124" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1012.5" x2="1263.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1017.5" y="669.1426">id = 5-16</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="241" x="1017.5" y="686.752">detail = GUIにテキストボックスを表示</text></g><g id="elem_5_17"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="1299.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1433" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1300.5" x2="1593.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1305.5" y="669.1426">id = 5-17</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="1305.5" y="686.752">detail = GUIでフォルダ選択ダイアログを表示</text></g><g id="elem_5_18"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="681.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="815" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="682.5" x2="975.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="687.5" y="669.1426">id = 5-18</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="687.5" y="686.752">detail = GUIでファイル選択ダイアログを表示</text></g><g id="elem_5_19"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="253" x="1629.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="1742" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="1630.5" x2="1881.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1635.5" y="669.1426">id = 5-19</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="241" x="1635.5" y="686.752">detail = GUIからコマンドを実行できる</text></g><g id="elem_3_2"><rect fill="#FF0000" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="454" x="124" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="330" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="125" x2="577" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="130" y="251.1426">id = 3-2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="442" x="130" y="268.752">detail = アノテーション結果は実行ごとにプロジェクトとして保存する</text></g><g id="elem_3_5"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="500" x="613" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="842" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="614" x2="1112" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="619" y="251.1426">id = 3-5</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="488" x="619" y="268.752">detail = テキストボックス/ダイアログで使用する画像認識モデルを指定できる</text></g><g id="elem_3_21"><rect fill="#FF0000" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="314" x="1148" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1284" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1149" x2="1461" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1154" y="251.1426">id = 3-21</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="1154" y="268.752">detail = 画像の自動アノテーションを実行できる</text></g><g id="elem_2_1"><rect fill="#FF0000" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="258" x="955" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1063" y="102.5332">大機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="956" x2="1212" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="961" y="126.1426">id = 2-1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="961" y="143.752">detail = 画像の自動アノテーション機能</text></g><g id="elem_3_4"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="430" x="1518" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1712" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1519" x2="1947" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="1524" y="251.1426">id = 3-4</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="418" x="1524" y="268.752">detail = テキストボックス/ダイアログで対象フォルダを指定できる</text></g><g id="elem_4_19"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="356" x="878" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1035" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="879" x2="1233" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="884" y="460.1426">id = 4-19</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="344" x="884" y="477.752">detail = テキストボックスで対象フォルダを指定できる</text></g><g id="elem_4_20"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="314" x="1269" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1405" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1270" x2="1582" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1275" y="460.1426">id = 4-20</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="1275" y="477.752">detail = ダイアログで対象フォルダを指定できる</text></g><g id="elem_4_21"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="314" x="529" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="665" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="530" x2="842" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="535" y="460.1426">id = 4-21</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="535" y="477.752">detail = ダイアログで対象ファイルを指定できる</text></g><g id="elem_4_22"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="273" x="1639.5" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1755" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="1640.5" x2="1911.5" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="1645.5" y="460.1426">id = 4-22</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="261" x="1645.5" y="477.752">detail = pythonのプラグラムを実行できる</text></g><path d="M8.5,91 L51.5,91 A3.75,3.75 0 0 1 54,93.5 L61,114.6094 L65.5,114.6094 A2.5,2.5 0 0 1 68,117.1094 L68,143.7188 A2.5,2.5 0 0 1 65.5,146.2188 L8.5,146.2188 A2.5,2.5 0 0 1 6,143.7188 L6,93.5 A2.5,2.5 0 0 1 8.5,91 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="6" x2="61" y1="114.6094" y2="114.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="10" y="107.5332">大機能</text><!--MD5=[b1011733d73355a4138831320af051bc]
+reverse link 5_15 to 5_3--><g id="link_5_15_5_3"><path codeLine="13" d="M558.51,697.89 C593.08,733.11 648.06,788.48 697,835 C767.61,902.11 852.65,978.01 899.88,1019.75 " fill="none" id="5_15-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="554.81,694.12,558.2525,703.3476,558.3096,697.6911,563.9662,697.7482,554.81,694.12" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6128280f683422d2fdecf770c0175466]
+reverse link 5_15 to 5_4--><g id="link_5_15_5_4"><path codeLine="14" d="M591.65,696.32 C636.44,718.72 694.8,747.9 738.69,769.84 " fill="none" id="5_15-backto-5_4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="587.08,694.04,593.3313,701.6506,591.5493,696.2818,596.9181,694.4998,587.08,694.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[39b3e32ceefdf40690e281bee79f5c53]
+reverse link 3_2 to 5_15--><g id="link_3_2_5_15"><path codeLine="12" d="M366.09,280.78 C399.52,361.16 479.35,553.14 510.87,628.94 " fill="none" id="3_2-backto-5_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="364.15,276.11,363.93,285.9564,366.0781,280.7233,371.3113,282.8714,364.15,276.11" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fc317fe41ca6eff0545457d654623905]
+reverse link 5_1 to 5_3--><g id="link_5_1_5_3"><path codeLine="12" d="M1033.11,963.67 C1013.51,981.4 989.92,1002.73 970.9,1019.93 " fill="none" id="5_1-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1036.98,960.18,1027.621,963.2474,1033.2706,963.5327,1032.9853,969.1824,1036.98,960.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[151220a8faead6bc965b12c371de67a3]
+reverse link 5_24 to 5_1--><g id="link_5_24_5_1"><path codeLine="12" d="M1072,840.46 C1072,857.82 1072,878.31 1072,894.93 " fill="none" id="5_24-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1072,835.18,1068,844.18,1072,840.18,1076,844.18,1072,835.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5abd8f621ac1e77bcf279b1049153ac2]
+reverse link 5_16 to 5_24--><g id="link_5_16_5_24"><path codeLine="12" d="M1120.84,698.64 C1110.4,720.62 1097.19,748.44 1087.15,769.6 " fill="none" id="5_16-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1123.02,694.04,1115.547,700.4552,1120.8759,698.5569,1122.7741,703.8858,1123.02,694.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7599d786599222ace8d33fc833c080e1]
+reverse link 4_19 to 5_15--><g id="link_4_19_5_15"><path codeLine="13" d="M989.21,487.47 C952.39,504.45 905.28,523.38 861,533 C818.18,542.3 704.79,525.01 664,541 C617.29,559.31 575.22,600.11 549.66,628.92 " fill="none" id="4_19-backto-5_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="994.1,485.19,984.2528,485.3729,989.5694,487.3052,987.6372,492.6218,994.1,485.19" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a74a6458e7f6ea45642becbbe05ebd24]
+reverse link 4_19 to 5_16--><g id="link_4_19_5_16"><path codeLine="14" d="M1070.49,490.08 C1086.1,529.49 1110.69,591.56 1125.49,628.91 " fill="none" id="4_19-backto-5_16" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1068.63,485.39,1068.2325,495.2308,1070.4746,490.0373,1075.6682,492.2794,1068.63,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[170b999938103c92ad111a2c8b749233]
+reverse link 5_23 to 5_1--><g id="link_5_23_5_1"><path codeLine="12" d="M1307.39,836.86 C1259.9,854.95 1201.55,877.17 1154.83,894.96 " fill="none" id="5_23-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1312.24,835.02,1302.405,834.4973,1307.5696,836.8053,1305.2615,841.9699,1312.24,835.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3c3f632b3eb6be1b19f94203e5cd4a2d]
+reverse link 5_17 to 5_23--><g id="link_5_17_5_23"><path codeLine="12" d="M1433.38,698.92 C1425.17,720.85 1414.82,748.53 1406.93,769.6 " fill="none" id="5_17-backto-5_23" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1435.2,694.04,1428.2946,701.0625,1433.4444,698.7216,1435.7852,703.8715,1435.2,694.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6682af02ca6bd914ca1f89d0aa36eaeb]
+reverse link 4_20 to 5_15--><g id="link_4_20_5_15"><path codeLine="13" d="M1367.65,487.55 C1334.84,504.77 1292.46,523.91 1252,533 C1220.13,540.16 694.57,529.49 664,541 C616.9,558.73 574.76,599.88 549.31,628.92 " fill="none" id="4_20-backto-5_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1372.42,485.03,1362.5951,485.7161,1368.0035,487.374,1366.3455,492.7825,1372.42,485.03" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0d641ff151fde5707d53cbf6d33b25aa]
+reverse link 4_20 to 5_17--><g id="link_4_20_5_17"><path codeLine="14" d="M1429.76,490.56 C1433.76,529.99 1440.02,591.71 1443.8,628.91 " fill="none" id="4_20-backto-5_17" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1429.24,485.39,1426.1607,494.7451,1429.7403,490.3649,1434.1206,493.9445,1429.24,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8e19a907c72d03689f36a1dae693f5c1]
+reverse link 3_4 to 4_19--><g id="link_3_4_4_19"><path codeLine="13" d="M1646.42,277.82 C1597.72,294.94 1535.34,314.23 1478,324 C1428.46,332.44 1300.13,317.56 1252,332 C1192.07,349.98 1131.93,390.85 1094.38,419.77 " fill="none" id="3_4-backto-4_19" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1651.39,276.06,1641.5707,275.2974,1646.6774,277.7308,1644.244,282.8375,1651.39,276.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8d3fbcdc315d9fd0a03d7cab6aa2a393]
+reverse link 3_4 to 4_20--><g id="link_3_4_4_20"><path codeLine="14" d="M1681.56,279.18 C1623.33,318.45 1529.27,381.87 1472.96,419.84 " fill="none" id="3_4-backto-4_20" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1686.04,276.16,1676.3394,277.8626,1681.8908,278.95,1680.8034,284.5013,1686.04,276.16" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[14e798ba9183cbb7e97bb1142744b775]
+reverse link 5_18 to 5_23--><g id="link_5_18_5_23"><path codeLine="12" d="M912.28,695.76 C938.06,704.63 966.84,713.09 994,718 C1047.17,727.6 1184.51,713.19 1237,726 C1274.21,735.08 1313.07,753.51 1342.94,769.89 " fill="none" id="5_18-backto-5_23" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="907.5,694.1,914.6888,700.8321,912.2231,695.7409,917.3143,693.2752,907.5,694.1" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[90b33c2d2b15dd1e7dc45f06d5f08cda]
+reverse link 4_21 to 5_15--><g id="link_4_21_5_15"><path codeLine="13" d="M657.75,489.6 C626.93,528.98 578.07,591.41 548.72,628.91 " fill="none" id="4_21-backto-5_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="661.04,485.39,652.3432,490.0123,657.9585,489.3275,658.6432,494.9428,661.04,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[412b5c2e509325be180d7e5ee18f2989]
+reverse link 4_21 to 5_18--><g id="link_4_21_5_18"><path codeLine="14" d="M710.94,489.6 C738.15,528.98 781.27,591.41 807.18,628.91 " fill="none" id="4_21-backto-5_18" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="708.03,485.39,709.8554,495.0682,710.8723,489.5035,716.437,490.5205,708.03,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0ecd6b7e87c7338f39531f1cd75ee6f3]
+reverse link 3_5 to 4_19--><g id="link_3_5_4_19"><path codeLine="13" d="M896.21,280.12 C932.91,319.48 991.44,382.25 1026.55,419.91 " fill="none" id="3_5-backto-4_19" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="892.73,276.39,895.9479,285.6983,896.1421,280.0448,901.7956,280.239,892.73,276.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[11d4468e2ffa636164422107c040e434]
+reverse link 3_5 to 4_21--><g id="link_3_5_4_21"><path codeLine="14" d="M832.13,280.6 C798.46,319.98 745.08,382.41 713.01,419.91 " fill="none" id="3_5-backto-4_21" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="835.73,276.39,826.8359,280.6201,832.476,280.1863,832.9099,285.8265,835.73,276.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[05c7da2455f4deba6df4b7b692f479b8]
+reverse link 5_19 to 5_23--><g id="link_5_19_5_23"><path codeLine="12" d="M1669.36,695.9 C1650.45,703.19 1630.55,710.85 1612,718 C1567.36,735.19 1517.55,754.36 1476.92,769.99 " fill="none" id="5_19-backto-5_23" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1674.14,694.06,1664.3037,693.5635,1669.4744,695.8578,1667.1801,701.0285,1674.14,694.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[46707dcbbe4f4e9572cad7305d57f706]
+reverse link 4_22 to 5_19--><g id="link_4_22_5_19"><path codeLine="12" d="M1772.42,490.56 C1768.61,529.99 1762.65,591.71 1759.05,628.91 " fill="none" id="4_22-backto-5_19" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1772.92,485.39,1768.0638,493.9584,1772.4338,490.3663,1776.0259,494.7363,1772.92,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4f29936ce505d9dd9c80e8575c5243ed]
+reverse link 3_21 to 4_22--><g id="link_3_21_4_22"><path codeLine="12" d="M1373.98,278.3 C1411.04,294.92 1458.04,313.57 1502,324 C1544.09,333.98 1558.19,317.65 1599,332 C1653.57,351.18 1707.36,391.36 1741.05,419.82 " fill="none" id="3_21-backto-4_22" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1369.05,276.08,1375.6072,283.4287,1373.6072,278.1372,1378.8987,276.1371,1369.05,276.08" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ff41d9e5dc5fbbca3f960a44ba294164]
+reverse link 2_1 to 3_2--><g id="link_2_1_3_2"><path codeLine="15" d="M949.52,125.28 C850.91,131.28 714.17,143.29 596,167 C542.65,177.7 484.38,195.4 438.06,210.97 " fill="none" id="2_1-backto-3_2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="954.78,124.96,945.5566,121.5062,949.789,125.2595,946.0357,129.4918,954.78,124.96" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fc1ccc055c6c65b6c7fbccf17cc7e78d]
+reverse link 2_1 to 3_4--><g id="link_2_1_3_4"><path codeLine="16" d="M1218.1,130.04 C1294.73,137.46 1392.34,149.29 1478,167 C1532.6,178.29 1592.42,195.73 1640.4,211 " fill="none" id="2_1-backto-3_4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1213.09,129.55,1221.6735,134.3795,1218.0678,130.0207,1222.4266,126.415,1213.09,129.55" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f4ee9fb3fd130b931a70e4aff450a085]
+reverse link 2_1 to 3_5--><g id="link_2_1_3_5"><path codeLine="17" d="M1022.68,153.63 C990.51,171.53 951.35,193.33 919.86,210.85 " fill="none" id="2_1-backto-3_5" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1027.37,151.02,1017.5622,151.9186,1023.0053,153.4591,1021.4648,158.9022,1027.37,151.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[67aa71e7d85e8189c0d49b06373fb442]
+reverse link 2_1 to 3_21--><g id="link_2_1_3_21"><path codeLine="18" d="M1145.32,153.63 C1177.49,171.53 1216.65,193.33 1248.14,210.85 " fill="none" id="2_1-backto-3_21" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1140.63,151.02,1146.5352,158.9022,1144.9947,153.4591,1150.4378,151.9186,1140.63,151.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[04a7f45353e0ff63697a5b3aa6523afa]
+@startuml
+!include ../l3/l3_2.pu
+!include ../l3/l3_4.pu
+!include ../l3/l3_5.pu
+!include ../l3/l3_21.pu
+
+package "大機能" as l2{
+  package "自動アノテーション機能"{
+    object "大機能" as 2_1 #Red{
+      id = 2-1
+      detail = 画像の自動アノテーション機能
+    }
+  }
+}
+
+2_1 <- - 3_2
+2_1 <- - 3_4
+2_1 <- - 3_5
+2_1 <- - 3_21
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+package "構成"{
+  package "環境"{
+    object "構成" as 5_4 #LightGreen{
+      id = 5-4
+      detail = pythonを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_15 #LightGreen{
+      id = 5-15
+      detail = ファイルシステムを使用する
+    }
+  }
+}
+
+5_15 <- - 5_3
+5_15 <- - 5_4
+
+package "中機能"{
+  package "自動アノテーション機能"{
+    object "中機能" as 3_2 #Red{
+      id = 3-2
+      detail = アノテーション結果は実行ごとにプロジェクトとして保存する
+    }
+  }
+}
+
+3_2 <- - 5_15
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_1 #LightGreen{
+      id = 5-1
+      detail = GUIをelectronで実装する
+    }
+  }
+}
+
+5_1 <- - 5_3
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_24 #LightGreen{
+      id = 5-24
+      detail = electronレンダラプロセスを実装する
+    }
+  }
+}
+
+5_24 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_16 #LightGreen{
+      id = 5-16
+      detail = GUIにテキストボックスを表示
+    }
+  }
+}
+
+5_16 <- - 5_24
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_19 #LightGreen{
+      id = 4-19
+      detail = テキストボックスで対象フォルダを指定できる
+    }
+  }
+}
+
+4_19 <- - 5_15
+4_19 <- - 5_16
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_23 #LightGreen{
+      id = 5-23
+      detail = electronメインプロセスを実装する
+    }
+  }
+}
+
+5_23 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_17 #LightGreen{
+      id = 5-17
+      detail = GUIでフォルダ選択ダイアログを表示
+    }
+  }
+}
+
+5_17 <- - 5_23
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_20 #LightGreen{
+      id = 4-20
+      detail = ダイアログで対象フォルダを指定できる
+    }
+  }
+}
+
+4_20 <- - 5_15
+4_20 <- - 5_17
+
+package "中機能"{
+  package "共通"{
+    object "中機能" as 3_4 #LightGreen{
+      id = 3-4
+      detail = テキストボックス/ダイアログで対象フォルダを指定できる
+    }
+  }
+}
+
+3_4 <- - 4_19
+3_4 <- - 4_20
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_18 #LightGreen{
+      id = 5-18
+      detail = GUIでファイル選択ダイアログを表示
+    }
+  }
+}
+
+5_18 <- - 5_23
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_21 #LightGreen{
+      id = 4-21
+      detail = ダイアログで対象ファイルを指定できる
+    }
+  }
+}
+
+4_21 <- - 5_15
+4_21 <- - 5_18
+
+package "中機能"{
+  package "自動アノテーション機能"{
+    object "中機能" as 3_5 #LightGreen{
+      id = 3-5
+      detail = テキストボックス/ダイアログで使用する画像認識モデルを指定できる
+    }
+  }
+}
+
+3_5 <- - 4_19
+3_5 <- - 4_21
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_19 #LightGreen{
+      id = 5-19
+      detail = GUIからコマンドを実行できる
+    }
+  }
+}
+
+5_19 <- - 5_23
+
+package "小機能"{
+  package "バックエンド"{
+    object "小機能" as 4_22 #LightGreen{
+      id = 4-22
+      detail = pythonのプラグラムを実行できる
+    }
+  }
+}
+
+4_22 <- - 5_19
+
+package "中機能"{
+  package "自動アノテーション機能"{
+    object "中機能" as 3_21 #Red{
+      id = 3-21
+      detail = 画像の自動アノテーションを実行できる
+    }
+  }
+}
+
+3_21 <- - 4_22
+
+package "大機能" as l2{
+  package "自動アノテーション機能"{
+    object "大機能" as 2_1 #Red{
+      id = 2-1
+      detail = 画像の自動アノテーション機能
+    }
+  }
+}
+
+2_1 <- - 3_2
+2_1 <- - 3_4
+2_1 <- - 3_5
+2_1 <- - 3_21
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

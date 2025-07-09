@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="798px" preserveAspectRatio="none" style="width:961px;height:798px;background:#FFFFFF;" version="1.1" viewBox="0 0 961 798" width="961px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M8.5,215 L38.375,215 A3.75,3.75 0 0 1 40.875,217.5 L47.875,238.6094 L951.5,238.6094 A2.5,2.5 0 0 1 954,241.1094 L954,788.5 A2.5,2.5 0 0 1 951.5,791 L8.5,791 A2.5,2.5 0 0 1 6,788.5 L6,217.5 A2.5,2.5 0 0 1 8.5,215 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="47.875" y1="238.6094" y2="238.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="10" y="231.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M146.5,400 L176.375,400 A3.75,3.75 0 0 1 178.875,402.5 L185.875,423.6094 L469.5,423.6094 A2.5,2.5 0 0 1 472,426.1094 L472,764.5 A2.5,2.5 0 0 1 469.5,767 L146.5,767 A2.5,2.5 0 0 1 144,764.5 L144,402.5 A2.5,2.5 0 0 1 146.5,400 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144" x2="185.875" y1="423.6094" y2="423.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="148" y="416.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M32.5,259 L62.375,259 A3.75,3.75 0 0 1 64.875,261.5 L71.875,282.6094 L927.5,282.6094 A2.5,2.5 0 0 1 930,285.1094 L930,373.5 A2.5,2.5 0 0 1 927.5,376 L32.5,376 A2.5,2.5 0 0 1 30,373.5 L30,261.5 A2.5,2.5 0 0 1 32.5,259 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="71.875" y1="282.6094" y2="282.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="34" y="275.5332">機能</text></g><!--MD5=[04c5534593d3d55038da165bfe529f5c]
+cluster 小機能--><g id="cluster_小機能"><path d="M276.5,6 L320.8125,6 A3.75,3.75 0 0 1 323.3125,8.5 L330.3125,29.6094 L707.5,29.6094 A2.5,2.5 0 0 1 710,32.1094 L710,188.5 A2.5,2.5 0 0 1 707.5,191 L276.5,191 A2.5,2.5 0 0 1 274,188.5 L274,8.5 A2.5,2.5 0 0 1 276.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="274" x2="330.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="278" y="22.5332">小機能</text></g><!--MD5=[b27c5c9af3cea12247b1c4c8d3c78770]
+cluster GUI--><g id="cluster_GUI"><path d="M300.5,50 L326.5,50 A3.75,3.75 0 0 1 329,52.5 L336,73.6094 L683.5,73.6094 A2.5,2.5 0 0 1 686,76.1094 L686,164.5 A2.5,2.5 0 0 1 683.5,167 L300.5,167 A2.5,2.5 0 0 1 298,164.5 L298,52.5 A2.5,2.5 0 0 1 300.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="298" x2="336" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="25" x="302" y="66.5332">GUI</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="282" y="686"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="355" y="702.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="283" x2="455" y1="707.6094" y2="707.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="288" y="726.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="288" y="743.752">detail = nodejsを使用する</text></g><g id="elem_5_1"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="220" x="217" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="313" y="577.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="218" x2="436" y1="582.6094" y2="582.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="223" y="601.1426">id = 5-1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="223" y="618.752">detail = GUIをelectronで実装する</text></g><g id="elem_5_24"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="295" x="160.5" y="436"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="294" y="452.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="161.5" x2="454.5" y1="457.6094" y2="457.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="166.5" y="476.1426">id = 5-24</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="166.5" y="493.752">detail = electronレンダラプロセスを実装する</text></g><g id="elem_5_9"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="281" x="46.5" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="173" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="47.5" x2="326.5" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="52.5" y="335.1426">id = 5-9</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="52.5" y="352.752">detail = GUIにローディング画面を表示する</text></g><g id="elem_5_21"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="258" x="363" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="478" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="364" x2="620" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="369" y="335.1426">id = 5-21</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="369" y="352.752">detail = 文字列配列を昇順でソートする</text></g><g id="elem_5_22"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="258" x="656" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="771" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="657" x2="913" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="662" y="335.1426">id = 5-22</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="662" y="352.752">detail = 文字列配列を降順でソートする</text></g><g id="elem_4_9"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="356" x="314" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="471" y="102.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="315" x2="669" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="320" y="126.1426">id = 4-9</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="344" x="320" y="143.752">detail = ディレクトリパス階層でソートして表示できる</text></g><!--MD5=[fc317fe41ca6eff0545457d654623905]
+reverse link 5_1 to 5_3--><g id="link_5_1_5_3"><path codeLine="12" d="M339.47,631.01 C345.43,648.47 352.49,669.16 358.22,685.93 " fill="none" id="5_1-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="337.82,626.18,336.9422,635.9897,339.4354,630.9119,344.5132,633.405,337.82,626.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[151220a8faead6bc965b12c371de67a3]
+reverse link 5_24 to 5_1--><g id="link_5_24_5_1"><path codeLine="12" d="M313.71,506.46 C316.39,523.82 319.56,544.31 322.12,560.93 " fill="none" id="5_24-backto-5_1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="312.89,501.18,310.2988,510.6819,313.6471,506.1224,318.2066,509.4706,312.89,501.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a8e17c9805a4789bf313314debed56e7]
+reverse link 5_9 to 5_24--><g id="link_5_9_5_24"><path codeLine="12" d="M217.74,363.81 C236.99,385.92 261.58,414.17 280.23,435.6 " fill="none" id="5_9-backto-5_24" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="214.46,360.04,217.356,369.4535,217.7444,363.81,223.3879,364.1984,214.46,360.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8550105c58fb17cd6855d021643ff01a]
+reverse link 5_21 to 5_3--><g id="link_5_21_5_3"><path codeLine="12" d="M494.73,365.43 C497.48,423.84 496.53,539.74 455,626 C444.03,648.79 425.34,669.71 408.19,685.78 " fill="none" id="5_21-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="494.47,360.31,490.9375,369.5036,494.7268,365.3034,498.927,369.0927,494.47,360.31" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9cb7a211914e1ae88bd677a36200536f]
+reverse link 5_22 to 5_3--><g id="link_5_22_5_3"><path codeLine="12" d="M749.09,363.9 C691.72,420.21 575.5,533.32 474,626 C451.86,646.22 426.53,668.32 406.3,685.73 " fill="none" id="5_22-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="752.79,360.27,743.5693,363.731,749.226,363.7768,749.1802,369.4335,752.79,360.27" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5b2260c6d8b18b71a2453fec3d3e9cbb]
+reverse link 4_9 to 5_9--><g id="link_4_9_5_9"><path codeLine="14" d="M431.46,153.87 C404.85,169.46 373.47,188.52 346,207 C304.17,235.14 258.34,270.05 226.67,294.86 " fill="none" id="4_9-backto-5_9" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="436.03,151.19,426.2427,152.2899,431.7163,153.7182,430.2879,159.1918,436.03,151.19" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[698bd11cb0ce4c47dfbf287da8cc7ddd]
+reverse link 4_9 to 5_21--><g id="link_4_9_5_21"><path codeLine="15" d="M492,156.56 C492,195.99 492,257.71 492,294.91 " fill="none" id="4_9-backto-5_21" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="492,151.39,488,160.39,492,156.39,496,160.39,492,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6d57daf64176fadd231d1199b70e320f]
+reverse link 4_9 to 5_22--><g id="link_4_9_5_22"><path codeLine="16" d="M554.02,153.67 C580.74,169.09 611.99,188.06 639,207 C678.43,234.64 720.71,269.94 749.58,294.99 " fill="none" id="4_9-backto-5_22" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="549.43,151.03,555.223,158.995,553.7597,153.5307,559.2241,152.0674,549.43,151.03" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d0b3da741f28a97f1896728eb421ab9b]
+@startuml
+!include ../l5/l5_9.pu
+!include ../l5/l5_21.pu
+!include ../l5/l5_22.pu
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_9{
+      id = 4-9
+      detail = ディレクトリパス階層でソートして表示できる
+    }
+  }
+}
+
+4_9 <- - 5_9
+4_9 <- - 5_21
+4_9 <- - 5_22
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_1 #LightGreen{
+      id = 5-1
+      detail = GUIをelectronで実装する
+    }
+  }
+}
+
+5_1 <- - 5_3
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_24 #LightGreen{
+      id = 5-24
+      detail = electronレンダラプロセスを実装する
+    }
+  }
+}
+
+5_24 <- - 5_1
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_9 #LightGreen{
+      id = 5-9
+      detail = GUIにローディング画面を表示する
+    }
+  }
+}
+
+5_9 <- - 5_24
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_21{
+      id = 5-21
+      detail = 文字列配列を昇順でソートする
+    }
+  }
+}
+
+5_21 <- - 5_3
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_22{
+      id = 5-22
+      detail = 文字列配列を降順でソートする
+    }
+  }
+}
+
+5_22 <- - 5_3
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_9{
+      id = 4-9
+      detail = ディレクトリパス階層でソートして表示できる
+    }
+  }
+}
+
+4_9 <- - 5_9
+4_9 <- - 5_21
+4_9 <- - 5_22
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

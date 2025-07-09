@@ -17,7 +17,7 @@
     "build-prepare": "npm run devenv-reset & npm run clean & rimraf ./publish",
     "build-python-env": "cd ./publish/win-unpacked/externalPackage/python & setup.sh",
     "build-exe-win": "npm run build-prepare & gulp dist & electron-builder --win & npm run build-copyExternals & npm run build-internal-python-asset & npm run build-python-env & npx mkdirp ./publish/win-unpacked/temp",
-    "plantuml-img-gen": "cd ./plantUML && node ./tools/imgGen.js || cd ../"
+    "plantuml-img-gen": "node ./tools/imgGen.js"
   },
   "author": "",
   "license": "ISC",

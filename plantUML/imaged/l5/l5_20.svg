@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="339px" preserveAspectRatio="none" style="width:505px;height:339px;background:#FFFFFF;" version="1.1" viewBox="0 0 505 339" width="505px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M8.5,6 L38.375,6 A3.75,3.75 0 0 1 40.875,8.5 L47.875,29.6094 L495.5,29.6094 A2.5,2.5 0 0 1 498,32.1094 L498,329.5 A2.5,2.5 0 0 1 495.5,332 L8.5,332 A2.5,2.5 0 0 1 6,329.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="47.875" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="10" y="22.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M151.5,191 L181.375,191 A3.75,3.75 0 0 1 183.875,193.5 L190.875,214.6094 L352.5,214.6094 A2.5,2.5 0 0 1 355,217.1094 L355,305.5 A2.5,2.5 0 0 1 352.5,308 L151.5,308 A2.5,2.5 0 0 1 149,305.5 L149,193.5 A2.5,2.5 0 0 1 151.5,191 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="149" x2="190.875" y1="214.6094" y2="214.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="153" y="207.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M32.5,50 L62.375,50 A3.75,3.75 0 0 1 64.875,52.5 L71.875,73.6094 L471.5,73.6094 A2.5,2.5 0 0 1 474,76.1094 L474,164.5 A2.5,2.5 0 0 1 471.5,167 L32.5,167 A2.5,2.5 0 0 1 30,164.5 L30,52.5 A2.5,2.5 0 0 1 32.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="71.875" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="34" y="66.5332">機能</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="165" y="227"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="238" y="243.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="166" x2="338" y1="248.6094" y2="248.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="171" y="267.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="171" y="284.752">detail = nodejsを使用する</text></g><g id="elem_5_20"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="412" x="46" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="238" y="102.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="457" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="52" y="126.1426">id = 5-20</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="400" x="52" y="143.752">detail = 文字列配列から特定文字列が含まれる文字列を抽出する</text></g><!--MD5=[b34e09530f9ad7bc2abe238bc2a6615f]
+reverse link 5_20 to 5_3--><g id="link_5_20_5_3"><path codeLine="12" d="M252,156.19 C252,178.09 252,205.62 252,226.6 " fill="none" id="5_20-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="252,151.04,248,160.04,252,156.04,256,160.04,252,151.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a7bab777cb15e9832fe7509036bc5b5e]
+@startuml
+!include ./l5_3.pu
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_20 #LightGreen{
+      id = 5-20
+      detail = 文字列配列から特定文字列が含まれる文字列を抽出する
+    }
+  }
+}
+
+5_20 <- - 5_3
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_20 #LightGreen{
+      id = 5-20
+      detail = 文字列配列から特定文字列が含まれる文字列を抽出する
+    }
+  }
+}
+
+5_20 <- - 5_3
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="866px" preserveAspectRatio="none" style="width:560px;height:866px;background:#FFFFFF;" version="1.1" viewBox="0 0 560 866" width="560px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M77.5,549 L107.375,549 A3.75,3.75 0 0 1 109.875,551.5 L116.875,572.6094 L550.5,572.6094 A2.5,2.5 0 0 1 553,575.1094 L553,856.5 A2.5,2.5 0 0 1 550.5,859 L77.5,859 A2.5,2.5 0 0 1 75,856.5 L75,551.5 A2.5,2.5 0 0 1 77.5,549 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="75" x2="116.875" y1="572.6094" y2="572.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="79" y="565.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M101.5,593 L131.375,593 A3.75,3.75 0 0 1 133.875,595.5 L140.875,616.6094 L526.5,616.6094 A2.5,2.5 0 0 1 529,619.1094 L529,832.5 A2.5,2.5 0 0 1 526.5,835 L101.5,835 A2.5,2.5 0 0 1 99,832.5 L99,595.5 A2.5,2.5 0 0 1 101.5,593 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="99" x2="140.875" y1="616.6094" y2="616.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="103" y="609.5332">環境</text></g><!--MD5=[04c5534593d3d55038da165bfe529f5c]
+cluster 小機能--><g id="cluster_小機能"><path d="M156.5,340 L200.8125,340 A3.75,3.75 0 0 1 203.3125,342.5 L210.3125,363.6094 L471.5,363.6094 A2.5,2.5 0 0 1 474,366.1094 L474,522.5 A2.5,2.5 0 0 1 471.5,525 L156.5,525 A2.5,2.5 0 0 1 154,522.5 L154,342.5 A2.5,2.5 0 0 1 156.5,340 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="154" x2="210.3125" y1="363.6094" y2="363.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="158" y="356.5332">小機能</text></g><!--MD5=[b27c5c9af3cea12247b1c4c8d3c78770]
+cluster GUI--><g id="cluster_GUI"><path d="M180.5,384 L206.5,384 A3.75,3.75 0 0 1 209,386.5 L216,407.6094 L447.5,407.6094 A2.5,2.5 0 0 1 450,410.1094 L450,498.5 A2.5,2.5 0 0 1 447.5,501 L180.5,501 A2.5,2.5 0 0 1 178,498.5 L178,386.5 A2.5,2.5 0 0 1 180.5,384 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="178" x2="216" y1="407.6094" y2="407.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="25" x="182" y="400.5332">GUI</text></g><!--MD5=[cd8a6d6b6ceaae3d861deb9820030cfc]
+cluster 中機能--><g id="cluster_中機能"><path d="M86.5,6 L130.8125,6 A3.75,3.75 0 0 1 133.3125,8.5 L140.3125,29.6094 L541.5,29.6094 A2.5,2.5 0 0 1 544,32.1094 L544,313.5 A2.5,2.5 0 0 1 541.5,316 L86.5,316 A2.5,2.5 0 0 1 84,313.5 L84,8.5 A2.5,2.5 0 0 1 86.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="84" x2="140.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="88" y="22.5332">中機能</text></g><!--MD5=[414a15a2db8aa408aa2cfdd3668707a1]
+cluster 自動アノテーション機能--><g id="cluster_自動アノテーション機能"><path d="M110.5,50 L270.3125,50 A3.75,3.75 0 0 1 272.8125,52.5 L279.8125,73.6094 L517.5,73.6094 A2.5,2.5 0 0 1 520,76.1094 L520,289.5 A2.5,2.5 0 0 1 517.5,292 L110.5,292 A2.5,2.5 0 0 1 108,289.5 L108,52.5 A2.5,2.5 0 0 1 110.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="108" x2="279.8125" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158.8125" x="112" y="66.5332">自動アノテーション機能</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="227" y="754"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="300" y="770.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="228" x2="400" y1="775.6094" y2="775.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="233" y="794.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="233" y="811.752">detail = nodejsを使用する</text></g><g id="elem_5_6"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="397" x="115.5" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="300" y="645.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="116.5" x2="511.5" y1="650.6094" y2="650.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="121.5" y="669.1426">id = 5-6</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="385" x="121.5" y="686.752">detail = GUI上で画像編集操作できるように(T.B.D)を使用する</text></g><g id="elem_4_5"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="239" x="194.5" y="420"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="293" y="436.5332">小機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="195.5" x2="432.5" y1="441.6094" y2="441.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="200.5" y="460.1426">id = 4-5</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="227" x="200.5" y="477.752">detail = GUI上で画像編集操作できる</text></g><g id="elem_3_6"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="379" x="124.5" y="211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="293" y="227.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="125.5" x2="502.5" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="130.5" y="251.1426">id = 3-6</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="367" x="130.5" y="268.752">detail = GUIで画像の上に表示した領域（枠）を調整できる</text></g><g id="elem_2_3"><rect fill="#F1F1F1" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="356" x="136" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="293" y="102.5332">大機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="491" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="142" y="126.1426">id = 2-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="344" x="142" y="143.752">detail = アノテーション結果から領域を調整できる機能</text></g><path d="M8.5,91 L51.5,91 A3.75,3.75 0 0 1 54,93.5 L61,114.6094 L65.5,114.6094 A2.5,2.5 0 0 1 68,117.1094 L68,143.7188 A2.5,2.5 0 0 1 65.5,146.2188 L8.5,146.2188 A2.5,2.5 0 0 1 6,143.7188 L6,93.5 A2.5,2.5 0 0 1 8.5,91 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="6" x2="61" y1="114.6094" y2="114.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="10" y="107.5332">大機能</text><!--MD5=[25dd3dff1aa169d3a9f053e99301e860]
+reverse link 5_6 to 5_3--><g id="link_5_6_5_3"><path codeLine="12" d="M314,699.46 C314,716.82 314,737.31 314,753.93 " fill="none" id="5_6-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="314,694.18,310,703.18,314,699.18,318,703.18,314,694.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4aca773bed234351810cea72d76c9beb]
+reverse link 4_5 to 5_6--><g id="link_4_5_5_6"><path codeLine="12" d="M314,490.56 C314,529.99 314,591.71 314,628.91 " fill="none" id="4_5-backto-5_6" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="314,485.39,310,494.39,314,490.39,318,494.39,314,485.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1bb67ed8e4f532581cc71f2c6b43899d]
+reverse link 3_6 to 4_5--><g id="link_3_6_4_5"><path codeLine="12" d="M314,281.56 C314,320.99 314,382.71 314,419.91 " fill="none" id="3_6-backto-4_5" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="314,276.39,310,285.39,314,281.39,318,285.39,314,276.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4325094ce51c2c217404672ab9b99170]
+reverse link 2_3 to 3_6--><g id="link_2_3_3_6"><path codeLine="12" d="M314,156.46 C314,173.82 314,194.31 314,210.93 " fill="none" id="2_3-backto-3_6" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="314,151.18,310,160.18,314,156.18,318,160.18,314,151.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[80ac867a0ba5856a456a836e4a6759ac]
+@startuml
+!include ../l3/l3_6.pu
+
+package "大機能" as l2{
+  package "自動アノテーション機能"{
+    object "大機能" as 2_3{
+      id = 2-3
+      detail = アノテーション結果から領域を調整できる機能
+    }
+  }
+}
+
+2_3 <- - 3_6
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "環境"{
+    object "構成" as 5_6{
+      id = 5-6
+      detail = GUI上で画像編集操作できるように(T.B.D)を使用する
+    }
+  }
+}
+
+5_6 <- - 5_3
+
+package "小機能"{
+  package "GUI"{
+    object "小機能" as 4_5{
+      id = 4-5
+      detail = GUI上で画像編集操作できる
+    }
+  }
+}
+
+4_5 <- - 5_6
+
+package "中機能"{
+  package "自動アノテーション機能"{
+    object "中機能" as 3_6{
+      id = 3-6
+      detail = GUIで画像の上に表示した領域（枠）を調整できる
+    }
+  }
+}
+
+3_6 <- - 4_5
+
+package "大機能" as l2{
+  package "自動アノテーション機能"{
+    object "大機能" as 2_3{
+      id = 2-3
+      detail = アノテーション結果から領域を調整できる機能
+    }
+  }
+}
+
+2_3 <- - 3_6
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

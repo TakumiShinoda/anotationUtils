@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="198px" preserveAspectRatio="none" style="width:393px;height:198px;background:#FFFFFF;" version="1.1" viewBox="0 0 393 198" width="393px" zoomAndPan="magnify"><defs/><g><!--MD5=[497d87bb8f00ba3c6c7d842bd6b1cd11]
+cluster l2--><g id="cluster_l2"><path d="M8.5,6 L52.8125,6 A3.75,3.75 0 0 1 55.3125,8.5 L62.3125,29.6094 L383.5,29.6094 A2.5,2.5 0 0 1 386,32.1094 L386,188.5 A2.5,2.5 0 0 1 383.5,191 L8.5,191 A2.5,2.5 0 0 1 6,188.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="62.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="10" y="22.5332">大機能</text></g><!--MD5=[b300f6b1ec8eed363d27ec57bc54e477]
+cluster 画像ビュワー--><g id="cluster_画像ビュワー"><path d="M32.5,50 L120.125,50 A3.75,3.75 0 0 1 122.625,52.5 L129.625,73.6094 L359.5,73.6094 A2.5,2.5 0 0 1 362,76.1094 L362,164.5 A2.5,2.5 0 0 1 359.5,167 L32.5,167 A2.5,2.5 0 0 1 30,164.5 L30,52.5 A2.5,2.5 0 0 1 32.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="129.625" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="34" y="66.5332">画像ビュワー</text></g><g id="elem_2_6"><rect fill="#FFA500" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="300" x="46" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="175" y="102.5332">大機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="345" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="52" y="126.1426">id = 2-6</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="288" x="52" y="143.752">detail = フォルダ内の画像を一覧で表示できる</text></g><!--MD5=[2597b22a2bbfd59fa5722a695cb157b4]
+@startuml
+' !include ../l3/l3_8.pu
+' !include ../l3/l3_9.pu
+' !include ../l3/l3_10.pu
+
+package "大機能" as l2{
+  package "画像ビュワー"{
+    object "大機能" as 2_6 #Orange{
+      id = 2-6
+      detail = フォルダ内の画像を一覧で表示できる
+    }
+  }
+}
+
+' 2_6 <- - 3_8
+' 2_6 <- - 3_9
+' 2_6 <- - 3_10
+@enduml
+
+@startuml
+
+package "大機能" as l2{
+  package "画像ビュワー"{
+    object "大機能" as 2_6 #Orange{
+      id = 2-6
+      detail = フォルダ内の画像を一覧で表示できる
+    }
+  }
+}
+
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

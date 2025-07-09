@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="548px" preserveAspectRatio="none" style="width:499px;height:548px;background:#FFFFFF;" version="1.1" viewBox="0 0 499 548" width="499px" zoomAndPan="magnify"><defs/><g><!--MD5=[e6557703c28ec013b8eadf9c41462697]
+cluster 構成--><g id="cluster_構成"><path d="M29.5,215 L59.375,215 A3.75,3.75 0 0 1 61.875,217.5 L68.875,238.6094 L489.5,238.6094 A2.5,2.5 0 0 1 492,241.1094 L492,538.5 A2.5,2.5 0 0 1 489.5,541 L29.5,541 A2.5,2.5 0 0 1 27,538.5 L27,217.5 A2.5,2.5 0 0 1 29.5,215 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="27" x2="68.875" y1="238.6094" y2="238.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="31" y="231.5332">構成</text></g><!--MD5=[ed071be72fb7e181fbc77b38300f4b00]
+cluster 環境--><g id="cluster_環境"><path d="M53.5,400 L83.375,400 A3.75,3.75 0 0 1 85.875,402.5 L92.875,423.6094 L465.5,423.6094 A2.5,2.5 0 0 1 468,426.1094 L468,514.5 A2.5,2.5 0 0 1 465.5,517 L53.5,517 A2.5,2.5 0 0 1 51,514.5 L51,402.5 A2.5,2.5 0 0 1 53.5,400 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="51" x2="92.875" y1="423.6094" y2="423.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="55" y="416.5332">環境</text></g><!--MD5=[593c3805de571ca794a38e03b1677d75]
+cluster 機能--><g id="cluster_機能"><path d="M74.5,259 L104.375,259 A3.75,3.75 0 0 1 106.875,261.5 L113.875,282.6094 L345.5,282.6094 A2.5,2.5 0 0 1 348,285.1094 L348,373.5 A2.5,2.5 0 0 1 345.5,376 L74.5,376 A2.5,2.5 0 0 1 72,373.5 L72,261.5 A2.5,2.5 0 0 1 74.5,259 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="72" x2="113.875" y1="282.6094" y2="282.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="28.875" x="76" y="275.5332">機能</text></g><!--MD5=[cd8a6d6b6ceaae3d861deb9820030cfc]
+cluster 中機能--><g id="cluster_中機能"><path d="M8.5,6 L52.8125,6 A3.75,3.75 0 0 1 55.3125,8.5 L62.3125,29.6094 L411.5,29.6094 A2.5,2.5 0 0 1 414,32.1094 L414,188.5 A2.5,2.5 0 0 1 411.5,191 L8.5,191 A2.5,2.5 0 0 1 6,188.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="62.3125" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43.3125" x="10" y="22.5332">中機能</text></g><!--MD5=[b300f6b1ec8eed363d27ec57bc54e477]
+cluster 画像ビュワー--><g id="cluster_画像ビュワー"><path d="M32.5,50 L120.125,50 A3.75,3.75 0 0 1 122.625,52.5 L129.625,73.6094 L387.5,73.6094 A2.5,2.5 0 0 1 390,76.1094 L390,164.5 A2.5,2.5 0 0 1 387.5,167 L32.5,167 A2.5,2.5 0 0 1 30,164.5 L30,52.5 A2.5,2.5 0 0 1 32.5,50 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="129.625" y1="73.6094" y2="73.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="86.625" x="34" y="66.5332">画像ビュワー</text></g><g id="elem_5_3"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="174" x="278" y="436"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="351" y="452.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="279" x2="451" y1="457.6094" y2="457.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="284" y="476.1426">id = 5-3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="284" y="493.752">detail = nodejsを使用する</text></g><g id="elem_5_4"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="175" x="67.5" y="436"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="141" y="452.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="68.5" x2="241.5" y1="457.6094" y2="457.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="73.5" y="476.1426">id = 5-4</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="73.5" y="493.752">detail = pythonを使用する</text></g><g id="elem_5_15"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="244" x="88" y="295"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="196" y="311.5332">構成</text><line style="stroke:#181818;stroke-width:0.5;" x1="89" x2="331" y1="316.6094" y2="316.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="94" y="335.1426">id = 5-15</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="94" y="352.752">detail = ファイルシステムを使用する</text></g><g id="elem_3_19"><rect fill="#90EE90" height="64.8281" style="stroke:#181818;stroke-width:0.5;" width="328" x="46" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="189" y="102.5332">中機能</text><line style="stroke:#181818;stroke-width:0.5;" x1="47" x2="373" y1="107.6094" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="52" y="126.1426">id = 3-19</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="316" x="52" y="143.752">detail = 画像ビュワーで表示中の画像を保存できる</text></g><!--MD5=[b1011733d73355a4138831320af051bc]
+reverse link 5_15 to 5_3--><g id="link_5_15_5_3"><path codeLine="13" d="M249.09,363.55 C273.87,385.78 305.68,414.3 329.7,435.84 " fill="none" id="5_15-backto-5_3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="245.17,360.04,249.2029,369.0253,248.8936,363.3769,254.542,363.0676,245.17,360.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6128280f683422d2fdecf770c0175466]
+reverse link 5_15 to 5_4--><g id="link_5_15_5_4"><path codeLine="14" d="M195.59,364.92 C186.91,386.85 175.96,414.53 167.62,435.6 " fill="none" id="5_15-backto-5_4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="197.52,360.04,190.5074,366.9555,195.6926,364.6941,197.954,369.8793,197.52,360.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0ce111f0802a649c56734dfb473a7397]
+reverse link 3_19 to 5_15--><g id="link_3_19_5_15"><path codeLine="12" d="M210,156.56 C210,195.99 210,257.71 210,294.91 " fill="none" id="3_19-backto-5_15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="210,151.39,206,160.39,210,156.39,214,160.39,210,151.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[368430c438fd12123ce694ea428c1f08]
+@startuml
+!include ../l5/l5_15.pu
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_19 #LightGreen{
+      id = 3-19
+      detail = 画像ビュワーで表示中の画像を保存できる
+    }
+  }
+}
+
+3_19 <- - 5_15
+@enduml
+
+@startuml
+package "構成"{
+  package "環境"{
+    object "構成" as 5_3 #LightGreen{
+      id = 5-3
+      detail = nodejsを使用する
+    }
+  }
+}
+package "構成"{
+  package "環境"{
+    object "構成" as 5_4 #LightGreen{
+      id = 5-4
+      detail = pythonを使用する
+    }
+  }
+}
+
+package "構成"{
+  package "機能"{
+    object "構成" as 5_15 #LightGreen{
+      id = 5-15
+      detail = ファイルシステムを使用する
+    }
+  }
+}
+
+5_15 <- - 5_3
+5_15 <- - 5_4
+
+package "中機能"{
+  package "画像ビュワー"{
+    object "中機能" as 3_19 #LightGreen{
+      id = 3-19
+      detail = 画像ビュワーで表示中の画像を保存できる
+    }
+  }
+}
+
+3_19 <- - 5_15
+@enduml
+
+PlantUML version 1.2022.12(Mon Oct 24 03:12:26 JST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

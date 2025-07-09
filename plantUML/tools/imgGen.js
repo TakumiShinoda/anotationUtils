@@ -11,7 +11,8 @@ const EntryDirs = [
   `${InputDir}/l2`,
   `${InputDir}/l3`,
   `${InputDir}/l4`,
-  `${InputDir}/l5`
+  `${InputDir}/l5`,
+  `${InputDir}/tips`
 ]
 
 function getLastElement(list){

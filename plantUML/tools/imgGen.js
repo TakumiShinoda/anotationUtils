@@ -3,7 +3,7 @@ const fs = require('fs')
 const fsp = require('fs').promises
 const path = require('path')
 
-const JarFilePath = `${__dirname}/plantuml-mit-1.2025.4.jar`
+const JarFilePath = `${__dirname}/../../externalPackage/plantUML/plantuml-mit-1.2025.4.jar`
 const InputDir = `${__dirname}/..`
 const OutputDir = `${__dirname}/../imaged`
 const EntryDirs = [
@@ -40,6 +40,7 @@ async function generateImg(inputPuPath, outputImagePath, imgType = 'svg'){
   return new Promise(async (res, rej) => {
     try{
       await fsp.access(absInputPuPath)
+      await fsp.access(JarFilePath)
 
       imageWriteStream = fs.createWriteStream(outputImagePath)
 

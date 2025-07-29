@@ -9,7 +9,7 @@ async function resetOutput(){
     await fsp.access(OutputPath)
     await fsp.rm(OutputPath, { recursive: true, force: true })
   }catch(err){
-    throw err
+    if(!(err.code == 'ENOENT')) throw err
   }finally{
     await fsp.mkdir(OutputPath)
   }

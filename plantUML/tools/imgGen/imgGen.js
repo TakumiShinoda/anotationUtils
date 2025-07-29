@@ -3,9 +3,9 @@ const fs = require('fs')
 const fsp = require('fs').promises
 const path = require('path')
 
-const JarFilePath = `${__dirname}/../../externalPackage/plantUML/plantuml-mit-1.2025.4.jar`
-const InputDir = `${__dirname}/..`
-const OutputDir = `${__dirname}/../imaged`
+const JarFilePath = `${__dirname}/../../../externalPackage/plantUML/plantuml-mit-1.2025.4.jar`
+const InputDir = `${__dirname}/../..`
+const OutputDir = `${__dirname}/../../imaged`
 const EntryDirs = [
   `${InputDir}/l1`,
   `${InputDir}/l2`,

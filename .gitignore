@@ -14,3 +14,5 @@ yarn.lock
 *tsOutput/
 
 plantuml*.jar
+
+/plantuml/tools/analysis/output

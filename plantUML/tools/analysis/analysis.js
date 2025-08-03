@@ -27,6 +27,9 @@ function checkExistKey(targetDict, key, withError = true){
 async function parseFromSvg(svgPath){
   let targetFile
   let targetJson
+  let idBuff
+  let detailBuff
+  let linkIdsBuff
   let result = {}
 
   return new Promise(async (res, rej) => {
@@ -39,18 +42,52 @@ async function parseFromSvg(svgPath){
       checkExistKey(targetJson['svg']['g'][0], 'g')
 
       for(let go of targetJson['svg']['g'][0]['g']){
+        // console.log(go)
+        
         if(
-          !checkExistKey(go, 'rect', false) ||
-          !checkExistKey(go, 'text', false)
-        ) continue
+          checkExistKey(go, 'rect', false) &&
+          checkExistKey(go, 'text', false)
+        ){
+          idBuff = undefined
+          detailBuff = undefined
 
-        console.log(go)
+          for(to of go['text']){
+            if(!checkExistKey(to, '_', false)) continue
+            if(
+              !to['_'].startsWith('id = ') &&
+              !to['_'].startsWith('detail = ')
+            ) continue
 
-        for(to of go['text']){
-          if(!checkExistKey(to, '_', false)) continue
-          if(!to['_'].startsWith('id = ')) continue
+            if(to['_'].startsWith('id = ')) idBuff = to['_'].replaceAll('id = ', '')
+            if(to['_'].startsWith('detail = ')) detailBuff = to['_'].replaceAll('detail = ', '')
+          }
 
-          result[to['_'].replaceAll('id = ', '')] = {}
+          if(
+            (idBuff == undefined) ||
+            (detailBuff == undefined)
+          ) continue
+
+          result[idBuff] = {detail: detailBuff}
+          result[idBuff]['child'] = []
+        }
+        
+        if(checkExistKey(go, 'path', false)){
+          for(let po of go['path']){
+            if(!checkExistKey(po, '$', false)) continue
+            if(!checkExistKey(po['$'], 'id', false)) continue
+
+            linkIdsBuff = po['$']['id'].split('-backto-')
+
+            if(linkIdsBuff.length != 2) continue
+
+            linkIdsBuff[0] = linkIdsBuff[0].replaceAll('_', '-')
+            linkIdsBuff[1] = linkIdsBuff[1].replaceAll('_', '-')
+
+            if(!checkExistKey(result, linkIdsBuff[0], false)) continue
+            if(!checkExistKey(result, linkIdsBuff[1], false)) continue
+
+            result[linkIdsBuff[0]]['child'].push(linkIdsBuff[1])
+          }
         }
       }
 
@@ -67,7 +104,7 @@ async function parseFromSvg(svgPath){
   try{
     await resetOutput()
 
-    parsedJson = await parseFromSvg(`${PlantUmlPath}/imaged/l4/l4_27.svg`)
+    parsedJson = await parseFromSvg(`${PlantUmlPath}/imaged/main.svg`)
 
     fsp.writeFile(`${OutputPath}/parsed.json`, JSON.stringify(parsedJson, undefined, 2))
     console.log(parsedJson)

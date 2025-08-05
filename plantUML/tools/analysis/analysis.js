@@ -1,19 +1,8 @@
 const fsp = require('fs').promises
-const xml2js = require("xml2js")
+const xml2js = require('xml2js')
 
-const PlantUmlPath = `${__dirname}/../..`
-const OutputPath = `${__dirname}/output`
-
-async function resetOutput(){
-  try{
-    await fsp.access(OutputPath)
-    await fsp.rm(OutputPath, { recursive: true, force: true })
-  }catch(err){
-    if(!(err.code == 'ENOENT')) throw err
-  }finally{
-    await fsp.mkdir(OutputPath)
-  }
-}
+const globals = require(`${__dirname}/globals.js`)
+const utils = require(`${__dirname}/utils.js`)
 
 function checkExistKey(targetDict, key, withError = true){
   if(Object.keys(targetDict).indexOf(key) < 0){
@@ -102,11 +91,11 @@ async function parseFromSvg(svgPath){
   let parsedJson
 
   try{
-    await resetOutput()
+    await utils.resetOutput()
 
-    parsedJson = await parseFromSvg(`${PlantUmlPath}/imaged/main.svg`)
+    parsedJson = await parseFromSvg(`${globals.PlantUmlPath}/imaged/l4/l4_27.svg`)
 
-    fsp.writeFile(`${OutputPath}/parsed.json`, JSON.stringify(parsedJson, undefined, 2))
+    fsp.writeFile(`${globals.OutputPath}/parsed.json`, JSON.stringify(parsedJson, undefined, 2))
     console.log(parsedJson)
   }catch(err){
     console.log(`Err: ${err}`)

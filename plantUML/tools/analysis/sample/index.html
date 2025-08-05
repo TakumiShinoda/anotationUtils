@@ -1,0 +1,47 @@
+<html><head>
+    <link rel="stylesheet" href="https://unpkg.com/mermaid/dist/mermaid.min.css">
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({
+        startOnLoad:true
+      })
+    </script>
+  </head>
+  <body>
+    <div class="mermaid" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+    graph BT
+      classDef defaultStyle font-size:10px,rx:8px,ry:8px
+      
+      5_3["****&lt;hr&gt;id = 5-3&lt;br&gt;detail = nodejsを使用する"]:::defaultStyle
+    
+      5_1["****&lt;hr&gt;id = 5-1&lt;br&gt;detail = GUIをelectronで実装する"]:::defaultStyle
+    
+      5_24["****&lt;hr&gt;id = 5-24&lt;br&gt;detail = electronレンダラプロセスを実装する"]:::defaultStyle
+    
+      5_4["****&lt;hr&gt;id = 5-4&lt;br&gt;detail = pythonを使用する"]:::defaultStyle
+    
+      5_5["****&lt;hr&gt;id = 5-5&lt;br&gt;detail = 画像処理はopencvを使用する"]:::defaultStyle
+    
+      5_7["****&lt;hr&gt;id = 5-7&lt;br&gt;detail = GUIに画像を表示する"]:::defaultStyle
+    
+      5_28["****&lt;hr&gt;id = 5-28&lt;br&gt;detail = 画像処理ができる"]:::defaultStyle
+    
+      4_27["****&lt;hr&gt;id = 4-27&lt;br&gt;detail = マークした画像を表示する"]:::defaultStyle
+    
+        5_3 --&gt; 5_1
+      
+        5_1 --&gt; 5_24
+      
+        5_4 --&gt; 5_5
+      
+        5_24 --&gt; 5_7
+      
+        5_5 --&gt; 5_28
+      
+        5_7 --&gt; 4_27
+      
+        5_28 --&gt; 4_27
+      
+  </div>
+  
+</body></html>

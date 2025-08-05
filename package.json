@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.3.14",
+    "cheerio": "^1.1.2",
     "chokidar": "^3.0.0",
     "css-loader": "^6.8.1",
     "electron": "35.0.2",

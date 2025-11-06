@@ -8,6 +8,7 @@ anotationUtilsSubprocess/
 publish
 todo.txt
 temp
+test
 
 package-lock.json
 yarn.lock

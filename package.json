@@ -45,7 +45,7 @@
     "electron-connect": "^0.6.3",
     "electron-packager": "^17.1.2",
     "glob-stream": "^7.0.0",
-    "gulp": "^4.0.2",
+    "gulp": "5.0.1",
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^5.0.0",
     "lodash": "4.17.21",

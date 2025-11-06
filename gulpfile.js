@@ -50,7 +50,7 @@ gulp.task('asset_copy', () => {
     for(let cc of copyChain){
       tasks.push(new Promise((subRes, subRej) => {
         try{
-          gulp.src(cc.src)
+          gulp.src(cc.src, {encoding: false})
             .pipe(gulp.dest(cc.dest))
             .on('end', () => {subRes()})
         }catch(err){subRej(err)}

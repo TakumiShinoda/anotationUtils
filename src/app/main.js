@@ -9,7 +9,7 @@ const { loadAnotationTarget } = require('./ipcMains/autoAnotation')
 const { getAnotatedTree, saveAnotatedTree } = require('./ipcMains/anotatedImage')
 const { loadDialogHistory } = require('./mods/dialogHistory')
 const { httpApiProgress } = require('./httpServer/progressServer')
-const { ProgressServerPort } = require('./globals')
+const { ProgressServerPort, RootPath } = require('./globals')
 
 require('electron-reload')(['./dist/bundles/**'])
 
@@ -26,6 +26,7 @@ app.on('ready', () => {
       'webviewTag': true,
       'preload': `${__dirname}/preloads/index/preload.js`
     },
+    icon: `${RootPath}/build/icons/app_icon.ico`,
     // transparent: true,
     // titleBarStyle: 'hidden',
     frame: false,

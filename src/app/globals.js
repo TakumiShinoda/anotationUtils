@@ -1,4 +1,7 @@
-const RootPath = process.cwd()
+const path = require('path')
+const { app } = require('electron')
+
+const RootPath = app.isPackaged ? path.dirname(process.execPath) : process.cwd()
 const ProgressServerPort = 33800
 
 MainWindow = undefined

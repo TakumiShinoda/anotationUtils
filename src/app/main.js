@@ -1,5 +1,5 @@
 const express = require('express')
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, dialog } = require('electron')
 
 const { distPath } = require('../../dev/path')
 const { getImageViewList, openByExplorer } = require('./ipcMains/ImageViewer')
@@ -12,6 +12,17 @@ const { httpApiProgress } = require('./httpServer/progressServer')
 const { ProgressServerPort, RootPath } = require('./globals')
 
 require('electron-reload')(['./dist/bundles/**'])
+
+process.on('uncaughtException', async (err) => {
+  await dialog.showMessageBox({
+    type: 'error',
+    title: 'Error',
+    message: `Error occurred:\n${err.message}`,
+    buttons: ['ok']
+  })
+
+  exitApp(undefined)
+})
 
 app.on('ready', () => {
   DialogHistory = loadDialogHistory()
@@ -41,7 +52,6 @@ app.on('ready', () => {
   ipcMain.handle('openFileDialog', openFileDialog)
   ipcMain.handle('openFolderDialog', openFolderDialog)
   ipcMain.handle('loadAnotationTarget', loadAnotationTarget)
-  // ipcMain.handle('getDatabaseInfo', getDatabaseInfo)
   ipcMain.handle('getAnotatedTree', getAnotatedTree)
   ipcMain.handle('saveAnotatedTree', saveAnotatedTree)
   ipcMain.handle('getImageViewList', getImageViewList)

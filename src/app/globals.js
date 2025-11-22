@@ -2,7 +2,7 @@ const path = require('path')
 const { app } = require('electron')
 
 const RootPath = app.isPackaged ? path.dirname(process.execPath) : process.cwd()
-const ProgressServerPort = 33800
+const ProgressServerPort = app.isPackaged ? 33800 : 33801
 
 MainWindow = undefined
 AnotationProc = undefined

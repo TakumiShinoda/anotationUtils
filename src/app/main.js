@@ -13,6 +13,11 @@ const { ProgressServerPort, RootPath } = require('./globals')
 
 require('electron-reload')(['./dist/bundles/**'])
 
+if(!app.requestSingleInstanceLock()){
+  app.quit()
+  process.exit(0)
+}
+
 process.on('uncaughtException', async (err) => {
   await dialog.showMessageBox({
     type: 'error',
@@ -22,6 +27,14 @@ process.on('uncaughtException', async (err) => {
   })
 
   exitApp(undefined)
+})
+
+app.on('second-instance', (ev) => {
+  if(MainWindow != undefined){
+    if(MainWindow.isMinimized()) MainWindow.restore()
+    
+    MainWindow.focus()
+  }
 })
 
 app.on('ready', () => {

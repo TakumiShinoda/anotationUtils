@@ -43,6 +43,11 @@
   overflow-y: scroll;
 }
 
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 body{
   user-select: none;
   -webkit-app-region: drag;

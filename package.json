@@ -21,24 +21,9 @@
   },
   "author": "",
   "license": "ISC",
-  "overrides": {
-    "semver": "6.3.1",
-    "minimatch": "3.0.5",
-    "lodash": "4.17.21",
-    "graceful-fs": "4.2.10",
-    "glob-parent": "6.0.1",
-    "@types/node": "20.9.1"
-  },
-  "resolutions": {
-    "semver": "6.3.1",
-    "minimatch": "3.0.5",
-    "lodash": "4.17.21",
-    "graceful-fs": "4.2.10",
-    "glob-parent": "6.0.1",
-    "@types/node": "16.18.60"
-  },
   "devDependencies": {
     "@types/jquery": "^3.3.14",
+    "@types/node": "20.9.1",
     "chokidar": "^3.0.0",
     "css-loader": "^6.8.1",
     "electron": "35.0.2",
@@ -62,12 +47,16 @@
     "electron-reload": "^2.0.0-alpha.1",
     "express": "4.21.2",
     "fs": "0.0.1-security",
+    "glob-parent": "6.0.1",
+    "graceful-fs": "4.2.10",
     "jimp": "^0.22.10",
     "jquery": "^3.3.1",
     "js-yaml": "4.1.0",
+    "minimatch": "3.0.5",
     "open-file-explorer": "^1.0.2",
     "path": "^0.12.7",
     "probe-image-size": "^7.2.3",
+    "semver": "6.3.1",
     "zod": "3.25.56"
   },
   "build": {

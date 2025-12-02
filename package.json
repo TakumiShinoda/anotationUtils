@@ -13,11 +13,12 @@
     "test-pack-darwinx64": "rm -R *darwin-x64* || node build/darwinx64.js && node build/darwinx64.js",
     "devenv-reset": "rm -R ./node_modules & rm ./package-lock.json & rm ./yarn.lock & yarn",
     "build-copyExternals": "robocopy ./externalPackage ./publish/win-unpacked/externalPackage /s /e & robocopy ./settings ./publish/win-unpacked/settings /s /e",
-    "build-internal-python-asset": "npx mkdirp ./publish/win-unpacked/src/assets & robocopy ./src/assets/python ./publish/win-unpacked/src/assets/python /s /e",
+    "build-internal-python-asset": "npx mkdirp ./publish/win-unpacked/src/assets && robocopy ./src/assets/python ./publish/win-unpacked/src/assets/python /s /e & if %ERRORLEVEL% GTR 8 (exit /b 1)",
     "build-prepare": "npm run devenv-reset & npm run clean & rimraf ./publish",
+    "build-after-proc": "node ./build/buildAfterProc.js",
     "build-python-env": "cd ./publish/win-unpacked/externalPackage/python & setup.sh",
     "build-win-full": "npm run build-prepare & gulp dist & electron-builder --win & npm run build-copyExternals & npm run build-internal-python-asset & npm run build-python-env & npx mkdirp ./publish/win-unpacked/temp",
-    "build-win-lite": "npm run devenv-reset && npm run clean && gulp dist && electron-builder --win --config.directories.output=publish.temp && node ./build/buildAfterProc.js && robocopy ./settings ./publish/win-unpacked/settings /s /e & npx mkdirp ./publish/win-unpacked/temp"
+    "build-win-lite": "npm run devenv-reset && npm run clean && gulp dist && electron-builder --win --config.directories.output=publish.temp && npm run build-internal-python-asset && npm run build-after-proc && robocopy ./settings ./publish/win-unpacked/settings /s /e && npx mkdirp ./publish/win-unpacked/temp"
   },
   "author": "",
   "license": "ISC",

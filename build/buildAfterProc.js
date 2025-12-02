@@ -46,21 +46,25 @@ async function copyAllRecursive(targetDir, destDir){
   let resolvePathBuff
 
   for(let d of targetDirs){
-    let resolvePathBuff = path.resolve(`${targetDirResolve}/${d.name}`).replaceAll('\\', '/')
+    resolvePathBuff = path.resolve(`${targetDirResolve}/${d.name}`).replaceAll('\\', '/')
 
     if(d.isDirectory()) await copyAllRecursive(resolvePathBuff, `${destDirResolve}/${d.name}`)
     else{
       await fsp.mkdir(destDirResolve, {recursive: true})
-
       await fsp.copyFile(`${targetDirResolve}/${d.name}`, `${destDirResolve}/${d.name}`)
     }
   }
 }
 
 (async () => {
-  if(!await isExistFolder(DestDir)) await fsp.mkdir(DestDir)
+  try{
+    if(!(await isExistFolder(DestDir))) await fsp.mkdir(DestDir)
 
-  await removeDirRecursiveWithExclusive(DestDir, RemoveExcludes)
-  await copyAllRecursive(TargetDir, DestDir)
-  await fsp.rmdir(TargetDir, {recursive: true, force: true})
+    await removeDirRecursiveWithExclusive(DestDir, RemoveExcludes)
+    await copyAllRecursive(TargetDir, DestDir)
+    await fsp.rm(TargetDir, {recursive: true, force: true})
+  }catch(err){
+    console.log('Error:', err)
+    process.exit(1)
+  }
 })()

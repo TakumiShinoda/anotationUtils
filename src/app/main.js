@@ -19,6 +19,11 @@ if(!app.requestSingleInstanceLock()){
 }
 
 process.on('uncaughtException', async (err) => {
+  if(err.code == 'EADDRINUSE'){
+    console.log(`Error: ${err.message}`)
+    return
+  }
+  
   await dialog.showMessageBox({
     type: 'error',
     title: 'Error',
